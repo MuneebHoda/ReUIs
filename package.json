@@ -1,0 +1,34 @@
+{
+  "name": "relui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Relational behavioral consistency tester for Web UIs.",
+  "type": "module",
+  "bin": {
+    "relui": "./src/cli.ts"
+  },
+  "scripts": {
+    "relui": "tsx src/cli.ts",
+    "run": "tsx src/cli.ts run --config relui.config.ts",
+    "explore": "tsx src/cli.ts explore --config relui.config.ts",
+    "check": "tsx src/cli.ts check --config relui.config.ts",
+    "baseline": "tsx src/cli.ts baseline --config relui.config.ts",
+    "report": "tsx src/cli.ts report --config relui.config.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.52.0",
+    "commander": "^12.1.0",
+    "pixelmatch": "^6.0.0",
+    "pngjs": "^7.0.0",
+    "tsx": "^4.19.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "@types/pixelmatch": "^5.2.6",
+    "@types/pngjs": "^6.0.5",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
+  }
+}
