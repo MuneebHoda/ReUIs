@@ -1,0 +1,30 @@
+[
+  {
+    "id": "v_74667be014c3",
+    "subjectId": "auth-invalid-login-dashboard",
+    "invariantId": "auth-invalid-login-blocks-dashboard",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid credentials must not reach the dashboard.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_97c034278884"
+    ],
+    "stateIds": [
+      "s_f0fb11eb43ea",
+      "s_98b838d77deb",
+      "s_d813b40e0e84"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"user-login-submit\"]",
+      "forbiddenState": "s_d813b40e0e84"
+    },
+    "replaySteps": [
+      "1. default -> Login ([data-testid=\"home-login\"])",
+      "2. invalid -> User Login ([data-testid=\"user-login-submit\"])"
+    ]
+  }
+]

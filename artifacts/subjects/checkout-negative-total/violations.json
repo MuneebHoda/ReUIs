@@ -1,0 +1,379 @@
+[
+  {
+    "id": "v_c633136d65f9",
+    "subjectId": "checkout-negative-total",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_f39c85fe9554"
+    ],
+    "stateIds": [
+      "s_30f20df1d627",
+      "s_279af0c5d97d"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"cart-next\"]",
+      "forbiddenState": "s_279af0c5d97d"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])"
+    ]
+  },
+  {
+    "id": "v_3ecaa41f2087",
+    "subjectId": "checkout-negative-total",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_eead915d8436"
+    ],
+    "stateIds": [
+      "s_30f20df1d627",
+      "s_279af0c5d97d"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"cart-next\"]",
+      "forbiddenState": "s_279af0c5d97d"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. default -> Cart ([data-testid=\"nav-cart\"])"
+    ]
+  },
+  {
+    "id": "v_53fe843eaf73",
+    "subjectId": "checkout-negative-total",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_3cf878f87c64"
+    ],
+    "stateIds": [
+      "s_30f20df1d627",
+      "s_279af0c5d97d"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"cart-next\"]",
+      "forbiddenState": "s_279af0c5d97d"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. default -> Contact ([data-testid=\"nav-contact\"])"
+    ]
+  },
+  {
+    "id": "v_1939644f6da3",
+    "subjectId": "checkout-negative-total",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_c5e986209787"
+    ],
+    "stateIds": [
+      "s_30f20df1d627",
+      "s_279af0c5d97d"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"cart-next\"]",
+      "forbiddenState": "s_279af0c5d97d"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. default -> Payment ([data-testid=\"nav-payment\"])"
+    ]
+  },
+  {
+    "id": "v_551def077435",
+    "subjectId": "checkout-negative-total",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_06bfd0dee3ce"
+    ],
+    "stateIds": [
+      "s_30f20df1d627",
+      "s_279af0c5d97d"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"cart-next\"]",
+      "forbiddenState": "s_279af0c5d97d"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. default -> Review ([data-testid=\"nav-review\"])"
+    ]
+  },
+  {
+    "id": "v_773f335bca1c",
+    "subjectId": "checkout-negative-total",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_d5ed020be2d0"
+    ],
+    "stateIds": [
+      "s_30f20df1d627",
+      "s_279af0c5d97d"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"cart-next\"]",
+      "forbiddenState": "s_279af0c5d97d"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. valid -> Continue to Payment ([data-testid=\"contact-next\"])"
+    ]
+  },
+  {
+    "id": "v_c39f2c459105",
+    "subjectId": "checkout-negative-total",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_d5ee12f63a8d"
+    ],
+    "stateIds": [
+      "s_30f20df1d627",
+      "s_279af0c5d97d"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"cart-next\"]",
+      "forbiddenState": "s_279af0c5d97d"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. admin -> Continue to Payment ([data-testid=\"contact-next\"])"
+    ]
+  },
+  {
+    "id": "v_d9476d995d45",
+    "subjectId": "checkout-negative-total",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_cc0c5ac1fadc"
+    ],
+    "stateIds": [
+      "s_30f20df1d627",
+      "s_279af0c5d97d"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"cart-next\"]",
+      "forbiddenState": "s_279af0c5d97d"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. invalid -> Continue to Payment ([data-testid=\"contact-next\"])"
+    ]
+  },
+  {
+    "id": "v_9a6b83b8db67",
+    "subjectId": "checkout-negative-total",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_ed023a32fba4"
+    ],
+    "stateIds": [
+      "s_30f20df1d627",
+      "s_279af0c5d97d"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"cart-next\"]",
+      "forbiddenState": "s_279af0c5d97d"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. valid -> Back ([data-testid=\"contact-back\"])"
+    ]
+  },
+  {
+    "id": "v_3a2007904eb4",
+    "subjectId": "checkout-negative-total",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_957f809a5d73"
+    ],
+    "stateIds": [
+      "s_30f20df1d627",
+      "s_279af0c5d97d"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"cart-next\"]",
+      "forbiddenState": "s_279af0c5d97d"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. admin -> Back ([data-testid=\"contact-back\"])"
+    ]
+  },
+  {
+    "id": "v_779ea30d4823",
+    "subjectId": "checkout-negative-total",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_97e464563a7a"
+    ],
+    "stateIds": [
+      "s_30f20df1d627",
+      "s_279af0c5d97d"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"cart-next\"]",
+      "forbiddenState": "s_279af0c5d97d"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. invalid -> Back ([data-testid=\"contact-back\"])"
+    ]
+  },
+  {
+    "id": "v_d2ce6798f24a",
+    "subjectId": "checkout-negative-total",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_ea24f46e5df0"
+    ],
+    "stateIds": [
+      "s_30f20df1d627",
+      "s_279af0c5d97d"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"cart-next\"]",
+      "forbiddenState": "s_279af0c5d97d"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. valid -> Express Review ([data-testid=\"express-review\"])"
+    ]
+  },
+  {
+    "id": "v_dcedb7054888",
+    "subjectId": "checkout-negative-total",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_c087b325b19e"
+    ],
+    "stateIds": [
+      "s_30f20df1d627",
+      "s_279af0c5d97d"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"cart-next\"]",
+      "forbiddenState": "s_279af0c5d97d"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. admin -> Express Review ([data-testid=\"express-review\"])"
+    ]
+  },
+  {
+    "id": "v_29744ff021fe",
+    "subjectId": "checkout-negative-total",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_f3232ec9b9c5"
+    ],
+    "stateIds": [
+      "s_30f20df1d627",
+      "s_279af0c5d97d"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"cart-next\"]",
+      "forbiddenState": "s_279af0c5d97d"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. invalid -> Express Review ([data-testid=\"express-review\"])"
+    ]
+  }
+]

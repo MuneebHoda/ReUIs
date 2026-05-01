@@ -1,0 +1,1214 @@
+[
+  {
+    "id": "v_02d91397e356",
+    "subjectId": "auth-auth-bypass",
+    "app": "auth",
+    "variant": "auth-bypass",
+    "faultId": "F-AUTH-1",
+    "invariantId": "auth-dashboard-requires-login",
+    "invariantType": "auth-precondition",
+    "severity": "critical",
+    "title": "Dashboard access must be preceded by a successful login action.",
+    "description": "A restricted state was reachable without the required authentication or authorization action.",
+    "traceIds": [
+      "t_7ef308de435b"
+    ],
+    "replaySteps": [
+      "1. default -> Open Dashboard ([data-testid=\"home-dashboard\"])"
+    ],
+    "startStateId": "s_00a49100779d",
+    "endStateId": "s_693c2edca823",
+    "startUrl": "/auth/auth-bypass",
+    "endUrl": "/auth/auth-bypass/dashboard",
+    "startText": "RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+    "endText": "RelUI auth benchmark Home Dashboard Admin Login Member Dashboard Protected dashboard loaded. Account: guest",
+    "screenshotPaths": [
+      "artifacts/subjects/auth-auth-bypass/screenshots/s_00a49100779d.png",
+      "artifacts/subjects/auth-auth-bypass/screenshots/s_693c2edca823.png"
+    ],
+    "textDiff": [
+      "- RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+      "+ RelUI auth benchmark Home Dashboard Admin Login Member Dashboard Protected dashboard loaded. Account: guest"
+    ]
+  },
+  {
+    "id": "v_13aae21c988f",
+    "subjectId": "auth-auth-bypass",
+    "app": "auth",
+    "variant": "auth-bypass",
+    "faultId": "F-AUTH-1",
+    "invariantId": "auth-dashboard-requires-login",
+    "invariantType": "auth-precondition",
+    "severity": "critical",
+    "title": "Dashboard access must be preceded by a successful login action.",
+    "description": "A restricted state was reachable without the required authentication or authorization action.",
+    "traceIds": [
+      "t_8a1e592e2e16"
+    ],
+    "replaySteps": [
+      "1. default -> Dashboard ([data-testid=\"nav-dashboard\"])"
+    ],
+    "startStateId": "s_00a49100779d",
+    "endStateId": "s_693c2edca823",
+    "startUrl": "/auth/auth-bypass",
+    "endUrl": "/auth/auth-bypass/dashboard",
+    "startText": "RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+    "endText": "RelUI auth benchmark Home Dashboard Admin Login Member Dashboard Protected dashboard loaded. Account: guest",
+    "screenshotPaths": [
+      "artifacts/subjects/auth-auth-bypass/screenshots/s_00a49100779d.png",
+      "artifacts/subjects/auth-auth-bypass/screenshots/s_693c2edca823.png"
+    ],
+    "textDiff": [
+      "- RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+      "+ RelUI auth benchmark Home Dashboard Admin Login Member Dashboard Protected dashboard loaded. Account: guest"
+    ]
+  },
+  {
+    "id": "v_4f1a12cec389",
+    "subjectId": "auth-auth-bypass",
+    "app": "auth",
+    "variant": "auth-bypass",
+    "faultId": "F-AUTH-1",
+    "invariantId": "auth-dashboard-requires-login",
+    "invariantType": "auth-precondition",
+    "severity": "critical",
+    "title": "Dashboard access must be preceded by a successful login action.",
+    "description": "A restricted state was reachable without the required authentication or authorization action.",
+    "traceIds": [
+      "t_e73944046bb1"
+    ],
+    "replaySteps": [
+      "1. default -> Open Dashboard ([data-testid=\"home-dashboard\"])",
+      "2. default -> Dashboard ([data-testid=\"nav-dashboard\"])"
+    ],
+    "startStateId": "s_00a49100779d",
+    "endStateId": "s_693c2edca823",
+    "startUrl": "/auth/auth-bypass",
+    "endUrl": "/auth/auth-bypass/dashboard",
+    "startText": "RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+    "endText": "RelUI auth benchmark Home Dashboard Admin Login Member Dashboard Protected dashboard loaded. Account: guest",
+    "screenshotPaths": [
+      "artifacts/subjects/auth-auth-bypass/screenshots/s_00a49100779d.png",
+      "artifacts/subjects/auth-auth-bypass/screenshots/s_693c2edca823.png"
+    ],
+    "textDiff": [
+      "- RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+      "+ RelUI auth benchmark Home Dashboard Admin Login Member Dashboard Protected dashboard loaded. Account: guest"
+    ]
+  },
+  {
+    "id": "v_fe36e7516844",
+    "subjectId": "auth-auth-bypass",
+    "app": "auth",
+    "variant": "auth-bypass",
+    "invariantId": "auth-logout-clears-protected-access",
+    "invariantType": "action-forbidden-state",
+    "severity": "critical",
+    "title": "Protected pages must not be reachable after logout.",
+    "description": "A forbidden state was observed after an action that should prevent it.",
+    "traceIds": [
+      "t_519eb8b00d1d"
+    ],
+    "replaySteps": [
+      "1. default -> Login ([data-testid=\"home-login\"])",
+      "2. valid -> User Login ([data-testid=\"user-login-submit\"])",
+      "3. default -> Logout ([data-testid=\"logout\"])",
+      "4. default -> Dashboard ([data-testid=\"nav-dashboard\"])"
+    ],
+    "startStateId": "s_00a49100779d",
+    "endStateId": "s_693c2edca823",
+    "startUrl": "/auth/auth-bypass",
+    "endUrl": "/auth/auth-bypass/dashboard",
+    "startText": "RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+    "endText": "RelUI auth benchmark Home Dashboard Admin Login Member Dashboard Protected dashboard loaded. Account: guest",
+    "screenshotPaths": [
+      "artifacts/subjects/auth-auth-bypass/screenshots/s_00a49100779d.png",
+      "artifacts/subjects/auth-auth-bypass/screenshots/s_693c2edca823.png"
+    ],
+    "textDiff": [
+      "- RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+      "+ RelUI auth benchmark Home Dashboard Admin Login Member Dashboard Protected dashboard loaded. Account: guest"
+    ]
+  },
+  {
+    "id": "v_69e967be99b7",
+    "subjectId": "auth-logout-retains-access",
+    "app": "auth",
+    "variant": "logout-retains-access",
+    "faultId": "F-AUTH-2",
+    "invariantId": "auth-logout-clears-protected-access",
+    "invariantType": "action-forbidden-state",
+    "severity": "critical",
+    "title": "Protected pages must not be reachable after logout.",
+    "description": "A forbidden state was observed after an action that should prevent it.",
+    "traceIds": [
+      "t_519eb8b00d1d"
+    ],
+    "replaySteps": [
+      "1. default -> Login ([data-testid=\"home-login\"])",
+      "2. valid -> User Login ([data-testid=\"user-login-submit\"])",
+      "3. default -> Logout ([data-testid=\"logout\"])",
+      "4. default -> Dashboard ([data-testid=\"nav-dashboard\"])"
+    ],
+    "startStateId": "s_d8505850d93d",
+    "endStateId": "s_69d58cc9a709",
+    "startUrl": "/auth/logout-retains-access",
+    "endUrl": "/auth/logout-retains-access/dashboard",
+    "startText": "RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+    "endText": "RelUI auth benchmark Home Dashboard Admin Logout Member Dashboard Protected dashboard loaded. Account: user",
+    "screenshotPaths": [
+      "artifacts/subjects/auth-logout-retains-access/screenshots/s_d8505850d93d.png",
+      "artifacts/subjects/auth-logout-retains-access/screenshots/s_69d58cc9a709.png"
+    ],
+    "textDiff": [
+      "- RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+      "+ RelUI auth benchmark Home Dashboard Admin Logout Member Dashboard Protected dashboard loaded. Account: user"
+    ]
+  },
+  {
+    "id": "v_55cc6dd4d85c",
+    "subjectId": "auth-role-escalation",
+    "app": "auth",
+    "variant": "role-escalation",
+    "faultId": "F-AUTH-3",
+    "invariantId": "auth-admin-requires-admin-login",
+    "invariantType": "auth-precondition",
+    "severity": "critical",
+    "title": "Admin Console access must be preceded by the admin login action.",
+    "description": "A restricted state was reachable without the required authentication or authorization action.",
+    "traceIds": [
+      "t_50263663be80"
+    ],
+    "replaySteps": [
+      "1. default -> Login ([data-testid=\"home-login\"])",
+      "2. valid -> User Login ([data-testid=\"user-login-submit\"])",
+      "3. default -> Admin ([data-testid=\"nav-admin\"])"
+    ],
+    "startStateId": "s_d7c20baf0817",
+    "endStateId": "s_8c7e60168213",
+    "startUrl": "/auth/role-escalation",
+    "endUrl": "/auth/role-escalation/admin",
+    "startText": "RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+    "endText": "RelUI auth benchmark Home Dashboard Admin Logout Admin Console Role restricted administration tools.",
+    "screenshotPaths": [
+      "artifacts/subjects/auth-role-escalation/screenshots/s_d7c20baf0817.png",
+      "artifacts/subjects/auth-role-escalation/screenshots/s_8c7e60168213.png"
+    ],
+    "textDiff": [
+      "- RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+      "+ RelUI auth benchmark Home Dashboard Admin Logout Admin Console Role restricted administration tools."
+    ]
+  },
+  {
+    "id": "v_74667be014c3",
+    "subjectId": "auth-invalid-login-dashboard",
+    "app": "auth",
+    "variant": "invalid-login-dashboard",
+    "faultId": "F-AUTH-4",
+    "invariantId": "auth-invalid-login-blocks-dashboard",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid credentials must not reach the dashboard.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_97c034278884"
+    ],
+    "replaySteps": [
+      "1. default -> Login ([data-testid=\"home-login\"])",
+      "2. invalid -> User Login ([data-testid=\"user-login-submit\"])"
+    ],
+    "startStateId": "s_f0fb11eb43ea",
+    "endStateId": "s_d813b40e0e84",
+    "startUrl": "/auth/invalid-login-dashboard",
+    "endUrl": "/auth/invalid-login-dashboard/dashboard",
+    "startText": "RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+    "endText": "RelUI auth benchmark Home Dashboard Admin Logout Member Dashboard Protected dashboard loaded. Account: user",
+    "screenshotPaths": [
+      "artifacts/subjects/auth-invalid-login-dashboard/screenshots/s_f0fb11eb43ea.png",
+      "artifacts/subjects/auth-invalid-login-dashboard/screenshots/s_d813b40e0e84.png"
+    ],
+    "textDiff": [
+      "- RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+      "+ RelUI auth benchmark Home Dashboard Admin Logout Member Dashboard Protected dashboard loaded. Account: user"
+    ]
+  },
+  {
+    "id": "v_18a1939e81f6",
+    "subjectId": "checkout-invalid-step-progression",
+    "app": "checkout",
+    "variant": "invalid-step-progression",
+    "faultId": "F-CHECKOUT-1",
+    "invariantId": "checkout-invalid-contact-blocks-payment",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid contact information must not advance to payment.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_a37ea7ad8870"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. invalid -> Continue to Payment ([data-testid=\"contact-next\"])"
+    ],
+    "startStateId": "s_fe1fe81a3ea6",
+    "endStateId": "s_ddf89d7c67f5",
+    "startUrl": "/checkout/invalid-step-progression",
+    "endUrl": "/checkout/invalid-step-progression/payment",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact"
+    ]
+  },
+  {
+    "id": "v_582020f26853",
+    "subjectId": "checkout-invalid-step-progression",
+    "app": "checkout",
+    "variant": "invalid-step-progression",
+    "faultId": "F-CHECKOUT-1",
+    "invariantId": "checkout-invalid-contact-blocks-payment",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid contact information must not advance to payment.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_028295fe14fd"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. invalid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "3. default -> Cart ([data-testid=\"nav-cart\"])"
+    ],
+    "startStateId": "s_fe1fe81a3ea6",
+    "endStateId": "s_ddf89d7c67f5",
+    "startUrl": "/checkout/invalid-step-progression",
+    "endUrl": "/checkout/invalid-step-progression/payment",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact"
+    ]
+  },
+  {
+    "id": "v_90a64b8351e4",
+    "subjectId": "checkout-invalid-step-progression",
+    "app": "checkout",
+    "variant": "invalid-step-progression",
+    "faultId": "F-CHECKOUT-1",
+    "invariantId": "checkout-invalid-contact-blocks-payment",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid contact information must not advance to payment.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_d06b5dacbb64"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. invalid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "3. default -> Contact ([data-testid=\"nav-contact\"])"
+    ],
+    "startStateId": "s_fe1fe81a3ea6",
+    "endStateId": "s_ddf89d7c67f5",
+    "startUrl": "/checkout/invalid-step-progression",
+    "endUrl": "/checkout/invalid-step-progression/payment",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact"
+    ]
+  },
+  {
+    "id": "v_d70348635bc1",
+    "subjectId": "checkout-invalid-step-progression",
+    "app": "checkout",
+    "variant": "invalid-step-progression",
+    "faultId": "F-CHECKOUT-1",
+    "invariantId": "checkout-invalid-contact-blocks-payment",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid contact information must not advance to payment.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_4776b6e51fbc"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. invalid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "3. default -> Payment ([data-testid=\"nav-payment\"])"
+    ],
+    "startStateId": "s_fe1fe81a3ea6",
+    "endStateId": "s_ddf89d7c67f5",
+    "startUrl": "/checkout/invalid-step-progression",
+    "endUrl": "/checkout/invalid-step-progression/payment",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact"
+    ]
+  },
+  {
+    "id": "v_51c5e96d4052",
+    "subjectId": "checkout-invalid-step-progression",
+    "app": "checkout",
+    "variant": "invalid-step-progression",
+    "faultId": "F-CHECKOUT-1",
+    "invariantId": "checkout-invalid-contact-blocks-payment",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid contact information must not advance to payment.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_72a665381a5f"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. invalid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "3. default -> Review ([data-testid=\"nav-review\"])"
+    ],
+    "startStateId": "s_fe1fe81a3ea6",
+    "endStateId": "s_ddf89d7c67f5",
+    "startUrl": "/checkout/invalid-step-progression",
+    "endUrl": "/checkout/invalid-step-progression/payment",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact"
+    ]
+  },
+  {
+    "id": "v_565cd5593129",
+    "subjectId": "checkout-invalid-step-progression",
+    "app": "checkout",
+    "variant": "invalid-step-progression",
+    "faultId": "F-CHECKOUT-1",
+    "invariantId": "checkout-invalid-contact-blocks-payment",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid contact information must not advance to payment.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_dd473662b838"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. invalid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "3. valid -> Review Order ([data-testid=\"payment-next\"])"
+    ],
+    "startStateId": "s_fe1fe81a3ea6",
+    "endStateId": "s_ddf89d7c67f5",
+    "startUrl": "/checkout/invalid-step-progression",
+    "endUrl": "/checkout/invalid-step-progression/payment",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact"
+    ]
+  },
+  {
+    "id": "v_f31bb9e2bb5e",
+    "subjectId": "checkout-invalid-step-progression",
+    "app": "checkout",
+    "variant": "invalid-step-progression",
+    "faultId": "F-CHECKOUT-1",
+    "invariantId": "checkout-invalid-contact-blocks-payment",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid contact information must not advance to payment.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_38e22e36d290"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. invalid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "3. admin -> Review Order ([data-testid=\"payment-next\"])"
+    ],
+    "startStateId": "s_fe1fe81a3ea6",
+    "endStateId": "s_ddf89d7c67f5",
+    "startUrl": "/checkout/invalid-step-progression",
+    "endUrl": "/checkout/invalid-step-progression/payment",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact"
+    ]
+  },
+  {
+    "id": "v_521ebc0c5cc1",
+    "subjectId": "checkout-invalid-step-progression",
+    "app": "checkout",
+    "variant": "invalid-step-progression",
+    "faultId": "F-CHECKOUT-1",
+    "invariantId": "checkout-invalid-contact-blocks-payment",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid contact information must not advance to payment.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_aaed9a8cf2d1"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. invalid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "3. invalid -> Review Order ([data-testid=\"payment-next\"])"
+    ],
+    "startStateId": "s_fe1fe81a3ea6",
+    "endStateId": "s_ddf89d7c67f5",
+    "startUrl": "/checkout/invalid-step-progression",
+    "endUrl": "/checkout/invalid-step-progression/payment",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact"
+    ]
+  },
+  {
+    "id": "v_b949820340e5",
+    "subjectId": "checkout-invalid-step-progression",
+    "app": "checkout",
+    "variant": "invalid-step-progression",
+    "faultId": "F-CHECKOUT-1",
+    "invariantId": "checkout-invalid-contact-blocks-payment",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid contact information must not advance to payment.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_6f258f364615"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. invalid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "3. valid -> Back to Contact ([data-testid=\"payment-back\"])"
+    ],
+    "startStateId": "s_fe1fe81a3ea6",
+    "endStateId": "s_ddf89d7c67f5",
+    "startUrl": "/checkout/invalid-step-progression",
+    "endUrl": "/checkout/invalid-step-progression/payment",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact"
+    ]
+  },
+  {
+    "id": "v_3f65e0ddcfb0",
+    "subjectId": "checkout-skip-payment",
+    "app": "checkout",
+    "variant": "skip-payment",
+    "faultId": "F-CHECKOUT-2",
+    "invariantId": "checkout-express-review-requires-payment",
+    "invariantType": "action-forbidden-state",
+    "severity": "critical",
+    "title": "Express review must not bypass payment.",
+    "description": "A forbidden state was observed after an action that should prevent it.",
+    "traceIds": [
+      "t_8afe859b172a"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. valid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "3. default -> Back to Contact ([data-testid=\"payment-back\"])",
+      "4. default -> Express Review ([data-testid=\"express-review\"])"
+    ],
+    "startStateId": "s_36eb583c5e25",
+    "endStateId": "s_2c812142cc5b",
+    "startUrl": "/checkout/skip-payment",
+    "endUrl": "/checkout/skip-payment/review",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Order Review Email: buyer@example.com Address: 100 Main Street Total: $40 Paid: no Place Order",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-skip-payment/screenshots/s_36eb583c5e25.png",
+      "artifacts/subjects/checkout-skip-payment/screenshots/s_2c812142cc5b.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Order Review Email: buyer@example.com Address: 100 Main Street Total: $40 Paid: no Place Order"
+    ]
+  },
+  {
+    "id": "v_c633136d65f9",
+    "subjectId": "checkout-negative-total",
+    "app": "checkout",
+    "variant": "negative-total",
+    "faultId": "F-CHECKOUT-3",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_f39c85fe9554"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])"
+    ],
+    "startStateId": "s_30f20df1d627",
+    "endStateId": "s_279af0c5d97d",
+    "startUrl": "/checkout/negative-total",
+    "endUrl": "/checkout/negative-total/contact",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-negative-total/screenshots/s_30f20df1d627.png",
+      "artifacts/subjects/checkout-negative-total/screenshots/s_279af0c5d97d.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review"
+    ]
+  },
+  {
+    "id": "v_3ecaa41f2087",
+    "subjectId": "checkout-negative-total",
+    "app": "checkout",
+    "variant": "negative-total",
+    "faultId": "F-CHECKOUT-3",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_eead915d8436"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. default -> Cart ([data-testid=\"nav-cart\"])"
+    ],
+    "startStateId": "s_30f20df1d627",
+    "endStateId": "s_279af0c5d97d",
+    "startUrl": "/checkout/negative-total",
+    "endUrl": "/checkout/negative-total/contact",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-negative-total/screenshots/s_30f20df1d627.png",
+      "artifacts/subjects/checkout-negative-total/screenshots/s_279af0c5d97d.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review"
+    ]
+  },
+  {
+    "id": "v_53fe843eaf73",
+    "subjectId": "checkout-negative-total",
+    "app": "checkout",
+    "variant": "negative-total",
+    "faultId": "F-CHECKOUT-3",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_3cf878f87c64"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. default -> Contact ([data-testid=\"nav-contact\"])"
+    ],
+    "startStateId": "s_30f20df1d627",
+    "endStateId": "s_279af0c5d97d",
+    "startUrl": "/checkout/negative-total",
+    "endUrl": "/checkout/negative-total/contact",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-negative-total/screenshots/s_30f20df1d627.png",
+      "artifacts/subjects/checkout-negative-total/screenshots/s_279af0c5d97d.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review"
+    ]
+  },
+  {
+    "id": "v_1939644f6da3",
+    "subjectId": "checkout-negative-total",
+    "app": "checkout",
+    "variant": "negative-total",
+    "faultId": "F-CHECKOUT-3",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_c5e986209787"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. default -> Payment ([data-testid=\"nav-payment\"])"
+    ],
+    "startStateId": "s_30f20df1d627",
+    "endStateId": "s_279af0c5d97d",
+    "startUrl": "/checkout/negative-total",
+    "endUrl": "/checkout/negative-total/contact",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-negative-total/screenshots/s_30f20df1d627.png",
+      "artifacts/subjects/checkout-negative-total/screenshots/s_279af0c5d97d.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review"
+    ]
+  },
+  {
+    "id": "v_551def077435",
+    "subjectId": "checkout-negative-total",
+    "app": "checkout",
+    "variant": "negative-total",
+    "faultId": "F-CHECKOUT-3",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_06bfd0dee3ce"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. default -> Review ([data-testid=\"nav-review\"])"
+    ],
+    "startStateId": "s_30f20df1d627",
+    "endStateId": "s_279af0c5d97d",
+    "startUrl": "/checkout/negative-total",
+    "endUrl": "/checkout/negative-total/contact",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-negative-total/screenshots/s_30f20df1d627.png",
+      "artifacts/subjects/checkout-negative-total/screenshots/s_279af0c5d97d.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review"
+    ]
+  },
+  {
+    "id": "v_773f335bca1c",
+    "subjectId": "checkout-negative-total",
+    "app": "checkout",
+    "variant": "negative-total",
+    "faultId": "F-CHECKOUT-3",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_d5ed020be2d0"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. valid -> Continue to Payment ([data-testid=\"contact-next\"])"
+    ],
+    "startStateId": "s_30f20df1d627",
+    "endStateId": "s_279af0c5d97d",
+    "startUrl": "/checkout/negative-total",
+    "endUrl": "/checkout/negative-total/contact",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-negative-total/screenshots/s_30f20df1d627.png",
+      "artifacts/subjects/checkout-negative-total/screenshots/s_279af0c5d97d.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review"
+    ]
+  },
+  {
+    "id": "v_c39f2c459105",
+    "subjectId": "checkout-negative-total",
+    "app": "checkout",
+    "variant": "negative-total",
+    "faultId": "F-CHECKOUT-3",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_d5ee12f63a8d"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. admin -> Continue to Payment ([data-testid=\"contact-next\"])"
+    ],
+    "startStateId": "s_30f20df1d627",
+    "endStateId": "s_279af0c5d97d",
+    "startUrl": "/checkout/negative-total",
+    "endUrl": "/checkout/negative-total/contact",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-negative-total/screenshots/s_30f20df1d627.png",
+      "artifacts/subjects/checkout-negative-total/screenshots/s_279af0c5d97d.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review"
+    ]
+  },
+  {
+    "id": "v_d9476d995d45",
+    "subjectId": "checkout-negative-total",
+    "app": "checkout",
+    "variant": "negative-total",
+    "faultId": "F-CHECKOUT-3",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_cc0c5ac1fadc"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. invalid -> Continue to Payment ([data-testid=\"contact-next\"])"
+    ],
+    "startStateId": "s_30f20df1d627",
+    "endStateId": "s_279af0c5d97d",
+    "startUrl": "/checkout/negative-total",
+    "endUrl": "/checkout/negative-total/contact",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-negative-total/screenshots/s_30f20df1d627.png",
+      "artifacts/subjects/checkout-negative-total/screenshots/s_279af0c5d97d.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review"
+    ]
+  },
+  {
+    "id": "v_9a6b83b8db67",
+    "subjectId": "checkout-negative-total",
+    "app": "checkout",
+    "variant": "negative-total",
+    "faultId": "F-CHECKOUT-3",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_ed023a32fba4"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. valid -> Back ([data-testid=\"contact-back\"])"
+    ],
+    "startStateId": "s_30f20df1d627",
+    "endStateId": "s_279af0c5d97d",
+    "startUrl": "/checkout/negative-total",
+    "endUrl": "/checkout/negative-total/contact",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-negative-total/screenshots/s_30f20df1d627.png",
+      "artifacts/subjects/checkout-negative-total/screenshots/s_279af0c5d97d.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review"
+    ]
+  },
+  {
+    "id": "v_3a2007904eb4",
+    "subjectId": "checkout-negative-total",
+    "app": "checkout",
+    "variant": "negative-total",
+    "faultId": "F-CHECKOUT-3",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_957f809a5d73"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. admin -> Back ([data-testid=\"contact-back\"])"
+    ],
+    "startStateId": "s_30f20df1d627",
+    "endStateId": "s_279af0c5d97d",
+    "startUrl": "/checkout/negative-total",
+    "endUrl": "/checkout/negative-total/contact",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-negative-total/screenshots/s_30f20df1d627.png",
+      "artifacts/subjects/checkout-negative-total/screenshots/s_279af0c5d97d.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review"
+    ]
+  },
+  {
+    "id": "v_779ea30d4823",
+    "subjectId": "checkout-negative-total",
+    "app": "checkout",
+    "variant": "negative-total",
+    "faultId": "F-CHECKOUT-3",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_97e464563a7a"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. invalid -> Back ([data-testid=\"contact-back\"])"
+    ],
+    "startStateId": "s_30f20df1d627",
+    "endStateId": "s_279af0c5d97d",
+    "startUrl": "/checkout/negative-total",
+    "endUrl": "/checkout/negative-total/contact",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-negative-total/screenshots/s_30f20df1d627.png",
+      "artifacts/subjects/checkout-negative-total/screenshots/s_279af0c5d97d.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review"
+    ]
+  },
+  {
+    "id": "v_d2ce6798f24a",
+    "subjectId": "checkout-negative-total",
+    "app": "checkout",
+    "variant": "negative-total",
+    "faultId": "F-CHECKOUT-3",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_ea24f46e5df0"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. valid -> Express Review ([data-testid=\"express-review\"])"
+    ],
+    "startStateId": "s_30f20df1d627",
+    "endStateId": "s_279af0c5d97d",
+    "startUrl": "/checkout/negative-total",
+    "endUrl": "/checkout/negative-total/contact",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-negative-total/screenshots/s_30f20df1d627.png",
+      "artifacts/subjects/checkout-negative-total/screenshots/s_279af0c5d97d.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review"
+    ]
+  },
+  {
+    "id": "v_dcedb7054888",
+    "subjectId": "checkout-negative-total",
+    "app": "checkout",
+    "variant": "negative-total",
+    "faultId": "F-CHECKOUT-3",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_c087b325b19e"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. admin -> Express Review ([data-testid=\"express-review\"])"
+    ],
+    "startStateId": "s_30f20df1d627",
+    "endStateId": "s_279af0c5d97d",
+    "startUrl": "/checkout/negative-total",
+    "endUrl": "/checkout/negative-total/contact",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-negative-total/screenshots/s_30f20df1d627.png",
+      "artifacts/subjects/checkout-negative-total/screenshots/s_279af0c5d97d.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review"
+    ]
+  },
+  {
+    "id": "v_29744ff021fe",
+    "subjectId": "checkout-negative-total",
+    "app": "checkout",
+    "variant": "negative-total",
+    "faultId": "F-CHECKOUT-3",
+    "invariantId": "checkout-invalid-cart-blocks-contact",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid cart quantities must not advance to contact collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_f3232ec9b9c5"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. invalid -> Express Review ([data-testid=\"express-review\"])"
+    ],
+    "startStateId": "s_30f20df1d627",
+    "endStateId": "s_279af0c5d97d",
+    "startUrl": "/checkout/negative-total",
+    "endUrl": "/checkout/negative-total/contact",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-negative-total/screenshots/s_30f20df1d627.png",
+      "artifacts/subjects/checkout-negative-total/screenshots/s_279af0c5d97d.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review"
+    ]
+  },
+  {
+    "id": "v_5eb4d41bcc6a",
+    "subjectId": "checkout-back-loses-contact",
+    "app": "checkout",
+    "variant": "back-loses-contact",
+    "faultId": "F-CHECKOUT-4",
+    "invariantId": "checkout-confirmation-paths-equivalent",
+    "invariantType": "path-equivalence",
+    "severity": "medium",
+    "title": "Alternative checkout paths that complete an order must converge to the same confirmation state.",
+    "description": "Equivalent workflow endpoints diverged across 2 representative paths.",
+    "traceIds": [
+      "t_ef4755e9d517",
+      "t_d9d4b91b6e80"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. valid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "3. valid -> Review Order ([data-testid=\"payment-next\"])",
+      "4. default -> Place Order ([data-testid=\"place-order\"])",
+      "1. valid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. valid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "3. default -> Back to Contact ([data-testid=\"payment-back\"])",
+      "4. valid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "5. valid -> Review Order ([data-testid=\"payment-next\"])",
+      "6. default -> Place Order ([data-testid=\"place-order\"])"
+    ],
+    "startStateId": "s_3c4902154c39",
+    "endStateId": "s_ef9b9c0a8be0",
+    "startUrl": "/checkout/back-loses-contact",
+    "endUrl": "/checkout/back-loses-contact/confirmation",
+    "startText": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+    "endText": "RelUI checkout benchmark Cart Contact Payment Review Order Complete Confirmation generated. Email: missing Address: missing Total: $40 Paid: yes",
+    "screenshotPaths": [
+      "artifacts/subjects/checkout-back-loses-contact/screenshots/s_3c4902154c39.png",
+      "artifacts/subjects/checkout-back-loses-contact/screenshots/s_ef9b9c0a8be0.png"
+    ],
+    "textDiff": [
+      "- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "+ RelUI checkout benchmark Cart Contact Payment Review Order Complete Confirmation generated. Email: missing Address: missing Total: $40 Paid: yes"
+    ]
+  },
+  {
+    "id": "v_a71700cbaffd",
+    "subjectId": "settings-alt-save-stale",
+    "app": "settings",
+    "variant": "alt-save-stale",
+    "faultId": "F-SETTINGS-1",
+    "invariantId": "settings-profile-save-paths-equivalent",
+    "invariantType": "path-equivalence",
+    "severity": "medium",
+    "title": "Normal and quick profile save paths must converge to the same saved profile state.",
+    "description": "Equivalent workflow endpoints diverged across 2 representative paths.",
+    "traceIds": [
+      "t_93982d6d1089",
+      "t_7cc3481ad291"
+    ],
+    "replaySteps": [
+      "1. valid -> Save Profile ([data-testid=\"save-profile\"])",
+      "1. valid -> Quick Save ([data-testid=\"quick-save-profile\"])"
+    ],
+    "startStateId": "s_5b44f2eaeaac",
+    "endStateId": "s_16c83dbbe8c0",
+    "startUrl": "/settings/alt-save-stale",
+    "endUrl": "/settings/alt-save-stale/summary",
+    "startText": "RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset",
+    "endText": "RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Default User Email notifications: off Saved: yes",
+    "screenshotPaths": [
+      "artifacts/subjects/settings-alt-save-stale/screenshots/s_5b44f2eaeaac.png",
+      "artifacts/subjects/settings-alt-save-stale/screenshots/s_16c83dbbe8c0.png"
+    ],
+    "textDiff": [
+      "- RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset",
+      "+ RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Default User Email notifications: off Saved: yes"
+    ]
+  },
+  {
+    "id": "v_c523bde1591e",
+    "subjectId": "settings-cancel-persists-change",
+    "app": "settings",
+    "variant": "cancel-persists-change",
+    "faultId": "F-SETTINGS-2",
+    "invariantId": "settings-cancel-does-not-save",
+    "invariantType": "action-forbidden-state",
+    "severity": "high",
+    "title": "Cancel must not persist edited profile data.",
+    "description": "A forbidden state was observed after an action that should prevent it.",
+    "traceIds": [
+      "t_0466048ead2d"
+    ],
+    "replaySteps": [
+      "1. valid -> Cancel ([data-testid=\"cancel-profile\"])"
+    ],
+    "startStateId": "s_c4f2c3e3a902",
+    "endStateId": "s_70c360c1d33a",
+    "startUrl": "/settings/cancel-persists-change",
+    "endUrl": "/settings/cancel-persists-change/summary",
+    "startText": "RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset",
+    "endText": "RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Taylor Email notifications: off Saved: yes",
+    "screenshotPaths": [
+      "artifacts/subjects/settings-cancel-persists-change/screenshots/s_c4f2c3e3a902.png",
+      "artifacts/subjects/settings-cancel-persists-change/screenshots/s_70c360c1d33a.png"
+    ],
+    "textDiff": [
+      "- RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset",
+      "+ RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Taylor Email notifications: off Saved: yes"
+    ]
+  },
+  {
+    "id": "v_490b7c4e3b43",
+    "subjectId": "settings-reset-does-not-clear",
+    "app": "settings",
+    "variant": "reset-does-not-clear",
+    "faultId": "F-SETTINGS-3",
+    "invariantId": "settings-reset-clears-edits",
+    "invariantType": "action-forbidden-state",
+    "severity": "high",
+    "title": "Reset must clear previously saved profile edits.",
+    "description": "A forbidden state was observed after an action that should prevent it.",
+    "traceIds": [
+      "t_c278fd5eecaa"
+    ],
+    "replaySteps": [
+      "1. valid -> Save Profile ([data-testid=\"save-profile\"])",
+      "2. default -> Profile ([data-testid=\"nav-settings\"])",
+      "3. default -> Reset ([data-testid=\"reset-profile\"])"
+    ],
+    "startStateId": "s_f073a0b2946a",
+    "endStateId": "s_5270d1d84916",
+    "startUrl": "/settings/reset-does-not-clear",
+    "endUrl": "/settings/reset-does-not-clear/summary",
+    "startText": "RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset",
+    "endText": "RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Taylor Email notifications: off Saved: yes",
+    "screenshotPaths": [
+      "artifacts/subjects/settings-reset-does-not-clear/screenshots/s_f073a0b2946a.png",
+      "artifacts/subjects/settings-reset-does-not-clear/screenshots/s_5270d1d84916.png"
+    ],
+    "textDiff": [
+      "- RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset",
+      "+ RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Taylor Email notifications: off Saved: yes"
+    ]
+  },
+  {
+    "id": "v_0b849bc211c0",
+    "subjectId": "settings-stale-notification",
+    "app": "settings",
+    "variant": "stale-notification",
+    "faultId": "F-SETTINGS-4",
+    "invariantId": "settings-notification-save-paths-equivalent",
+    "invariantType": "path-equivalence",
+    "severity": "medium",
+    "title": "Normal and quick notification save paths must converge to the same notification state.",
+    "description": "Equivalent workflow endpoints diverged across 2 representative paths.",
+    "traceIds": [
+      "t_c202da6eddc6",
+      "t_0eeb712f1b64"
+    ],
+    "replaySteps": [
+      "1. default -> Notifications ([data-testid=\"nav-notifications\"])",
+      "2. valid -> Save Notifications ([data-testid=\"save-notifications\"])",
+      "1. default -> Notifications ([data-testid=\"nav-notifications\"])",
+      "2. valid -> Quick Save ([data-testid=\"quick-save-notifications\"])"
+    ],
+    "startStateId": "s_13999a0ab7c3",
+    "endStateId": "s_81be9a85fe41",
+    "startUrl": "/settings/stale-notification",
+    "endUrl": "/settings/stale-notification/summary",
+    "startText": "RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset",
+    "endText": "RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Default User Email notifications: off Saved: yes",
+    "screenshotPaths": [
+      "artifacts/subjects/settings-stale-notification/screenshots/s_13999a0ab7c3.png",
+      "artifacts/subjects/settings-stale-notification/screenshots/s_81be9a85fe41.png"
+    ],
+    "textDiff": [
+      "- RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset",
+      "+ RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Default User Email notifications: off Saved: yes"
+    ]
+  }
+]

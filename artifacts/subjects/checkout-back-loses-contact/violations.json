@@ -1,0 +1,41 @@
+[
+  {
+    "id": "v_5eb4d41bcc6a",
+    "subjectId": "checkout-back-loses-contact",
+    "invariantId": "checkout-confirmation-paths-equivalent",
+    "invariantType": "path-equivalence",
+    "severity": "medium",
+    "title": "Alternative checkout paths that complete an order must converge to the same confirmation state.",
+    "description": "Equivalent workflow endpoints diverged across 2 representative paths.",
+    "traceIds": [
+      "t_ef4755e9d517",
+      "t_d9d4b91b6e80"
+    ],
+    "stateIds": [
+      "s_3f095d1abdf8",
+      "s_ef9b9c0a8be0"
+    ],
+    "evidence": {
+      "distinctEndpointStates": [
+        "s_3f095d1abdf8",
+        "s_ef9b9c0a8be0"
+      ],
+      "endpointFingerprints": [
+        "899d88b6eb7ebec9bc2ba399b3f7e7c563c28abf7fe4a60c8db971f690be60fd",
+        "2cae3aa348acf4173f1b945465d3e4e8cf183d4d665cfee74b925860cea19006"
+      ]
+    },
+    "replaySteps": [
+      "1. valid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. valid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "3. valid -> Review Order ([data-testid=\"payment-next\"])",
+      "4. default -> Place Order ([data-testid=\"place-order\"])",
+      "1. valid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. valid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "3. default -> Back to Contact ([data-testid=\"payment-back\"])",
+      "4. valid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "5. valid -> Review Order ([data-testid=\"payment-next\"])",
+      "6. default -> Place Order ([data-testid=\"place-order\"])"
+    ]
+  }
+]

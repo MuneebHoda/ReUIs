@@ -1,0 +1,1307 @@
+{
+  "subjectId": "auth-auth-bypass",
+  "generatedAt": "2026-05-01T22:57:56.263Z",
+  "durationMs": 8742,
+  "nodes": [
+    {
+      "id": "s_00a49100779d",
+      "url": "http://127.0.0.1:4173/auth/auth-bypass/",
+      "normalizedUrl": "/auth/auth-bypass",
+      "title": "RelUI auth auth-bypass",
+      "text": "RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+      "canonicalText": "relui auth benchmark home dashboard admin login auth portal exercise authentication and authorization flows. login open dashboard open admin",
+      "semanticFingerprint": "b84b22169878aa52c70e40f7814bf60064f9c98c73058e8f38f0fc665ad77a7a",
+      "controlSignature": "a:admin:[data-testid=\"nav-admin\"]:|a:dashboard:[data-testid=\"nav-dashboard\"]:|a:home:[data-testid=\"nav-home\"]:|a:login:[data-testid=\"home-login\"]:|a:login:[data-testid=\"nav-login\"]:|a:open admin:[data-testid=\"home-admin\"]:|a:open dashboard:[data-testid=\"home-dashboard\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-home\"]",
+          "label": "Home",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-dashboard\"]",
+          "label": "Dashboard",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-admin\"]",
+          "label": "Admin",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-login\"]",
+          "label": "Login",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"home-login\"]",
+          "label": "Login",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"home-dashboard\"]",
+          "label": "Open Dashboard",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"home-admin\"]",
+          "label": "Open Admin",
+          "tag": "a",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/auth-auth-bypass/screenshots/s_00a49100779d.png"
+    },
+    {
+      "id": "s_693c2edca823",
+      "url": "http://127.0.0.1:4173/auth/auth-bypass/dashboard",
+      "normalizedUrl": "/auth/auth-bypass/dashboard",
+      "title": "RelUI auth auth-bypass",
+      "text": "RelUI auth benchmark Home Dashboard Admin Login Member Dashboard Protected dashboard loaded. Account: guest",
+      "canonicalText": "relui auth benchmark home dashboard admin login member dashboard protected dashboard loaded. account: guest",
+      "semanticFingerprint": "327ced5720e63ef1451ce80e1a89e400ac99605084f62bed68423624ce984b1a",
+      "controlSignature": "a:admin:[data-testid=\"nav-admin\"]:|a:dashboard:[data-testid=\"nav-dashboard\"]:|a:home:[data-testid=\"nav-home\"]:|a:login:[data-testid=\"nav-login\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-home\"]",
+          "label": "Home",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-dashboard\"]",
+          "label": "Dashboard",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-admin\"]",
+          "label": "Admin",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-login\"]",
+          "label": "Login",
+          "tag": "a",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/auth-auth-bypass/screenshots/s_693c2edca823.png"
+    },
+    {
+      "id": "s_d28f51fa1b00",
+      "url": "http://127.0.0.1:4173/auth/auth-bypass/login",
+      "normalizedUrl": "/auth/auth-bypass/login",
+      "title": "RelUI auth auth-bypass",
+      "text": "RelUI auth benchmark Home Dashboard Admin Login Login Username Password User Login Admin Login",
+      "canonicalText": "relui auth benchmark home dashboard admin login login username password user login admin login",
+      "semanticFingerprint": "f3e4c33051cbdc992469b3af8842caf3ffb23d92ad64dfd3e167460c96fec2ee",
+      "controlSignature": "a:admin:[data-testid=\"nav-admin\"]:|a:dashboard:[data-testid=\"nav-dashboard\"]:|a:home:[data-testid=\"nav-home\"]:|a:login:[data-testid=\"nav-login\"]:|button:admin login:[data-testid=\"admin-login-submit\"]:|button:user login:[data-testid=\"user-login-submit\"]:|input::[data-testid=\"password\"]:|input::[data-testid=\"username\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-home\"]",
+          "label": "Home",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-dashboard\"]",
+          "label": "Dashboard",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-admin\"]",
+          "label": "Admin",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-login\"]",
+          "label": "Login",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"username\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"password\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"user-login-submit\"]",
+          "label": "User Login",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"admin-login-submit\"]",
+          "label": "Admin Login",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/auth-auth-bypass/screenshots/s_d28f51fa1b00.png"
+    },
+    {
+      "id": "s_40aff46e1937",
+      "url": "http://127.0.0.1:4173/auth/auth-bypass/dashboard",
+      "normalizedUrl": "/auth/auth-bypass/dashboard",
+      "title": "RelUI auth auth-bypass",
+      "text": "RelUI auth benchmark Home Dashboard Admin Logout Member Dashboard Protected dashboard loaded. Account: user",
+      "canonicalText": "relui auth benchmark home dashboard admin logout member dashboard protected dashboard loaded. account: user",
+      "semanticFingerprint": "d8b1d3bb91d3b400e5cacebc146b7c2345b89c0507b52e7332e420f0e95abadd",
+      "controlSignature": "a:admin:[data-testid=\"nav-admin\"]:|a:dashboard:[data-testid=\"nav-dashboard\"]:|a:home:[data-testid=\"nav-home\"]:|button:logout:[data-testid=\"logout\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-home\"]",
+          "label": "Home",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-dashboard\"]",
+          "label": "Dashboard",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-admin\"]",
+          "label": "Admin",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"logout\"]",
+          "label": "Logout",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/auth-auth-bypass/screenshots/s_40aff46e1937.png"
+    },
+    {
+      "id": "s_121bdced24c8",
+      "url": "http://127.0.0.1:4173/auth/auth-bypass/dashboard",
+      "normalizedUrl": "/auth/auth-bypass/dashboard",
+      "title": "RelUI auth auth-bypass",
+      "text": "RelUI auth benchmark Home Dashboard Admin Logout Member Dashboard Protected dashboard loaded. Account: admin",
+      "canonicalText": "relui auth benchmark home dashboard admin logout member dashboard protected dashboard loaded. account: admin",
+      "semanticFingerprint": "b2ebab60f134505e209d50d2a399485c6111c85f79342f671f1cbc6b6de90ae8",
+      "controlSignature": "a:admin:[data-testid=\"nav-admin\"]:|a:dashboard:[data-testid=\"nav-dashboard\"]:|a:home:[data-testid=\"nav-home\"]:|button:logout:[data-testid=\"logout\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-home\"]",
+          "label": "Home",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-dashboard\"]",
+          "label": "Dashboard",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-admin\"]",
+          "label": "Admin",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"logout\"]",
+          "label": "Logout",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/auth-auth-bypass/screenshots/s_121bdced24c8.png"
+    },
+    {
+      "id": "s_3231a37f471b",
+      "url": "http://127.0.0.1:4173/auth/auth-bypass/admin",
+      "normalizedUrl": "/auth/auth-bypass/admin",
+      "title": "RelUI auth auth-bypass",
+      "text": "RelUI auth benchmark Home Dashboard Admin Logout Admin Console Role restricted administration tools.",
+      "canonicalText": "relui auth benchmark home dashboard admin logout admin console role restricted administration tools.",
+      "semanticFingerprint": "f45a7185e680d2c319ecfa19338712c2f95ddb04d35906486e0cabf92dffc9bb",
+      "controlSignature": "a:admin:[data-testid=\"nav-admin\"]:|a:dashboard:[data-testid=\"nav-dashboard\"]:|a:home:[data-testid=\"nav-home\"]:|button:logout:[data-testid=\"logout\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-home\"]",
+          "label": "Home",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-dashboard\"]",
+          "label": "Dashboard",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-admin\"]",
+          "label": "Admin",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"logout\"]",
+          "label": "Logout",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/auth-auth-bypass/screenshots/s_3231a37f471b.png"
+    },
+    {
+      "id": "s_3ec6138b0f7a",
+      "url": "http://127.0.0.1:4173/auth/auth-bypass/login",
+      "normalizedUrl": "/auth/auth-bypass/login",
+      "title": "RelUI auth auth-bypass",
+      "text": "RelUI auth benchmark Home Dashboard Admin Login Login Invalid credentials. Username Password User Login Admin Login",
+      "canonicalText": "relui auth benchmark home dashboard admin login login invalid credentials. username password user login admin login",
+      "semanticFingerprint": "f09b878622131c492ce70e3edf941a674bd7a669b59833b93caa2d70bea7c9ab",
+      "controlSignature": "a:admin:[data-testid=\"nav-admin\"]:|a:dashboard:[data-testid=\"nav-dashboard\"]:|a:home:[data-testid=\"nav-home\"]:|a:login:[data-testid=\"nav-login\"]:|button:admin login:[data-testid=\"admin-login-submit\"]:|button:user login:[data-testid=\"user-login-submit\"]:|input::[data-testid=\"password\"]:|input::[data-testid=\"username\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-home\"]",
+          "label": "Home",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-dashboard\"]",
+          "label": "Dashboard",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-admin\"]",
+          "label": "Admin",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-login\"]",
+          "label": "Login",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"username\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"password\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"user-login-submit\"]",
+          "label": "User Login",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"admin-login-submit\"]",
+          "label": "Admin Login",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/auth-auth-bypass/screenshots/s_3ec6138b0f7a.png"
+    },
+    {
+      "id": "s_361ec819d050",
+      "url": "http://127.0.0.1:4173/auth/auth-bypass/logout",
+      "normalizedUrl": "/auth/auth-bypass/logout",
+      "title": "RelUI auth auth-bypass",
+      "text": "RelUI auth benchmark Home Dashboard Admin Login Signed out Your session should no longer access protected pages.",
+      "canonicalText": "relui auth benchmark home dashboard admin login signed out your session should no longer access protected pages.",
+      "semanticFingerprint": "25b22f1301d882a1e2cc5491f0db0fde7d49404d43b69a9a7ff0b1010786bebb",
+      "controlSignature": "a:admin:[data-testid=\"nav-admin\"]:|a:dashboard:[data-testid=\"nav-dashboard\"]:|a:home:[data-testid=\"nav-home\"]:|a:login:[data-testid=\"nav-login\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-home\"]",
+          "label": "Home",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-dashboard\"]",
+          "label": "Dashboard",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-admin\"]",
+          "label": "Admin",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-login\"]",
+          "label": "Login",
+          "tag": "a",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/auth-auth-bypass/screenshots/s_361ec819d050.png"
+    },
+    {
+      "id": "s_5713c32edde6",
+      "url": "http://127.0.0.1:4173/auth/auth-bypass/admin",
+      "normalizedUrl": "/auth/auth-bypass/admin",
+      "title": "RelUI auth auth-bypass",
+      "text": "RelUI auth benchmark Home Dashboard Admin Logout Access Denied Admin Console requires administrator login. Go to Login",
+      "canonicalText": "relui auth benchmark home dashboard admin logout access denied admin console requires administrator login. go to login",
+      "semanticFingerprint": "825097d5a6040a0bf8209f35e614dba9bfa6c3103f829d750b9b794ac6be764e",
+      "controlSignature": "a:admin:[data-testid=\"nav-admin\"]:|a:dashboard:[data-testid=\"nav-dashboard\"]:|a:go to login:[data-testid=\"denied-login\"]:|a:home:[data-testid=\"nav-home\"]:|button:logout:[data-testid=\"logout\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-home\"]",
+          "label": "Home",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-dashboard\"]",
+          "label": "Dashboard",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-admin\"]",
+          "label": "Admin",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"logout\"]",
+          "label": "Logout",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"denied-login\"]",
+          "label": "Go to Login",
+          "tag": "a",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/auth-auth-bypass/screenshots/s_5713c32edde6.png"
+    },
+    {
+      "id": "s_9a505be1bddc",
+      "url": "http://127.0.0.1:4173/auth/auth-bypass/admin",
+      "normalizedUrl": "/auth/auth-bypass/admin",
+      "title": "RelUI auth auth-bypass",
+      "text": "RelUI auth benchmark Home Dashboard Admin Login Access Denied Admin Console requires administrator login. Go to Login",
+      "canonicalText": "relui auth benchmark home dashboard admin login access denied admin console requires administrator login. go to login",
+      "semanticFingerprint": "69325d7149d4fe45b32d736b47ab665873c53aef8dded1c40b7938d85c99183b",
+      "controlSignature": "a:admin:[data-testid=\"nav-admin\"]:|a:dashboard:[data-testid=\"nav-dashboard\"]:|a:go to login:[data-testid=\"denied-login\"]:|a:home:[data-testid=\"nav-home\"]:|a:login:[data-testid=\"nav-login\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-home\"]",
+          "label": "Home",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-dashboard\"]",
+          "label": "Dashboard",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-admin\"]",
+          "label": "Admin",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-login\"]",
+          "label": "Login",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"denied-login\"]",
+          "label": "Go to Login",
+          "tag": "a",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/auth-auth-bypass/screenshots/s_9a505be1bddc.png"
+    },
+    {
+      "id": "s_14f02c912545",
+      "url": "http://127.0.0.1:4173/auth/auth-bypass/",
+      "normalizedUrl": "/auth/auth-bypass",
+      "title": "RelUI auth auth-bypass",
+      "text": "RelUI auth benchmark Home Dashboard Admin Logout Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
+      "canonicalText": "relui auth benchmark home dashboard admin logout auth portal exercise authentication and authorization flows. login open dashboard open admin",
+      "semanticFingerprint": "2873ecc15edd2bbd5dfc239da2e529a8ca8fd91f11e1ef29dd50a8f94bace40c",
+      "controlSignature": "a:admin:[data-testid=\"nav-admin\"]:|a:dashboard:[data-testid=\"nav-dashboard\"]:|a:home:[data-testid=\"nav-home\"]:|a:login:[data-testid=\"home-login\"]:|a:open admin:[data-testid=\"home-admin\"]:|a:open dashboard:[data-testid=\"home-dashboard\"]:|button:logout:[data-testid=\"logout\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-home\"]",
+          "label": "Home",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-dashboard\"]",
+          "label": "Dashboard",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-admin\"]",
+          "label": "Admin",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"logout\"]",
+          "label": "Logout",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"home-login\"]",
+          "label": "Login",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"home-dashboard\"]",
+          "label": "Open Dashboard",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"home-admin\"]",
+          "label": "Open Admin",
+          "tag": "a",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/auth-auth-bypass/screenshots/s_14f02c912545.png"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_9b2e113cc3b4",
+      "from": "s_00a49100779d",
+      "to": "s_693c2edca823",
+      "selector": "[data-testid=\"home-dashboard\"]",
+      "label": "Open Dashboard",
+      "profileName": "default",
+      "traceIds": [
+        "t_7ef308de435b",
+        "t_23f896faae5c",
+        "t_e73944046bb1",
+        "t_fd37f6f530bc",
+        "t_a47da7883ffd"
+      ]
+    },
+    {
+      "id": "e_9a51436d7829",
+      "from": "s_00a49100779d",
+      "to": "s_d28f51fa1b00",
+      "selector": "[data-testid=\"home-login\"]",
+      "label": "Login",
+      "profileName": "default",
+      "traceIds": [
+        "t_3c0c350400bc",
+        "t_91cc3aead8ca",
+        "t_97c034278884",
+        "t_519eb8b00d1d",
+        "t_50263663be80",
+        "t_5b810b7a85ab",
+        "t_f5365a1fb1d2"
+      ]
+    },
+    {
+      "id": "e_a70037a6b1c0",
+      "from": "s_d28f51fa1b00",
+      "to": "s_40aff46e1937",
+      "selector": "[data-testid=\"user-login-submit\"]",
+      "label": "User Login",
+      "profileName": "valid",
+      "traceIds": [
+        "t_3c0c350400bc",
+        "t_519eb8b00d1d",
+        "t_50263663be80",
+        "t_f5365a1fb1d2"
+      ]
+    },
+    {
+      "id": "e_39c418276b83",
+      "from": "s_d28f51fa1b00",
+      "to": "s_121bdced24c8",
+      "selector": "[data-testid=\"admin-login-submit\"]",
+      "label": "Admin Login",
+      "profileName": "admin",
+      "traceIds": [
+        "t_91cc3aead8ca"
+      ]
+    },
+    {
+      "id": "e_189981e0c5c2",
+      "from": "s_121bdced24c8",
+      "to": "s_3231a37f471b",
+      "selector": "[data-testid=\"nav-admin\"]",
+      "label": "Admin",
+      "profileName": "default",
+      "traceIds": [
+        "t_91cc3aead8ca"
+      ]
+    },
+    {
+      "id": "e_ad20e0e49010",
+      "from": "s_d28f51fa1b00",
+      "to": "s_3ec6138b0f7a",
+      "selector": "[data-testid=\"user-login-submit\"]",
+      "label": "User Login",
+      "profileName": "invalid",
+      "traceIds": [
+        "t_97c034278884"
+      ]
+    },
+    {
+      "id": "e_567347533d8a",
+      "from": "s_40aff46e1937",
+      "to": "s_361ec819d050",
+      "selector": "[data-testid=\"logout\"]",
+      "label": "Logout",
+      "profileName": "default",
+      "traceIds": [
+        "t_519eb8b00d1d"
+      ]
+    },
+    {
+      "id": "e_bf7753a862fc",
+      "from": "s_361ec819d050",
+      "to": "s_693c2edca823",
+      "selector": "[data-testid=\"nav-dashboard\"]",
+      "label": "Dashboard",
+      "profileName": "default",
+      "traceIds": [
+        "t_519eb8b00d1d"
+      ]
+    },
+    {
+      "id": "e_c046e8cb57e4",
+      "from": "s_40aff46e1937",
+      "to": "s_5713c32edde6",
+      "selector": "[data-testid=\"nav-admin\"]",
+      "label": "Admin",
+      "profileName": "default",
+      "traceIds": [
+        "t_50263663be80"
+      ]
+    },
+    {
+      "id": "e_3d7e3655886e",
+      "from": "s_00a49100779d",
+      "to": "s_00a49100779d",
+      "selector": "[data-testid=\"nav-home\"]",
+      "label": "Home",
+      "profileName": "default",
+      "traceIds": [
+        "t_c7aa792eccfa"
+      ]
+    },
+    {
+      "id": "e_8de7f7c05647",
+      "from": "s_00a49100779d",
+      "to": "s_693c2edca823",
+      "selector": "[data-testid=\"nav-dashboard\"]",
+      "label": "Dashboard",
+      "profileName": "default",
+      "traceIds": [
+        "t_8a1e592e2e16"
+      ]
+    },
+    {
+      "id": "e_399f2d7312a9",
+      "from": "s_00a49100779d",
+      "to": "s_9a505be1bddc",
+      "selector": "[data-testid=\"nav-admin\"]",
+      "label": "Admin",
+      "profileName": "default",
+      "traceIds": [
+        "t_54302cb6940c"
+      ]
+    },
+    {
+      "id": "e_d73ce6531827",
+      "from": "s_00a49100779d",
+      "to": "s_d28f51fa1b00",
+      "selector": "[data-testid=\"nav-login\"]",
+      "label": "Login",
+      "profileName": "default",
+      "traceIds": [
+        "t_8cba11e3153c"
+      ]
+    },
+    {
+      "id": "e_1ce7c97f3781",
+      "from": "s_00a49100779d",
+      "to": "s_9a505be1bddc",
+      "selector": "[data-testid=\"home-admin\"]",
+      "label": "Open Admin",
+      "profileName": "default",
+      "traceIds": [
+        "t_ec400112d18f"
+      ]
+    },
+    {
+      "id": "e_fe771a4fd150",
+      "from": "s_693c2edca823",
+      "to": "s_00a49100779d",
+      "selector": "[data-testid=\"nav-home\"]",
+      "label": "Home",
+      "profileName": "default",
+      "traceIds": [
+        "t_23f896faae5c"
+      ]
+    },
+    {
+      "id": "e_945d495df253",
+      "from": "s_693c2edca823",
+      "to": "s_693c2edca823",
+      "selector": "[data-testid=\"nav-dashboard\"]",
+      "label": "Dashboard",
+      "profileName": "default",
+      "traceIds": [
+        "t_e73944046bb1"
+      ]
+    },
+    {
+      "id": "e_4b4abb6d68be",
+      "from": "s_693c2edca823",
+      "to": "s_9a505be1bddc",
+      "selector": "[data-testid=\"nav-admin\"]",
+      "label": "Admin",
+      "profileName": "default",
+      "traceIds": [
+        "t_fd37f6f530bc"
+      ]
+    },
+    {
+      "id": "e_6133c0c71abf",
+      "from": "s_693c2edca823",
+      "to": "s_d28f51fa1b00",
+      "selector": "[data-testid=\"nav-login\"]",
+      "label": "Login",
+      "profileName": "default",
+      "traceIds": [
+        "t_a47da7883ffd"
+      ]
+    },
+    {
+      "id": "e_679cb8a3d757",
+      "from": "s_40aff46e1937",
+      "to": "s_14f02c912545",
+      "selector": "[data-testid=\"nav-home\"]",
+      "label": "Home",
+      "profileName": "default",
+      "traceIds": [
+        "t_f5365a1fb1d2"
+      ]
+    }
+  ],
+  "traces": [
+    {
+      "id": "t_cced28c6dc3f",
+      "subjectId": "auth-auth-bypass",
+      "signature": "start",
+      "steps": [],
+      "stateIds": [
+        "s_00a49100779d"
+      ],
+      "finalStateId": "s_00a49100779d"
+    },
+    {
+      "id": "t_7ef308de435b",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"home-dashboard\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"home-dashboard\"]",
+            "label": "Open Dashboard",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_693c2edca823"
+      ],
+      "finalStateId": "s_693c2edca823"
+    },
+    {
+      "id": "t_3c0c350400bc",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"home-login\"] -> valid:[data-testid=\"user-login-submit\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"home-login\"]",
+            "label": "Login",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"user-login-submit\"]",
+            "label": "User Login",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_d28f51fa1b00",
+        "s_40aff46e1937"
+      ],
+      "finalStateId": "s_40aff46e1937"
+    },
+    {
+      "id": "t_91cc3aead8ca",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"home-login\"] -> admin:[data-testid=\"admin-login-submit\"] -> default:[data-testid=\"nav-admin\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"home-login\"]",
+            "label": "Login",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"admin-login-submit\"]",
+            "label": "Admin Login",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "admin",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-admin\"]",
+            "label": "Admin",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_d28f51fa1b00",
+        "s_121bdced24c8",
+        "s_3231a37f471b"
+      ],
+      "finalStateId": "s_3231a37f471b"
+    },
+    {
+      "id": "t_97c034278884",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"home-login\"] -> invalid:[data-testid=\"user-login-submit\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"home-login\"]",
+            "label": "Login",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"user-login-submit\"]",
+            "label": "User Login",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_d28f51fa1b00",
+        "s_3ec6138b0f7a"
+      ],
+      "finalStateId": "s_3ec6138b0f7a"
+    },
+    {
+      "id": "t_519eb8b00d1d",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"home-login\"] -> valid:[data-testid=\"user-login-submit\"] -> default:[data-testid=\"logout\"] -> default:[data-testid=\"nav-dashboard\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"home-login\"]",
+            "label": "Login",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"user-login-submit\"]",
+            "label": "User Login",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"logout\"]",
+            "label": "Logout",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-dashboard\"]",
+            "label": "Dashboard",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_d28f51fa1b00",
+        "s_40aff46e1937",
+        "s_361ec819d050",
+        "s_693c2edca823"
+      ],
+      "finalStateId": "s_693c2edca823"
+    },
+    {
+      "id": "t_50263663be80",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"home-login\"] -> valid:[data-testid=\"user-login-submit\"] -> default:[data-testid=\"nav-admin\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"home-login\"]",
+            "label": "Login",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"user-login-submit\"]",
+            "label": "User Login",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-admin\"]",
+            "label": "Admin",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_d28f51fa1b00",
+        "s_40aff46e1937",
+        "s_5713c32edde6"
+      ],
+      "finalStateId": "s_5713c32edde6"
+    },
+    {
+      "id": "t_c7aa792eccfa",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"nav-home\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-home\"]",
+            "label": "Home",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/auth/auth-bypass/",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_00a49100779d"
+      ],
+      "finalStateId": "s_00a49100779d"
+    },
+    {
+      "id": "t_8a1e592e2e16",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"nav-dashboard\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-dashboard\"]",
+            "label": "Dashboard",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/auth/auth-bypass/dashboard",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_693c2edca823"
+      ],
+      "finalStateId": "s_693c2edca823"
+    },
+    {
+      "id": "t_54302cb6940c",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"nav-admin\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-admin\"]",
+            "label": "Admin",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/auth/auth-bypass/admin",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_9a505be1bddc"
+      ],
+      "finalStateId": "s_9a505be1bddc"
+    },
+    {
+      "id": "t_8cba11e3153c",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"nav-login\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-login\"]",
+            "label": "Login",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/auth/auth-bypass/login",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_d28f51fa1b00"
+      ],
+      "finalStateId": "s_d28f51fa1b00"
+    },
+    {
+      "id": "t_5b810b7a85ab",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"home-login\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"home-login\"]",
+            "label": "Login",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/auth/auth-bypass/login",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_d28f51fa1b00"
+      ],
+      "finalStateId": "s_d28f51fa1b00"
+    },
+    {
+      "id": "t_ec400112d18f",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"home-admin\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"home-admin\"]",
+            "label": "Open Admin",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/auth/auth-bypass/admin",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_9a505be1bddc"
+      ],
+      "finalStateId": "s_9a505be1bddc"
+    },
+    {
+      "id": "t_23f896faae5c",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"home-dashboard\"] -> default:[data-testid=\"nav-home\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"home-dashboard\"]",
+            "label": "Open Dashboard",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-home\"]",
+            "label": "Home",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/auth/auth-bypass/",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_693c2edca823",
+        "s_00a49100779d"
+      ],
+      "finalStateId": "s_00a49100779d"
+    },
+    {
+      "id": "t_e73944046bb1",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"home-dashboard\"] -> default:[data-testid=\"nav-dashboard\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"home-dashboard\"]",
+            "label": "Open Dashboard",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-dashboard\"]",
+            "label": "Dashboard",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/auth/auth-bypass/dashboard",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_693c2edca823",
+        "s_693c2edca823"
+      ],
+      "finalStateId": "s_693c2edca823"
+    },
+    {
+      "id": "t_fd37f6f530bc",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"home-dashboard\"] -> default:[data-testid=\"nav-admin\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"home-dashboard\"]",
+            "label": "Open Dashboard",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-admin\"]",
+            "label": "Admin",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/auth/auth-bypass/admin",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_693c2edca823",
+        "s_9a505be1bddc"
+      ],
+      "finalStateId": "s_9a505be1bddc"
+    },
+    {
+      "id": "t_a47da7883ffd",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"home-dashboard\"] -> default:[data-testid=\"nav-login\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"home-dashboard\"]",
+            "label": "Open Dashboard",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-login\"]",
+            "label": "Login",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/auth/auth-bypass/login",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_693c2edca823",
+        "s_d28f51fa1b00"
+      ],
+      "finalStateId": "s_d28f51fa1b00"
+    },
+    {
+      "id": "t_f5365a1fb1d2",
+      "subjectId": "auth-auth-bypass",
+      "signature": "default:[data-testid=\"home-login\"] -> valid:[data-testid=\"user-login-submit\"] -> default:[data-testid=\"nav-home\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"home-login\"]",
+            "label": "Login",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"user-login-submit\"]",
+            "label": "User Login",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-home\"]",
+            "label": "Home",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/auth/auth-bypass/",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_00a49100779d",
+        "s_d28f51fa1b00",
+        "s_40aff46e1937",
+        "s_14f02c912545"
+      ],
+      "finalStateId": "s_14f02c912545"
+    }
+  ],
+  "stats": {
+    "states": 11,
+    "edges": 19,
+    "traces": 18,
+    "maxDepth": 4,
+    "exploredActions": 104
+  }
+}

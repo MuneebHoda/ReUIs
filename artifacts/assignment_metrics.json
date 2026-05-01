@@ -1,0 +1,21 @@
+{
+  "appsTested": 3,
+  "appNames": [
+    "auth",
+    "checkout",
+    "settings"
+  ],
+  "subjectVariants": 15,
+  "cleanVariants": 3,
+  "faultyVariants": 12,
+  "faultsInjected": 12,
+  "statesDiscovered": 163,
+  "transitionsDiscovered": 340,
+  "tracesExplored": 332,
+  "bugsDetected": 12,
+  "falsePositives": 0,
+  "relationalViolations": 36,
+  "structuralDetections": 3,
+  "visualDetections": 0,
+  "runtimeMs": 170664
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "v_3f65e0ddcfb0",
+    "subjectId": "checkout-skip-payment",
+    "invariantId": "checkout-express-review-requires-payment",
+    "invariantType": "action-forbidden-state",
+    "severity": "critical",
+    "title": "Express review must not bypass payment.",
+    "description": "A forbidden state was observed after an action that should prevent it.",
+    "traceIds": [
+      "t_8afe859b172a"
+    ],
+    "stateIds": [
+      "s_36eb583c5e25",
+      "s_9bfd85710f34",
+      "s_a221645be934",
+      "s_1d3829056120",
+      "s_2c812142cc5b"
+    ],
+    "evidence": {
+      "actionSelectors": [
+        "[data-testid=\"express-review\"]"
+      ],
+      "forbiddenStateIds": [
+        "s_2c812142cc5b"
+      ]
+    },
+    "replaySteps": [
+      "1. valid -> Continue to Contact ([data-testid=\"cart-next\"])",
+      "2. valid -> Continue to Payment ([data-testid=\"contact-next\"])",
+      "3. default -> Back to Contact ([data-testid=\"payment-back\"])",
+      "4. default -> Express Review ([data-testid=\"express-review\"])"
+    ]
+  }
+]

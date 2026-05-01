@@ -1,0 +1,35 @@
+[
+  {
+    "id": "v_69e967be99b7",
+    "subjectId": "auth-logout-retains-access",
+    "invariantId": "auth-logout-clears-protected-access",
+    "invariantType": "action-forbidden-state",
+    "severity": "critical",
+    "title": "Protected pages must not be reachable after logout.",
+    "description": "A forbidden state was observed after an action that should prevent it.",
+    "traceIds": [
+      "t_519eb8b00d1d"
+    ],
+    "stateIds": [
+      "s_d8505850d93d",
+      "s_66f3774cf417",
+      "s_69d58cc9a709",
+      "s_33b92a4abe70",
+      "s_69d58cc9a709"
+    ],
+    "evidence": {
+      "actionSelectors": [
+        "[data-testid=\"logout\"]"
+      ],
+      "forbiddenStateIds": [
+        "s_69d58cc9a709"
+      ]
+    },
+    "replaySteps": [
+      "1. default -> Login ([data-testid=\"home-login\"])",
+      "2. valid -> User Login ([data-testid=\"user-login-submit\"])",
+      "3. default -> Logout ([data-testid=\"logout\"])",
+      "4. default -> Dashboard ([data-testid=\"nav-dashboard\"])"
+    ]
+  }
+]

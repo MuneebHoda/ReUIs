@@ -1,0 +1,31 @@
+[
+  {
+    "id": "v_55cc6dd4d85c",
+    "subjectId": "auth-role-escalation",
+    "invariantId": "auth-admin-requires-admin-login",
+    "invariantType": "auth-precondition",
+    "severity": "critical",
+    "title": "Admin Console access must be preceded by the admin login action.",
+    "description": "A restricted state was reachable without the required authentication or authorization action.",
+    "traceIds": [
+      "t_50263663be80"
+    ],
+    "stateIds": [
+      "s_d7c20baf0817",
+      "s_8747cabeacc6",
+      "s_382d3f095369",
+      "s_8c7e60168213"
+    ],
+    "evidence": {
+      "missingRequiredActions": [
+        "[data-testid=\"admin-login-submit\"]"
+      ],
+      "finalState": "s_8c7e60168213"
+    },
+    "replaySteps": [
+      "1. default -> Login ([data-testid=\"home-login\"])",
+      "2. valid -> User Login ([data-testid=\"user-login-submit\"])",
+      "3. default -> Admin ([data-testid=\"nav-admin\"])"
+    ]
+  }
+]

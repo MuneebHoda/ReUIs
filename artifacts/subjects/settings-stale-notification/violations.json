@@ -1,0 +1,35 @@
+[
+  {
+    "id": "v_0b849bc211c0",
+    "subjectId": "settings-stale-notification",
+    "invariantId": "settings-notification-save-paths-equivalent",
+    "invariantType": "path-equivalence",
+    "severity": "medium",
+    "title": "Normal and quick notification save paths must converge to the same notification state.",
+    "description": "Equivalent workflow endpoints diverged across 2 representative paths.",
+    "traceIds": [
+      "t_c202da6eddc6",
+      "t_0eeb712f1b64"
+    ],
+    "stateIds": [
+      "s_2a172c5b1c79",
+      "s_81be9a85fe41"
+    ],
+    "evidence": {
+      "distinctEndpointStates": [
+        "s_2a172c5b1c79",
+        "s_81be9a85fe41"
+      ],
+      "endpointFingerprints": [
+        "17b55a60d3bd3c29e5416f46a9a31f41319f7d717c857701f4a3384c10dcdecd",
+        "a6df71399039e907df45f13da47f052515d0acd83dd9a82276dae5d791e3514d"
+      ]
+    },
+    "replaySteps": [
+      "1. default -> Notifications ([data-testid=\"nav-notifications\"])",
+      "2. valid -> Save Notifications ([data-testid=\"save-notifications\"])",
+      "1. default -> Notifications ([data-testid=\"nav-notifications\"])",
+      "2. valid -> Quick Save ([data-testid=\"quick-save-notifications\"])"
+    ]
+  }
+]

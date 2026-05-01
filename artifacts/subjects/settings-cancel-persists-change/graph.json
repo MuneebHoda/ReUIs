@@ -1,0 +1,1164 @@
+{
+  "subjectId": "settings-cancel-persists-change",
+  "generatedAt": "2026-05-01T23:00:13.576Z",
+  "durationMs": 7731,
+  "nodes": [
+    {
+      "id": "s_c4f2c3e3a902",
+      "url": "http://127.0.0.1:4173/settings/cancel-persists-change/",
+      "normalizedUrl": "/settings/cancel-persists-change",
+      "title": "RelUI settings cancel-persists-change",
+      "text": "RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset",
+      "canonicalText": "relui settings benchmark profile notifications summary profile settings display name save profile quick save cancel reset",
+      "semanticFingerprint": "7cc036ae43e7487e33c0e382dc05d98641af1b41f40695315a9e9c4062e20ff1",
+      "controlSignature": "a:notifications:[data-testid=\"nav-notifications\"]:|a:profile:[data-testid=\"nav-settings\"]:|a:summary:[data-testid=\"nav-summary\"]:|button:cancel:[data-testid=\"cancel-profile\"]:|button:quick save:[data-testid=\"quick-save-profile\"]:|button:reset:[data-testid=\"reset-profile\"]:|button:save profile:[data-testid=\"save-profile\"]:|input::[data-testid=\"displayName\"]:default user",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-settings\"]",
+          "label": "Profile",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-notifications\"]",
+          "label": "Notifications",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-summary\"]",
+          "label": "Summary",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"displayName\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": "Default User"
+        },
+        {
+          "selector": "[data-testid=\"save-profile\"]",
+          "label": "Save Profile",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"quick-save-profile\"]",
+          "label": "Quick Save",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"cancel-profile\"]",
+          "label": "Cancel",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"reset-profile\"]",
+          "label": "Reset",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/settings-cancel-persists-change/screenshots/s_c4f2c3e3a902.png"
+    },
+    {
+      "id": "s_70c360c1d33a",
+      "url": "http://127.0.0.1:4173/settings/cancel-persists-change/summary",
+      "normalizedUrl": "/settings/cancel-persists-change/summary",
+      "title": "RelUI settings cancel-persists-change",
+      "text": "RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Taylor Email notifications: off Saved: yes",
+      "canonicalText": "relui settings benchmark profile notifications summary settings saved display name: taylor email notifications: off saved: yes",
+      "semanticFingerprint": "f07062104673735947c1fb63aacce15c8f927e03a309a26714159874b9cc31af",
+      "controlSignature": "a:notifications:[data-testid=\"nav-notifications\"]:|a:profile:[data-testid=\"nav-settings\"]:|a:summary:[data-testid=\"nav-summary\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-settings\"]",
+          "label": "Profile",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-notifications\"]",
+          "label": "Notifications",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-summary\"]",
+          "label": "Summary",
+          "tag": "a",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/settings-cancel-persists-change/screenshots/s_70c360c1d33a.png"
+    },
+    {
+      "id": "s_c9954092a2a6",
+      "url": "http://127.0.0.1:4173/settings/cancel-persists-change/profile",
+      "normalizedUrl": "/settings/cancel-persists-change/profile",
+      "title": "RelUI settings cancel-persists-change",
+      "text": "RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset",
+      "canonicalText": "relui settings benchmark profile notifications summary profile settings display name save profile quick save cancel reset",
+      "semanticFingerprint": "75e98b1be30fb7b086b126942fe2c37f3b259a0efbb7394963177c7b00553979",
+      "controlSignature": "a:notifications:[data-testid=\"nav-notifications\"]:|a:profile:[data-testid=\"nav-settings\"]:|a:summary:[data-testid=\"nav-summary\"]:|button:cancel:[data-testid=\"cancel-profile\"]:|button:quick save:[data-testid=\"quick-save-profile\"]:|button:reset:[data-testid=\"reset-profile\"]:|button:save profile:[data-testid=\"save-profile\"]:|input::[data-testid=\"displayName\"]:taylor",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-settings\"]",
+          "label": "Profile",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-notifications\"]",
+          "label": "Notifications",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-summary\"]",
+          "label": "Summary",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"displayName\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": "Taylor"
+        },
+        {
+          "selector": "[data-testid=\"save-profile\"]",
+          "label": "Save Profile",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"quick-save-profile\"]",
+          "label": "Quick Save",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"cancel-profile\"]",
+          "label": "Cancel",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"reset-profile\"]",
+          "label": "Reset",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/settings-cancel-persists-change/screenshots/s_c9954092a2a6.png"
+    },
+    {
+      "id": "s_e90bf6a98dfe",
+      "url": "http://127.0.0.1:4173/settings/cancel-persists-change/summary",
+      "normalizedUrl": "/settings/cancel-persists-change/summary",
+      "title": "RelUI settings cancel-persists-change",
+      "text": "RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Default User Email notifications: off Saved: yes",
+      "canonicalText": "relui settings benchmark profile notifications summary settings saved display name: default user email notifications: off saved: yes",
+      "semanticFingerprint": "f51cfdb180ac95c534144d65ecd16a53e90ce324b751d3799089ec557ee0cb92",
+      "controlSignature": "a:notifications:[data-testid=\"nav-notifications\"]:|a:profile:[data-testid=\"nav-settings\"]:|a:summary:[data-testid=\"nav-summary\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-settings\"]",
+          "label": "Profile",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-notifications\"]",
+          "label": "Notifications",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-summary\"]",
+          "label": "Summary",
+          "tag": "a",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/settings-cancel-persists-change/screenshots/s_e90bf6a98dfe.png"
+    },
+    {
+      "id": "s_60131b8fe735",
+      "url": "http://127.0.0.1:4173/settings/cancel-persists-change/notifications",
+      "normalizedUrl": "/settings/cancel-persists-change/notifications",
+      "title": "RelUI settings cancel-persists-change",
+      "text": "RelUI settings benchmark Profile Notifications Summary Notification Settings Email notifications Save Notifications Quick Save",
+      "canonicalText": "relui settings benchmark profile notifications summary notification settings email notifications save notifications quick save",
+      "semanticFingerprint": "81cf443385a87e343bbecfed444e01881b527ee9f6d87e84c649c3beef396e47",
+      "controlSignature": "a:notifications:[data-testid=\"nav-notifications\"]:|a:profile:[data-testid=\"nav-settings\"]:|a:summary:[data-testid=\"nav-summary\"]:|button:quick save:[data-testid=\"quick-save-notifications\"]:|button:save notifications:[data-testid=\"save-notifications\"]:|input::[data-testid=\"notifications\"]:off",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-settings\"]",
+          "label": "Profile",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-notifications\"]",
+          "label": "Notifications",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-summary\"]",
+          "label": "Summary",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"notifications\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": "off"
+        },
+        {
+          "selector": "[data-testid=\"save-notifications\"]",
+          "label": "Save Notifications",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"quick-save-notifications\"]",
+          "label": "Quick Save",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/settings-cancel-persists-change/screenshots/s_60131b8fe735.png"
+    },
+    {
+      "id": "s_cc24a545cc4a",
+      "url": "http://127.0.0.1:4173/settings/cancel-persists-change/summary",
+      "normalizedUrl": "/settings/cancel-persists-change/summary",
+      "title": "RelUI settings cancel-persists-change",
+      "text": "RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Default User Email notifications: on Saved: yes",
+      "canonicalText": "relui settings benchmark profile notifications summary settings saved display name: default user email notifications: on saved: yes",
+      "semanticFingerprint": "7a1631d939c69d19fe6895cbf2401e84068873441643d8dc81d134f9e8c31b27",
+      "controlSignature": "a:notifications:[data-testid=\"nav-notifications\"]:|a:profile:[data-testid=\"nav-settings\"]:|a:summary:[data-testid=\"nav-summary\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-settings\"]",
+          "label": "Profile",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-notifications\"]",
+          "label": "Notifications",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-summary\"]",
+          "label": "Summary",
+          "tag": "a",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/settings-cancel-persists-change/screenshots/s_cc24a545cc4a.png"
+    },
+    {
+      "id": "s_0ee0e7b1727b",
+      "url": "http://127.0.0.1:4173/settings/cancel-persists-change/profile",
+      "normalizedUrl": "/settings/cancel-persists-change/profile",
+      "title": "RelUI settings cancel-persists-change",
+      "text": "RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset",
+      "canonicalText": "relui settings benchmark profile notifications summary profile settings display name save profile quick save cancel reset",
+      "semanticFingerprint": "aed3acc29666c23987be8bc071535384f641e8f59d2decd83f6b1759cd407bfc",
+      "controlSignature": "a:notifications:[data-testid=\"nav-notifications\"]:|a:profile:[data-testid=\"nav-settings\"]:|a:summary:[data-testid=\"nav-summary\"]:|button:cancel:[data-testid=\"cancel-profile\"]:|button:quick save:[data-testid=\"quick-save-profile\"]:|button:reset:[data-testid=\"reset-profile\"]:|button:save profile:[data-testid=\"save-profile\"]:|input::[data-testid=\"displayName\"]:default user",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-settings\"]",
+          "label": "Profile",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-notifications\"]",
+          "label": "Notifications",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-summary\"]",
+          "label": "Summary",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"displayName\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": "Default User"
+        },
+        {
+          "selector": "[data-testid=\"save-profile\"]",
+          "label": "Save Profile",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"quick-save-profile\"]",
+          "label": "Quick Save",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"cancel-profile\"]",
+          "label": "Cancel",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"reset-profile\"]",
+          "label": "Reset",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/settings-cancel-persists-change/screenshots/s_0ee0e7b1727b.png"
+    },
+    {
+      "id": "s_ed62fdf73b57",
+      "url": "http://127.0.0.1:4173/settings/cancel-persists-change/summary",
+      "normalizedUrl": "/settings/cancel-persists-change/summary",
+      "title": "RelUI settings cancel-persists-change",
+      "text": "RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Default User Email notifications: off Saved: no",
+      "canonicalText": "relui settings benchmark profile notifications summary settings saved display name: default user email notifications: off saved: no",
+      "semanticFingerprint": "2f9b78c3ab92c973b54f5ca16e83ccd9eeaba3e75ad49a15a17472009459b397",
+      "controlSignature": "a:notifications:[data-testid=\"nav-notifications\"]:|a:profile:[data-testid=\"nav-settings\"]:|a:summary:[data-testid=\"nav-summary\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-settings\"]",
+          "label": "Profile",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-notifications\"]",
+          "label": "Notifications",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-summary\"]",
+          "label": "Summary",
+          "tag": "a",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/settings-cancel-persists-change/screenshots/s_ed62fdf73b57.png"
+    },
+    {
+      "id": "s_24a28483a867",
+      "url": "http://127.0.0.1:4173/settings/cancel-persists-change/summary",
+      "normalizedUrl": "/settings/cancel-persists-change/summary",
+      "title": "RelUI settings cancel-persists-change",
+      "text": "RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Admin Taylor Email notifications: off Saved: yes",
+      "canonicalText": "relui settings benchmark profile notifications summary settings saved display name: admin taylor email notifications: off saved: yes",
+      "semanticFingerprint": "2d93d1f23c1a876a418f4480099577ea3e5a6e503d17c0b8508391af98434d9b",
+      "controlSignature": "a:notifications:[data-testid=\"nav-notifications\"]:|a:profile:[data-testid=\"nav-settings\"]:|a:summary:[data-testid=\"nav-summary\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-settings\"]",
+          "label": "Profile",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-notifications\"]",
+          "label": "Notifications",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-summary\"]",
+          "label": "Summary",
+          "tag": "a",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/settings-cancel-persists-change/screenshots/s_24a28483a867.png"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_569ee1ae1c66",
+      "from": "s_c4f2c3e3a902",
+      "to": "s_70c360c1d33a",
+      "selector": "[data-testid=\"save-profile\"]",
+      "label": "Save Profile",
+      "profileName": "valid",
+      "traceIds": [
+        "t_93982d6d1089",
+        "t_c278fd5eecaa",
+        "t_685d4f88f7ef"
+      ]
+    },
+    {
+      "id": "e_92604ba48d33",
+      "from": "s_c4f2c3e3a902",
+      "to": "s_70c360c1d33a",
+      "selector": "[data-testid=\"quick-save-profile\"]",
+      "label": "Quick Save",
+      "profileName": "valid",
+      "traceIds": [
+        "t_7cc3481ad291"
+      ]
+    },
+    {
+      "id": "e_a66c8e469ee0",
+      "from": "s_c4f2c3e3a902",
+      "to": "s_70c360c1d33a",
+      "selector": "[data-testid=\"cancel-profile\"]",
+      "label": "Cancel",
+      "profileName": "valid",
+      "traceIds": [
+        "t_0466048ead2d"
+      ]
+    },
+    {
+      "id": "e_53ef6564d22e",
+      "from": "s_70c360c1d33a",
+      "to": "s_c9954092a2a6",
+      "selector": "[data-testid=\"nav-settings\"]",
+      "label": "Profile",
+      "profileName": "default",
+      "traceIds": [
+        "t_c278fd5eecaa",
+        "t_685d4f88f7ef"
+      ]
+    },
+    {
+      "id": "e_b1916e2e1255",
+      "from": "s_c9954092a2a6",
+      "to": "s_e90bf6a98dfe",
+      "selector": "[data-testid=\"reset-profile\"]",
+      "label": "Reset",
+      "profileName": "default",
+      "traceIds": [
+        "t_c278fd5eecaa"
+      ]
+    },
+    {
+      "id": "e_4f6843e730ed",
+      "from": "s_c4f2c3e3a902",
+      "to": "s_60131b8fe735",
+      "selector": "[data-testid=\"nav-notifications\"]",
+      "label": "Notifications",
+      "profileName": "default",
+      "traceIds": [
+        "t_c202da6eddc6",
+        "t_0eeb712f1b64",
+        "t_fa3670b08091"
+      ]
+    },
+    {
+      "id": "e_0c347f06f5a0",
+      "from": "s_60131b8fe735",
+      "to": "s_cc24a545cc4a",
+      "selector": "[data-testid=\"save-notifications\"]",
+      "label": "Save Notifications",
+      "profileName": "valid",
+      "traceIds": [
+        "t_c202da6eddc6"
+      ]
+    },
+    {
+      "id": "e_628d992cf773",
+      "from": "s_60131b8fe735",
+      "to": "s_cc24a545cc4a",
+      "selector": "[data-testid=\"quick-save-notifications\"]",
+      "label": "Quick Save",
+      "profileName": "valid",
+      "traceIds": [
+        "t_0eeb712f1b64"
+      ]
+    },
+    {
+      "id": "e_988a662017da",
+      "from": "s_c4f2c3e3a902",
+      "to": "s_0ee0e7b1727b",
+      "selector": "[data-testid=\"nav-settings\"]",
+      "label": "Profile",
+      "profileName": "default",
+      "traceIds": [
+        "t_98307d2edb00"
+      ]
+    },
+    {
+      "id": "e_91b1fd00f111",
+      "from": "s_c4f2c3e3a902",
+      "to": "s_ed62fdf73b57",
+      "selector": "[data-testid=\"nav-summary\"]",
+      "label": "Summary",
+      "profileName": "default",
+      "traceIds": [
+        "t_5ca0848f5727"
+      ]
+    },
+    {
+      "id": "e_a8934136cae4",
+      "from": "s_c4f2c3e3a902",
+      "to": "s_24a28483a867",
+      "selector": "[data-testid=\"save-profile\"]",
+      "label": "Save Profile",
+      "profileName": "admin",
+      "traceIds": [
+        "t_3242b1c621af"
+      ]
+    },
+    {
+      "id": "e_ab84f41363ee",
+      "from": "s_c4f2c3e3a902",
+      "to": "s_e90bf6a98dfe",
+      "selector": "[data-testid=\"save-profile\"]",
+      "label": "Save Profile",
+      "profileName": "invalid",
+      "traceIds": [
+        "t_19f2816c0e4e"
+      ]
+    },
+    {
+      "id": "e_87b3a3291bbf",
+      "from": "s_c4f2c3e3a902",
+      "to": "s_24a28483a867",
+      "selector": "[data-testid=\"quick-save-profile\"]",
+      "label": "Quick Save",
+      "profileName": "admin",
+      "traceIds": [
+        "t_c8e8a44d4e56"
+      ]
+    },
+    {
+      "id": "e_f8a50cb82cfa",
+      "from": "s_c4f2c3e3a902",
+      "to": "s_e90bf6a98dfe",
+      "selector": "[data-testid=\"quick-save-profile\"]",
+      "label": "Quick Save",
+      "profileName": "invalid",
+      "traceIds": [
+        "t_814f67024034"
+      ]
+    },
+    {
+      "id": "e_fd5d57ac29a0",
+      "from": "s_c4f2c3e3a902",
+      "to": "s_24a28483a867",
+      "selector": "[data-testid=\"cancel-profile\"]",
+      "label": "Cancel",
+      "profileName": "admin",
+      "traceIds": [
+        "t_f4ece212498b"
+      ]
+    },
+    {
+      "id": "e_8e2c48f63225",
+      "from": "s_c4f2c3e3a902",
+      "to": "s_e90bf6a98dfe",
+      "selector": "[data-testid=\"cancel-profile\"]",
+      "label": "Cancel",
+      "profileName": "invalid",
+      "traceIds": [
+        "t_6c733d19b82a"
+      ]
+    },
+    {
+      "id": "e_7ae375ca65d2",
+      "from": "s_c4f2c3e3a902",
+      "to": "s_e90bf6a98dfe",
+      "selector": "[data-testid=\"reset-profile\"]",
+      "label": "Reset",
+      "profileName": "valid",
+      "traceIds": [
+        "t_cbd4fde6c7c2"
+      ]
+    },
+    {
+      "id": "e_24a78e9cdd19",
+      "from": "s_c4f2c3e3a902",
+      "to": "s_e90bf6a98dfe",
+      "selector": "[data-testid=\"reset-profile\"]",
+      "label": "Reset",
+      "profileName": "admin",
+      "traceIds": [
+        "t_0f45cd6638bf"
+      ]
+    },
+    {
+      "id": "e_c50659d2cde5",
+      "from": "s_c4f2c3e3a902",
+      "to": "s_e90bf6a98dfe",
+      "selector": "[data-testid=\"reset-profile\"]",
+      "label": "Reset",
+      "profileName": "invalid",
+      "traceIds": [
+        "t_d43a88daefec"
+      ]
+    }
+  ],
+  "traces": [
+    {
+      "id": "t_cced28c6dc3f",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "start",
+      "steps": [],
+      "stateIds": [
+        "s_c4f2c3e3a902"
+      ],
+      "finalStateId": "s_c4f2c3e3a902"
+    },
+    {
+      "id": "t_93982d6d1089",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "valid:[data-testid=\"save-profile\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"save-profile\"]",
+            "label": "Save Profile",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_70c360c1d33a"
+      ],
+      "finalStateId": "s_70c360c1d33a"
+    },
+    {
+      "id": "t_7cc3481ad291",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "valid:[data-testid=\"quick-save-profile\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"quick-save-profile\"]",
+            "label": "Quick Save",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_70c360c1d33a"
+      ],
+      "finalStateId": "s_70c360c1d33a"
+    },
+    {
+      "id": "t_0466048ead2d",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "valid:[data-testid=\"cancel-profile\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cancel-profile\"]",
+            "label": "Cancel",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_70c360c1d33a"
+      ],
+      "finalStateId": "s_70c360c1d33a"
+    },
+    {
+      "id": "t_c278fd5eecaa",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "valid:[data-testid=\"save-profile\"] -> default:[data-testid=\"nav-settings\"] -> default:[data-testid=\"reset-profile\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"save-profile\"]",
+            "label": "Save Profile",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-settings\"]",
+            "label": "Profile",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"reset-profile\"]",
+            "label": "Reset",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_70c360c1d33a",
+        "s_c9954092a2a6",
+        "s_e90bf6a98dfe"
+      ],
+      "finalStateId": "s_e90bf6a98dfe"
+    },
+    {
+      "id": "t_c202da6eddc6",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "default:[data-testid=\"nav-notifications\"] -> valid:[data-testid=\"save-notifications\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-notifications\"]",
+            "label": "Notifications",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"save-notifications\"]",
+            "label": "Save Notifications",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_60131b8fe735",
+        "s_cc24a545cc4a"
+      ],
+      "finalStateId": "s_cc24a545cc4a"
+    },
+    {
+      "id": "t_0eeb712f1b64",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "default:[data-testid=\"nav-notifications\"] -> valid:[data-testid=\"quick-save-notifications\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-notifications\"]",
+            "label": "Notifications",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"quick-save-notifications\"]",
+            "label": "Quick Save",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_60131b8fe735",
+        "s_cc24a545cc4a"
+      ],
+      "finalStateId": "s_cc24a545cc4a"
+    },
+    {
+      "id": "t_98307d2edb00",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "default:[data-testid=\"nav-settings\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-settings\"]",
+            "label": "Profile",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/settings/cancel-persists-change/profile",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_0ee0e7b1727b"
+      ],
+      "finalStateId": "s_0ee0e7b1727b"
+    },
+    {
+      "id": "t_fa3670b08091",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "default:[data-testid=\"nav-notifications\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-notifications\"]",
+            "label": "Notifications",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/settings/cancel-persists-change/notifications",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_60131b8fe735"
+      ],
+      "finalStateId": "s_60131b8fe735"
+    },
+    {
+      "id": "t_5ca0848f5727",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "default:[data-testid=\"nav-summary\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-summary\"]",
+            "label": "Summary",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/settings/cancel-persists-change/summary",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_ed62fdf73b57"
+      ],
+      "finalStateId": "s_ed62fdf73b57"
+    },
+    {
+      "id": "t_3242b1c621af",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "admin:[data-testid=\"save-profile\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"save-profile\"]",
+            "label": "Save Profile",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "admin",
+          "fills": [
+            {
+              "selector": "[data-testid=\"displayName\"]",
+              "key": "displayName",
+              "value": "Admin Taylor"
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_24a28483a867"
+      ],
+      "finalStateId": "s_24a28483a867"
+    },
+    {
+      "id": "t_19f2816c0e4e",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "invalid:[data-testid=\"save-profile\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"save-profile\"]",
+            "label": "Save Profile",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": [
+            {
+              "selector": "[data-testid=\"displayName\"]",
+              "key": "displayName",
+              "value": ""
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_e90bf6a98dfe"
+      ],
+      "finalStateId": "s_e90bf6a98dfe"
+    },
+    {
+      "id": "t_c8e8a44d4e56",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "admin:[data-testid=\"quick-save-profile\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"quick-save-profile\"]",
+            "label": "Quick Save",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "admin",
+          "fills": [
+            {
+              "selector": "[data-testid=\"displayName\"]",
+              "key": "displayName",
+              "value": "Admin Taylor"
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_24a28483a867"
+      ],
+      "finalStateId": "s_24a28483a867"
+    },
+    {
+      "id": "t_814f67024034",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "invalid:[data-testid=\"quick-save-profile\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"quick-save-profile\"]",
+            "label": "Quick Save",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": [
+            {
+              "selector": "[data-testid=\"displayName\"]",
+              "key": "displayName",
+              "value": ""
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_e90bf6a98dfe"
+      ],
+      "finalStateId": "s_e90bf6a98dfe"
+    },
+    {
+      "id": "t_f4ece212498b",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "admin:[data-testid=\"cancel-profile\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cancel-profile\"]",
+            "label": "Cancel",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "admin",
+          "fills": [
+            {
+              "selector": "[data-testid=\"displayName\"]",
+              "key": "displayName",
+              "value": "Admin Taylor"
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_24a28483a867"
+      ],
+      "finalStateId": "s_24a28483a867"
+    },
+    {
+      "id": "t_6c733d19b82a",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "invalid:[data-testid=\"cancel-profile\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cancel-profile\"]",
+            "label": "Cancel",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": [
+            {
+              "selector": "[data-testid=\"displayName\"]",
+              "key": "displayName",
+              "value": ""
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_e90bf6a98dfe"
+      ],
+      "finalStateId": "s_e90bf6a98dfe"
+    },
+    {
+      "id": "t_cbd4fde6c7c2",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "valid:[data-testid=\"reset-profile\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"reset-profile\"]",
+            "label": "Reset",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": [
+            {
+              "selector": "[data-testid=\"displayName\"]",
+              "key": "displayName",
+              "value": "Taylor"
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_e90bf6a98dfe"
+      ],
+      "finalStateId": "s_e90bf6a98dfe"
+    },
+    {
+      "id": "t_0f45cd6638bf",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "admin:[data-testid=\"reset-profile\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"reset-profile\"]",
+            "label": "Reset",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "admin",
+          "fills": [
+            {
+              "selector": "[data-testid=\"displayName\"]",
+              "key": "displayName",
+              "value": "Admin Taylor"
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_e90bf6a98dfe"
+      ],
+      "finalStateId": "s_e90bf6a98dfe"
+    },
+    {
+      "id": "t_d43a88daefec",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "invalid:[data-testid=\"reset-profile\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"reset-profile\"]",
+            "label": "Reset",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": [
+            {
+              "selector": "[data-testid=\"displayName\"]",
+              "key": "displayName",
+              "value": ""
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_e90bf6a98dfe"
+      ],
+      "finalStateId": "s_e90bf6a98dfe"
+    },
+    {
+      "id": "t_685d4f88f7ef",
+      "subjectId": "settings-cancel-persists-change",
+      "signature": "valid:[data-testid=\"save-profile\"] -> default:[data-testid=\"nav-settings\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"save-profile\"]",
+            "label": "Save Profile",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-settings\"]",
+            "label": "Profile",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/settings/cancel-persists-change/profile",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_c4f2c3e3a902",
+        "s_70c360c1d33a",
+        "s_c9954092a2a6"
+      ],
+      "finalStateId": "s_c9954092a2a6"
+    }
+  ],
+  "stats": {
+    "states": 9,
+    "edges": 19,
+    "traces": 20,
+    "maxDepth": 4,
+    "exploredActions": 97
+  }
+}

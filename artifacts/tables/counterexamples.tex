@@ -1,0 +1,19 @@
+% Representative Counterexamples
+\begin{tabular}{llll}
+\toprule
+Fault & Invariant & Replay Steps & End URL \\
+\midrule
+F-AUTH-1 & auth-dashboard-requires-login & 1. default -> Open Dashboard ([data-testid="home-dashboard"]) & /auth/auth-bypass/dashboard \\
+F-AUTH-2 & auth-logout-clears-protected-access & 1. default -> Login ([data-testid="home-login"]); 2. valid -> User Login ([data-testid="user-login-submit"]); 3. default -> Logout ([data-testid="logout"]); 4. default -> Dashboard ([data-testid="nav-dashboard"]) & /auth/logout-retains-access/dashboard \\
+F-AUTH-3 & auth-admin-requires-admin-login & 1. default -> Login ([data-testid="home-login"]); 2. valid -> User Login ([data-testid="user-login-submit"]); 3. default -> Admin ([data-testid="nav-admin"]) & /auth/role-escalation/admin \\
+F-AUTH-4 & auth-invalid-login-blocks-dashboard & 1. default -> Login ([data-testid="home-login"]); 2. invalid -> User Login ([data-testid="user-login-submit"]) & /auth/invalid-login-dashboard/dashboard \\
+F-CHECKOUT-1 & checkout-invalid-contact-blocks-payment & 1. valid -> Continue to Contact ([data-testid="cart-next"]); 2. invalid -> Continue to Payment ([data-testid="contact-next"]) & /checkout/invalid-step-progression/payment \\
+F-CHECKOUT-2 & checkout-express-review-requires-payment & 1. valid -> Continue to Contact ([data-testid="cart-next"]); 2. valid -> Continue to Payment ([data-testid="contact-next"]); 3. default -> Back to Contact ([data-testid="payment-back"]); 4. default -> Express Review ([data-testid="express-review"]) & /checkout/skip-payment/review \\
+F-CHECKOUT-3 & checkout-invalid-cart-blocks-contact & 1. invalid -> Continue to Contact ([data-testid="cart-next"]) & /checkout/negative-total/contact \\
+F-CHECKOUT-4 & checkout-confirmation-paths-equivalent & 1. valid -> Continue to Contact ([data-testid="cart-next"]); 2. valid -> Continue to Payment ([data-testid="contact-next"]); 3. valid -> Review Order ([data-testid="payment-next"]); 4. default -> Place Order ([data-testid="place-order"]); 1. valid -> Continue to Contact ([data-testid="cart-next"]); 2. valid -> Continue to Payment ([data-testid="contact-next"]); 3. default -> Back to Contact ([data-testid="payment-back"]); 4. valid -> Continue to Payment ([data-testid="contact-next"]); 5. valid -> Review Order ([data-testid="payment-next"]); 6. default -> Place Order ([data-testid="place-order"]) & /checkout/back-loses-contact/confirmation \\
+F-SETTINGS-1 & settings-profile-save-paths-equivalent & 1. valid -> Save Profile ([data-testid="save-profile"]); 1. valid -> Quick Save ([data-testid="quick-save-profile"]) & /settings/alt-save-stale/summary \\
+F-SETTINGS-2 & settings-cancel-does-not-save & 1. valid -> Cancel ([data-testid="cancel-profile"]) & /settings/cancel-persists-change/summary \\
+F-SETTINGS-3 & settings-reset-clears-edits & 1. valid -> Save Profile ([data-testid="save-profile"]); 2. default -> Profile ([data-testid="nav-settings"]); 3. default -> Reset ([data-testid="reset-profile"]) & /settings/reset-does-not-clear/summary \\
+F-SETTINGS-4 & settings-notification-save-paths-equivalent & 1. default -> Notifications ([data-testid="nav-notifications"]); 2. valid -> Save Notifications ([data-testid="save-notifications"]); 1. default -> Notifications ([data-testid="nav-notifications"]); 2. valid -> Quick Save ([data-testid="quick-save-notifications"]) & /settings/stale-notification/summary \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "v_c523bde1591e",
+    "subjectId": "settings-cancel-persists-change",
+    "invariantId": "settings-cancel-does-not-save",
+    "invariantType": "action-forbidden-state",
+    "severity": "high",
+    "title": "Cancel must not persist edited profile data.",
+    "description": "A forbidden state was observed after an action that should prevent it.",
+    "traceIds": [
+      "t_0466048ead2d"
+    ],
+    "stateIds": [
+      "s_c4f2c3e3a902",
+      "s_70c360c1d33a"
+    ],
+    "evidence": {
+      "actionSelectors": [
+        "[data-testid=\"cancel-profile\"]"
+      ],
+      "forbiddenStateIds": [
+        "s_70c360c1d33a"
+      ]
+    },
+    "replaySteps": [
+      "1. valid -> Cancel ([data-testid=\"cancel-profile\"])"
+    ]
+  }
+]

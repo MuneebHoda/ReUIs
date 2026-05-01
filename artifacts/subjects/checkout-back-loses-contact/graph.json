@@ -1,0 +1,2377 @@
+{
+  "subjectId": "checkout-back-loses-contact",
+  "generatedAt": "2026-05-01T22:59:50.449Z",
+  "durationMs": 19149,
+  "nodes": [
+    {
+      "id": "s_3c4902154c39",
+      "url": "http://127.0.0.1:4173/checkout/back-loses-contact/",
+      "normalizedUrl": "/checkout/back-loses-contact",
+      "title": "RelUI checkout back-loses-contact",
+      "text": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "canonicalText": "relui checkout benchmark cart contact payment review cart quantity continue to contact",
+      "semanticFingerprint": "9df6b2ff539d71d7507a9d9b9e93860cef4de4ccbbf8c41338ea0602ef394640",
+      "controlSignature": "a:cart:[data-testid=\"nav-cart\"]:|a:contact:[data-testid=\"nav-contact\"]:|a:payment:[data-testid=\"nav-payment\"]:|a:review:[data-testid=\"nav-review\"]:|button:continue to contact:[data-testid=\"cart-next\"]:|input::[data-testid=\"quantity\"]:1",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-cart\"]",
+          "label": "Cart",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-contact\"]",
+          "label": "Contact",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-payment\"]",
+          "label": "Payment",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"quantity\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": "1"
+        },
+        {
+          "selector": "[data-testid=\"cart-next\"]",
+          "label": "Continue to Contact",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/checkout-back-loses-contact/screenshots/s_3c4902154c39.png"
+    },
+    {
+      "id": "s_bc066b470567",
+      "url": "http://127.0.0.1:4173/checkout/back-loses-contact/",
+      "normalizedUrl": "/checkout/back-loses-contact",
+      "title": "RelUI checkout back-loses-contact",
+      "text": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity must be positive. Quantity Continue to Contact",
+      "canonicalText": "relui checkout benchmark cart contact payment review cart quantity must be positive. quantity continue to contact",
+      "semanticFingerprint": "ae08bda4b11e8e3a148730760162442773073ae7bb67e277aceab4aea4de7f40",
+      "controlSignature": "a:cart:[data-testid=\"nav-cart\"]:|a:contact:[data-testid=\"nav-contact\"]:|a:payment:[data-testid=\"nav-payment\"]:|a:review:[data-testid=\"nav-review\"]:|button:continue to contact:[data-testid=\"cart-next\"]:|input::[data-testid=\"quantity\"]:1",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-cart\"]",
+          "label": "Cart",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-contact\"]",
+          "label": "Contact",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-payment\"]",
+          "label": "Payment",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"quantity\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": "1"
+        },
+        {
+          "selector": "[data-testid=\"cart-next\"]",
+          "label": "Continue to Contact",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/checkout-back-loses-contact/screenshots/s_bc066b470567.png"
+    },
+    {
+      "id": "s_448961fd3e04",
+      "url": "http://127.0.0.1:4173/checkout/back-loses-contact/contact",
+      "normalizedUrl": "/checkout/back-loses-contact/contact",
+      "title": "RelUI checkout back-loses-contact",
+      "text": "RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review",
+      "canonicalText": "relui checkout benchmark cart contact payment review contact email address continue to payment back express review",
+      "semanticFingerprint": "e5ca7fbf874a31cc023f049f67beba8122b22f349117efc497f15a9ba959fefd",
+      "controlSignature": "a:cart:[data-testid=\"nav-cart\"]:|a:contact:[data-testid=\"nav-contact\"]:|a:payment:[data-testid=\"nav-payment\"]:|a:review:[data-testid=\"nav-review\"]:|button:back:[data-testid=\"contact-back\"]:|button:continue to payment:[data-testid=\"contact-next\"]:|button:express review:[data-testid=\"express-review\"]:|input::[data-testid=\"address\"]:|input::[data-testid=\"email\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-cart\"]",
+          "label": "Cart",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-contact\"]",
+          "label": "Contact",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-payment\"]",
+          "label": "Payment",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"email\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"address\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"contact-next\"]",
+          "label": "Continue to Payment",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"contact-back\"]",
+          "label": "Back",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"express-review\"]",
+          "label": "Express Review",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/checkout-back-loses-contact/screenshots/s_448961fd3e04.png"
+    },
+    {
+      "id": "s_60c8eccf3fb4",
+      "url": "http://127.0.0.1:4173/checkout/back-loses-contact/contact",
+      "normalizedUrl": "/checkout/back-loses-contact/contact",
+      "title": "RelUI checkout back-loses-contact",
+      "text": "RelUI checkout benchmark Cart Contact Payment Review Contact Valid email and address are required. Email Address Continue to Payment Back Express Review",
+      "canonicalText": "relui checkout benchmark cart contact payment review contact valid email and address are required. email address continue to payment back express review",
+      "semanticFingerprint": "0d1432a96c666f6f994a3183ab1701ba44762009b92b218c2b3ff10c219db125",
+      "controlSignature": "a:cart:[data-testid=\"nav-cart\"]:|a:contact:[data-testid=\"nav-contact\"]:|a:payment:[data-testid=\"nav-payment\"]:|a:review:[data-testid=\"nav-review\"]:|button:back:[data-testid=\"contact-back\"]:|button:continue to payment:[data-testid=\"contact-next\"]:|button:express review:[data-testid=\"express-review\"]:|input::[data-testid=\"address\"]:|input::[data-testid=\"email\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-cart\"]",
+          "label": "Cart",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-contact\"]",
+          "label": "Contact",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-payment\"]",
+          "label": "Payment",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"email\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"address\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"contact-next\"]",
+          "label": "Continue to Payment",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"contact-back\"]",
+          "label": "Back",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"express-review\"]",
+          "label": "Express Review",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/checkout-back-loses-contact/screenshots/s_60c8eccf3fb4.png"
+    },
+    {
+      "id": "s_51404df2278f",
+      "url": "http://127.0.0.1:4173/checkout/back-loses-contact/payment",
+      "normalizedUrl": "/checkout/back-loses-contact/payment",
+      "title": "RelUI checkout back-loses-contact",
+      "text": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
+      "canonicalText": "relui checkout benchmark cart contact payment review payment card review order back to contact",
+      "semanticFingerprint": "0d886a396162456b4ee8bfad425a2ca3697e99e03dc67a2e6350a3816df860d8",
+      "controlSignature": "a:cart:[data-testid=\"nav-cart\"]:|a:contact:[data-testid=\"nav-contact\"]:|a:payment:[data-testid=\"nav-payment\"]:|a:review:[data-testid=\"nav-review\"]:|button:back to contact:[data-testid=\"payment-back\"]:|button:review order:[data-testid=\"payment-next\"]:|input::[data-testid=\"card\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-cart\"]",
+          "label": "Cart",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-contact\"]",
+          "label": "Contact",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-payment\"]",
+          "label": "Payment",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"card\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"payment-next\"]",
+          "label": "Review Order",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"payment-back\"]",
+          "label": "Back to Contact",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/checkout-back-loses-contact/screenshots/s_51404df2278f.png"
+    },
+    {
+      "id": "s_7515449b7f72",
+      "url": "http://127.0.0.1:4173/checkout/back-loses-contact/payment",
+      "normalizedUrl": "/checkout/back-loses-contact/payment",
+      "title": "RelUI checkout back-loses-contact",
+      "text": "RelUI checkout benchmark Cart Contact Payment Review Payment Valid card is required. Card Review Order Back to Contact",
+      "canonicalText": "relui checkout benchmark cart contact payment review payment valid card is required. card review order back to contact",
+      "semanticFingerprint": "eb2b0e852c98580392b7cca3ec007b7b7663ef2b4624690a200787c4f04f39e7",
+      "controlSignature": "a:cart:[data-testid=\"nav-cart\"]:|a:contact:[data-testid=\"nav-contact\"]:|a:payment:[data-testid=\"nav-payment\"]:|a:review:[data-testid=\"nav-review\"]:|button:back to contact:[data-testid=\"payment-back\"]:|button:review order:[data-testid=\"payment-next\"]:|input::[data-testid=\"card\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-cart\"]",
+          "label": "Cart",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-contact\"]",
+          "label": "Contact",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-payment\"]",
+          "label": "Payment",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"card\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"payment-next\"]",
+          "label": "Review Order",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"payment-back\"]",
+          "label": "Back to Contact",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/checkout-back-loses-contact/screenshots/s_7515449b7f72.png"
+    },
+    {
+      "id": "s_bdc4e8bdcc57",
+      "url": "http://127.0.0.1:4173/checkout/back-loses-contact/payment",
+      "normalizedUrl": "/checkout/back-loses-contact/payment",
+      "title": "RelUI checkout back-loses-contact",
+      "text": "RelUI checkout benchmark Cart Contact Payment Review Payment Payment is required before review. Card Review Order Back to Contact",
+      "canonicalText": "relui checkout benchmark cart contact payment review payment payment is required before review. card review order back to contact",
+      "semanticFingerprint": "c47ac5c494ca1f23df6134a1de037cb0fa0f2c2041bbb43a1a1d7c079227a8f0",
+      "controlSignature": "a:cart:[data-testid=\"nav-cart\"]:|a:contact:[data-testid=\"nav-contact\"]:|a:payment:[data-testid=\"nav-payment\"]:|a:review:[data-testid=\"nav-review\"]:|button:back to contact:[data-testid=\"payment-back\"]:|button:review order:[data-testid=\"payment-next\"]:|input::[data-testid=\"card\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-cart\"]",
+          "label": "Cart",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-contact\"]",
+          "label": "Contact",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-payment\"]",
+          "label": "Payment",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"card\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"payment-next\"]",
+          "label": "Review Order",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"payment-back\"]",
+          "label": "Back to Contact",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/checkout-back-loses-contact/screenshots/s_bdc4e8bdcc57.png"
+    },
+    {
+      "id": "s_e3013eb8acac",
+      "url": "http://127.0.0.1:4173/checkout/back-loses-contact/review",
+      "normalizedUrl": "/checkout/back-loses-contact/review",
+      "title": "RelUI checkout back-loses-contact",
+      "text": "RelUI checkout benchmark Cart Contact Payment Review Order Review Email: buyer@example.com Address: 100 Main Street Total: $40 Paid: yes Place Order",
+      "canonicalText": "relui checkout benchmark cart contact payment review order review email: buyer@example.com address: 100 main street total: $40 paid: yes place order",
+      "semanticFingerprint": "962d6b8d153dec69f8f62d0525bf33d776e65210534b6a0ebcf5b85318a2452d",
+      "controlSignature": "a:cart:[data-testid=\"nav-cart\"]:|a:contact:[data-testid=\"nav-contact\"]:|a:payment:[data-testid=\"nav-payment\"]:|a:review:[data-testid=\"nav-review\"]:|button:place order:[data-testid=\"place-order\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-cart\"]",
+          "label": "Cart",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-contact\"]",
+          "label": "Contact",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-payment\"]",
+          "label": "Payment",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"place-order\"]",
+          "label": "Place Order",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/checkout-back-loses-contact/screenshots/s_e3013eb8acac.png"
+    },
+    {
+      "id": "s_3f095d1abdf8",
+      "url": "http://127.0.0.1:4173/checkout/back-loses-contact/confirmation",
+      "normalizedUrl": "/checkout/back-loses-contact/confirmation",
+      "title": "RelUI checkout back-loses-contact",
+      "text": "RelUI checkout benchmark Cart Contact Payment Review Order Complete Confirmation generated. Email: buyer@example.com Address: 100 Main Street Total: $40 Paid: yes",
+      "canonicalText": "relui checkout benchmark cart contact payment review order complete confirmation generated. email: buyer@example.com address: 100 main street total: $40 paid: yes",
+      "semanticFingerprint": "899d88b6eb7ebec9bc2ba399b3f7e7c563c28abf7fe4a60c8db971f690be60fd",
+      "controlSignature": "a:cart:[data-testid=\"nav-cart\"]:|a:contact:[data-testid=\"nav-contact\"]:|a:payment:[data-testid=\"nav-payment\"]:|a:review:[data-testid=\"nav-review\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-cart\"]",
+          "label": "Cart",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-contact\"]",
+          "label": "Contact",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-payment\"]",
+          "label": "Payment",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/checkout-back-loses-contact/screenshots/s_3f095d1abdf8.png"
+    },
+    {
+      "id": "s_3456d8110fee",
+      "url": "http://127.0.0.1:4173/checkout/back-loses-contact/review",
+      "normalizedUrl": "/checkout/back-loses-contact/review",
+      "title": "RelUI checkout back-loses-contact",
+      "text": "RelUI checkout benchmark Cart Contact Payment Review Order Review Email: missing Address: missing Total: $40 Paid: yes Place Order",
+      "canonicalText": "relui checkout benchmark cart contact payment review order review email: missing address: missing total: $40 paid: yes place order",
+      "semanticFingerprint": "37291b3ae0addd248be0211f4d5fde9e451f5939ee2a71a39cfbd15a85d71323",
+      "controlSignature": "a:cart:[data-testid=\"nav-cart\"]:|a:contact:[data-testid=\"nav-contact\"]:|a:payment:[data-testid=\"nav-payment\"]:|a:review:[data-testid=\"nav-review\"]:|button:place order:[data-testid=\"place-order\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-cart\"]",
+          "label": "Cart",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-contact\"]",
+          "label": "Contact",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-payment\"]",
+          "label": "Payment",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"place-order\"]",
+          "label": "Place Order",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/checkout-back-loses-contact/screenshots/s_3456d8110fee.png"
+    },
+    {
+      "id": "s_ef9b9c0a8be0",
+      "url": "http://127.0.0.1:4173/checkout/back-loses-contact/confirmation",
+      "normalizedUrl": "/checkout/back-loses-contact/confirmation",
+      "title": "RelUI checkout back-loses-contact",
+      "text": "RelUI checkout benchmark Cart Contact Payment Review Order Complete Confirmation generated. Email: missing Address: missing Total: $40 Paid: yes",
+      "canonicalText": "relui checkout benchmark cart contact payment review order complete confirmation generated. email: missing address: missing total: $40 paid: yes",
+      "semanticFingerprint": "2cae3aa348acf4173f1b945465d3e4e8cf183d4d665cfee74b925860cea19006",
+      "controlSignature": "a:cart:[data-testid=\"nav-cart\"]:|a:contact:[data-testid=\"nav-contact\"]:|a:payment:[data-testid=\"nav-payment\"]:|a:review:[data-testid=\"nav-review\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-cart\"]",
+          "label": "Cart",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-contact\"]",
+          "label": "Contact",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-payment\"]",
+          "label": "Payment",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/checkout-back-loses-contact/screenshots/s_ef9b9c0a8be0.png"
+    },
+    {
+      "id": "s_d7218f82614c",
+      "url": "http://127.0.0.1:4173/checkout/back-loses-contact/cart",
+      "normalizedUrl": "/checkout/back-loses-contact/cart",
+      "title": "RelUI checkout back-loses-contact",
+      "text": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "canonicalText": "relui checkout benchmark cart contact payment review cart quantity continue to contact",
+      "semanticFingerprint": "157de936187644854db18dc1377973e9dfca7529d1e479b3bd02fd531eb8fd49",
+      "controlSignature": "a:cart:[data-testid=\"nav-cart\"]:|a:contact:[data-testid=\"nav-contact\"]:|a:payment:[data-testid=\"nav-payment\"]:|a:review:[data-testid=\"nav-review\"]:|button:continue to contact:[data-testid=\"cart-next\"]:|input::[data-testid=\"quantity\"]:1",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-cart\"]",
+          "label": "Cart",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-contact\"]",
+          "label": "Contact",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-payment\"]",
+          "label": "Payment",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"quantity\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": "1"
+        },
+        {
+          "selector": "[data-testid=\"cart-next\"]",
+          "label": "Continue to Contact",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/checkout-back-loses-contact/screenshots/s_d7218f82614c.png"
+    },
+    {
+      "id": "s_837895477bf8",
+      "url": "http://127.0.0.1:4173/checkout/back-loses-contact/review",
+      "normalizedUrl": "/checkout/back-loses-contact/review",
+      "title": "RelUI checkout back-loses-contact",
+      "text": "RelUI checkout benchmark Cart Contact Payment Review Order Review Email: missing Address: missing Total: $20 Paid: no Place Order",
+      "canonicalText": "relui checkout benchmark cart contact payment review order review email: missing address: missing total: $20 paid: no place order",
+      "semanticFingerprint": "cf164ade8e50d32af0fcb7c9f8b0ca4d6ff32eccb443422c4fe4723020ed7ca0",
+      "controlSignature": "a:cart:[data-testid=\"nav-cart\"]:|a:contact:[data-testid=\"nav-contact\"]:|a:payment:[data-testid=\"nav-payment\"]:|a:review:[data-testid=\"nav-review\"]:|button:place order:[data-testid=\"place-order\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-cart\"]",
+          "label": "Cart",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-contact\"]",
+          "label": "Contact",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-payment\"]",
+          "label": "Payment",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"place-order\"]",
+          "label": "Place Order",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/checkout-back-loses-contact/screenshots/s_837895477bf8.png"
+    },
+    {
+      "id": "s_3f067f0ebfe9",
+      "url": "http://127.0.0.1:4173/checkout/back-loses-contact/cart",
+      "normalizedUrl": "/checkout/back-loses-contact/cart",
+      "title": "RelUI checkout back-loses-contact",
+      "text": "RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact",
+      "canonicalText": "relui checkout benchmark cart contact payment review cart quantity continue to contact",
+      "semanticFingerprint": "4e77e5ea492683db483fe8021551436cfdf5dd1b2b49842eb3ba687a2d27f60e",
+      "controlSignature": "a:cart:[data-testid=\"nav-cart\"]:|a:contact:[data-testid=\"nav-contact\"]:|a:payment:[data-testid=\"nav-payment\"]:|a:review:[data-testid=\"nav-review\"]:|button:continue to contact:[data-testid=\"cart-next\"]:|input::[data-testid=\"quantity\"]:2",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-cart\"]",
+          "label": "Cart",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-contact\"]",
+          "label": "Contact",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-payment\"]",
+          "label": "Payment",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"quantity\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": "2"
+        },
+        {
+          "selector": "[data-testid=\"cart-next\"]",
+          "label": "Continue to Contact",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/checkout-back-loses-contact/screenshots/s_3f067f0ebfe9.png"
+    },
+    {
+      "id": "s_83ad222edcdf",
+      "url": "http://127.0.0.1:4173/checkout/back-loses-contact/review",
+      "normalizedUrl": "/checkout/back-loses-contact/review",
+      "title": "RelUI checkout back-loses-contact",
+      "text": "RelUI checkout benchmark Cart Contact Payment Review Order Review Email: missing Address: missing Total: $40 Paid: no Place Order",
+      "canonicalText": "relui checkout benchmark cart contact payment review order review email: missing address: missing total: $40 paid: no place order",
+      "semanticFingerprint": "0b05e8a6959935acda13884b8d4801d6ed65035d3d63e66ddc870f672a1694b9",
+      "controlSignature": "a:cart:[data-testid=\"nav-cart\"]:|a:contact:[data-testid=\"nav-contact\"]:|a:payment:[data-testid=\"nav-payment\"]:|a:review:[data-testid=\"nav-review\"]:|button:place order:[data-testid=\"place-order\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-cart\"]",
+          "label": "Cart",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-contact\"]",
+          "label": "Contact",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-payment\"]",
+          "label": "Payment",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"place-order\"]",
+          "label": "Place Order",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/checkout-back-loses-contact/screenshots/s_83ad222edcdf.png"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_140fb7e1bb98",
+      "from": "s_3c4902154c39",
+      "to": "s_bc066b470567",
+      "selector": "[data-testid=\"cart-next\"]",
+      "label": "Continue to Contact",
+      "profileName": "invalid",
+      "traceIds": [
+        "t_f39c85fe9554",
+        "t_eead915d8436",
+        "t_3cf878f87c64",
+        "t_c5e986209787",
+        "t_06bfd0dee3ce",
+        "t_105db1f27445",
+        "t_c50469e4724a",
+        "t_a2ac54aaac5f"
+      ]
+    },
+    {
+      "id": "e_6582d0722c37",
+      "from": "s_3c4902154c39",
+      "to": "s_448961fd3e04",
+      "selector": "[data-testid=\"cart-next\"]",
+      "label": "Continue to Contact",
+      "profileName": "valid",
+      "traceIds": [
+        "t_a37ea7ad8870",
+        "t_e04ebbcc3b28",
+        "t_8afe859b172a",
+        "t_ef4755e9d517",
+        "t_d9d4b91b6e80",
+        "t_7cb64124311b",
+        "t_028295fe14fd",
+        "t_d06b5dacbb64",
+        "t_4776b6e51fbc",
+        "t_72a665381a5f",
+        "t_8bc0d55ea53c",
+        "t_806a4cc6d79e",
+        "t_b3754d3b8b34",
+        "t_fc0362d04295",
+        "t_ba21afc0fe3b",
+        "t_37622fb9ae26"
+      ]
+    },
+    {
+      "id": "e_df0b5463b898",
+      "from": "s_448961fd3e04",
+      "to": "s_60c8eccf3fb4",
+      "selector": "[data-testid=\"contact-next\"]",
+      "label": "Continue to Payment",
+      "profileName": "invalid",
+      "traceIds": [
+        "t_a37ea7ad8870",
+        "t_028295fe14fd",
+        "t_d06b5dacbb64",
+        "t_4776b6e51fbc",
+        "t_72a665381a5f",
+        "t_8bc0d55ea53c",
+        "t_806a4cc6d79e",
+        "t_b3754d3b8b34",
+        "t_fc0362d04295",
+        "t_ba21afc0fe3b",
+        "t_37622fb9ae26"
+      ]
+    },
+    {
+      "id": "e_8eda75c58a9b",
+      "from": "s_448961fd3e04",
+      "to": "s_51404df2278f",
+      "selector": "[data-testid=\"contact-next\"]",
+      "label": "Continue to Payment",
+      "profileName": "valid",
+      "traceIds": [
+        "t_e04ebbcc3b28",
+        "t_8afe859b172a",
+        "t_ef4755e9d517",
+        "t_d9d4b91b6e80",
+        "t_d9d4b91b6e80"
+      ]
+    },
+    {
+      "id": "e_2f124fc37630",
+      "from": "s_51404df2278f",
+      "to": "s_7515449b7f72",
+      "selector": "[data-testid=\"payment-next\"]",
+      "label": "Review Order",
+      "profileName": "invalid",
+      "traceIds": [
+        "t_e04ebbcc3b28"
+      ]
+    },
+    {
+      "id": "e_69c98fd25d20",
+      "from": "s_51404df2278f",
+      "to": "s_448961fd3e04",
+      "selector": "[data-testid=\"payment-back\"]",
+      "label": "Back to Contact",
+      "profileName": "default",
+      "traceIds": [
+        "t_8afe859b172a",
+        "t_d9d4b91b6e80"
+      ]
+    },
+    {
+      "id": "e_949d1048d9ab",
+      "from": "s_448961fd3e04",
+      "to": "s_bdc4e8bdcc57",
+      "selector": "[data-testid=\"express-review\"]",
+      "label": "Express Review",
+      "profileName": "default",
+      "traceIds": [
+        "t_8afe859b172a"
+      ]
+    },
+    {
+      "id": "e_d4b54f6e3650",
+      "from": "s_51404df2278f",
+      "to": "s_e3013eb8acac",
+      "selector": "[data-testid=\"payment-next\"]",
+      "label": "Review Order",
+      "profileName": "valid",
+      "traceIds": [
+        "t_ef4755e9d517"
+      ]
+    },
+    {
+      "id": "e_29b4e5e8bfd2",
+      "from": "s_e3013eb8acac",
+      "to": "s_3f095d1abdf8",
+      "selector": "[data-testid=\"place-order\"]",
+      "label": "Place Order",
+      "profileName": "default",
+      "traceIds": [
+        "t_ef4755e9d517"
+      ]
+    },
+    {
+      "id": "e_06db3e4a68c8",
+      "from": "s_51404df2278f",
+      "to": "s_3456d8110fee",
+      "selector": "[data-testid=\"payment-next\"]",
+      "label": "Review Order",
+      "profileName": "valid",
+      "traceIds": [
+        "t_d9d4b91b6e80"
+      ]
+    },
+    {
+      "id": "e_edb6c95231d7",
+      "from": "s_3456d8110fee",
+      "to": "s_ef9b9c0a8be0",
+      "selector": "[data-testid=\"place-order\"]",
+      "label": "Place Order",
+      "profileName": "default",
+      "traceIds": [
+        "t_d9d4b91b6e80"
+      ]
+    },
+    {
+      "id": "e_2191f2b5c889",
+      "from": "s_3c4902154c39",
+      "to": "s_d7218f82614c",
+      "selector": "[data-testid=\"nav-cart\"]",
+      "label": "Cart",
+      "profileName": "default",
+      "traceIds": [
+        "t_6a00e4a20400"
+      ]
+    },
+    {
+      "id": "e_750ba3aedea9",
+      "from": "s_3c4902154c39",
+      "to": "s_448961fd3e04",
+      "selector": "[data-testid=\"nav-contact\"]",
+      "label": "Contact",
+      "profileName": "default",
+      "traceIds": [
+        "t_73764798e334"
+      ]
+    },
+    {
+      "id": "e_993b6589da44",
+      "from": "s_3c4902154c39",
+      "to": "s_51404df2278f",
+      "selector": "[data-testid=\"nav-payment\"]",
+      "label": "Payment",
+      "profileName": "default",
+      "traceIds": [
+        "t_39b89f5e1b27"
+      ]
+    },
+    {
+      "id": "e_f33742bc1118",
+      "from": "s_3c4902154c39",
+      "to": "s_837895477bf8",
+      "selector": "[data-testid=\"nav-review\"]",
+      "label": "Review",
+      "profileName": "default",
+      "traceIds": [
+        "t_4f1bcb07fc5a"
+      ]
+    },
+    {
+      "id": "e_e8706a4203d2",
+      "from": "s_3c4902154c39",
+      "to": "s_448961fd3e04",
+      "selector": "[data-testid=\"cart-next\"]",
+      "label": "Continue to Contact",
+      "profileName": "admin",
+      "traceIds": [
+        "t_0f14ddebbd51"
+      ]
+    },
+    {
+      "id": "e_5cae8e50be41",
+      "from": "s_bc066b470567",
+      "to": "s_d7218f82614c",
+      "selector": "[data-testid=\"nav-cart\"]",
+      "label": "Cart",
+      "profileName": "default",
+      "traceIds": [
+        "t_eead915d8436"
+      ]
+    },
+    {
+      "id": "e_4212465ba8ad",
+      "from": "s_bc066b470567",
+      "to": "s_448961fd3e04",
+      "selector": "[data-testid=\"nav-contact\"]",
+      "label": "Contact",
+      "profileName": "default",
+      "traceIds": [
+        "t_3cf878f87c64"
+      ]
+    },
+    {
+      "id": "e_91c1286d8ca7",
+      "from": "s_bc066b470567",
+      "to": "s_51404df2278f",
+      "selector": "[data-testid=\"nav-payment\"]",
+      "label": "Payment",
+      "profileName": "default",
+      "traceIds": [
+        "t_c5e986209787"
+      ]
+    },
+    {
+      "id": "e_bc6685405dbb",
+      "from": "s_bc066b470567",
+      "to": "s_837895477bf8",
+      "selector": "[data-testid=\"nav-review\"]",
+      "label": "Review",
+      "profileName": "default",
+      "traceIds": [
+        "t_06bfd0dee3ce"
+      ]
+    },
+    {
+      "id": "e_255f285b9eec",
+      "from": "s_bc066b470567",
+      "to": "s_448961fd3e04",
+      "selector": "[data-testid=\"cart-next\"]",
+      "label": "Continue to Contact",
+      "profileName": "valid",
+      "traceIds": [
+        "t_105db1f27445"
+      ]
+    },
+    {
+      "id": "e_840b32f98884",
+      "from": "s_bc066b470567",
+      "to": "s_448961fd3e04",
+      "selector": "[data-testid=\"cart-next\"]",
+      "label": "Continue to Contact",
+      "profileName": "admin",
+      "traceIds": [
+        "t_c50469e4724a"
+      ]
+    },
+    {
+      "id": "e_684c5a86ae42",
+      "from": "s_bc066b470567",
+      "to": "s_bc066b470567",
+      "selector": "[data-testid=\"cart-next\"]",
+      "label": "Continue to Contact",
+      "profileName": "invalid",
+      "traceIds": [
+        "t_a2ac54aaac5f"
+      ]
+    },
+    {
+      "id": "e_90a9eae749bb",
+      "from": "s_60c8eccf3fb4",
+      "to": "s_3f067f0ebfe9",
+      "selector": "[data-testid=\"nav-cart\"]",
+      "label": "Cart",
+      "profileName": "default",
+      "traceIds": [
+        "t_028295fe14fd"
+      ]
+    },
+    {
+      "id": "e_51e5bff7cd24",
+      "from": "s_60c8eccf3fb4",
+      "to": "s_448961fd3e04",
+      "selector": "[data-testid=\"nav-contact\"]",
+      "label": "Contact",
+      "profileName": "default",
+      "traceIds": [
+        "t_d06b5dacbb64"
+      ]
+    },
+    {
+      "id": "e_067bcfe56ea0",
+      "from": "s_60c8eccf3fb4",
+      "to": "s_51404df2278f",
+      "selector": "[data-testid=\"nav-payment\"]",
+      "label": "Payment",
+      "profileName": "default",
+      "traceIds": [
+        "t_4776b6e51fbc"
+      ]
+    },
+    {
+      "id": "e_2543814151b3",
+      "from": "s_60c8eccf3fb4",
+      "to": "s_83ad222edcdf",
+      "selector": "[data-testid=\"nav-review\"]",
+      "label": "Review",
+      "profileName": "default",
+      "traceIds": [
+        "t_72a665381a5f"
+      ]
+    },
+    {
+      "id": "e_cc29fe2837de",
+      "from": "s_60c8eccf3fb4",
+      "to": "s_51404df2278f",
+      "selector": "[data-testid=\"contact-next\"]",
+      "label": "Continue to Payment",
+      "profileName": "valid",
+      "traceIds": [
+        "t_8bc0d55ea53c"
+      ]
+    },
+    {
+      "id": "e_57af6bb2f2e7",
+      "from": "s_60c8eccf3fb4",
+      "to": "s_51404df2278f",
+      "selector": "[data-testid=\"contact-next\"]",
+      "label": "Continue to Payment",
+      "profileName": "admin",
+      "traceIds": [
+        "t_806a4cc6d79e"
+      ]
+    },
+    {
+      "id": "e_cf05e37aed48",
+      "from": "s_60c8eccf3fb4",
+      "to": "s_60c8eccf3fb4",
+      "selector": "[data-testid=\"contact-next\"]",
+      "label": "Continue to Payment",
+      "profileName": "invalid",
+      "traceIds": [
+        "t_b3754d3b8b34"
+      ]
+    },
+    {
+      "id": "e_7b28d086b27e",
+      "from": "s_60c8eccf3fb4",
+      "to": "s_3f067f0ebfe9",
+      "selector": "[data-testid=\"contact-back\"]",
+      "label": "Back",
+      "profileName": "valid",
+      "traceIds": [
+        "t_fc0362d04295"
+      ]
+    },
+    {
+      "id": "e_082def7dc0bf",
+      "from": "s_60c8eccf3fb4",
+      "to": "s_3f067f0ebfe9",
+      "selector": "[data-testid=\"contact-back\"]",
+      "label": "Back",
+      "profileName": "admin",
+      "traceIds": [
+        "t_ba21afc0fe3b"
+      ]
+    },
+    {
+      "id": "e_9cb40e66f36a",
+      "from": "s_60c8eccf3fb4",
+      "to": "s_3f067f0ebfe9",
+      "selector": "[data-testid=\"contact-back\"]",
+      "label": "Back",
+      "profileName": "invalid",
+      "traceIds": [
+        "t_37622fb9ae26"
+      ]
+    }
+  ],
+  "traces": [
+    {
+      "id": "t_cced28c6dc3f",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "start",
+      "steps": [],
+      "stateIds": [
+        "s_3c4902154c39"
+      ],
+      "finalStateId": "s_3c4902154c39"
+    },
+    {
+      "id": "t_f39c85fe9554",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "invalid:[data-testid=\"cart-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_bc066b470567"
+      ],
+      "finalStateId": "s_bc066b470567"
+    },
+    {
+      "id": "t_a37ea7ad8870",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"] -> invalid:[data-testid=\"contact-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04",
+        "s_60c8eccf3fb4"
+      ],
+      "finalStateId": "s_60c8eccf3fb4"
+    },
+    {
+      "id": "t_e04ebbcc3b28",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"] -> valid:[data-testid=\"contact-next\"] -> invalid:[data-testid=\"payment-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"payment-next\"]",
+            "label": "Review Order",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04",
+        "s_51404df2278f",
+        "s_7515449b7f72"
+      ],
+      "finalStateId": "s_7515449b7f72"
+    },
+    {
+      "id": "t_8afe859b172a",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"] -> valid:[data-testid=\"contact-next\"] -> default:[data-testid=\"payment-back\"] -> default:[data-testid=\"express-review\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"payment-back\"]",
+            "label": "Back to Contact",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"express-review\"]",
+            "label": "Express Review",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04",
+        "s_51404df2278f",
+        "s_448961fd3e04",
+        "s_bdc4e8bdcc57"
+      ],
+      "finalStateId": "s_bdc4e8bdcc57"
+    },
+    {
+      "id": "t_ef4755e9d517",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"] -> valid:[data-testid=\"contact-next\"] -> valid:[data-testid=\"payment-next\"] -> default:[data-testid=\"place-order\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"payment-next\"]",
+            "label": "Review Order",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"place-order\"]",
+            "label": "Place Order",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04",
+        "s_51404df2278f",
+        "s_e3013eb8acac",
+        "s_3f095d1abdf8"
+      ],
+      "finalStateId": "s_3f095d1abdf8"
+    },
+    {
+      "id": "t_d9d4b91b6e80",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"] -> valid:[data-testid=\"contact-next\"] -> default:[data-testid=\"payment-back\"] -> valid:[data-testid=\"contact-next\"] -> valid:[data-testid=\"payment-next\"] -> default:[data-testid=\"place-order\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"payment-back\"]",
+            "label": "Back to Contact",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"payment-next\"]",
+            "label": "Review Order",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"place-order\"]",
+            "label": "Place Order",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04",
+        "s_51404df2278f",
+        "s_448961fd3e04",
+        "s_51404df2278f",
+        "s_3456d8110fee",
+        "s_ef9b9c0a8be0"
+      ],
+      "finalStateId": "s_ef9b9c0a8be0"
+    },
+    {
+      "id": "t_6a00e4a20400",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "default:[data-testid=\"nav-cart\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-cart\"]",
+            "label": "Cart",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/checkout/back-loses-contact/cart",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_d7218f82614c"
+      ],
+      "finalStateId": "s_d7218f82614c"
+    },
+    {
+      "id": "t_73764798e334",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "default:[data-testid=\"nav-contact\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-contact\"]",
+            "label": "Contact",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/checkout/back-loses-contact/contact",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04"
+      ],
+      "finalStateId": "s_448961fd3e04"
+    },
+    {
+      "id": "t_39b89f5e1b27",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "default:[data-testid=\"nav-payment\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-payment\"]",
+            "label": "Payment",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/checkout/back-loses-contact/payment",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_51404df2278f"
+      ],
+      "finalStateId": "s_51404df2278f"
+    },
+    {
+      "id": "t_4f1bcb07fc5a",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "default:[data-testid=\"nav-review\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-review\"]",
+            "label": "Review",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/checkout/back-loses-contact/review",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_837895477bf8"
+      ],
+      "finalStateId": "s_837895477bf8"
+    },
+    {
+      "id": "t_7cb64124311b",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": [
+            {
+              "selector": "[data-testid=\"quantity\"]",
+              "key": "quantity",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04"
+      ],
+      "finalStateId": "s_448961fd3e04"
+    },
+    {
+      "id": "t_0f14ddebbd51",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "admin:[data-testid=\"cart-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "admin",
+          "fills": [
+            {
+              "selector": "[data-testid=\"quantity\"]",
+              "key": "quantity",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04"
+      ],
+      "finalStateId": "s_448961fd3e04"
+    },
+    {
+      "id": "t_eead915d8436",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "invalid:[data-testid=\"cart-next\"] -> default:[data-testid=\"nav-cart\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-cart\"]",
+            "label": "Cart",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/checkout/back-loses-contact/cart",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_bc066b470567",
+        "s_d7218f82614c"
+      ],
+      "finalStateId": "s_d7218f82614c"
+    },
+    {
+      "id": "t_3cf878f87c64",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "invalid:[data-testid=\"cart-next\"] -> default:[data-testid=\"nav-contact\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-contact\"]",
+            "label": "Contact",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/checkout/back-loses-contact/contact",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_bc066b470567",
+        "s_448961fd3e04"
+      ],
+      "finalStateId": "s_448961fd3e04"
+    },
+    {
+      "id": "t_c5e986209787",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "invalid:[data-testid=\"cart-next\"] -> default:[data-testid=\"nav-payment\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-payment\"]",
+            "label": "Payment",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/checkout/back-loses-contact/payment",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_bc066b470567",
+        "s_51404df2278f"
+      ],
+      "finalStateId": "s_51404df2278f"
+    },
+    {
+      "id": "t_06bfd0dee3ce",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "invalid:[data-testid=\"cart-next\"] -> default:[data-testid=\"nav-review\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-review\"]",
+            "label": "Review",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/checkout/back-loses-contact/review",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_bc066b470567",
+        "s_837895477bf8"
+      ],
+      "finalStateId": "s_837895477bf8"
+    },
+    {
+      "id": "t_105db1f27445",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "invalid:[data-testid=\"cart-next\"] -> valid:[data-testid=\"cart-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": [
+            {
+              "selector": "[data-testid=\"quantity\"]",
+              "key": "quantity",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_bc066b470567",
+        "s_448961fd3e04"
+      ],
+      "finalStateId": "s_448961fd3e04"
+    },
+    {
+      "id": "t_c50469e4724a",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "invalid:[data-testid=\"cart-next\"] -> admin:[data-testid=\"cart-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "admin",
+          "fills": [
+            {
+              "selector": "[data-testid=\"quantity\"]",
+              "key": "quantity",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_bc066b470567",
+        "s_448961fd3e04"
+      ],
+      "finalStateId": "s_448961fd3e04"
+    },
+    {
+      "id": "t_a2ac54aaac5f",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "invalid:[data-testid=\"cart-next\"] -> invalid:[data-testid=\"cart-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": [
+            {
+              "selector": "[data-testid=\"quantity\"]",
+              "key": "quantity",
+              "value": -2
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_bc066b470567",
+        "s_bc066b470567"
+      ],
+      "finalStateId": "s_bc066b470567"
+    },
+    {
+      "id": "t_028295fe14fd",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"] -> invalid:[data-testid=\"contact-next\"] -> default:[data-testid=\"nav-cart\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-cart\"]",
+            "label": "Cart",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/checkout/back-loses-contact/cart",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04",
+        "s_60c8eccf3fb4",
+        "s_3f067f0ebfe9"
+      ],
+      "finalStateId": "s_3f067f0ebfe9"
+    },
+    {
+      "id": "t_d06b5dacbb64",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"] -> invalid:[data-testid=\"contact-next\"] -> default:[data-testid=\"nav-contact\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-contact\"]",
+            "label": "Contact",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/checkout/back-loses-contact/contact",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04",
+        "s_60c8eccf3fb4",
+        "s_448961fd3e04"
+      ],
+      "finalStateId": "s_448961fd3e04"
+    },
+    {
+      "id": "t_4776b6e51fbc",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"] -> invalid:[data-testid=\"contact-next\"] -> default:[data-testid=\"nav-payment\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-payment\"]",
+            "label": "Payment",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/checkout/back-loses-contact/payment",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04",
+        "s_60c8eccf3fb4",
+        "s_51404df2278f"
+      ],
+      "finalStateId": "s_51404df2278f"
+    },
+    {
+      "id": "t_72a665381a5f",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"] -> invalid:[data-testid=\"contact-next\"] -> default:[data-testid=\"nav-review\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-review\"]",
+            "label": "Review",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/checkout/back-loses-contact/review",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04",
+        "s_60c8eccf3fb4",
+        "s_83ad222edcdf"
+      ],
+      "finalStateId": "s_83ad222edcdf"
+    },
+    {
+      "id": "t_8bc0d55ea53c",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"] -> invalid:[data-testid=\"contact-next\"] -> valid:[data-testid=\"contact-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": [
+            {
+              "selector": "[data-testid=\"email\"]",
+              "key": "email",
+              "value": "buyer@example.com"
+            },
+            {
+              "selector": "[data-testid=\"address\"]",
+              "key": "address",
+              "value": "100 Main Street"
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04",
+        "s_60c8eccf3fb4",
+        "s_51404df2278f"
+      ],
+      "finalStateId": "s_51404df2278f"
+    },
+    {
+      "id": "t_806a4cc6d79e",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"] -> invalid:[data-testid=\"contact-next\"] -> admin:[data-testid=\"contact-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "admin",
+          "fills": [
+            {
+              "selector": "[data-testid=\"email\"]",
+              "key": "email",
+              "value": "admin@example.com"
+            },
+            {
+              "selector": "[data-testid=\"address\"]",
+              "key": "address",
+              "value": "200 Admin Ave"
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04",
+        "s_60c8eccf3fb4",
+        "s_51404df2278f"
+      ],
+      "finalStateId": "s_51404df2278f"
+    },
+    {
+      "id": "t_b3754d3b8b34",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"] -> invalid:[data-testid=\"contact-next\"] -> invalid:[data-testid=\"contact-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": [
+            {
+              "selector": "[data-testid=\"email\"]",
+              "key": "email",
+              "value": "not-email"
+            },
+            {
+              "selector": "[data-testid=\"address\"]",
+              "key": "address",
+              "value": ""
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04",
+        "s_60c8eccf3fb4",
+        "s_60c8eccf3fb4"
+      ],
+      "finalStateId": "s_60c8eccf3fb4"
+    },
+    {
+      "id": "t_fc0362d04295",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"] -> invalid:[data-testid=\"contact-next\"] -> valid:[data-testid=\"contact-back\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-back\"]",
+            "label": "Back",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": [
+            {
+              "selector": "[data-testid=\"email\"]",
+              "key": "email",
+              "value": "buyer@example.com"
+            },
+            {
+              "selector": "[data-testid=\"address\"]",
+              "key": "address",
+              "value": "100 Main Street"
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04",
+        "s_60c8eccf3fb4",
+        "s_3f067f0ebfe9"
+      ],
+      "finalStateId": "s_3f067f0ebfe9"
+    },
+    {
+      "id": "t_ba21afc0fe3b",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"] -> invalid:[data-testid=\"contact-next\"] -> admin:[data-testid=\"contact-back\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-back\"]",
+            "label": "Back",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "admin",
+          "fills": [
+            {
+              "selector": "[data-testid=\"email\"]",
+              "key": "email",
+              "value": "admin@example.com"
+            },
+            {
+              "selector": "[data-testid=\"address\"]",
+              "key": "address",
+              "value": "200 Admin Ave"
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04",
+        "s_60c8eccf3fb4",
+        "s_3f067f0ebfe9"
+      ],
+      "finalStateId": "s_3f067f0ebfe9"
+    },
+    {
+      "id": "t_37622fb9ae26",
+      "subjectId": "checkout-back-loses-contact",
+      "signature": "valid:[data-testid=\"cart-next\"] -> invalid:[data-testid=\"contact-next\"] -> invalid:[data-testid=\"contact-back\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"cart-next\"]",
+            "label": "Continue to Contact",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-next\"]",
+            "label": "Continue to Payment",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"contact-back\"]",
+            "label": "Back",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": [
+            {
+              "selector": "[data-testid=\"email\"]",
+              "key": "email",
+              "value": "not-email"
+            },
+            {
+              "selector": "[data-testid=\"address\"]",
+              "key": "address",
+              "value": ""
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_3c4902154c39",
+        "s_448961fd3e04",
+        "s_60c8eccf3fb4",
+        "s_3f067f0ebfe9"
+      ],
+      "finalStateId": "s_3f067f0ebfe9"
+    }
+  ],
+  "stats": {
+    "states": 15,
+    "edges": 33,
+    "traces": 30,
+    "maxDepth": 6,
+    "exploredActions": 267
+  }
+}

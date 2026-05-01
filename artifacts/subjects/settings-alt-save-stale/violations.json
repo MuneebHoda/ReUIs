@@ -1,0 +1,33 @@
+[
+  {
+    "id": "v_a71700cbaffd",
+    "subjectId": "settings-alt-save-stale",
+    "invariantId": "settings-profile-save-paths-equivalent",
+    "invariantType": "path-equivalence",
+    "severity": "medium",
+    "title": "Normal and quick profile save paths must converge to the same saved profile state.",
+    "description": "Equivalent workflow endpoints diverged across 2 representative paths.",
+    "traceIds": [
+      "t_93982d6d1089",
+      "t_7cc3481ad291"
+    ],
+    "stateIds": [
+      "s_b35ad6246d3c",
+      "s_16c83dbbe8c0"
+    ],
+    "evidence": {
+      "distinctEndpointStates": [
+        "s_b35ad6246d3c",
+        "s_16c83dbbe8c0"
+      ],
+      "endpointFingerprints": [
+        "4ab0d3ef2f44ce472516da90aabf26c8c991fcf789be7461a214f8a3b1306ce7",
+        "ab294d46687a701881bd382a10547c5c93d4bd95e1a15742eebf97d5f28f3593"
+      ]
+    },
+    "replaySteps": [
+      "1. valid -> Save Profile ([data-testid=\"save-profile\"])",
+      "1. valid -> Quick Save ([data-testid=\"quick-save-profile\"])"
+    ]
+  }
+]

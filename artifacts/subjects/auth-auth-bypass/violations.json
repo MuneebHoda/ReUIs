@@ -1,0 +1,115 @@
+[
+  {
+    "id": "v_02d91397e356",
+    "subjectId": "auth-auth-bypass",
+    "invariantId": "auth-dashboard-requires-login",
+    "invariantType": "auth-precondition",
+    "severity": "critical",
+    "title": "Dashboard access must be preceded by a successful login action.",
+    "description": "A restricted state was reachable without the required authentication or authorization action.",
+    "traceIds": [
+      "t_7ef308de435b"
+    ],
+    "stateIds": [
+      "s_00a49100779d",
+      "s_693c2edca823"
+    ],
+    "evidence": {
+      "missingRequiredActions": [
+        "[data-testid=\"user-login-submit\"]",
+        "[data-testid=\"admin-login-submit\"]"
+      ],
+      "finalState": "s_693c2edca823"
+    },
+    "replaySteps": [
+      "1. default -> Open Dashboard ([data-testid=\"home-dashboard\"])"
+    ]
+  },
+  {
+    "id": "v_13aae21c988f",
+    "subjectId": "auth-auth-bypass",
+    "invariantId": "auth-dashboard-requires-login",
+    "invariantType": "auth-precondition",
+    "severity": "critical",
+    "title": "Dashboard access must be preceded by a successful login action.",
+    "description": "A restricted state was reachable without the required authentication or authorization action.",
+    "traceIds": [
+      "t_8a1e592e2e16"
+    ],
+    "stateIds": [
+      "s_00a49100779d",
+      "s_693c2edca823"
+    ],
+    "evidence": {
+      "missingRequiredActions": [
+        "[data-testid=\"user-login-submit\"]",
+        "[data-testid=\"admin-login-submit\"]"
+      ],
+      "finalState": "s_693c2edca823"
+    },
+    "replaySteps": [
+      "1. default -> Dashboard ([data-testid=\"nav-dashboard\"])"
+    ]
+  },
+  {
+    "id": "v_4f1a12cec389",
+    "subjectId": "auth-auth-bypass",
+    "invariantId": "auth-dashboard-requires-login",
+    "invariantType": "auth-precondition",
+    "severity": "critical",
+    "title": "Dashboard access must be preceded by a successful login action.",
+    "description": "A restricted state was reachable without the required authentication or authorization action.",
+    "traceIds": [
+      "t_e73944046bb1"
+    ],
+    "stateIds": [
+      "s_00a49100779d",
+      "s_693c2edca823",
+      "s_693c2edca823"
+    ],
+    "evidence": {
+      "missingRequiredActions": [
+        "[data-testid=\"user-login-submit\"]",
+        "[data-testid=\"admin-login-submit\"]"
+      ],
+      "finalState": "s_693c2edca823"
+    },
+    "replaySteps": [
+      "1. default -> Open Dashboard ([data-testid=\"home-dashboard\"])",
+      "2. default -> Dashboard ([data-testid=\"nav-dashboard\"])"
+    ]
+  },
+  {
+    "id": "v_fe36e7516844",
+    "subjectId": "auth-auth-bypass",
+    "invariantId": "auth-logout-clears-protected-access",
+    "invariantType": "action-forbidden-state",
+    "severity": "critical",
+    "title": "Protected pages must not be reachable after logout.",
+    "description": "A forbidden state was observed after an action that should prevent it.",
+    "traceIds": [
+      "t_519eb8b00d1d"
+    ],
+    "stateIds": [
+      "s_00a49100779d",
+      "s_d28f51fa1b00",
+      "s_40aff46e1937",
+      "s_361ec819d050",
+      "s_693c2edca823"
+    ],
+    "evidence": {
+      "actionSelectors": [
+        "[data-testid=\"logout\"]"
+      ],
+      "forbiddenStateIds": [
+        "s_693c2edca823"
+      ]
+    },
+    "replaySteps": [
+      "1. default -> Login ([data-testid=\"home-login\"])",
+      "2. valid -> User Login ([data-testid=\"user-login-submit\"])",
+      "3. default -> Logout ([data-testid=\"logout\"])",
+      "4. default -> Dashboard ([data-testid=\"nav-dashboard\"])"
+    ]
+  }
+]

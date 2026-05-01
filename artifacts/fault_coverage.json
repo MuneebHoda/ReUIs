@@ -1,0 +1,271 @@
+[
+  {
+    "faultId": "F-AUTH-1",
+    "title": "Dashboard bypasses authentication",
+    "subjectId": "auth-auth-bypass",
+    "app": "auth",
+    "variant": "auth-bypass",
+    "expectedInvariantIds": [
+      "auth-dashboard-requires-login"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "auth-dashboard-requires-login"
+    ],
+    "relationalViolationIds": [
+      "v_02d91397e356",
+      "v_13aae21c988f",
+      "v_4f1a12cec389"
+    ],
+    "baselineDetected": true,
+    "baselineKinds": [
+      "structural"
+    ],
+    "counterexampleId": "v_02d91397e356"
+  },
+  {
+    "faultId": "F-AUTH-2",
+    "title": "Logout does not clear protected access",
+    "subjectId": "auth-logout-retains-access",
+    "app": "auth",
+    "variant": "logout-retains-access",
+    "expectedInvariantIds": [
+      "auth-logout-clears-protected-access"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "auth-logout-clears-protected-access"
+    ],
+    "relationalViolationIds": [
+      "v_69e967be99b7"
+    ],
+    "baselineDetected": false,
+    "baselineKinds": [],
+    "counterexampleId": "v_69e967be99b7"
+  },
+  {
+    "faultId": "F-AUTH-3",
+    "title": "User role reaches admin console",
+    "subjectId": "auth-role-escalation",
+    "app": "auth",
+    "variant": "role-escalation",
+    "expectedInvariantIds": [
+      "auth-admin-requires-admin-login"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "auth-admin-requires-admin-login"
+    ],
+    "relationalViolationIds": [
+      "v_55cc6dd4d85c"
+    ],
+    "baselineDetected": false,
+    "baselineKinds": [],
+    "counterexampleId": "v_55cc6dd4d85c"
+  },
+  {
+    "faultId": "F-AUTH-4",
+    "title": "Invalid login reaches dashboard",
+    "subjectId": "auth-invalid-login-dashboard",
+    "app": "auth",
+    "variant": "invalid-login-dashboard",
+    "expectedInvariantIds": [
+      "auth-invalid-login-blocks-dashboard"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "auth-invalid-login-blocks-dashboard"
+    ],
+    "relationalViolationIds": [
+      "v_74667be014c3"
+    ],
+    "baselineDetected": false,
+    "baselineKinds": [],
+    "counterexampleId": "v_74667be014c3"
+  },
+  {
+    "faultId": "F-CHECKOUT-1",
+    "title": "Invalid contact advances to payment",
+    "subjectId": "checkout-invalid-step-progression",
+    "app": "checkout",
+    "variant": "invalid-step-progression",
+    "expectedInvariantIds": [
+      "checkout-invalid-contact-blocks-payment"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "checkout-invalid-contact-blocks-payment"
+    ],
+    "relationalViolationIds": [
+      "v_18a1939e81f6",
+      "v_582020f26853",
+      "v_90a64b8351e4",
+      "v_d70348635bc1",
+      "v_51c5e96d4052",
+      "v_565cd5593129",
+      "v_f31bb9e2bb5e",
+      "v_521ebc0c5cc1",
+      "v_b949820340e5"
+    ],
+    "baselineDetected": true,
+    "baselineKinds": [
+      "structural"
+    ],
+    "counterexampleId": "v_18a1939e81f6"
+  },
+  {
+    "faultId": "F-CHECKOUT-2",
+    "title": "Express review bypasses payment",
+    "subjectId": "checkout-skip-payment",
+    "app": "checkout",
+    "variant": "skip-payment",
+    "expectedInvariantIds": [
+      "checkout-express-review-requires-payment"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "checkout-express-review-requires-payment"
+    ],
+    "relationalViolationIds": [
+      "v_3f65e0ddcfb0"
+    ],
+    "baselineDetected": false,
+    "baselineKinds": [],
+    "counterexampleId": "v_3f65e0ddcfb0"
+  },
+  {
+    "faultId": "F-CHECKOUT-3",
+    "title": "Negative quantity advances checkout",
+    "subjectId": "checkout-negative-total",
+    "app": "checkout",
+    "variant": "negative-total",
+    "expectedInvariantIds": [
+      "checkout-invalid-cart-blocks-contact"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "checkout-invalid-cart-blocks-contact"
+    ],
+    "relationalViolationIds": [
+      "v_c633136d65f9",
+      "v_3ecaa41f2087",
+      "v_53fe843eaf73",
+      "v_1939644f6da3",
+      "v_551def077435",
+      "v_773f335bca1c",
+      "v_c39f2c459105",
+      "v_d9476d995d45",
+      "v_9a6b83b8db67",
+      "v_3a2007904eb4",
+      "v_779ea30d4823",
+      "v_d2ce6798f24a",
+      "v_dcedb7054888",
+      "v_29744ff021fe"
+    ],
+    "baselineDetected": true,
+    "baselineKinds": [
+      "structural"
+    ],
+    "counterexampleId": "v_c633136d65f9"
+  },
+  {
+    "faultId": "F-CHECKOUT-4",
+    "title": "Back path loses contact details before confirmation",
+    "subjectId": "checkout-back-loses-contact",
+    "app": "checkout",
+    "variant": "back-loses-contact",
+    "expectedInvariantIds": [
+      "checkout-confirmation-paths-equivalent"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "checkout-confirmation-paths-equivalent"
+    ],
+    "relationalViolationIds": [
+      "v_5eb4d41bcc6a"
+    ],
+    "baselineDetected": false,
+    "baselineKinds": [],
+    "counterexampleId": "v_5eb4d41bcc6a"
+  },
+  {
+    "faultId": "F-SETTINGS-1",
+    "title": "Quick profile save writes stale state",
+    "subjectId": "settings-alt-save-stale",
+    "app": "settings",
+    "variant": "alt-save-stale",
+    "expectedInvariantIds": [
+      "settings-profile-save-paths-equivalent"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "settings-profile-save-paths-equivalent"
+    ],
+    "relationalViolationIds": [
+      "v_a71700cbaffd"
+    ],
+    "baselineDetected": false,
+    "baselineKinds": [],
+    "counterexampleId": "v_a71700cbaffd"
+  },
+  {
+    "faultId": "F-SETTINGS-2",
+    "title": "Cancel persists an edited display name",
+    "subjectId": "settings-cancel-persists-change",
+    "app": "settings",
+    "variant": "cancel-persists-change",
+    "expectedInvariantIds": [
+      "settings-cancel-does-not-save"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "settings-cancel-does-not-save"
+    ],
+    "relationalViolationIds": [
+      "v_c523bde1591e"
+    ],
+    "baselineDetected": false,
+    "baselineKinds": [],
+    "counterexampleId": "v_c523bde1591e"
+  },
+  {
+    "faultId": "F-SETTINGS-3",
+    "title": "Reset leaves edited display name in saved state",
+    "subjectId": "settings-reset-does-not-clear",
+    "app": "settings",
+    "variant": "reset-does-not-clear",
+    "expectedInvariantIds": [
+      "settings-reset-clears-edits"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "settings-reset-clears-edits"
+    ],
+    "relationalViolationIds": [
+      "v_490b7c4e3b43"
+    ],
+    "baselineDetected": false,
+    "baselineKinds": [],
+    "counterexampleId": "v_490b7c4e3b43"
+  },
+  {
+    "faultId": "F-SETTINGS-4",
+    "title": "Quick notification save discards notification state",
+    "subjectId": "settings-stale-notification",
+    "app": "settings",
+    "variant": "stale-notification",
+    "expectedInvariantIds": [
+      "settings-notification-save-paths-equivalent"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "settings-notification-save-paths-equivalent"
+    ],
+    "relationalViolationIds": [
+      "v_0b849bc211c0"
+    ],
+    "baselineDetected": false,
+    "baselineKinds": [],
+    "counterexampleId": "v_0b849bc211c0"
+  }
+]

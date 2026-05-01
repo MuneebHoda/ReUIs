@@ -1,0 +1,22 @@
+% Runtime and Model Size by Subject
+\begin{tabular}{lllll}
+\toprule
+Subject & States & Transitions & Traces & Runtime (s) \\
+\midrule
+auth-clean & 10 & 19 & 18 & 9.15 \\
+auth-auth-bypass & 11 & 19 & 18 & 8.74 \\
+auth-logout-retains-access & 10 & 19 & 18 & 8.87 \\
+auth-role-escalation & 9 & 19 & 18 & 8.75 \\
+auth-invalid-login-dashboard & 9 & 19 & 18 & 8.75 \\
+checkout-clean & 13 & 30 & 28 & 17.59 \\
+checkout-invalid-step-progression & 14 & 29 & 28 & 17.55 \\
+checkout-skip-payment & 14 & 30 & 28 & 17.54 \\
+checkout-negative-total & 13 & 28 & 28 & 15.99 \\
+checkout-back-loses-contact & 15 & 33 & 30 & 19.15 \\
+settings-clean & 9 & 19 & 20 & 7.61 \\
+settings-alt-save-stale & 9 & 19 & 20 & 7.78 \\
+settings-cancel-persists-change & 9 & 19 & 20 & 7.73 \\
+settings-reset-does-not-clear & 9 & 19 & 20 & 7.74 \\
+settings-stale-notification & 9 & 19 & 20 & 7.73 \\
+\bottomrule
+\end{tabular}

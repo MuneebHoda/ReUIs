@@ -1,0 +1,201 @@
+[
+  {
+    "subjectId": "auth-clean",
+    "cleanSubjectId": "auth-clean",
+    "structural": {
+      "detected": false,
+      "alerts": []
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "auth-auth-bypass",
+    "cleanSubjectId": "auth-clean",
+    "structural": {
+      "detected": true,
+      "alerts": [
+        {
+          "kind": "structural",
+          "message": "State s_14f02c912545 has a control structure not seen in the clean variant."
+        }
+      ]
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "auth-logout-retains-access",
+    "cleanSubjectId": "auth-clean",
+    "structural": {
+      "detected": false,
+      "alerts": []
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "auth-role-escalation",
+    "cleanSubjectId": "auth-clean",
+    "structural": {
+      "detected": false,
+      "alerts": []
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "auth-invalid-login-dashboard",
+    "cleanSubjectId": "auth-clean",
+    "structural": {
+      "detected": false,
+      "alerts": []
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "checkout-clean",
+    "cleanSubjectId": "checkout-clean",
+    "structural": {
+      "detected": false,
+      "alerts": []
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "checkout-invalid-step-progression",
+    "cleanSubjectId": "checkout-clean",
+    "structural": {
+      "detected": true,
+      "alerts": [
+        {
+          "kind": "structural",
+          "message": "State s_8df6827e8513 has a control structure not seen in the clean variant."
+        },
+        {
+          "kind": "structural",
+          "message": "State s_c65a0806a0ed has a control structure not seen in the clean variant."
+        }
+      ]
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "checkout-skip-payment",
+    "cleanSubjectId": "checkout-clean",
+    "structural": {
+      "detected": false,
+      "alerts": []
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "checkout-negative-total",
+    "cleanSubjectId": "checkout-clean",
+    "structural": {
+      "detected": true,
+      "alerts": [
+        {
+          "kind": "structural",
+          "message": "State s_88795babfe45 has a control structure not seen in the clean variant."
+        }
+      ]
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "checkout-back-loses-contact",
+    "cleanSubjectId": "checkout-clean",
+    "structural": {
+      "detected": false,
+      "alerts": []
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "settings-clean",
+    "cleanSubjectId": "settings-clean",
+    "structural": {
+      "detected": false,
+      "alerts": []
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "settings-alt-save-stale",
+    "cleanSubjectId": "settings-clean",
+    "structural": {
+      "detected": false,
+      "alerts": []
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "settings-cancel-persists-change",
+    "cleanSubjectId": "settings-clean",
+    "structural": {
+      "detected": false,
+      "alerts": []
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "settings-reset-does-not-clear",
+    "cleanSubjectId": "settings-clean",
+    "structural": {
+      "detected": false,
+      "alerts": []
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "settings-stale-notification",
+    "cleanSubjectId": "settings-clean",
+    "structural": {
+      "detected": false,
+      "alerts": []
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  }
+]

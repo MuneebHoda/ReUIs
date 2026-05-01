@@ -1,0 +1,19 @@
+% Injected Faults and Relational Oracles
+\begin{tabular}{lllll}
+\toprule
+Fault & App & Variant & Expected Oracle & Detected \\
+\midrule
+F-AUTH-1 & Auth & auth-bypass & auth-dashboard-requires-login & Yes \\
+F-AUTH-2 & Auth & logout-retains-access & auth-logout-clears-protected-access & Yes \\
+F-AUTH-3 & Auth & role-escalation & auth-admin-requires-admin-login & Yes \\
+F-AUTH-4 & Auth & invalid-login-dashboard & auth-invalid-login-blocks-dashboard & Yes \\
+F-CHECKOUT-1 & Checkout & invalid-step-progression & checkout-invalid-contact-blocks-payment & Yes \\
+F-CHECKOUT-2 & Checkout & skip-payment & checkout-express-review-requires-payment & Yes \\
+F-CHECKOUT-3 & Checkout & negative-total & checkout-invalid-cart-blocks-contact & Yes \\
+F-CHECKOUT-4 & Checkout & back-loses-contact & checkout-confirmation-paths-equivalent & Yes \\
+F-SETTINGS-1 & Settings & alt-save-stale & settings-profile-save-paths-equivalent & Yes \\
+F-SETTINGS-2 & Settings & cancel-persists-change & settings-cancel-does-not-save & Yes \\
+F-SETTINGS-3 & Settings & reset-does-not-clear & settings-reset-clears-edits & Yes \\
+F-SETTINGS-4 & Settings & stale-notification & settings-notification-save-paths-equivalent & Yes \\
+\bottomrule
+\end{tabular}

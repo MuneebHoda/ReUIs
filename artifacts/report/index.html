@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RelUI Report</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18202f;
+      --muted: #5f6f85;
+      --line: #d8e0ea;
+      --panel: #ffffff;
+      --page: #f3f6fa;
+      --navy: #16243a;
+      --teal: #0f766e;
+      --cyan: #0369a1;
+      --amber: #b54708;
+      --red: #b42318;
+      --green: #027a48;
+      --soft-teal: #ecfdf3;
+      --soft-cyan: #eff8ff;
+      --soft-amber: #fffaeb;
+      --soft-red: #fef3f2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font: 14px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      background: var(--navy);
+      color: #ffffff;
+      padding: 30px 38px 34px;
+      border-bottom: 5px solid var(--teal);
+    }
+    header h1 { margin: 0; font-size: 31px; letter-spacing: 0; }
+    header p { max-width: 840px; margin: 8px 0 0; color: #cfdae8; }
+    main { max-width: 1280px; margin: 0 auto; padding: 26px; }
+    h2 { margin: 0 0 14px; font-size: 20px; letter-spacing: 0; }
+    h3 { margin: 0 0 8px; font-size: 16px; letter-spacing: 0; }
+    p { color: var(--muted); }
+    table { width: 100%; border-collapse: collapse; min-width: 860px; }
+    th, td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    pre {
+      margin: 10px 0 0;
+      padding: 12px;
+      overflow: auto;
+      background: #101828;
+      color: #edf2f7;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+    .section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      margin-top: 18px;
+      overflow: auto;
+      box-shadow: 0 1px 2px rgb(16 24 40 / 0.04);
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .metric {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      min-height: 92px;
+    }
+    .metric strong { display: block; font-size: 27px; line-height: 1.1; }
+    .metric span { display: block; margin-top: 6px; color: var(--muted); }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .ok { color: var(--green); background: var(--soft-teal); }
+    .miss { color: var(--red); background: var(--soft-red); }
+    .neutral { color: var(--muted); background: #eef2f6; }
+    .warn { color: var(--amber); background: var(--soft-amber); }
+    .info { color: var(--cyan); background: var(--soft-cyan); }
+    .critical, .high { color: var(--red); background: var(--soft-red); }
+    .medium { color: var(--amber); background: var(--soft-amber); }
+    .figure-grid, .app-grid, .fault-grid, .counterexample-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 12px;
+    }
+    .figure, .fault-card, .counterexample, .app-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfe;
+      padding: 14px;
+    }
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(130px, 1fr));
+      gap: 8px;
+      align-items: stretch;
+    }
+    .pipe-step {
+      border: 1px solid #9bd0c7;
+      background: #f0fdfa;
+      border-radius: 8px;
+      padding: 12px;
+      min-height: 72px;
+      font-weight: 700;
+    }
+    .pipe-step span { display: block; margin-top: 4px; color: var(--muted); font-weight: 500; font-size: 12px; }
+    .bars { display: grid; gap: 10px; }
+    .bar-row { display: grid; grid-template-columns: 110px 1fr 52px; gap: 10px; align-items: center; }
+    .bar-shell { height: 12px; background: #e8edf4; border-radius: 999px; overflow: hidden; }
+    .bar-fill { height: 100%; background: var(--teal); border-radius: 999px; }
+    .bar-fill.alt { background: var(--cyan); }
+    .bar-fill.warn { background: var(--amber); }
+    .fault-card h3, .counterexample h3 { display: flex; justify-content: space-between; gap: 8px; align-items: flex-start; }
+    .fault-meta { color: var(--muted); margin: 6px 0 10px; }
+    .mini-table { display: grid; grid-template-columns: 128px 1fr; gap: 6px 10px; font-size: 13px; }
+    .mini-table div:nth-child(odd) { color: var(--muted); }
+    .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-top: 10px; }
+    .shot img { width: 100%; border: 1px solid var(--line); border-radius: 6px; background: white; }
+    .shot span { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; }
+    .diff { display: grid; gap: 5px; margin-top: 10px; }
+    .diff div { padding: 7px 9px; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; }
+    .diff .minus { background: var(--soft-red); color: var(--red); }
+    .diff .plus { background: var(--soft-teal); color: var(--green); }
+    .diff .note { background: #eef2f6; color: var(--muted); }
+    .graph-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+    .edge { color: var(--muted); font-size: 12px; margin: 3px 0; }
+    .summary-note { margin: 0 0 14px; color: var(--muted); }
+    @media (max-width: 920px) {
+      .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .pipeline { grid-template-columns: 1fr; }
+      main { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RelUI Behavioral Consistency Report</h1>
+    <p>RelUI explores Web UI interaction paths, infers canonical state-transition graphs, and checks relational invariants that structural and visual tests often miss.</p>
+  </header>
+  <main>
+    <section class="metric-grid" aria-label="Assignment metrics">
+      <div class="metric"><strong>3</strong><span>Apps Tested</span><span>Auth, Checkout, Settings</span></div>
+      <div class="metric"><strong>12</strong><span>Faults Injected</span><span>12 faulty variants</span></div>
+      <div class="metric"><strong>163</strong><span>States Discovered</span><span>340 transitions</span></div>
+      <div class="metric"><strong>12/12</strong><span>Bugs Detected</span><span>0 clean false positives</span></div>
+      <div class="metric"><strong>332</strong><span>Traces Explored</span><span>Replayable browser traces</span></div>
+      <div class="metric"><strong>36</strong><span>Relational Violations</span><span>Counterexample instances</span></div>
+      <div class="metric"><strong>170.66s</strong><span>Runtime</span><span>End-to-end exploration time</span></div>
+      <div class="metric"><strong>3</strong><span>Baseline Hits</span><span>3 structural, 0 visual</span></div>
+    </section>
+
+    <section class="section">
+      <h2>Figure 1. RelUI Pipeline</h2>
+      <div class="pipeline">
+        <div class="pipe-step">Explore<span>Playwright collects event traces</span></div>
+        <div class="pipe-step">Canonicalize<span>DOM, URL, widgets, screenshots</span></div>
+        <div class="pipe-step">Infer Graph<span>States and labeled transitions</span></div>
+        <div class="pipe-step">Check Relations<span>Auth, validation, equivalence</span></div>
+        <div class="pipe-step">Report<span>Tables, figures, counterexamples</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Figure 2. App and Fault Matrix</h2>
+      <p class="summary-note">Each card groups clean and faulty variants by benchmark app. Detection status is based on expected fault-to-oracle mappings in the config.</p>
+      <div class="app-grid">
+        <article class="app-card">
+    <h3>Auth</h3>
+    <div class="mini-table">
+      <div>Variants</div><div>5</div>
+      <div>Faults</div><div>4</div>
+      <div>Detected</div><div>4/4</div>
+      <div>States</div><div>49</div>
+      <div>Transitions</div><div>95</div>
+      <div>Runtime</div><div>44.25s</div>
+    </div>
+    <p><span class="badge ok">F-AUTH-1</span> <span class="badge ok">F-AUTH-2</span> <span class="badge ok">F-AUTH-3</span> <span class="badge ok">F-AUTH-4</span></p>
+  </article><article class="app-card">
+    <h3>Checkout</h3>
+    <div class="mini-table">
+      <div>Variants</div><div>5</div>
+      <div>Faults</div><div>4</div>
+      <div>Detected</div><div>4/4</div>
+      <div>States</div><div>69</div>
+      <div>Transitions</div><div>150</div>
+      <div>Runtime</div><div>87.82s</div>
+    </div>
+    <p><span class="badge ok">F-CHECKOUT-1</span> <span class="badge ok">F-CHECKOUT-2</span> <span class="badge ok">F-CHECKOUT-3</span> <span class="badge ok">F-CHECKOUT-4</span></p>
+  </article><article class="app-card">
+    <h3>Settings</h3>
+    <div class="mini-table">
+      <div>Variants</div><div>5</div>
+      <div>Faults</div><div>4</div>
+      <div>Detected</div><div>4/4</div>
+      <div>States</div><div>45</div>
+      <div>Transitions</div><div>95</div>
+      <div>Runtime</div><div>38.59s</div>
+    </div>
+    <p><span class="badge ok">F-SETTINGS-1</span> <span class="badge ok">F-SETTINGS-2</span> <span class="badge ok">F-SETTINGS-3</span> <span class="badge ok">F-SETTINGS-4</span></p>
+  </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Figure 3. RelUI vs Baselines</h2>
+      <div class="figure-grid">
+        <article class="figure">
+    <h3>Detected Faults</h3>
+    <div class="bars">
+      <div class="bar-row"><span>RelUI</span><div class="bar-shell"><div class="bar-fill " style="width:100%"></div></div><strong>12</strong></div>
+      <div class="bar-row"><span>Structural</span><div class="bar-shell"><div class="bar-fill alt" style="width:25%"></div></div><strong>3</strong></div>
+      <div class="bar-row"><span>Visual</span><div class="bar-shell"><div class="bar-fill warn" style="width:3%"></div></div><strong>0</strong></div>
+    </div>
+  </article>
+        <article class="figure">
+    <h3>States + Transitions</h3>
+    <div class="bars"><div class="bar-row"><span>Auth</span><div class="bar-shell"><div class="bar-fill alt" style="width:66%"></div></div><strong>144</strong></div><div class="bar-row"><span>Checkout</span><div class="bar-shell"><div class="bar-fill alt" style="width:100%"></div></div><strong>219</strong></div><div class="bar-row"><span>Settings</span><div class="bar-shell"><div class="bar-fill alt" style="width:64%"></div></div><strong>140</strong></div></div>
+  </article>
+        <article class="figure">
+    <h3>Runtime by App</h3>
+    <div class="bars"><div class="bar-row"><span>Auth</span><div class="bar-shell"><div class="bar-fill " style="width:50%"></div></div><strong>44.25</strong></div><div class="bar-row"><span>Checkout</span><div class="bar-shell"><div class="bar-fill " style="width:100%"></div></div><strong>87.82</strong></div><div class="bar-row"><span>Settings</span><div class="bar-shell"><div class="bar-fill " style="width:44%"></div></div><strong>38.59</strong></div></div>
+  </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Subject Results</h2>
+      <table>
+    <thead><tr><th>Subject</th><th>App</th><th>Variant</th><th>Faults</th><th>RelUI Violations</th><th>Structural</th><th>Visual</th><th>States</th><th>Transitions</th><th>Traces</th><th>Runtime</th></tr></thead>
+    <tbody>
+      <tr>
+            <td>auth-clean</td>
+            <td>Auth</td>
+            <td>clean</td>
+            <td>0</td>
+            <td>0</td>
+            <td><span class="badge neutral">no</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>10</td>
+            <td>19</td>
+            <td>18</td>
+            <td>9.15s</td>
+          </tr><tr>
+            <td>auth-auth-bypass</td>
+            <td>Auth</td>
+            <td>auth-bypass</td>
+            <td>1</td>
+            <td>4</td>
+            <td><span class="badge ok">yes</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>11</td>
+            <td>19</td>
+            <td>18</td>
+            <td>8.74s</td>
+          </tr><tr>
+            <td>auth-logout-retains-access</td>
+            <td>Auth</td>
+            <td>logout-retains-access</td>
+            <td>1</td>
+            <td>1</td>
+            <td><span class="badge neutral">no</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>10</td>
+            <td>19</td>
+            <td>18</td>
+            <td>8.87s</td>
+          </tr><tr>
+            <td>auth-role-escalation</td>
+            <td>Auth</td>
+            <td>role-escalation</td>
+            <td>1</td>
+            <td>1</td>
+            <td><span class="badge neutral">no</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>9</td>
+            <td>19</td>
+            <td>18</td>
+            <td>8.75s</td>
+          </tr><tr>
+            <td>auth-invalid-login-dashboard</td>
+            <td>Auth</td>
+            <td>invalid-login-dashboard</td>
+            <td>1</td>
+            <td>1</td>
+            <td><span class="badge neutral">no</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>9</td>
+            <td>19</td>
+            <td>18</td>
+            <td>8.75s</td>
+          </tr><tr>
+            <td>checkout-clean</td>
+            <td>Checkout</td>
+            <td>clean</td>
+            <td>0</td>
+            <td>0</td>
+            <td><span class="badge neutral">no</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>13</td>
+            <td>30</td>
+            <td>28</td>
+            <td>17.59s</td>
+          </tr><tr>
+            <td>checkout-invalid-step-progression</td>
+            <td>Checkout</td>
+            <td>invalid-step-progression</td>
+            <td>1</td>
+            <td>9</td>
+            <td><span class="badge ok">yes</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>14</td>
+            <td>29</td>
+            <td>28</td>
+            <td>17.55s</td>
+          </tr><tr>
+            <td>checkout-skip-payment</td>
+            <td>Checkout</td>
+            <td>skip-payment</td>
+            <td>1</td>
+            <td>1</td>
+            <td><span class="badge neutral">no</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>14</td>
+            <td>30</td>
+            <td>28</td>
+            <td>17.54s</td>
+          </tr><tr>
+            <td>checkout-negative-total</td>
+            <td>Checkout</td>
+            <td>negative-total</td>
+            <td>1</td>
+            <td>14</td>
+            <td><span class="badge ok">yes</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>13</td>
+            <td>28</td>
+            <td>28</td>
+            <td>15.99s</td>
+          </tr><tr>
+            <td>checkout-back-loses-contact</td>
+            <td>Checkout</td>
+            <td>back-loses-contact</td>
+            <td>1</td>
+            <td>1</td>
+            <td><span class="badge neutral">no</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>15</td>
+            <td>33</td>
+            <td>30</td>
+            <td>19.15s</td>
+          </tr><tr>
+            <td>settings-clean</td>
+            <td>Settings</td>
+            <td>clean</td>
+            <td>0</td>
+            <td>0</td>
+            <td><span class="badge neutral">no</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>9</td>
+            <td>19</td>
+            <td>20</td>
+            <td>7.61s</td>
+          </tr><tr>
+            <td>settings-alt-save-stale</td>
+            <td>Settings</td>
+            <td>alt-save-stale</td>
+            <td>1</td>
+            <td>1</td>
+            <td><span class="badge neutral">no</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>9</td>
+            <td>19</td>
+            <td>20</td>
+            <td>7.78s</td>
+          </tr><tr>
+            <td>settings-cancel-persists-change</td>
+            <td>Settings</td>
+            <td>cancel-persists-change</td>
+            <td>1</td>
+            <td>1</td>
+            <td><span class="badge neutral">no</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>9</td>
+            <td>19</td>
+            <td>20</td>
+            <td>7.73s</td>
+          </tr><tr>
+            <td>settings-reset-does-not-clear</td>
+            <td>Settings</td>
+            <td>reset-does-not-clear</td>
+            <td>1</td>
+            <td>1</td>
+            <td><span class="badge neutral">no</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>9</td>
+            <td>19</td>
+            <td>20</td>
+            <td>7.74s</td>
+          </tr><tr>
+            <td>settings-stale-notification</td>
+            <td>Settings</td>
+            <td>stale-notification</td>
+            <td>1</td>
+            <td>1</td>
+            <td><span class="badge neutral">no</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>9</td>
+            <td>19</td>
+            <td>20</td>
+            <td>7.73s</td>
+          </tr>
+    </tbody>
+  </table>
+    </section>
+
+    <section class="section">
+      <h2>Fault Coverage</h2>
+      <div class="fault-grid">
+        <article class="fault-card" id="F-AUTH-1">
+    <h3>F-AUTH-1 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Auth / auth-bypass</p>
+    <p>Dashboard bypasses authentication</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>auth-dashboard-requires-login</div>
+      <div>Detected By</div><div>auth-dashboard-requires-login</div>
+      <div>Baseline</div><div>structural</div>
+      <div>Counterexample</div><div><a href="#v_02d91397e356">v_02d91397e356</a></div>
+    </div>
+  </article><article class="fault-card" id="F-AUTH-2">
+    <h3>F-AUTH-2 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Auth / logout-retains-access</p>
+    <p>Logout does not clear protected access</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>auth-logout-clears-protected-access</div>
+      <div>Detected By</div><div>auth-logout-clears-protected-access</div>
+      <div>Baseline</div><div>missed</div>
+      <div>Counterexample</div><div><a href="#v_69e967be99b7">v_69e967be99b7</a></div>
+    </div>
+  </article><article class="fault-card" id="F-AUTH-3">
+    <h3>F-AUTH-3 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Auth / role-escalation</p>
+    <p>User role reaches admin console</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>auth-admin-requires-admin-login</div>
+      <div>Detected By</div><div>auth-admin-requires-admin-login</div>
+      <div>Baseline</div><div>missed</div>
+      <div>Counterexample</div><div><a href="#v_55cc6dd4d85c">v_55cc6dd4d85c</a></div>
+    </div>
+  </article><article class="fault-card" id="F-AUTH-4">
+    <h3>F-AUTH-4 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Auth / invalid-login-dashboard</p>
+    <p>Invalid login reaches dashboard</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>auth-invalid-login-blocks-dashboard</div>
+      <div>Detected By</div><div>auth-invalid-login-blocks-dashboard</div>
+      <div>Baseline</div><div>missed</div>
+      <div>Counterexample</div><div><a href="#v_74667be014c3">v_74667be014c3</a></div>
+    </div>
+  </article><article class="fault-card" id="F-CHECKOUT-1">
+    <h3>F-CHECKOUT-1 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Checkout / invalid-step-progression</p>
+    <p>Invalid contact advances to payment</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>checkout-invalid-contact-blocks-payment</div>
+      <div>Detected By</div><div>checkout-invalid-contact-blocks-payment</div>
+      <div>Baseline</div><div>structural</div>
+      <div>Counterexample</div><div><a href="#v_18a1939e81f6">v_18a1939e81f6</a></div>
+    </div>
+  </article><article class="fault-card" id="F-CHECKOUT-2">
+    <h3>F-CHECKOUT-2 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Checkout / skip-payment</p>
+    <p>Express review bypasses payment</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>checkout-express-review-requires-payment</div>
+      <div>Detected By</div><div>checkout-express-review-requires-payment</div>
+      <div>Baseline</div><div>missed</div>
+      <div>Counterexample</div><div><a href="#v_3f65e0ddcfb0">v_3f65e0ddcfb0</a></div>
+    </div>
+  </article><article class="fault-card" id="F-CHECKOUT-3">
+    <h3>F-CHECKOUT-3 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Checkout / negative-total</p>
+    <p>Negative quantity advances checkout</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>checkout-invalid-cart-blocks-contact</div>
+      <div>Detected By</div><div>checkout-invalid-cart-blocks-contact</div>
+      <div>Baseline</div><div>structural</div>
+      <div>Counterexample</div><div><a href="#v_c633136d65f9">v_c633136d65f9</a></div>
+    </div>
+  </article><article class="fault-card" id="F-CHECKOUT-4">
+    <h3>F-CHECKOUT-4 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Checkout / back-loses-contact</p>
+    <p>Back path loses contact details before confirmation</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>checkout-confirmation-paths-equivalent</div>
+      <div>Detected By</div><div>checkout-confirmation-paths-equivalent</div>
+      <div>Baseline</div><div>missed</div>
+      <div>Counterexample</div><div><a href="#v_5eb4d41bcc6a">v_5eb4d41bcc6a</a></div>
+    </div>
+  </article><article class="fault-card" id="F-SETTINGS-1">
+    <h3>F-SETTINGS-1 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Settings / alt-save-stale</p>
+    <p>Quick profile save writes stale state</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>settings-profile-save-paths-equivalent</div>
+      <div>Detected By</div><div>settings-profile-save-paths-equivalent</div>
+      <div>Baseline</div><div>missed</div>
+      <div>Counterexample</div><div><a href="#v_a71700cbaffd">v_a71700cbaffd</a></div>
+    </div>
+  </article><article class="fault-card" id="F-SETTINGS-2">
+    <h3>F-SETTINGS-2 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Settings / cancel-persists-change</p>
+    <p>Cancel persists an edited display name</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>settings-cancel-does-not-save</div>
+      <div>Detected By</div><div>settings-cancel-does-not-save</div>
+      <div>Baseline</div><div>missed</div>
+      <div>Counterexample</div><div><a href="#v_c523bde1591e">v_c523bde1591e</a></div>
+    </div>
+  </article><article class="fault-card" id="F-SETTINGS-3">
+    <h3>F-SETTINGS-3 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Settings / reset-does-not-clear</p>
+    <p>Reset leaves edited display name in saved state</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>settings-reset-clears-edits</div>
+      <div>Detected By</div><div>settings-reset-clears-edits</div>
+      <div>Baseline</div><div>missed</div>
+      <div>Counterexample</div><div><a href="#v_490b7c4e3b43">v_490b7c4e3b43</a></div>
+    </div>
+  </article><article class="fault-card" id="F-SETTINGS-4">
+    <h3>F-SETTINGS-4 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Settings / stale-notification</p>
+    <p>Quick notification save discards notification state</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>settings-notification-save-paths-equivalent</div>
+      <div>Detected By</div><div>settings-notification-save-paths-equivalent</div>
+      <div>Baseline</div><div>missed</div>
+      <div>Counterexample</div><div><a href="#v_0b849bc211c0">v_0b849bc211c0</a></div>
+    </div>
+  </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Representative Counterexamples</h2>
+      <div class="counterexample-grid">
+        <article class="counterexample" id="v_02d91397e356">
+    <h3>F-AUTH-1 <span class="badge critical">critical</span></h3>
+    <p class="fault-meta">auth-auth-bypass · auth-dashboard-requires-login</p>
+    <p>A restricted state was reachable without the required authentication or authorization action.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/auth/auth-bypass</div>
+      <div>End URL</div><div>/auth/auth-bypass/dashboard</div>
+      <div>Trace IDs</div><div>t_7ef308de435b</div>
+    </div>
+    <pre>1. default -&gt; Open Dashboard ([data-testid=&quot;home-dashboard&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin</div><div class="plus">+ RelUI auth benchmark Home Dashboard Admin Login Member Dashboard Protected dashboard loaded. Account: guest</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/auth-auth-bypass/screenshots/s_00a49100779d.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/auth-auth-bypass/screenshots/s_693c2edca823.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+  </article><article class="counterexample" id="v_69e967be99b7">
+    <h3>F-AUTH-2 <span class="badge critical">critical</span></h3>
+    <p class="fault-meta">auth-logout-retains-access · auth-logout-clears-protected-access</p>
+    <p>A forbidden state was observed after an action that should prevent it.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/auth/logout-retains-access</div>
+      <div>End URL</div><div>/auth/logout-retains-access/dashboard</div>
+      <div>Trace IDs</div><div>t_519eb8b00d1d</div>
+    </div>
+    <pre>1. default -&gt; Login ([data-testid=&quot;home-login&quot;])
+2. valid -&gt; User Login ([data-testid=&quot;user-login-submit&quot;])
+3. default -&gt; Logout ([data-testid=&quot;logout&quot;])
+4. default -&gt; Dashboard ([data-testid=&quot;nav-dashboard&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin</div><div class="plus">+ RelUI auth benchmark Home Dashboard Admin Logout Member Dashboard Protected dashboard loaded. Account: user</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/auth-logout-retains-access/screenshots/s_d8505850d93d.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/auth-logout-retains-access/screenshots/s_69d58cc9a709.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+  </article><article class="counterexample" id="v_55cc6dd4d85c">
+    <h3>F-AUTH-3 <span class="badge critical">critical</span></h3>
+    <p class="fault-meta">auth-role-escalation · auth-admin-requires-admin-login</p>
+    <p>A restricted state was reachable without the required authentication or authorization action.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/auth/role-escalation</div>
+      <div>End URL</div><div>/auth/role-escalation/admin</div>
+      <div>Trace IDs</div><div>t_50263663be80</div>
+    </div>
+    <pre>1. default -&gt; Login ([data-testid=&quot;home-login&quot;])
+2. valid -&gt; User Login ([data-testid=&quot;user-login-submit&quot;])
+3. default -&gt; Admin ([data-testid=&quot;nav-admin&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin</div><div class="plus">+ RelUI auth benchmark Home Dashboard Admin Logout Admin Console Role restricted administration tools.</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/auth-role-escalation/screenshots/s_d7c20baf0817.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/auth-role-escalation/screenshots/s_8c7e60168213.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+  </article><article class="counterexample" id="v_74667be014c3">
+    <h3>F-AUTH-4 <span class="badge high">high</span></h3>
+    <p class="fault-meta">auth-invalid-login-dashboard · auth-invalid-login-blocks-dashboard</p>
+    <p>An invalid input profile reached a state that should require valid input first.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/auth/invalid-login-dashboard</div>
+      <div>End URL</div><div>/auth/invalid-login-dashboard/dashboard</div>
+      <div>Trace IDs</div><div>t_97c034278884</div>
+    </div>
+    <pre>1. default -&gt; Login ([data-testid=&quot;home-login&quot;])
+2. invalid -&gt; User Login ([data-testid=&quot;user-login-submit&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin</div><div class="plus">+ RelUI auth benchmark Home Dashboard Admin Logout Member Dashboard Protected dashboard loaded. Account: user</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/auth-invalid-login-dashboard/screenshots/s_f0fb11eb43ea.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/auth-invalid-login-dashboard/screenshots/s_d813b40e0e84.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+  </article><article class="counterexample" id="v_18a1939e81f6">
+    <h3>F-CHECKOUT-1 <span class="badge high">high</span></h3>
+    <p class="fault-meta">checkout-invalid-step-progression · checkout-invalid-contact-blocks-payment</p>
+    <p>An invalid input profile reached a state that should require valid input first.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/checkout/invalid-step-progression</div>
+      <div>End URL</div><div>/checkout/invalid-step-progression/payment</div>
+      <div>Trace IDs</div><div>t_a37ea7ad8870</div>
+    </div>
+    <pre>1. valid -&gt; Continue to Contact ([data-testid=&quot;cart-next&quot;])
+2. invalid -&gt; Continue to Payment ([data-testid=&quot;contact-next&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact</div><div class="plus">+ RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+  </article><article class="counterexample" id="v_3f65e0ddcfb0">
+    <h3>F-CHECKOUT-2 <span class="badge critical">critical</span></h3>
+    <p class="fault-meta">checkout-skip-payment · checkout-express-review-requires-payment</p>
+    <p>A forbidden state was observed after an action that should prevent it.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/checkout/skip-payment</div>
+      <div>End URL</div><div>/checkout/skip-payment/review</div>
+      <div>Trace IDs</div><div>t_8afe859b172a</div>
+    </div>
+    <pre>1. valid -&gt; Continue to Contact ([data-testid=&quot;cart-next&quot;])
+2. valid -&gt; Continue to Payment ([data-testid=&quot;contact-next&quot;])
+3. default -&gt; Back to Contact ([data-testid=&quot;payment-back&quot;])
+4. default -&gt; Express Review ([data-testid=&quot;express-review&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact</div><div class="plus">+ RelUI checkout benchmark Cart Contact Payment Review Order Review Email: buyer@example.com Address: 100 Main Street Total: $40 Paid: no Place Order</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/checkout-skip-payment/screenshots/s_36eb583c5e25.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/checkout-skip-payment/screenshots/s_2c812142cc5b.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+  </article><article class="counterexample" id="v_c633136d65f9">
+    <h3>F-CHECKOUT-3 <span class="badge high">high</span></h3>
+    <p class="fault-meta">checkout-negative-total · checkout-invalid-cart-blocks-contact</p>
+    <p>An invalid input profile reached a state that should require valid input first.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/checkout/negative-total</div>
+      <div>End URL</div><div>/checkout/negative-total/contact</div>
+      <div>Trace IDs</div><div>t_f39c85fe9554</div>
+    </div>
+    <pre>1. invalid -&gt; Continue to Contact ([data-testid=&quot;cart-next&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact</div><div class="plus">+ RelUI checkout benchmark Cart Contact Payment Review Contact Email Address Continue to Payment Back Express Review</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/checkout-negative-total/screenshots/s_30f20df1d627.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/checkout-negative-total/screenshots/s_279af0c5d97d.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+  </article><article class="counterexample" id="v_5eb4d41bcc6a">
+    <h3>F-CHECKOUT-4 <span class="badge medium">medium</span></h3>
+    <p class="fault-meta">checkout-back-loses-contact · checkout-confirmation-paths-equivalent</p>
+    <p>Equivalent workflow endpoints diverged across 2 representative paths.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/checkout/back-loses-contact</div>
+      <div>End URL</div><div>/checkout/back-loses-contact/confirmation</div>
+      <div>Trace IDs</div><div>t_ef4755e9d517, t_d9d4b91b6e80</div>
+    </div>
+    <pre>1. valid -&gt; Continue to Contact ([data-testid=&quot;cart-next&quot;])
+2. valid -&gt; Continue to Payment ([data-testid=&quot;contact-next&quot;])
+3. valid -&gt; Review Order ([data-testid=&quot;payment-next&quot;])
+4. default -&gt; Place Order ([data-testid=&quot;place-order&quot;])
+1. valid -&gt; Continue to Contact ([data-testid=&quot;cart-next&quot;])
+2. valid -&gt; Continue to Payment ([data-testid=&quot;contact-next&quot;])
+3. default -&gt; Back to Contact ([data-testid=&quot;payment-back&quot;])
+4. valid -&gt; Continue to Payment ([data-testid=&quot;contact-next&quot;])
+5. valid -&gt; Review Order ([data-testid=&quot;payment-next&quot;])
+6. default -&gt; Place Order ([data-testid=&quot;place-order&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact</div><div class="plus">+ RelUI checkout benchmark Cart Contact Payment Review Order Complete Confirmation generated. Email: missing Address: missing Total: $40 Paid: yes</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/checkout-back-loses-contact/screenshots/s_3c4902154c39.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/checkout-back-loses-contact/screenshots/s_ef9b9c0a8be0.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+  </article><article class="counterexample" id="v_a71700cbaffd">
+    <h3>F-SETTINGS-1 <span class="badge medium">medium</span></h3>
+    <p class="fault-meta">settings-alt-save-stale · settings-profile-save-paths-equivalent</p>
+    <p>Equivalent workflow endpoints diverged across 2 representative paths.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/settings/alt-save-stale</div>
+      <div>End URL</div><div>/settings/alt-save-stale/summary</div>
+      <div>Trace IDs</div><div>t_93982d6d1089, t_7cc3481ad291</div>
+    </div>
+    <pre>1. valid -&gt; Save Profile ([data-testid=&quot;save-profile&quot;])
+1. valid -&gt; Quick Save ([data-testid=&quot;quick-save-profile&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset</div><div class="plus">+ RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Default User Email notifications: off Saved: yes</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/settings-alt-save-stale/screenshots/s_5b44f2eaeaac.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/settings-alt-save-stale/screenshots/s_16c83dbbe8c0.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+  </article><article class="counterexample" id="v_c523bde1591e">
+    <h3>F-SETTINGS-2 <span class="badge high">high</span></h3>
+    <p class="fault-meta">settings-cancel-persists-change · settings-cancel-does-not-save</p>
+    <p>A forbidden state was observed after an action that should prevent it.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/settings/cancel-persists-change</div>
+      <div>End URL</div><div>/settings/cancel-persists-change/summary</div>
+      <div>Trace IDs</div><div>t_0466048ead2d</div>
+    </div>
+    <pre>1. valid -&gt; Cancel ([data-testid=&quot;cancel-profile&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset</div><div class="plus">+ RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Taylor Email notifications: off Saved: yes</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/settings-cancel-persists-change/screenshots/s_c4f2c3e3a902.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/settings-cancel-persists-change/screenshots/s_70c360c1d33a.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+  </article><article class="counterexample" id="v_490b7c4e3b43">
+    <h3>F-SETTINGS-3 <span class="badge high">high</span></h3>
+    <p class="fault-meta">settings-reset-does-not-clear · settings-reset-clears-edits</p>
+    <p>A forbidden state was observed after an action that should prevent it.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/settings/reset-does-not-clear</div>
+      <div>End URL</div><div>/settings/reset-does-not-clear/summary</div>
+      <div>Trace IDs</div><div>t_c278fd5eecaa</div>
+    </div>
+    <pre>1. valid -&gt; Save Profile ([data-testid=&quot;save-profile&quot;])
+2. default -&gt; Profile ([data-testid=&quot;nav-settings&quot;])
+3. default -&gt; Reset ([data-testid=&quot;reset-profile&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset</div><div class="plus">+ RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Taylor Email notifications: off Saved: yes</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/settings-reset-does-not-clear/screenshots/s_f073a0b2946a.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/settings-reset-does-not-clear/screenshots/s_5270d1d84916.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+  </article><article class="counterexample" id="v_0b849bc211c0">
+    <h3>F-SETTINGS-4 <span class="badge medium">medium</span></h3>
+    <p class="fault-meta">settings-stale-notification · settings-notification-save-paths-equivalent</p>
+    <p>Equivalent workflow endpoints diverged across 2 representative paths.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/settings/stale-notification</div>
+      <div>End URL</div><div>/settings/stale-notification/summary</div>
+      <div>Trace IDs</div><div>t_c202da6eddc6, t_0eeb712f1b64</div>
+    </div>
+    <pre>1. default -&gt; Notifications ([data-testid=&quot;nav-notifications&quot;])
+2. valid -&gt; Save Notifications ([data-testid=&quot;save-notifications&quot;])
+1. default -&gt; Notifications ([data-testid=&quot;nav-notifications&quot;])
+2. valid -&gt; Quick Save ([data-testid=&quot;quick-save-notifications&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset</div><div class="plus">+ RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Default User Email notifications: off Saved: yes</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/settings-stale-notification/screenshots/s_13999a0ab7c3.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/settings-stale-notification/screenshots/s_81be9a85fe41.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+  </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>State Graph Sketches</h2>
+      <div class="graph-list">
+        <article class="figure">
+    <h3>auth-clean</h3>
+    <p>10 states, 19 transitions, 18 traces</p>
+    <div class="edge">s_95335910f7c5 -> s_e6bb99040bd4 via Open Dashboard [default]</div><div class="edge">s_95335910f7c5 -> s_1c7ae66e70bd via Login [default]</div><div class="edge">s_1c7ae66e70bd -> s_e809c6dfcae3 via User Login [valid]</div><div class="edge">s_1c7ae66e70bd -> s_d7c27d0ba0ea via Admin Login [admin]</div><div class="edge">s_d7c27d0ba0ea -> s_1d2074a9e0bb via Admin [default]</div><div class="edge">s_1c7ae66e70bd -> s_135797812aee via User Login [invalid]</div><div class="edge">s_e809c6dfcae3 -> s_5e9046a7379f via Logout [default]</div><div class="edge">s_5e9046a7379f -> s_e6bb99040bd4 via Dashboard [default]</div>
+  </article><article class="figure">
+    <h3>auth-auth-bypass</h3>
+    <p>11 states, 19 transitions, 18 traces</p>
+    <div class="edge">s_00a49100779d -> s_693c2edca823 via Open Dashboard [default]</div><div class="edge">s_00a49100779d -> s_d28f51fa1b00 via Login [default]</div><div class="edge">s_d28f51fa1b00 -> s_40aff46e1937 via User Login [valid]</div><div class="edge">s_d28f51fa1b00 -> s_121bdced24c8 via Admin Login [admin]</div><div class="edge">s_121bdced24c8 -> s_3231a37f471b via Admin [default]</div><div class="edge">s_d28f51fa1b00 -> s_3ec6138b0f7a via User Login [invalid]</div><div class="edge">s_40aff46e1937 -> s_361ec819d050 via Logout [default]</div><div class="edge">s_361ec819d050 -> s_693c2edca823 via Dashboard [default]</div>
+  </article><article class="figure">
+    <h3>auth-logout-retains-access</h3>
+    <p>10 states, 19 transitions, 18 traces</p>
+    <div class="edge">s_d8505850d93d -> s_748ca16518ef via Open Dashboard [default]</div><div class="edge">s_d8505850d93d -> s_66f3774cf417 via Login [default]</div><div class="edge">s_66f3774cf417 -> s_69d58cc9a709 via User Login [valid]</div><div class="edge">s_66f3774cf417 -> s_88aaff63d7af via Admin Login [admin]</div><div class="edge">s_88aaff63d7af -> s_0e13c28c05b3 via Admin [default]</div><div class="edge">s_66f3774cf417 -> s_f6c7121455a0 via User Login [invalid]</div><div class="edge">s_69d58cc9a709 -> s_33b92a4abe70 via Logout [default]</div><div class="edge">s_33b92a4abe70 -> s_69d58cc9a709 via Dashboard [default]</div>
+  </article><article class="figure">
+    <h3>auth-role-escalation</h3>
+    <p>9 states, 19 transitions, 18 traces</p>
+    <div class="edge">s_d7c20baf0817 -> s_7d4845caea67 via Open Dashboard [default]</div><div class="edge">s_d7c20baf0817 -> s_8747cabeacc6 via Login [default]</div><div class="edge">s_8747cabeacc6 -> s_382d3f095369 via User Login [valid]</div><div class="edge">s_8747cabeacc6 -> s_b77643c9f0c6 via Admin Login [admin]</div><div class="edge">s_b77643c9f0c6 -> s_8c7e60168213 via Admin [default]</div><div class="edge">s_8747cabeacc6 -> s_98cc18d3fc94 via User Login [invalid]</div><div class="edge">s_382d3f095369 -> s_9be3d2312ffb via Logout [default]</div><div class="edge">s_9be3d2312ffb -> s_7d4845caea67 via Dashboard [default]</div>
+  </article><article class="figure">
+    <h3>auth-invalid-login-dashboard</h3>
+    <p>9 states, 19 transitions, 18 traces</p>
+    <div class="edge">s_f0fb11eb43ea -> s_413dcc94fe3f via Open Dashboard [default]</div><div class="edge">s_f0fb11eb43ea -> s_98b838d77deb via Login [default]</div><div class="edge">s_98b838d77deb -> s_d813b40e0e84 via User Login [valid]</div><div class="edge">s_98b838d77deb -> s_970644003241 via Admin Login [admin]</div><div class="edge">s_970644003241 -> s_b833aaee7bb1 via Admin [default]</div><div class="edge">s_98b838d77deb -> s_d813b40e0e84 via User Login [invalid]</div><div class="edge">s_d813b40e0e84 -> s_98a17a3a4b3c via Logout [default]</div><div class="edge">s_98a17a3a4b3c -> s_413dcc94fe3f via Dashboard [default]</div>
+  </article><article class="figure">
+    <h3>checkout-clean</h3>
+    <p>13 states, 30 transitions, 28 traces</p>
+    <div class="edge">s_9c0bd09deb68 -> s_5305909ec2e3 via Continue to Contact [invalid]</div><div class="edge">s_9c0bd09deb68 -> s_23c82ca70dbb via Continue to Contact [valid]</div><div class="edge">s_23c82ca70dbb -> s_72c8a762bf31 via Continue to Payment [invalid]</div><div class="edge">s_23c82ca70dbb -> s_13673c48805e via Continue to Payment [valid]</div><div class="edge">s_13673c48805e -> s_08b28bc549fa via Review Order [invalid]</div><div class="edge">s_13673c48805e -> s_eaefbaca68d9 via Back to Contact [default]</div><div class="edge">s_eaefbaca68d9 -> s_d9626758e183 via Express Review [default]</div><div class="edge">s_13673c48805e -> s_30d0d835b689 via Review Order [valid]</div>
+  </article><article class="figure">
+    <h3>checkout-invalid-step-progression</h3>
+    <p>14 states, 29 transitions, 28 traces</p>
+    <div class="edge">s_fe1fe81a3ea6 -> s_d0454ac7c914 via Continue to Contact [invalid]</div><div class="edge">s_fe1fe81a3ea6 -> s_9aec5b5247d7 via Continue to Contact [valid]</div><div class="edge">s_9aec5b5247d7 -> s_ddf89d7c67f5 via Continue to Payment [invalid]</div><div class="edge">s_9aec5b5247d7 -> s_ddf89d7c67f5 via Continue to Payment [valid]</div><div class="edge">s_ddf89d7c67f5 -> s_c84c2299b1fa via Review Order [invalid]</div><div class="edge">s_ddf89d7c67f5 -> s_7432e82e5fde via Back to Contact [default]</div><div class="edge">s_7432e82e5fde -> s_b6f918b2fe58 via Express Review [default]</div><div class="edge">s_ddf89d7c67f5 -> s_77c10d6d6cd1 via Review Order [valid]</div>
+  </article><article class="figure">
+    <h3>checkout-skip-payment</h3>
+    <p>14 states, 30 transitions, 28 traces</p>
+    <div class="edge">s_36eb583c5e25 -> s_1072d5736e53 via Continue to Contact [invalid]</div><div class="edge">s_36eb583c5e25 -> s_9bfd85710f34 via Continue to Contact [valid]</div><div class="edge">s_9bfd85710f34 -> s_374929de9a96 via Continue to Payment [invalid]</div><div class="edge">s_9bfd85710f34 -> s_a221645be934 via Continue to Payment [valid]</div><div class="edge">s_a221645be934 -> s_80109a1b355b via Review Order [invalid]</div><div class="edge">s_a221645be934 -> s_1d3829056120 via Back to Contact [default]</div><div class="edge">s_1d3829056120 -> s_2c812142cc5b via Express Review [default]</div><div class="edge">s_a221645be934 -> s_8e186e02d89a via Review Order [valid]</div>
+  </article><article class="figure">
+    <h3>checkout-negative-total</h3>
+    <p>13 states, 28 transitions, 28 traces</p>
+    <div class="edge">s_30f20df1d627 -> s_279af0c5d97d via Continue to Contact [invalid]</div><div class="edge">s_30f20df1d627 -> s_279af0c5d97d via Continue to Contact [valid]</div><div class="edge">s_279af0c5d97d -> s_ed0a7270e31c via Continue to Payment [invalid]</div><div class="edge">s_279af0c5d97d -> s_d58e6560afe8 via Continue to Payment [valid]</div><div class="edge">s_d58e6560afe8 -> s_ee6c037ea9f4 via Review Order [invalid]</div><div class="edge">s_d58e6560afe8 -> s_fad2e105931f via Back to Contact [default]</div><div class="edge">s_fad2e105931f -> s_9a197573b5fe via Express Review [default]</div><div class="edge">s_d58e6560afe8 -> s_c8d1ffe79de9 via Review Order [valid]</div>
+  </article><article class="figure">
+    <h3>checkout-back-loses-contact</h3>
+    <p>15 states, 33 transitions, 30 traces</p>
+    <div class="edge">s_3c4902154c39 -> s_bc066b470567 via Continue to Contact [invalid]</div><div class="edge">s_3c4902154c39 -> s_448961fd3e04 via Continue to Contact [valid]</div><div class="edge">s_448961fd3e04 -> s_60c8eccf3fb4 via Continue to Payment [invalid]</div><div class="edge">s_448961fd3e04 -> s_51404df2278f via Continue to Payment [valid]</div><div class="edge">s_51404df2278f -> s_7515449b7f72 via Review Order [invalid]</div><div class="edge">s_51404df2278f -> s_448961fd3e04 via Back to Contact [default]</div><div class="edge">s_448961fd3e04 -> s_bdc4e8bdcc57 via Express Review [default]</div><div class="edge">s_51404df2278f -> s_e3013eb8acac via Review Order [valid]</div>
+  </article><article class="figure">
+    <h3>settings-clean</h3>
+    <p>9 states, 19 transitions, 20 traces</p>
+    <div class="edge">s_b1320fe77963 -> s_bac89369a29d via Save Profile [valid]</div><div class="edge">s_b1320fe77963 -> s_bac89369a29d via Quick Save [valid]</div><div class="edge">s_b1320fe77963 -> s_d3cbb1b42fe6 via Cancel [valid]</div><div class="edge">s_bac89369a29d -> s_8d95a4c227d7 via Profile [default]</div><div class="edge">s_8d95a4c227d7 -> s_6b01d0bd0db1 via Reset [default]</div><div class="edge">s_b1320fe77963 -> s_ad997f1712c9 via Notifications [default]</div><div class="edge">s_ad997f1712c9 -> s_7744d5abbbf5 via Save Notifications [valid]</div><div class="edge">s_ad997f1712c9 -> s_7744d5abbbf5 via Quick Save [valid]</div>
+  </article><article class="figure">
+    <h3>settings-alt-save-stale</h3>
+    <p>9 states, 19 transitions, 20 traces</p>
+    <div class="edge">s_5b44f2eaeaac -> s_b35ad6246d3c via Save Profile [valid]</div><div class="edge">s_5b44f2eaeaac -> s_16c83dbbe8c0 via Quick Save [valid]</div><div class="edge">s_5b44f2eaeaac -> s_671177d930b2 via Cancel [valid]</div><div class="edge">s_b35ad6246d3c -> s_b55d9b991d06 via Profile [default]</div><div class="edge">s_b55d9b991d06 -> s_16c83dbbe8c0 via Reset [default]</div><div class="edge">s_5b44f2eaeaac -> s_2a8ca9f0e901 via Notifications [default]</div><div class="edge">s_2a8ca9f0e901 -> s_9aa6669f7ab7 via Save Notifications [valid]</div><div class="edge">s_2a8ca9f0e901 -> s_9aa6669f7ab7 via Quick Save [valid]</div>
+  </article><article class="figure">
+    <h3>settings-cancel-persists-change</h3>
+    <p>9 states, 19 transitions, 20 traces</p>
+    <div class="edge">s_c4f2c3e3a902 -> s_70c360c1d33a via Save Profile [valid]</div><div class="edge">s_c4f2c3e3a902 -> s_70c360c1d33a via Quick Save [valid]</div><div class="edge">s_c4f2c3e3a902 -> s_70c360c1d33a via Cancel [valid]</div><div class="edge">s_70c360c1d33a -> s_c9954092a2a6 via Profile [default]</div><div class="edge">s_c9954092a2a6 -> s_e90bf6a98dfe via Reset [default]</div><div class="edge">s_c4f2c3e3a902 -> s_60131b8fe735 via Notifications [default]</div><div class="edge">s_60131b8fe735 -> s_cc24a545cc4a via Save Notifications [valid]</div><div class="edge">s_60131b8fe735 -> s_cc24a545cc4a via Quick Save [valid]</div>
+  </article><article class="figure">
+    <h3>settings-reset-does-not-clear</h3>
+    <p>9 states, 19 transitions, 20 traces</p>
+    <div class="edge">s_f073a0b2946a -> s_5270d1d84916 via Save Profile [valid]</div><div class="edge">s_f073a0b2946a -> s_5270d1d84916 via Quick Save [valid]</div><div class="edge">s_f073a0b2946a -> s_e7e3d1909e5d via Cancel [valid]</div><div class="edge">s_5270d1d84916 -> s_a82662635441 via Profile [default]</div><div class="edge">s_a82662635441 -> s_5270d1d84916 via Reset [default]</div><div class="edge">s_f073a0b2946a -> s_3d16e17d741c via Notifications [default]</div><div class="edge">s_3d16e17d741c -> s_f066e23a6317 via Save Notifications [valid]</div><div class="edge">s_3d16e17d741c -> s_f066e23a6317 via Quick Save [valid]</div>
+  </article><article class="figure">
+    <h3>settings-stale-notification</h3>
+    <p>9 states, 19 transitions, 20 traces</p>
+    <div class="edge">s_13999a0ab7c3 -> s_6d0bc275bf36 via Save Profile [valid]</div><div class="edge">s_13999a0ab7c3 -> s_6d0bc275bf36 via Quick Save [valid]</div><div class="edge">s_13999a0ab7c3 -> s_abc2fdbefee9 via Cancel [valid]</div><div class="edge">s_6d0bc275bf36 -> s_ea43b423787f via Profile [default]</div><div class="edge">s_ea43b423787f -> s_81be9a85fe41 via Reset [default]</div><div class="edge">s_13999a0ab7c3 -> s_ae5b73d5ee96 via Notifications [default]</div><div class="edge">s_ae5b73d5ee96 -> s_2a172c5b1c79 via Save Notifications [valid]</div><div class="edge">s_ae5b73d5ee96 -> s_81be9a85fe41 via Quick Save [valid]</div>
+  </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

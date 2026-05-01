@@ -1,0 +1,33 @@
+[
+  {
+    "id": "v_490b7c4e3b43",
+    "subjectId": "settings-reset-does-not-clear",
+    "invariantId": "settings-reset-clears-edits",
+    "invariantType": "action-forbidden-state",
+    "severity": "high",
+    "title": "Reset must clear previously saved profile edits.",
+    "description": "A forbidden state was observed after an action that should prevent it.",
+    "traceIds": [
+      "t_c278fd5eecaa"
+    ],
+    "stateIds": [
+      "s_f073a0b2946a",
+      "s_5270d1d84916",
+      "s_a82662635441",
+      "s_5270d1d84916"
+    ],
+    "evidence": {
+      "actionSelectors": [
+        "[data-testid=\"reset-profile\"]"
+      ],
+      "forbiddenStateIds": [
+        "s_5270d1d84916"
+      ]
+    },
+    "replaySteps": [
+      "1. valid -> Save Profile ([data-testid=\"save-profile\"])",
+      "2. default -> Profile ([data-testid=\"nav-settings\"])",
+      "3. default -> Reset ([data-testid=\"reset-profile\"])"
+    ]
+  }
+]
