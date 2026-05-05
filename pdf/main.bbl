@@ -1,0 +1,117 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{6}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Mesbah et~al\mbox{.}(2012a)]%
+        {mesbah2012crawling}
+\bibfield{author}{\bibinfo{person}{Ali Mesbah}, \bibinfo{person}{Arie van
+  Deursen}, {and} \bibinfo{person}{Stefan Lenselink}.}
+  \bibinfo{year}{2012}\natexlab{a}.
+\newblock \showarticletitle{Crawling Ajax-Based Web Applications Through
+  Dynamic Analysis of User Interface State Changes}.
+\newblock \bibinfo{journal}{\emph{ACM Transactions on the Web}}
+  \bibinfo{volume}{6}, \bibinfo{number}{1} (\bibinfo{year}{2012}),
+  \bibinfo{pages}{1--30}.
+\newblock
+\href{https://doi.org/10.1145/2109205.2109208}{doi:\nolinkurl{10.1145/2109205.2109208}}
+
+
+\bibitem[Mesbah et~al\mbox{.}(2012b)]%
+        {mesbah2012invariant}
+\bibfield{author}{\bibinfo{person}{Ali Mesbah}, \bibinfo{person}{Arie van
+  Deursen}, {and} \bibinfo{person}{Danny Roest}.}
+  \bibinfo{year}{2012}\natexlab{b}.
+\newblock \showarticletitle{Invariant-Based Automated Testing of Modern Web
+  Applications}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Software Engineering}}
+  \bibinfo{volume}{38}, \bibinfo{number}{1} (\bibinfo{year}{2012}),
+  \bibinfo{pages}{35--53}.
+\newblock
+\href{https://doi.org/10.1109/TSE.2011.28}{doi:\nolinkurl{10.1109/TSE.2011.28}}
+
+
+\bibitem[{Microsoft Playwright}(2026)]%
+        {playwright}
+\bibfield{author}{\bibinfo{person}{{Microsoft Playwright}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Playwright Browser Testing Documentation}.
+\newblock \bibinfo{howpublished}{\url{https://playwright.dev/docs/browsers}}.
+\newblock
+\newblock
+\shownote{Accessed 2026-05-05}.
+
+
+\bibitem[Nguyen et~al\mbox{.}(2014)]%
+        {nguyen2013guitar}
+\bibfield{author}{\bibinfo{person}{Bao~N. Nguyen}, \bibinfo{person}{Bryan
+  Robbins}, \bibinfo{person}{Ishan Banerjee}, {and} \bibinfo{person}{Atif
+  Memon}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{{GUITAR}: An Innovative Tool for Automated Testing
+  of GUI-Driven Software}.
+\newblock \bibinfo{journal}{\emph{Automated Software Engineering}}
+  \bibinfo{volume}{21}, \bibinfo{number}{1} (\bibinfo{year}{2014}),
+  \bibinfo{pages}{65--105}.
+\newblock
+\href{https://doi.org/10.1007/s10515-013-0128-9}{doi:\nolinkurl{10.1007/s10515-013-0128-9}}
+
+
+\bibitem[Utting et~al\mbox{.}(2012)]%
+        {utting2012taxonomy}
+\bibfield{author}{\bibinfo{person}{Mark Utting}, \bibinfo{person}{Alexander
+  Pretschner}, {and} \bibinfo{person}{Bruno Legeard}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{A Taxonomy of Model-Based Testing Approaches}.
+\newblock \bibinfo{journal}{\emph{Software Testing, Verification and
+  Reliability}} \bibinfo{volume}{22}, \bibinfo{number}{5}
+  (\bibinfo{year}{2012}), \bibinfo{pages}{297--312}.
+\newblock
+\href{https://doi.org/10.1002/stvr.456}{doi:\nolinkurl{10.1002/stvr.456}}
+
+
+\bibitem[Wang et~al\mbox{.}(2024)]%
+        {wang2024vetl}
+\bibfield{author}{\bibinfo{person}{Siyi Wang}, \bibinfo{person}{Sinan Wang},
+  \bibinfo{person}{Yujia Fan}, \bibinfo{person}{Xiaolei Li}, {and}
+  \bibinfo{person}{Yepang Liu}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{Leveraging Large Vision Language Model for Better
+  Automatic Web GUI Testing}.
+\newblock
+\showeprint[arxiv]{2410.12157}~[cs.SE]
+\href{https://doi.org/10.48550/arXiv.2410.12157}{doi:\nolinkurl{10.48550/arXiv.2410.12157}}
+
+
+\end{thebibliography}

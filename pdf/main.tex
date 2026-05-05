@@ -85,16 +85,23 @@
 }
 \email{{aali274,shoda6}@illinois.edu}
 
+\renewcommand{\shortauthors}{Ali and Hoda}
+
 \begin{abstract}
+\noindent\textbf{Source code:}~\url{https://github.com/MuneebHoda/ReUIs}\\[4pt]
 Modern Web UI bugs often hide between pages rather than inside one page. A confirmation screen can look normal while losing data after back navigation; a protected dashboard can render correctly while being reachable without login. This paper presents \RelUI, a TypeScript and Playwright prototype for relational behavioral consistency testing of Web UIs. \RelUI explores browser traces, canonicalizes states, infers a state-transition graph, and checks explicit workflow invariants over traces and endpoints. We evaluate the final artifact on four benchmark workflows, 20 subject variants, and 16 injected faults. The final run explored 454 replayable traces, discovered 230 canonical states and 467 transitions, detected all 16 injected faults, and reported zero clean false positives in 250.08 seconds. Lightweight structural and visual baselines detected only 5 and 0 faults, respectively, showing that workflow correctness needs relational oracles beyond local DOM or screenshot checks.
 \end{abstract}
 
 \maketitle
 
-\section{Introduction}
+\section{Introduction}\label{sec:intro}
 Web applications increasingly encode critical behavior as multi-step workflows: login, checkout, account settings, and money transfer flows all depend on action history. These workflows fail in ways that are hard to detect with one-state checks. A page can contain the right controls and still violate an authentication precondition; two valid paths can reach the same confirmation URL but disagree about preserved user data.
 
-\RelUI targets this class of bug. It treats a Web UI as an explored transition system and checks relational invariants over traces, graph edges, and endpoint states. The final artifact is implemented in TypeScript on top of Playwright \citep{playwright}; it emits JSON, CSV, HTML, screenshots, and LaTeX-ready tables.
+Consider a small example from our money-transfer benchmark. The clean variant moves the user through amount entry, recipient selection, review, and confirmation; the receipt page shows the transferred amount. In the \texttt{back-loses-transfer} variant, going back from review to edit the recipient and then continuing forward reaches the same receipt URL but the displayed amount is missing. A structural crawler still finds the correct buttons on every page. A visual diff against the clean receipt looks essentially identical at the page level. A happy-path script that walks straight through still passes. The bug only surfaces when two paths that both end at \texttt{Transfer Complete} are compared against each other. \RelUI flags this as a path-equivalence violation and produces both replay traces as evidence.
+
+This kind of cross-path reasoning is the gap. Existing model-based testing constructs state graphs but assumes the engineer supplies the model \citep{utting2012taxonomy}. Invariant-based Web testing checks predicates over individual states discovered by a crawler \citep{mesbah2012invariant}, but does not relate states reached through different paths. Vision-based GUI testing improves coverage by interpreting screens \citep{wang2024vetl}, but still reasons about screens, not about the relationships between them. None of these directly enforce constraints such as ``every protected state must be preceded by an authentication action'' or ``two paths that mean the same thing must end in the same state.''
+
+\RelUI targets exactly this gap. It treats a Web UI as an explored transition system and checks five families of relational invariants over traces, graph edges, and endpoint states: authentication precondition, validation blocking, action-forbidden state, forbidden transition, and path equivalence. The implementation runs on Playwright \citep{playwright} and emits JSON, CSV, HTML, screenshots, and LaTeX-ready tables.
 
 \begin{figure}[t]
   \centering
@@ -115,9 +122,18 @@ Web applications increasingly encode critical behavior as multi-step workflows: 
   \label{fig:scorecard}
 \end{figure}
 
-Figure~\ref{fig:scorecard} summarizes the final run. The project makes three contributions: (1) a relational approach for Web UI workflow testing, (2) a runnable Playwright-based tool with replayable counterexamples, and (3) an evaluation over four workflows showing that relational oracles detect faults missed by local structural and visual baselines.
+We evaluated \RelUI on four controlled benchmark applications (an authentication portal, a checkout wizard, a settings workflow, and a money-transfer flow), each shipping with one clean variant and four faulty variants for a total of 16 injected faults. Figure~\ref{fig:scorecard} summarizes the headline result. \RelUI detected all 16 faults with zero false positives on the four clean variants. A structural baseline that compares visible control signatures detected 5 of 16, and a visual baseline based on per-pixel screenshot diffs detected 0 of 16. The full run took 250.08 seconds and built a graph of 230 canonical states and 467 transitions over 454 explored traces.
 
-\section{Approach Overview}
+This paper makes three contributions:
+\begin{enumerate}
+  \item A method for inferring a state-transition graph from automated Web UI exploration, with a canonicalization scheme that groups semantically equivalent pages while keeping behaviorally distinct ones separate.
+  \item A library of five relational invariant families that capture cross-path properties (authentication precondition, validation blocking, action-forbidden state, forbidden transition, and path equivalence), each driven by a small declarative configuration so the same checker works across applications.
+  \item An empirical study on 16 injected faults across four applications showing that relational invariants catch every fault while structural and visual baselines catch a third or fewer, with replayable counterexamples and a reproducible benchmark suite.
+\end{enumerate}
+
+The rest of the paper is organized as follows. Section~\ref{sec:approach-overview} sketches the pipeline. Section~\ref{sec:approach-details} formalizes each stage and presents the algorithm. Section~\ref{sec:eval} reports the experimental results. Section~\ref{sec:related} positions our work against prior testing techniques. Section~\ref{sec:threats} discusses threats to validity, and Section~\ref{sec:conclusion} concludes.
+
+\section{Approach Overview}\label{sec:approach-overview}
 \RelUI receives a subject URL, input profiles, seed traces, exploration bounds, and invariant definitions. It drives the UI in a real browser, snapshots reached states, merges equivalent states by semantic fingerprint, builds a labeled graph, and checks five invariant families.
 
 \begin{figure}[t]
@@ -144,7 +160,7 @@ Figure~\ref{fig:scorecard} summarizes the final run. The project makes three con
 
 The main design decision is to make the oracle relational. Instead of asking only whether a page looks different, \RelUI asks whether a state is justified by the trace that reached it and whether alternative traces that implement the same task converge to equivalent endpoints.
 
-\section{Approach Details}
+\section{Approach Details}\label{sec:approach-details}
 \subsection{Exploration and Canonicalization}
 \RelUI combines deterministic seed traces with bounded action discovery. Seed traces guarantee coverage of security- and validation-relevant paths, while action discovery explores visible anchors, buttons, submit inputs, and role-button elements. Form actions are filled from named profiles such as \texttt{valid}, \texttt{admin}, and \texttt{invalid}.
 
@@ -190,7 +206,7 @@ The final tool implements five invariant families: authentication/precondition, 
 Every violation records invariant ID, type, severity, trace IDs, state IDs, replay steps, screenshots, and text deltas. The final exporter also computes app-level coverage and invariant-family coverage. This lets the report separate two questions: whether faults are detected, and what exploration/model size was needed to detect them.
 
 \FloatBarrier
-\section{Experimental Evaluation}
+\section{Experimental Evaluation}\label{sec:eval}
 \subsection{Evaluation Plan}
 We evaluate three research questions:
 \begin{description}
@@ -211,7 +227,19 @@ The final benchmark suite contains Auth, Checkout, Settings, and Transfer workfl
 
 \subsection{Evaluation Results}
 \subsubsection{RQ1: Fault Detection}
-\RelUI detected all 16 injected faults and produced zero relational violations on the four clean variants. The complete run discovered 230 canonical states, 467 transitions, and 454 replayable traces. Table~\ref{tab:app-coverage} shows that Checkout remained the largest workflow by states, transitions, traces, and runtime, while Transfer added a second multi-step, data-preservation-heavy benchmark.
+\RelUI detected all 16 injected faults and produced zero relational violations on the four clean variants. The complete run discovered 230 canonical states, 467 transitions, and 454 replayable traces. Table~\ref{tab:app-coverage} shows the per-app breakdown: every app reports 4/4 detection, with Checkout the largest workflow by states, transitions, traces, and runtime, and Transfer adding a second multi-step, data-preservation-heavy benchmark.
+
+Looking at which oracle family caught which fault is more informative than the aggregate. Table~\ref{tab:family-coverage} summarizes the five configured families and the 59 total violation instances they produced. Validation-blocking accounts for 42 of those 59 instances over 5 faults, because every invalid input that should be rejected appears in many traces during exploration and each one fires the oracle independently. The other three families produced fewer instances but still detected every fault assigned to them: 7 instances over 3 authentication-precondition faults, 5 instances over 4 action-forbidden-state faults, and 5 instances over 4 path-equivalence faults. The forbidden-transition family was configured but had no fault assigned to it in this benchmark; it remains available for new subjects.
+
+\begin{table}[t]
+  \centering
+  \caption{Invariant family coverage. Configured oracles, faults assigned to each family, detected faults, and total violation instances reported.}
+  \label{tab:family-coverage}
+  \scriptsize
+  \resizebox{\columnwidth}{!}{\artifacttable{invariant_family_coverage}}
+\end{table}
+
+The zero-false-positive result on the four clean variants is the second half of effectiveness. The clean variants exercise the same paths and the same input profiles as the faulty ones, so a brittle oracle would have flagged them. The fact that none of the five families fired suggests the canonicalization granularity is in a reasonable band: tight enough to keep semantically equivalent states grouped together, loose enough to keep behaviorally distinct ones apart. This balance is what makes path-equivalence usable, since that oracle compares endpoint fingerprints directly.
 
 \begin{figure}[t]
   \centering
@@ -245,7 +273,13 @@ The final benchmark suite contains Auth, Checkout, Settings, and Transfer workfl
 \end{figure}
 
 \subsubsection{RQ2: Baseline Misses}
-Figure~\ref{fig:detection-bars} shows the headline comparison. Structural checking detects five faults that change visible control signatures: one Auth bypass, two Checkout validation failures, and two Transfer validation failures. It misses logout retention, role escalation, payment bypass, cancel/reset persistence, stale quick-save paths, and path-equivalence faults because those failures are semantically wrong but structurally ordinary. The visual baseline detects none under the configured threshold because most faulty pages are intentionally plausible.
+Figure~\ref{fig:detection-bars} shows the headline comparison and Table~\ref{tab:fault-matrix} gives the per-fault breakdown. Structural checking detects five faults: one Auth bypass, two Checkout validation failures, and two Transfer validation failures. It misses the other 11. The visual baseline detects 0 of the 16.
+
+The interesting question is \emph{why} the baselines miss what they miss. The five faults the structural baseline catches all change which controls appear on a page. F-AUTH-1 causes the dashboard to render in place of the login redirect, so the login form disappears. F-CHECKOUT-1 and F-CHECKOUT-3 let the workflow advance from a page that should have been blocked, so the next page contains controls it should not yet show. F-TRANSFER-1 and F-TRANSFER-2 do the same on the transfer flow. In each case the visible control set on at least one page differs from the matching clean state, which is exactly what the structural diff measures.
+
+The other 11 faults leave the control structure of every visited page identical to the clean variant. F-AUTH-2 (\texttt{logout-retains-access}) renders the same logout button and the same dashboard layout as the clean app; the bug is that the dashboard remains reachable after the logout transition fires. F-SETTINGS-2 (\texttt{cancel-persists-change}) renders the same cancel button and the same summary page; the bug is that the saved name on the summary page is the edited value instead of the original. F-CHECKOUT-4, F-SETTINGS-1, F-SETTINGS-4, and F-TRANSFER-4 are path-equivalence faults: each individual page along each path is fine, but two paths that should converge produce different end states. None of these can be seen by comparing one state to one reference state. They become visible only when the relationship between two states or two paths is examined.
+
+The visual baseline caught zero faults at the configured pixel-diff threshold (0.18 fraction of differing pixels). We chose the threshold to suppress noise from headless browser font rendering, which produced small but consistent diffs even between identical states. The injected faults are all logical, not cosmetic, so the visual diffs they produce stay below this threshold. Lowering the threshold would raise visual detections at the cost of a flood of false positives on the clean variants. This is the standard trade-off that makes screenshot regression testing brittle, and it is the reason a relational oracle is needed even when an evaluation team is willing to invest in pixel-level baselines.
 
 \begin{table*}[t]
   \centering
@@ -307,7 +341,11 @@ Figure~\ref{fig:detection-bars} shows the headline comparison. Structural checki
 \end{figure}
 
 \subsubsection{RQ3: Exploration Cost}
-Figure~\ref{fig:runtime-model} groups runtime and model size by workflow. Checkout is slowest at 91.77 seconds because it has the deepest workflow and largest transition set. Transfer adds 122 traces and 127 transitions in 72.10 seconds, showing that the added benchmark increases evaluation breadth without dominating total cost. Settings is smallest because most traces are short profile or notification actions.
+Figure~\ref{fig:runtime-model} groups runtime and model size by workflow. Checkout is slowest at 91.77 seconds because it has the deepest workflow and largest transition set (150 transitions, average trace length 2.25, max 6). Transfer is the second largest at 72.10 seconds (127 transitions, average length 2.03, max 5). Auth runs in 45.92 seconds with shorter traces (average 1.73, max 4), and Settings is smallest at 40.29 seconds because most traces are one or two clicks long (average 1.20, max 3). The total across all 20 subjects is 250.08 seconds.
+
+Two observations. First, runtime tracks transition count more closely than state count or trace count, because each new transition usually corresponds to one extra Playwright action (click or form fill) that has to be executed. Throughput is roughly 1.8 to 1.9 transitions per second across all four apps, which is consistent with the per-action latency of headless Chromium plus screenshot and DOM serialization overhead. The added Transfer benchmark scales the pipeline almost exactly as we would expect: it adds about 30\% more transitions than the original three-app suite and adds about 30\% more runtime.
+
+Second, invariant checking is not the bottleneck. The five oracle families together iterate over the trace list and edge list once per invariant, and each check is a simple set membership or fingerprint comparison. The dominant cost is Playwright execution, not relational checking. This matters for scaling: more sophisticated invariants can be added without significantly increasing runtime, as long as the underlying graph is already built. Adding a new application costs roughly its share of new Playwright actions; the per-fault detection check is essentially free in comparison.
 
 \begin{figure*}[t]
   \centering
@@ -365,8 +403,14 @@ Figure~\ref{fig:runtime-model} groups runtime and model size by workflow. Checko
   \label{fig:runtime-model}
 \end{figure*}
 
-\subsubsection{Representative Counterexample}
-Figure~\ref{fig:transfer-counterexample} shows the new Transfer path-equivalence fault. A normal transfer receipt preserves \texttt{\$125}; the back/edit path reaches the same receipt state class after confirmation but loses the amount. The page remains visually plausible, which explains why local visual comparison is weak here.
+\subsubsection{Representative Counterexamples}
+Beyond aggregate counts, \RelUI produces a replay trace for every violation. Three counterexamples illustrate the kinds of bugs the relational oracles are meant to catch.
+
+\textbf{F-AUTH-1 (auth-bypass).} The replay is a single step: open the dashboard from the home page. The end URL is \texttt{/auth/auth-bypass/dashboard} with the protected content rendered, and there is no login transition anywhere in the path. The \texttt{auth-precondition} oracle fires because the trace reaches a state matching the protected dashboard pattern without containing any of the required login selectors. The structural baseline catches this one too because the dashboard renders different controls than the expected login redirect.
+
+\textbf{F-AUTH-2 (logout-retains-access).} The replay is four steps: log in, log out, then click the dashboard nav link. The end URL is \texttt{/auth/logout-retains-access/dashboard}, again with the protected content rendered. The \texttt{action-forbidden-state} oracle fires because the trace contains a logout selector and a later state matches the protected dashboard. The control set is identical to the clean variant at every step, which is why the structural baseline misses it. This is a textbook case of a bug that requires comparing pre- and post-action state rather than inspecting any individual page.
+
+\textbf{F-TRANSFER-4 (back-loses-transfer).} Figure~\ref{fig:transfer-counterexample} shows the path-equivalence fault from the Transfer benchmark. A normal transfer reaches a receipt page that preserves \texttt{Amount: \$125}. A back/edit path that briefly returns to the recipient step before continuing forward reaches the same receipt URL after \texttt{confirm-transfer}, but the displayed amount is missing. The two endpoint fingerprints differ even though both paths satisfy the same task description. The page remains visually plausible at the receipt level, which is why the visual baseline misses it; the bug is structural in the workflow but not in any single rendered page.
 
 \begin{figure*}[t]
   \centering
@@ -387,26 +431,28 @@ Figure~\ref{fig:transfer-counterexample} shows the new Transfer path-equivalence
 \end{figure*}
 
 \FloatBarrier
-\section{Related Work}
-\textbf{Model-based testing.} Model-based testing derives tests from behavioral models \citep{utting2012taxonomy}. \RelUI also uses a transition model, but infers it from browser traces and uses it mainly for relational oracle checking rather than for exhaustive model-derived generation.
+\section{Related Work}\label{sec:related}
+\textbf{Model-based testing.} Model-based testing derives tests from behavioral models \citep{utting2012taxonomy}. The strength of these approaches is the ability to generate large, structured test suites; the weakness is that the model is an input, not an output, so the testing is only as good as the model the engineer writes. \RelUI also uses a transition model, but infers it from browser traces and uses it mainly for relational oracle checking rather than for exhaustive model-derived generation.
 
-\textbf{Web state crawling and invariants.} Crawljax explores Ajax applications and infers state-flow graphs \citep{mesbah2012crawling}. Invariant-based Web testing checks discovered states against state and DOM constraints \citep{mesbah2012invariant}. \RelUI builds on these ideas but checks relationships between traces: required actions before protected endpoints, invalid profiles before forbidden states, and equivalent paths to the same task endpoint.
+\textbf{Web state crawling and invariants.} Crawljax explores Ajax applications and infers state-flow graphs \citep{mesbah2012crawling}. Invariant-based Web testing checks discovered states against state and DOM constraints \citep{mesbah2012invariant}. This line of work is the closest in spirit to ours and also infers a model from interaction rather than from a manual specification. The difference is in what the invariants describe. Existing invariants are mostly per-state predicates such as ``this state should not contain a JavaScript error'' or ``this state should contain this element.'' They do not relate two paths or compare a state before and after an action. \RelUI extends this lineage with five families that each quantify over multiple traces or multiple edges in the same graph.
 
-\textbf{GUI testing frameworks.} GUITAR provides an extensible GUI testing framework across workflows and platforms \citep{nguyen2013guitar}. \RelUI is narrower and Web-focused, but produces compact Playwright replay evidence around relational workflow defects.
+\textbf{GUI testing frameworks.} GUITAR provides an extensible GUI testing framework across workflows and platforms \citep{nguyen2013guitar}. Its strength is breadth across desktop and mobile UIs; its oracles are still primarily per-state. \RelUI is narrower and Web-focused, but produces compact Playwright replay evidence around relational workflow defects.
 
-\textbf{Browser automation and LVLM GUI testing.} Playwright supplies reliable browser automation and screenshots \citep{playwright}. LVLM-based tools such as VETL use visual understanding for GUI exploration and input generation \citep{wang2024vetl}. \RelUI is complementary: its oracle is explicit and auditable rather than learned.
+\textbf{Browser automation and LVLM GUI testing.} Playwright supplies reliable browser automation and screenshots \citep{playwright}. LVLM-based tools such as VETL use visual understanding for GUI exploration and input generation \citep{wang2024vetl}. These approaches optimize for exploring more of the UI; they generally do not check relationships between explored paths.
 
-\section{Threats to Validity}
-\textbf{Internal validity.} The faults are controlled injections, and each expected fault is mapped to an invariant in the configuration. This improves auditability but means results depend on the correctness of those mappings. Clean variants reduce false-positive risk, but they do not prove the invariants are complete.
+\textbf{Positioning.} The four lines of work above differ from \RelUI along one axis: the unit of reasoning. Model-based testing reasons over a model the engineer wrote. Invariant-based testing reasons over individual inferred states. GUI frameworks reason over scripted sequences. Vision-based testing reasons over screens. \RelUI reasons over \emph{relationships} between paths and between pre- and post-action states, on top of an inferred model. The five invariant families we implemented are not properties of a single state; each one is a quantification over multiple traces or multiple edges in the same graph. This is what lets \RelUI catch bugs such as ``logout retains access'' or ``two paths diverge at the receipt,'' which neither per-state invariants nor coverage-driven exploration can express.
 
-\textbf{External validity.} The four workflows are realistic surrogates, not production systems. They cover authentication, checkout, settings, and transfer behavior, but not all asynchronous, third-party, or highly dynamic UI patterns.
+\section{Threats to Validity}\label{sec:threats}
+\textbf{Internal validity.} The faults are controlled injections written by us, and each expected fault is mapped to an invariant in the configuration. This pairing improves auditability but means the results depend on the correctness of those mappings; an invariant that is too narrow could match its target fault by coincidence. We mitigated this by deriving each fault from a class of bug we observed in the wild (missing auth check, validation skip, state that should reset but does not, paths that should converge), and by implementing each fault as a single conditional branch in the benchmark server so the bug is small and localized. The canonicalization function is another internal threat: a too-aggressive canonicalization would merge distinct states and hide path-equivalence violations, while a too-strict canonicalization would split equivalent states and produce false positives. The clean-variant runs are the main check on this; they exercise the same paths as the faulty variants and produced zero violations, which suggests the granularity is in a usable band but does not prove it is correct on unseen UIs.
 
-\textbf{Construct validity.} The structural and visual baselines are lightweight diagnostic baselines. Their role is to show that local structure and appearance miss relational defects, not to replace a full comparison with mature commercial suites.
+\textbf{External validity.} The four workflows are realistic surrogates, not production systems. They cover authentication, checkout, settings, and transfer behavior, but not all asynchronous, third-party, or highly dynamic UI patterns. We do not claim that 16-of-16 detection transfers to large production sites or to UIs generated by language models. What does transfer, we believe, is the categorical observation: the faults that escape structural and visual checks are the relational ones, and \RelUI is built to catch that class. Confirming this on open-source applications and on generated UIs is future work.
 
-\textbf{Reliability.} \RelUI resets browser storage before traces and uses deterministic input profiles. Remaining nondeterminism can come from browser timing and screenshots. The artifact preserves graphs, traces, screenshots, CSV files, and HTML evidence to support reruns and manual inspection.
+\textbf{Construct validity.} The structural and visual baselines are intentionally lightweight diagnostic baselines. Their role is to show that local structure and appearance miss relational defects, not to replace a full comparison with mature commercial suites. Detection is also measured as ``the relevant invariant fires at least once on the faulty variant,'' which conflates ``found a bug'' with ``produced an actionable signal.'' A more careful construct would measure precision (whether the reported violations correspond to the injected fault rather than to a side effect) and developer effort (how long it takes to read the counterexample and confirm the bug). We report counterexample length as a partial proxy and we did not run a user study.
 
-\section{Conclusion}
-\RelUI shows that Web UI correctness often depends on relationships across actions and paths. The final artifact expands the evaluation to four workflows, 20 variants, and 16 injected faults; it detects all faults with zero clean false positives while local structural and visual baselines detect only 5 and 0. The results support the core claim: workflow-level UI testing needs explicit relational oracles, not only page-local checks.
+\textbf{Reliability.} \RelUI resets browser storage before traces and uses deterministic input profiles, so reruns are stable up to Playwright timing variance. The trace budget (\texttt{maxTraces=80}, \texttt{maxDepth=4}, \texttt{maxActionsPerState=8}) bounds what the explorer reaches; bugs that live beyond this depth would not be discovered, and our scalability claims are calibrated to applications of the size used in this benchmark. The artifact preserves graphs, traces, screenshots, CSV files, and HTML evidence to support reruns and manual inspection.
+
+\section{Conclusion}\label{sec:conclusion}
+\RelUI shows that Web UI correctness often depends on relationships across actions and paths. The final artifact evaluates four workflows, 20 variants, and 16 injected faults; it detects all faults with zero clean false positives, while local structural and visual baselines detect only 5 and 0. The faults the baselines miss are exactly the cross-path bugs that motivated this work: logout that does not actually log the user out, two checkout paths that diverge at the final screen, a cancel button that persists the change, a back/edit transfer that loses the amount on the receipt. The results support the core claim that workflow-level UI testing needs explicit relational oracles, not only page-local checks. Future work includes scaling the approach to larger open-source applications, evaluating against UIs generated by language models, and exploring learned canonicalization that adapts the abstraction granularity per application instead of using a fixed formula.
 
 \bibliographystyle{ACM-Reference-Format}
 \IfFileExists{references.bib}{\bibliography{references}}{\bibliography{pdf/references}}
