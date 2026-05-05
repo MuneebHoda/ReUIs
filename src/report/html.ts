@@ -171,6 +171,7 @@ export function renderHtmlReport(model: ReportModel, artifactsDir: string): stri
       ${metric("States Discovered", metrics.statesDiscovered, `${metrics.transitionsDiscovered} transitions`)}
       ${metric("Bugs Detected", `${metrics.bugsDetected}/${metrics.faultsInjected}`, `${metrics.falsePositives} clean false positives`)}
       ${metric("Traces Explored", metrics.tracesExplored, "Replayable browser traces")}
+      ${metric("Unique Actions", metrics.uniqueActions, "Per-subject action coverage")}
       ${metric("Relational Violations", metrics.relationalViolations, "Counterexample instances")}
       ${metric("Runtime", `${formatSeconds(metrics.runtimeMs)}s`, "End-to-end exploration time")}
       ${metric("Baseline Hits", metrics.structuralDetections + metrics.visualDetections, `${metrics.structuralDetections} structural, ${metrics.visualDetections} visual`)}
@@ -199,6 +200,7 @@ export function renderHtmlReport(model: ReportModel, artifactsDir: string): stri
       <h2>Figure 3. RelUI vs Baselines</h2>
       <div class="figure-grid">
         ${detectionBars(model)}
+        ${invariantCoveragePanel(model)}
         ${modelSizeBars(byApp)}
         ${runtimeBars(byApp)}
       </div>
@@ -253,9 +255,23 @@ function appPanel(model: ReportModel, app: string, summaries: SubjectSummary[]):
       <div>Detected</div><div>${detected}/${faults.length}</div>
       <div>States</div><div>${summaries.reduce((total, summary) => total + summary.states, 0)}</div>
       <div>Transitions</div><div>${summaries.reduce((total, summary) => total + summary.edges, 0)}</div>
+      <div>Unique actions</div><div>${model.appCoverage.find((coverage) => coverage.app === app)?.uniqueActions ?? 0}</div>
+      <div>Avg trace length</div><div>${model.appCoverage.find((coverage) => coverage.app === app)?.averageTraceLength ?? 0}</div>
       <div>Runtime</div><div>${formatSeconds(summaries.reduce((total, summary) => total + summary.durationMs, 0))}s</div>
     </div>
     <p>${faults.map((fault) => `<span class="badge ${fault.detected ? "ok" : "miss"}">${escapeHtml(fault.faultId)}</span>`).join(" ")}</p>
+  </article>`;
+}
+
+function invariantCoveragePanel(model: ReportModel): string {
+  const max = Math.max(...model.invariantFamilyCoverage.map((coverage) => coverage.expectedFaults), 1);
+  return `<article class="figure">
+    <h3>Oracle Family Coverage</h3>
+    <div class="bars">
+      ${model.invariantFamilyCoverage
+        .map((coverage) => bar(coverage.invariantType, coverage.detectedFaults, max, coverage.detectedFaults === coverage.expectedFaults ? "" : "warn"))
+        .join("")}
+    </div>
   </article>`;
 }
 

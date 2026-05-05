@@ -1,0 +1,1914 @@
+{
+  "subjectId": "transfer-invalid-recipient-progression",
+  "generatedAt": "2026-05-05T22:19:21.102Z",
+  "durationMs": 13996,
+  "nodes": [
+    {
+      "id": "s_43f7bef43828",
+      "url": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/",
+      "normalizedUrl": "/transfer/invalid-recipient-progression",
+      "title": "RelUI transfer invalid-recipient-progression",
+      "text": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "canonicalText": "relui transfer benchmark amount recipient review confirmation transfer amount amount memo continue to recipient",
+      "semanticFingerprint": "d48b010636528d83f511d2c5db5885e779441ffbf3f164d592298ef512a4d314",
+      "controlSignature": "a:amount:[data-testid=\"nav-transfer-start\"]:|a:confirmation:[data-testid=\"nav-transfer-confirmation\"]:|a:recipient:[data-testid=\"nav-transfer-recipient\"]:|a:review:[data-testid=\"nav-transfer-review\"]:|button:continue to recipient:[data-testid=\"transfer-amount-next\"]:|input::[data-testid=\"amount\"]:100|input::[data-testid=\"memo\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-transfer-start\"]",
+          "label": "Amount",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-recipient\"]",
+          "label": "Recipient",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+          "label": "Confirmation",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"amount\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": "100"
+        },
+        {
+          "selector": "[data-testid=\"memo\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"transfer-amount-next\"]",
+          "label": "Continue to Recipient",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_43f7bef43828.png"
+    },
+    {
+      "id": "s_ea855cc7a87d",
+      "url": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/",
+      "normalizedUrl": "/transfer/invalid-recipient-progression",
+      "title": "RelUI transfer invalid-recipient-progression",
+      "text": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount must be between $1 and $5,000. Amount Memo Continue to Recipient",
+      "canonicalText": "relui transfer benchmark amount recipient review confirmation transfer amount amount must be between $1 and $5,000. amount memo continue to recipient",
+      "semanticFingerprint": "ae5a902c16f8455ea87c7043b23a765fd9c65ce42905dc155ba5467c36161d91",
+      "controlSignature": "a:amount:[data-testid=\"nav-transfer-start\"]:|a:confirmation:[data-testid=\"nav-transfer-confirmation\"]:|a:recipient:[data-testid=\"nav-transfer-recipient\"]:|a:review:[data-testid=\"nav-transfer-review\"]:|button:continue to recipient:[data-testid=\"transfer-amount-next\"]:|input::[data-testid=\"amount\"]:100|input::[data-testid=\"memo\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-transfer-start\"]",
+          "label": "Amount",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-recipient\"]",
+          "label": "Recipient",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+          "label": "Confirmation",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"amount\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": "100"
+        },
+        {
+          "selector": "[data-testid=\"memo\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"transfer-amount-next\"]",
+          "label": "Continue to Recipient",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_ea855cc7a87d.png"
+    },
+    {
+      "id": "s_e84815c7765b",
+      "url": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/recipient",
+      "normalizedUrl": "/transfer/invalid-recipient-progression/recipient",
+      "title": "RelUI transfer invalid-recipient-progression",
+      "text": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back",
+      "canonicalText": "relui transfer benchmark amount recipient review confirmation transfer recipient recipient review transfer back",
+      "semanticFingerprint": "38f134570b52859fbcf45141647a6bf0e84554803695bcb4f7094d65d9ec07b3",
+      "controlSignature": "a:amount:[data-testid=\"nav-transfer-start\"]:|a:confirmation:[data-testid=\"nav-transfer-confirmation\"]:|a:recipient:[data-testid=\"nav-transfer-recipient\"]:|a:review:[data-testid=\"nav-transfer-review\"]:|button:back:[data-testid=\"transfer-recipient-back\"]:|button:review transfer:[data-testid=\"transfer-recipient-next\"]:|input::[data-testid=\"recipient\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-transfer-start\"]",
+          "label": "Amount",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-recipient\"]",
+          "label": "Recipient",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+          "label": "Confirmation",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"recipient\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"transfer-recipient-next\"]",
+          "label": "Review Transfer",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"transfer-recipient-back\"]",
+          "label": "Back",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_e84815c7765b.png"
+    },
+    {
+      "id": "s_b5c184cdadec",
+      "url": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/review",
+      "normalizedUrl": "/transfer/invalid-recipient-progression/review",
+      "title": "RelUI transfer invalid-recipient-progression",
+      "text": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient",
+      "canonicalText": "relui transfer benchmark amount recipient review confirmation transfer review amount: $125 recipient: not-a-recipient memo: spring rent reviewed: yes confirm transfer back to recipient",
+      "semanticFingerprint": "e6d2264bf382a324a044021799539757a19dd7b02f46785c77469d7b3bcbdd6d",
+      "controlSignature": "a:amount:[data-testid=\"nav-transfer-start\"]:|a:confirmation:[data-testid=\"nav-transfer-confirmation\"]:|a:recipient:[data-testid=\"nav-transfer-recipient\"]:|a:review:[data-testid=\"nav-transfer-review\"]:|button:back to recipient:[data-testid=\"transfer-review-back\"]:|button:confirm transfer:[data-testid=\"confirm-transfer\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-transfer-start\"]",
+          "label": "Amount",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-recipient\"]",
+          "label": "Recipient",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+          "label": "Confirmation",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"confirm-transfer\"]",
+          "label": "Confirm Transfer",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"transfer-review-back\"]",
+          "label": "Back to Recipient",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_b5c184cdadec.png"
+    },
+    {
+      "id": "s_268abf1bc388",
+      "url": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/review",
+      "normalizedUrl": "/transfer/invalid-recipient-progression/review",
+      "title": "RelUI transfer invalid-recipient-progression",
+      "text": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Confirm transfer before receipt. Recipient Review Transfer Back",
+      "canonicalText": "relui transfer benchmark amount recipient review confirmation transfer recipient confirm transfer before receipt. recipient review transfer back",
+      "semanticFingerprint": "0f3b8153d86dd20112aa5e66ff9cd5d96c3d1a9a12312d9c71d722bb67a699a2",
+      "controlSignature": "a:amount:[data-testid=\"nav-transfer-start\"]:|a:confirmation:[data-testid=\"nav-transfer-confirmation\"]:|a:recipient:[data-testid=\"nav-transfer-recipient\"]:|a:review:[data-testid=\"nav-transfer-review\"]:|button:back:[data-testid=\"transfer-recipient-back\"]:|button:review transfer:[data-testid=\"transfer-recipient-next\"]:|input::[data-testid=\"recipient\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-transfer-start\"]",
+          "label": "Amount",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-recipient\"]",
+          "label": "Recipient",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+          "label": "Confirmation",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"recipient\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"transfer-recipient-next\"]",
+          "label": "Review Transfer",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"transfer-recipient-back\"]",
+          "label": "Back",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_268abf1bc388.png"
+    },
+    {
+      "id": "s_887d99898fe4",
+      "url": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/review",
+      "normalizedUrl": "/transfer/invalid-recipient-progression/review",
+      "title": "RelUI transfer invalid-recipient-progression",
+      "text": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: alex@example.com Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient",
+      "canonicalText": "relui transfer benchmark amount recipient review confirmation transfer review amount: $125 recipient: alex@example.com memo: spring rent reviewed: yes confirm transfer back to recipient",
+      "semanticFingerprint": "4e61df2b570044d019647e16574107e999f34be9bf14a4f90f3c6463a34b617b",
+      "controlSignature": "a:amount:[data-testid=\"nav-transfer-start\"]:|a:confirmation:[data-testid=\"nav-transfer-confirmation\"]:|a:recipient:[data-testid=\"nav-transfer-recipient\"]:|a:review:[data-testid=\"nav-transfer-review\"]:|button:back to recipient:[data-testid=\"transfer-review-back\"]:|button:confirm transfer:[data-testid=\"confirm-transfer\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-transfer-start\"]",
+          "label": "Amount",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-recipient\"]",
+          "label": "Recipient",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+          "label": "Confirmation",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"confirm-transfer\"]",
+          "label": "Confirm Transfer",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"transfer-review-back\"]",
+          "label": "Back to Recipient",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_887d99898fe4.png"
+    },
+    {
+      "id": "s_656ec12419b4",
+      "url": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/confirmation",
+      "normalizedUrl": "/transfer/invalid-recipient-progression/confirmation",
+      "title": "RelUI transfer invalid-recipient-progression",
+      "text": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Complete Transfer receipt generated. Amount: $125 Recipient: alex@example.com Memo: Spring rent Confirmed: yes",
+      "canonicalText": "relui transfer benchmark amount recipient review confirmation transfer complete transfer receipt generated. amount: $125 recipient: alex@example.com memo: spring rent confirmed: yes",
+      "semanticFingerprint": "eaa38338ab305356d947f87c95c94efc7af461b1f3557b9446689deeb376ef50",
+      "controlSignature": "a:amount:[data-testid=\"nav-transfer-start\"]:|a:confirmation:[data-testid=\"nav-transfer-confirmation\"]:|a:recipient:[data-testid=\"nav-transfer-recipient\"]:|a:review:[data-testid=\"nav-transfer-review\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-transfer-start\"]",
+          "label": "Amount",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-recipient\"]",
+          "label": "Recipient",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+          "label": "Confirmation",
+          "tag": "a",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_656ec12419b4.png"
+    },
+    {
+      "id": "s_6757175224a4",
+      "url": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/recipient",
+      "normalizedUrl": "/transfer/invalid-recipient-progression/recipient",
+      "title": "RelUI transfer invalid-recipient-progression",
+      "text": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back",
+      "canonicalText": "relui transfer benchmark amount recipient review confirmation transfer recipient recipient review transfer back",
+      "semanticFingerprint": "4bb2508948c67a9bc486521f5a0604ae939dc32b1bfc0ca9fb08080de8e4d401",
+      "controlSignature": "a:amount:[data-testid=\"nav-transfer-start\"]:|a:confirmation:[data-testid=\"nav-transfer-confirmation\"]:|a:recipient:[data-testid=\"nav-transfer-recipient\"]:|a:review:[data-testid=\"nav-transfer-review\"]:|button:back:[data-testid=\"transfer-recipient-back\"]:|button:review transfer:[data-testid=\"transfer-recipient-next\"]:|input::[data-testid=\"recipient\"]:alex@example.com",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-transfer-start\"]",
+          "label": "Amount",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-recipient\"]",
+          "label": "Recipient",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+          "label": "Confirmation",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"recipient\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": "alex@example.com"
+        },
+        {
+          "selector": "[data-testid=\"transfer-recipient-next\"]",
+          "label": "Review Transfer",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"transfer-recipient-back\"]",
+          "label": "Back",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_6757175224a4.png"
+    },
+    {
+      "id": "s_c6acee0a42e0",
+      "url": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/start",
+      "normalizedUrl": "/transfer/invalid-recipient-progression/start",
+      "title": "RelUI transfer invalid-recipient-progression",
+      "text": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "canonicalText": "relui transfer benchmark amount recipient review confirmation transfer amount amount memo continue to recipient",
+      "semanticFingerprint": "92e883da2e777b3fd2995d5ad101ba1e98b1288a06321f007caa02af3b829449",
+      "controlSignature": "a:amount:[data-testid=\"nav-transfer-start\"]:|a:confirmation:[data-testid=\"nav-transfer-confirmation\"]:|a:recipient:[data-testid=\"nav-transfer-recipient\"]:|a:review:[data-testid=\"nav-transfer-review\"]:|button:continue to recipient:[data-testid=\"transfer-amount-next\"]:|input::[data-testid=\"amount\"]:100|input::[data-testid=\"memo\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-transfer-start\"]",
+          "label": "Amount",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-recipient\"]",
+          "label": "Recipient",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+          "label": "Confirmation",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"amount\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": "100"
+        },
+        {
+          "selector": "[data-testid=\"memo\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"transfer-amount-next\"]",
+          "label": "Continue to Recipient",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_c6acee0a42e0.png"
+    },
+    {
+      "id": "s_a79aafb2c770",
+      "url": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/review",
+      "normalizedUrl": "/transfer/invalid-recipient-progression/review",
+      "title": "RelUI transfer invalid-recipient-progression",
+      "text": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Amount and recipient are required before review. Recipient Review Transfer Back",
+      "canonicalText": "relui transfer benchmark amount recipient review confirmation transfer recipient amount and recipient are required before review. recipient review transfer back",
+      "semanticFingerprint": "aae7e6965733a5ccfa93612a8aea10c2b0d8cdbcf18936186fe733c9e5ef217b",
+      "controlSignature": "a:amount:[data-testid=\"nav-transfer-start\"]:|a:confirmation:[data-testid=\"nav-transfer-confirmation\"]:|a:recipient:[data-testid=\"nav-transfer-recipient\"]:|a:review:[data-testid=\"nav-transfer-review\"]:|button:back:[data-testid=\"transfer-recipient-back\"]:|button:review transfer:[data-testid=\"transfer-recipient-next\"]:|input::[data-testid=\"recipient\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-transfer-start\"]",
+          "label": "Amount",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-recipient\"]",
+          "label": "Recipient",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+          "label": "Confirmation",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"recipient\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": ""
+        },
+        {
+          "selector": "[data-testid=\"transfer-recipient-next\"]",
+          "label": "Review Transfer",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"transfer-recipient-back\"]",
+          "label": "Back",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_a79aafb2c770.png"
+    },
+    {
+      "id": "s_4ece9c48c060",
+      "url": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/start",
+      "normalizedUrl": "/transfer/invalid-recipient-progression/start",
+      "title": "RelUI transfer invalid-recipient-progression",
+      "text": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "canonicalText": "relui transfer benchmark amount recipient review confirmation transfer amount amount memo continue to recipient",
+      "semanticFingerprint": "f2b1faa93db647558c6a874357f95e11fe99bd24dbcfcf92c490fa53c60f625a",
+      "controlSignature": "a:amount:[data-testid=\"nav-transfer-start\"]:|a:confirmation:[data-testid=\"nav-transfer-confirmation\"]:|a:recipient:[data-testid=\"nav-transfer-recipient\"]:|a:review:[data-testid=\"nav-transfer-review\"]:|button:continue to recipient:[data-testid=\"transfer-amount-next\"]:|input::[data-testid=\"amount\"]:125|input::[data-testid=\"memo\"]:spring rent",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-transfer-start\"]",
+          "label": "Amount",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-recipient\"]",
+          "label": "Recipient",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+          "label": "Confirmation",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"amount\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": "125"
+        },
+        {
+          "selector": "[data-testid=\"memo\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": "Spring rent"
+        },
+        {
+          "selector": "[data-testid=\"transfer-amount-next\"]",
+          "label": "Continue to Recipient",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_4ece9c48c060.png"
+    },
+    {
+      "id": "s_ba23cac76b17",
+      "url": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/recipient",
+      "normalizedUrl": "/transfer/invalid-recipient-progression/recipient",
+      "title": "RelUI transfer invalid-recipient-progression",
+      "text": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back",
+      "canonicalText": "relui transfer benchmark amount recipient review confirmation transfer recipient recipient review transfer back",
+      "semanticFingerprint": "b615960f5abebef7407c49d352efe2fc385e39b72dd885666a699e9650e86715",
+      "controlSignature": "a:amount:[data-testid=\"nav-transfer-start\"]:|a:confirmation:[data-testid=\"nav-transfer-confirmation\"]:|a:recipient:[data-testid=\"nav-transfer-recipient\"]:|a:review:[data-testid=\"nav-transfer-review\"]:|button:back:[data-testid=\"transfer-recipient-back\"]:|button:review transfer:[data-testid=\"transfer-recipient-next\"]:|input::[data-testid=\"recipient\"]:not-a-recipient",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-transfer-start\"]",
+          "label": "Amount",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-recipient\"]",
+          "label": "Recipient",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+          "label": "Confirmation",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"recipient\"]",
+          "label": "",
+          "tag": "input",
+          "role": "",
+          "value": "not-a-recipient"
+        },
+        {
+          "selector": "[data-testid=\"transfer-recipient-next\"]",
+          "label": "Review Transfer",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"transfer-recipient-back\"]",
+          "label": "Back",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_ba23cac76b17.png"
+    },
+    {
+      "id": "s_0344d2e54ed5",
+      "url": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/review",
+      "normalizedUrl": "/transfer/invalid-recipient-progression/review",
+      "title": "RelUI transfer invalid-recipient-progression",
+      "text": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Confirm transfer before receipt. Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient",
+      "canonicalText": "relui transfer benchmark amount recipient review confirmation transfer review confirm transfer before receipt. amount: $125 recipient: not-a-recipient memo: spring rent reviewed: yes confirm transfer back to recipient",
+      "semanticFingerprint": "dbc8a2900354fce3e4aa0b7fac8163bef64fd75d15440a7bcd933cec89560d70",
+      "controlSignature": "a:amount:[data-testid=\"nav-transfer-start\"]:|a:confirmation:[data-testid=\"nav-transfer-confirmation\"]:|a:recipient:[data-testid=\"nav-transfer-recipient\"]:|a:review:[data-testid=\"nav-transfer-review\"]:|button:back to recipient:[data-testid=\"transfer-review-back\"]:|button:confirm transfer:[data-testid=\"confirm-transfer\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-transfer-start\"]",
+          "label": "Amount",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-recipient\"]",
+          "label": "Recipient",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+          "label": "Confirmation",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"confirm-transfer\"]",
+          "label": "Confirm Transfer",
+          "tag": "button",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"transfer-review-back\"]",
+          "label": "Back to Recipient",
+          "tag": "button",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_0344d2e54ed5.png"
+    },
+    {
+      "id": "s_48e4fbdbf36f",
+      "url": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/confirmation",
+      "normalizedUrl": "/transfer/invalid-recipient-progression/confirmation",
+      "title": "RelUI transfer invalid-recipient-progression",
+      "text": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Complete Transfer receipt generated. Amount: $125 Recipient: not-a-recipient Memo: Spring rent Confirmed: yes",
+      "canonicalText": "relui transfer benchmark amount recipient review confirmation transfer complete transfer receipt generated. amount: $125 recipient: not-a-recipient memo: spring rent confirmed: yes",
+      "semanticFingerprint": "8b42e3231b2b7df7ee70ea0351db2bbd30a0bd4cd755ac39f768d7206adead3c",
+      "controlSignature": "a:amount:[data-testid=\"nav-transfer-start\"]:|a:confirmation:[data-testid=\"nav-transfer-confirmation\"]:|a:recipient:[data-testid=\"nav-transfer-recipient\"]:|a:review:[data-testid=\"nav-transfer-review\"]:",
+      "controls": [
+        {
+          "selector": "[data-testid=\"nav-transfer-start\"]",
+          "label": "Amount",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-recipient\"]",
+          "label": "Recipient",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-review\"]",
+          "label": "Review",
+          "tag": "a",
+          "role": ""
+        },
+        {
+          "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+          "label": "Confirmation",
+          "tag": "a",
+          "role": ""
+        }
+      ],
+      "screenshotPath": "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_48e4fbdbf36f.png"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_2619a2ec369a",
+      "from": "s_43f7bef43828",
+      "to": "s_ea855cc7a87d",
+      "selector": "[data-testid=\"transfer-amount-next\"]",
+      "label": "Continue to Recipient",
+      "profileName": "invalid",
+      "traceIds": [
+        "t_f41c2e94f005",
+        "t_0f4f39150d96",
+        "t_88cbb203baed",
+        "t_ef710de71e68",
+        "t_6cf89dae7040",
+        "t_4f927d4c1f28",
+        "t_70c19eb20acd",
+        "t_0d360d749b03"
+      ]
+    },
+    {
+      "id": "e_3e894faab92a",
+      "from": "s_43f7bef43828",
+      "to": "s_e84815c7765b",
+      "selector": "[data-testid=\"transfer-amount-next\"]",
+      "label": "Continue to Recipient",
+      "profileName": "valid",
+      "traceIds": [
+        "t_f92a74d46164",
+        "t_2d376002ea56",
+        "t_bb6454bbbf09",
+        "t_7fba3307e781",
+        "t_b7bd2d57c819",
+        "t_8c958a08292e",
+        "t_2f6b0a11d962",
+        "t_61b09326d04e",
+        "t_7be23801a55d",
+        "t_bc4cfb0f9e56"
+      ]
+    },
+    {
+      "id": "e_68f27e29856d",
+      "from": "s_e84815c7765b",
+      "to": "s_b5c184cdadec",
+      "selector": "[data-testid=\"transfer-recipient-next\"]",
+      "label": "Review Transfer",
+      "profileName": "invalid",
+      "traceIds": [
+        "t_f92a74d46164",
+        "t_b7bd2d57c819",
+        "t_8c958a08292e",
+        "t_2f6b0a11d962",
+        "t_61b09326d04e",
+        "t_7be23801a55d",
+        "t_bc4cfb0f9e56"
+      ]
+    },
+    {
+      "id": "e_ed58a9f4ab6e",
+      "from": "s_43f7bef43828",
+      "to": "s_268abf1bc388",
+      "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+      "label": "Confirmation",
+      "profileName": "default",
+      "traceIds": [
+        "t_52c3244e797e"
+      ]
+    },
+    {
+      "id": "e_3d9b0d075b14",
+      "from": "s_e84815c7765b",
+      "to": "s_887d99898fe4",
+      "selector": "[data-testid=\"transfer-recipient-next\"]",
+      "label": "Review Transfer",
+      "profileName": "valid",
+      "traceIds": [
+        "t_2d376002ea56",
+        "t_bb6454bbbf09"
+      ]
+    },
+    {
+      "id": "e_8b8861b082bb",
+      "from": "s_887d99898fe4",
+      "to": "s_656ec12419b4",
+      "selector": "[data-testid=\"confirm-transfer\"]",
+      "label": "Confirm Transfer",
+      "profileName": "default",
+      "traceIds": [
+        "t_2d376002ea56",
+        "t_bb6454bbbf09"
+      ]
+    },
+    {
+      "id": "e_259f44b9a703",
+      "from": "s_887d99898fe4",
+      "to": "s_6757175224a4",
+      "selector": "[data-testid=\"transfer-review-back\"]",
+      "label": "Back to Recipient",
+      "profileName": "default",
+      "traceIds": [
+        "t_bb6454bbbf09"
+      ]
+    },
+    {
+      "id": "e_dbaf77271585",
+      "from": "s_6757175224a4",
+      "to": "s_887d99898fe4",
+      "selector": "[data-testid=\"transfer-recipient-next\"]",
+      "label": "Review Transfer",
+      "profileName": "valid",
+      "traceIds": [
+        "t_bb6454bbbf09"
+      ]
+    },
+    {
+      "id": "e_8e43067d992e",
+      "from": "s_43f7bef43828",
+      "to": "s_c6acee0a42e0",
+      "selector": "[data-testid=\"nav-transfer-start\"]",
+      "label": "Amount",
+      "profileName": "default",
+      "traceIds": [
+        "t_6468dbf812ce"
+      ]
+    },
+    {
+      "id": "e_ffcec959e818",
+      "from": "s_43f7bef43828",
+      "to": "s_e84815c7765b",
+      "selector": "[data-testid=\"nav-transfer-recipient\"]",
+      "label": "Recipient",
+      "profileName": "default",
+      "traceIds": [
+        "t_a895f74908c2"
+      ]
+    },
+    {
+      "id": "e_1860f71e45c3",
+      "from": "s_43f7bef43828",
+      "to": "s_a79aafb2c770",
+      "selector": "[data-testid=\"nav-transfer-review\"]",
+      "label": "Review",
+      "profileName": "default",
+      "traceIds": [
+        "t_875b80089553"
+      ]
+    },
+    {
+      "id": "e_36a9fb3ae07d",
+      "from": "s_43f7bef43828",
+      "to": "s_e84815c7765b",
+      "selector": "[data-testid=\"transfer-amount-next\"]",
+      "label": "Continue to Recipient",
+      "profileName": "admin",
+      "traceIds": [
+        "t_d660b5b72536"
+      ]
+    },
+    {
+      "id": "e_f31d942f0d33",
+      "from": "s_ea855cc7a87d",
+      "to": "s_c6acee0a42e0",
+      "selector": "[data-testid=\"nav-transfer-start\"]",
+      "label": "Amount",
+      "profileName": "default",
+      "traceIds": [
+        "t_0f4f39150d96"
+      ]
+    },
+    {
+      "id": "e_f98a0a3a9013",
+      "from": "s_ea855cc7a87d",
+      "to": "s_e84815c7765b",
+      "selector": "[data-testid=\"nav-transfer-recipient\"]",
+      "label": "Recipient",
+      "profileName": "default",
+      "traceIds": [
+        "t_88cbb203baed"
+      ]
+    },
+    {
+      "id": "e_cf0b8cb2b6ef",
+      "from": "s_ea855cc7a87d",
+      "to": "s_a79aafb2c770",
+      "selector": "[data-testid=\"nav-transfer-review\"]",
+      "label": "Review",
+      "profileName": "default",
+      "traceIds": [
+        "t_ef710de71e68"
+      ]
+    },
+    {
+      "id": "e_3e13748e9f5e",
+      "from": "s_ea855cc7a87d",
+      "to": "s_268abf1bc388",
+      "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+      "label": "Confirmation",
+      "profileName": "default",
+      "traceIds": [
+        "t_6cf89dae7040"
+      ]
+    },
+    {
+      "id": "e_d93eecd8bdc4",
+      "from": "s_ea855cc7a87d",
+      "to": "s_e84815c7765b",
+      "selector": "[data-testid=\"transfer-amount-next\"]",
+      "label": "Continue to Recipient",
+      "profileName": "valid",
+      "traceIds": [
+        "t_4f927d4c1f28"
+      ]
+    },
+    {
+      "id": "e_cf2ab15690de",
+      "from": "s_ea855cc7a87d",
+      "to": "s_e84815c7765b",
+      "selector": "[data-testid=\"transfer-amount-next\"]",
+      "label": "Continue to Recipient",
+      "profileName": "admin",
+      "traceIds": [
+        "t_70c19eb20acd"
+      ]
+    },
+    {
+      "id": "e_575ce02f59cf",
+      "from": "s_ea855cc7a87d",
+      "to": "s_ea855cc7a87d",
+      "selector": "[data-testid=\"transfer-amount-next\"]",
+      "label": "Continue to Recipient",
+      "profileName": "invalid",
+      "traceIds": [
+        "t_0d360d749b03"
+      ]
+    },
+    {
+      "id": "e_3ab82a169687",
+      "from": "s_b5c184cdadec",
+      "to": "s_4ece9c48c060",
+      "selector": "[data-testid=\"nav-transfer-start\"]",
+      "label": "Amount",
+      "profileName": "default",
+      "traceIds": [
+        "t_b7bd2d57c819"
+      ]
+    },
+    {
+      "id": "e_2a3f751680aa",
+      "from": "s_b5c184cdadec",
+      "to": "s_ba23cac76b17",
+      "selector": "[data-testid=\"nav-transfer-recipient\"]",
+      "label": "Recipient",
+      "profileName": "default",
+      "traceIds": [
+        "t_8c958a08292e"
+      ]
+    },
+    {
+      "id": "e_d5290995d148",
+      "from": "s_b5c184cdadec",
+      "to": "s_b5c184cdadec",
+      "selector": "[data-testid=\"nav-transfer-review\"]",
+      "label": "Review",
+      "profileName": "default",
+      "traceIds": [
+        "t_2f6b0a11d962"
+      ]
+    },
+    {
+      "id": "e_2a11a2852d3b",
+      "from": "s_b5c184cdadec",
+      "to": "s_0344d2e54ed5",
+      "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+      "label": "Confirmation",
+      "profileName": "default",
+      "traceIds": [
+        "t_61b09326d04e"
+      ]
+    },
+    {
+      "id": "e_28797d0b5725",
+      "from": "s_b5c184cdadec",
+      "to": "s_48e4fbdbf36f",
+      "selector": "[data-testid=\"confirm-transfer\"]",
+      "label": "Confirm Transfer",
+      "profileName": "default",
+      "traceIds": [
+        "t_7be23801a55d"
+      ]
+    },
+    {
+      "id": "e_a671bd0c9e67",
+      "from": "s_b5c184cdadec",
+      "to": "s_ba23cac76b17",
+      "selector": "[data-testid=\"transfer-review-back\"]",
+      "label": "Back to Recipient",
+      "profileName": "default",
+      "traceIds": [
+        "t_bc4cfb0f9e56"
+      ]
+    }
+  ],
+  "traces": [
+    {
+      "id": "t_cced28c6dc3f",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "start",
+      "steps": [],
+      "stateIds": [
+        "s_43f7bef43828"
+      ],
+      "finalStateId": "s_43f7bef43828"
+    },
+    {
+      "id": "t_f41c2e94f005",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "invalid:[data-testid=\"transfer-amount-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_ea855cc7a87d"
+      ],
+      "finalStateId": "s_ea855cc7a87d"
+    },
+    {
+      "id": "t_f92a74d46164",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "valid:[data-testid=\"transfer-amount-next\"] -> invalid:[data-testid=\"transfer-recipient-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-recipient-next\"]",
+            "label": "Review Transfer",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_e84815c7765b",
+        "s_b5c184cdadec"
+      ],
+      "finalStateId": "s_b5c184cdadec"
+    },
+    {
+      "id": "t_52c3244e797e",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "default:[data-testid=\"nav-transfer-confirmation\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+            "label": "Confirmation",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_268abf1bc388"
+      ],
+      "finalStateId": "s_268abf1bc388"
+    },
+    {
+      "id": "t_2d376002ea56",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "valid:[data-testid=\"transfer-amount-next\"] -> valid:[data-testid=\"transfer-recipient-next\"] -> default:[data-testid=\"confirm-transfer\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-recipient-next\"]",
+            "label": "Review Transfer",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"confirm-transfer\"]",
+            "label": "Confirm Transfer",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_e84815c7765b",
+        "s_887d99898fe4",
+        "s_656ec12419b4"
+      ],
+      "finalStateId": "s_656ec12419b4"
+    },
+    {
+      "id": "t_bb6454bbbf09",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "valid:[data-testid=\"transfer-amount-next\"] -> valid:[data-testid=\"transfer-recipient-next\"] -> default:[data-testid=\"transfer-review-back\"] -> valid:[data-testid=\"transfer-recipient-next\"] -> default:[data-testid=\"confirm-transfer\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-recipient-next\"]",
+            "label": "Review Transfer",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-review-back\"]",
+            "label": "Back to Recipient",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-recipient-next\"]",
+            "label": "Review Transfer",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"confirm-transfer\"]",
+            "label": "Confirm Transfer",
+            "tag": "seed",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_e84815c7765b",
+        "s_887d99898fe4",
+        "s_6757175224a4",
+        "s_887d99898fe4",
+        "s_656ec12419b4"
+      ],
+      "finalStateId": "s_656ec12419b4"
+    },
+    {
+      "id": "t_6468dbf812ce",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "default:[data-testid=\"nav-transfer-start\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-transfer-start\"]",
+            "label": "Amount",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/start",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_c6acee0a42e0"
+      ],
+      "finalStateId": "s_c6acee0a42e0"
+    },
+    {
+      "id": "t_a895f74908c2",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "default:[data-testid=\"nav-transfer-recipient\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-transfer-recipient\"]",
+            "label": "Recipient",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/recipient",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_e84815c7765b"
+      ],
+      "finalStateId": "s_e84815c7765b"
+    },
+    {
+      "id": "t_875b80089553",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "default:[data-testid=\"nav-transfer-review\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-transfer-review\"]",
+            "label": "Review",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/review",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_a79aafb2c770"
+      ],
+      "finalStateId": "s_a79aafb2c770"
+    },
+    {
+      "id": "t_7fba3307e781",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "valid:[data-testid=\"transfer-amount-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": [
+            {
+              "selector": "[data-testid=\"amount\"]",
+              "key": "amount",
+              "value": 125
+            },
+            {
+              "selector": "[data-testid=\"memo\"]",
+              "key": "memo",
+              "value": "Spring rent"
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_e84815c7765b"
+      ],
+      "finalStateId": "s_e84815c7765b"
+    },
+    {
+      "id": "t_d660b5b72536",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "admin:[data-testid=\"transfer-amount-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "admin",
+          "fills": [
+            {
+              "selector": "[data-testid=\"amount\"]",
+              "key": "amount",
+              "value": 250
+            },
+            {
+              "selector": "[data-testid=\"memo\"]",
+              "key": "memo",
+              "value": "Admin transfer"
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_e84815c7765b"
+      ],
+      "finalStateId": "s_e84815c7765b"
+    },
+    {
+      "id": "t_0f4f39150d96",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "invalid:[data-testid=\"transfer-amount-next\"] -> default:[data-testid=\"nav-transfer-start\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-transfer-start\"]",
+            "label": "Amount",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/start",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_ea855cc7a87d",
+        "s_c6acee0a42e0"
+      ],
+      "finalStateId": "s_c6acee0a42e0"
+    },
+    {
+      "id": "t_88cbb203baed",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "invalid:[data-testid=\"transfer-amount-next\"] -> default:[data-testid=\"nav-transfer-recipient\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-transfer-recipient\"]",
+            "label": "Recipient",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/recipient",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_ea855cc7a87d",
+        "s_e84815c7765b"
+      ],
+      "finalStateId": "s_e84815c7765b"
+    },
+    {
+      "id": "t_ef710de71e68",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "invalid:[data-testid=\"transfer-amount-next\"] -> default:[data-testid=\"nav-transfer-review\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-transfer-review\"]",
+            "label": "Review",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/review",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_ea855cc7a87d",
+        "s_a79aafb2c770"
+      ],
+      "finalStateId": "s_a79aafb2c770"
+    },
+    {
+      "id": "t_6cf89dae7040",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "invalid:[data-testid=\"transfer-amount-next\"] -> default:[data-testid=\"nav-transfer-confirmation\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+            "label": "Confirmation",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/confirmation",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_ea855cc7a87d",
+        "s_268abf1bc388"
+      ],
+      "finalStateId": "s_268abf1bc388"
+    },
+    {
+      "id": "t_4f927d4c1f28",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "invalid:[data-testid=\"transfer-amount-next\"] -> valid:[data-testid=\"transfer-amount-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": [
+            {
+              "selector": "[data-testid=\"amount\"]",
+              "key": "amount",
+              "value": 125
+            },
+            {
+              "selector": "[data-testid=\"memo\"]",
+              "key": "memo",
+              "value": "Spring rent"
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_ea855cc7a87d",
+        "s_e84815c7765b"
+      ],
+      "finalStateId": "s_e84815c7765b"
+    },
+    {
+      "id": "t_70c19eb20acd",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "invalid:[data-testid=\"transfer-amount-next\"] -> admin:[data-testid=\"transfer-amount-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "admin",
+          "fills": [
+            {
+              "selector": "[data-testid=\"amount\"]",
+              "key": "amount",
+              "value": 250
+            },
+            {
+              "selector": "[data-testid=\"memo\"]",
+              "key": "memo",
+              "value": "Admin transfer"
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_ea855cc7a87d",
+        "s_e84815c7765b"
+      ],
+      "finalStateId": "s_e84815c7765b"
+    },
+    {
+      "id": "t_0d360d749b03",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "invalid:[data-testid=\"transfer-amount-next\"] -> invalid:[data-testid=\"transfer-amount-next\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "button",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": [
+            {
+              "selector": "[data-testid=\"amount\"]",
+              "key": "amount",
+              "value": -25
+            },
+            {
+              "selector": "[data-testid=\"memo\"]",
+              "key": "memo",
+              "value": ""
+            }
+          ]
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_ea855cc7a87d",
+        "s_ea855cc7a87d"
+      ],
+      "finalStateId": "s_ea855cc7a87d"
+    },
+    {
+      "id": "t_b7bd2d57c819",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "valid:[data-testid=\"transfer-amount-next\"] -> invalid:[data-testid=\"transfer-recipient-next\"] -> default:[data-testid=\"nav-transfer-start\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-recipient-next\"]",
+            "label": "Review Transfer",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-transfer-start\"]",
+            "label": "Amount",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/start",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_e84815c7765b",
+        "s_b5c184cdadec",
+        "s_4ece9c48c060"
+      ],
+      "finalStateId": "s_4ece9c48c060"
+    },
+    {
+      "id": "t_8c958a08292e",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "valid:[data-testid=\"transfer-amount-next\"] -> invalid:[data-testid=\"transfer-recipient-next\"] -> default:[data-testid=\"nav-transfer-recipient\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-recipient-next\"]",
+            "label": "Review Transfer",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-transfer-recipient\"]",
+            "label": "Recipient",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/recipient",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_e84815c7765b",
+        "s_b5c184cdadec",
+        "s_ba23cac76b17"
+      ],
+      "finalStateId": "s_ba23cac76b17"
+    },
+    {
+      "id": "t_2f6b0a11d962",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "valid:[data-testid=\"transfer-amount-next\"] -> invalid:[data-testid=\"transfer-recipient-next\"] -> default:[data-testid=\"nav-transfer-review\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-recipient-next\"]",
+            "label": "Review Transfer",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-transfer-review\"]",
+            "label": "Review",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/review",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_e84815c7765b",
+        "s_b5c184cdadec",
+        "s_b5c184cdadec"
+      ],
+      "finalStateId": "s_b5c184cdadec"
+    },
+    {
+      "id": "t_61b09326d04e",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "valid:[data-testid=\"transfer-amount-next\"] -> invalid:[data-testid=\"transfer-recipient-next\"] -> default:[data-testid=\"nav-transfer-confirmation\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-recipient-next\"]",
+            "label": "Review Transfer",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"nav-transfer-confirmation\"]",
+            "label": "Confirmation",
+            "tag": "a",
+            "href": "http://127.0.0.1:4173/transfer/invalid-recipient-progression/confirmation",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_e84815c7765b",
+        "s_b5c184cdadec",
+        "s_0344d2e54ed5"
+      ],
+      "finalStateId": "s_0344d2e54ed5"
+    },
+    {
+      "id": "t_7be23801a55d",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "valid:[data-testid=\"transfer-amount-next\"] -> invalid:[data-testid=\"transfer-recipient-next\"] -> default:[data-testid=\"confirm-transfer\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-recipient-next\"]",
+            "label": "Review Transfer",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"confirm-transfer\"]",
+            "label": "Confirm Transfer",
+            "tag": "button",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_e84815c7765b",
+        "s_b5c184cdadec",
+        "s_48e4fbdbf36f"
+      ],
+      "finalStateId": "s_48e4fbdbf36f"
+    },
+    {
+      "id": "t_bc4cfb0f9e56",
+      "subjectId": "transfer-invalid-recipient-progression",
+      "signature": "valid:[data-testid=\"transfer-amount-next\"] -> invalid:[data-testid=\"transfer-recipient-next\"] -> default:[data-testid=\"transfer-review-back\"]",
+      "steps": [
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-amount-next\"]",
+            "label": "Continue to Recipient",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "valid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-recipient-next\"]",
+            "label": "Review Transfer",
+            "tag": "seed",
+            "isFormAction": true
+          },
+          "profileName": "invalid",
+          "fills": []
+        },
+        {
+          "action": {
+            "selector": "[data-testid=\"transfer-review-back\"]",
+            "label": "Back to Recipient",
+            "tag": "button",
+            "isFormAction": false
+          },
+          "profileName": "default",
+          "fills": []
+        }
+      ],
+      "stateIds": [
+        "s_43f7bef43828",
+        "s_e84815c7765b",
+        "s_b5c184cdadec",
+        "s_ba23cac76b17"
+      ],
+      "finalStateId": "s_ba23cac76b17"
+    }
+  ],
+  "stats": {
+    "states": 14,
+    "edges": 25,
+    "traces": 24,
+    "maxDepth": 5,
+    "exploredActions": 185
+  }
+}

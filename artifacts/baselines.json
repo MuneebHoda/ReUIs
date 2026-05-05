@@ -197,5 +197,75 @@
       "detected": false,
       "alerts": []
     }
+  },
+  {
+    "subjectId": "transfer-clean",
+    "cleanSubjectId": "transfer-clean",
+    "structural": {
+      "detected": false,
+      "alerts": []
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "transfer-invalid-amount-progression",
+    "cleanSubjectId": "transfer-clean",
+    "structural": {
+      "detected": true,
+      "alerts": [
+        {
+          "kind": "structural",
+          "message": "State s_3001ef18b782 has a control structure not seen in the clean variant."
+        }
+      ]
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "transfer-invalid-recipient-progression",
+    "cleanSubjectId": "transfer-clean",
+    "structural": {
+      "detected": true,
+      "alerts": [
+        {
+          "kind": "structural",
+          "message": "State s_ba23cac76b17 has a control structure not seen in the clean variant."
+        }
+      ]
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "transfer-skip-confirmation",
+    "cleanSubjectId": "transfer-clean",
+    "structural": {
+      "detected": false,
+      "alerts": []
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
+  },
+  {
+    "subjectId": "transfer-back-loses-transfer",
+    "cleanSubjectId": "transfer-clean",
+    "structural": {
+      "detected": false,
+      "alerts": []
+    },
+    "visual": {
+      "detected": false,
+      "alerts": []
+    }
   }
 ]

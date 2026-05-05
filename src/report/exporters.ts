@@ -8,6 +8,8 @@ export async function writeReportExports(model: ReportModel, artifactsDir: strin
   await writeJson(path.join(artifactsDir, "summary.json"), model.summaries);
   await writeJson(path.join(artifactsDir, "violations.json"), model.violations);
   await writeJson(path.join(artifactsDir, "assignment_metrics.json"), model.assignmentMetrics);
+  await writeJson(path.join(artifactsDir, "coverage_by_app.json"), model.appCoverage);
+  await writeJson(path.join(artifactsDir, "invariant_family_coverage.json"), model.invariantFamilyCoverage);
   await writeJson(path.join(artifactsDir, "fault_coverage.json"), model.faultCoverage);
   await writeJson(path.join(artifactsDir, "counterexamples.json"), model.counterexamples);
 
@@ -15,6 +17,8 @@ export async function writeReportExports(model: ReportModel, artifactsDir: strin
   await writeText(path.join(artifactsDir, "violations.csv"), legacyViolationsCsv(model));
   await writeText(path.join(artifactsDir, "assignment_metrics.csv"), assignmentMetricsCsv(model));
   await writeText(path.join(artifactsDir, "fault_coverage.csv"), faultCoverageCsv(model));
+  await writeText(path.join(artifactsDir, "coverage_by_app.csv"), coverageByAppCsv(model));
+  await writeText(path.join(artifactsDir, "invariant_family_coverage.csv"), invariantFamilyCoverageCsv(model));
   await writeText(path.join(artifactsDir, "baseline_comparison.csv"), baselineComparisonCsv(model));
   await writeText(path.join(artifactsDir, "runtime_by_subject.csv"), runtimeBySubjectCsv(model));
   await writeText(path.join(artifactsDir, "counterexamples.csv"), counterexamplesCsv(model));
@@ -29,6 +33,8 @@ export function buildLatexTables(model: ReportModel): ReportTable[] {
     benchmarkSubjectsTable(model),
     injectedFaultsTable(model),
     detectionSummaryTable(model),
+    coverageByAppTable(model),
+    invariantFamilyCoverageTable(model),
     baselineComparisonTable(model),
     runtimeScalabilityTable(model),
     representativeCounterexamplesTable(model)
@@ -87,8 +93,44 @@ function assignmentMetricsCsv(model: ReportModel): string {
     ["relational_violations", metrics.relationalViolations],
     ["structural_baseline_detections", metrics.structuralDetections],
     ["visual_baseline_detections", metrics.visualDetections],
+    ["unique_subject_actions", metrics.uniqueActions],
     ["runtime_ms", metrics.runtimeMs],
     ["runtime_seconds", formatSeconds(metrics.runtimeMs)]
+  ]);
+}
+
+function coverageByAppCsv(model: ReportModel): string {
+  return csv([
+    ["app", "variants", "injected_faults", "detected_faults", "states", "transitions", "traces", "unique_actions", "avg_trace_length", "max_trace_length", "structural_detections", "visual_detections", "runtime_ms", "runtime_seconds"],
+    ...model.appCoverage.map((coverage) => [
+      coverage.app,
+      coverage.variants,
+      coverage.injectedFaults,
+      coverage.detectedFaults,
+      coverage.states,
+      coverage.transitions,
+      coverage.traces,
+      coverage.uniqueActions,
+      coverage.averageTraceLength,
+      coverage.maxTraceLength,
+      coverage.structuralDetections,
+      coverage.visualDetections,
+      coverage.runtimeMs,
+      formatSeconds(coverage.runtimeMs)
+    ])
+  ]);
+}
+
+function invariantFamilyCoverageCsv(model: ReportModel): string {
+  return csv([
+    ["invariant_type", "configured_invariants", "expected_faults", "detected_faults", "violation_instances"],
+    ...model.invariantFamilyCoverage.map((coverage) => [
+      coverage.invariantType,
+      coverage.configuredInvariants,
+      coverage.expectedFaults,
+      coverage.detectedFaults,
+      coverage.violationInstances
+    ])
   ]);
 }
 
@@ -134,7 +176,7 @@ function baselineComparisonCsv(model: ReportModel): string {
 
 function runtimeBySubjectCsv(model: ReportModel): string {
   return csv([
-    ["subject", "app", "variant", "states", "transitions", "traces", "runtime_ms", "runtime_seconds", "states_per_second", "transitions_per_second"],
+    ["subject", "app", "variant", "states", "transitions", "traces", "unique_actions", "avg_trace_length", "max_trace_length", "runtime_ms", "runtime_seconds", "states_per_second", "transitions_per_second"],
     ...model.summaries.map((summary) => [
       summary.subjectId,
       summary.app,
@@ -142,6 +184,9 @@ function runtimeBySubjectCsv(model: ReportModel): string {
       summary.states,
       summary.edges,
       summary.traces,
+      summary.uniqueActions,
+      summary.averageTraceLength,
+      summary.maxTraceLength,
       summary.durationMs,
       formatSeconds(summary.durationMs),
       rate(summary.states, summary.durationMs),
@@ -215,8 +260,45 @@ function detectionSummaryTable(model: ReportModel): ReportTable {
       ["False positives on clean variants", model.assignmentMetrics.falsePositives],
       ["Structural baseline detections", model.assignmentMetrics.structuralDetections],
       ["Visual baseline detections", model.assignmentMetrics.visualDetections],
+      ["Unique subject actions", model.assignmentMetrics.uniqueActions],
       ["Runtime (s)", formatSeconds(model.assignmentMetrics.runtimeMs)]
     ]
+  };
+}
+
+function coverageByAppTable(model: ReportModel): ReportTable {
+  return {
+    id: "coverage_by_app",
+    title: "Coverage by App",
+    columns: ["App", "Variants", "Faults", "Detected", "States", "Trans.", "Traces", "Actions", "Avg Len.", "Max Len.", "Runtime (s)"],
+    rows: model.appCoverage.map((coverage) => [
+      titleCase(coverage.app),
+      coverage.variants,
+      coverage.injectedFaults,
+      `${coverage.detectedFaults}/${coverage.injectedFaults}`,
+      coverage.states,
+      coverage.transitions,
+      coverage.traces,
+      coverage.uniqueActions,
+      coverage.averageTraceLength,
+      coverage.maxTraceLength,
+      formatSeconds(coverage.runtimeMs)
+    ])
+  };
+}
+
+function invariantFamilyCoverageTable(model: ReportModel): ReportTable {
+  return {
+    id: "invariant_family_coverage",
+    title: "Invariant Family Coverage",
+    columns: ["Invariant Family", "Configured", "Faults", "Detected", "Violation Instances"],
+    rows: model.invariantFamilyCoverage.map((coverage) => [
+      coverage.invariantType,
+      coverage.configuredInvariants,
+      coverage.expectedFaults,
+      `${coverage.detectedFaults}/${coverage.expectedFaults}`,
+      coverage.violationInstances
+    ])
   };
 }
 

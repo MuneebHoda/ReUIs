@@ -1,8 +1,10 @@
 import type {
+  AppCoverageSummary,
   AssignmentMetrics,
   BaselineResult,
   CounterexampleSummary,
   FaultCoverage,
+  InvariantFamilyCoverage,
   StateGraph,
   StateSnapshot,
   SubjectConfig,
@@ -19,6 +21,8 @@ export interface ReportModel {
   violationsBySubject: Map<string, Violation[]>;
   baselinesBySubject: Map<string, BaselineResult>;
   assignmentMetrics: AssignmentMetrics;
+  appCoverage: AppCoverageSummary[];
+  invariantFamilyCoverage: InvariantFamilyCoverage[];
   faultCoverage: FaultCoverage[];
   counterexamples: CounterexampleSummary[];
 }
@@ -37,6 +41,8 @@ export function buildReportModel(input: BuildReportModelInput): ReportModel {
   const faultCoverage = buildFaultCoverage(input.subjects, input.violationsBySubject, baselinesBySubject);
   const counterexamples = buildCounterexamples(input.subjects, input.graphs, input.violationsBySubject, faultCoverage);
   const assignmentMetrics = buildAssignmentMetrics(summaries, faultCoverage, violations, input.baselines);
+  const appCoverage = buildAppCoverage(input.subjects, input.graphs, summaries, faultCoverage);
+  const invariantFamilyCoverage = buildInvariantFamilyCoverage(input.subjects, faultCoverage, violations);
 
   return {
     subjects: input.subjects,
@@ -47,6 +53,8 @@ export function buildReportModel(input: BuildReportModelInput): ReportModel {
     violationsBySubject: input.violationsBySubject,
     baselinesBySubject,
     assignmentMetrics,
+    appCoverage,
+    invariantFamilyCoverage,
     faultCoverage,
     counterexamples
   };
@@ -58,6 +66,8 @@ export function summarizeSubject(
   violations: Violation[],
   baseline?: BaselineResult
 ): SubjectSummary {
+  const traceLengths = graph.traces.map((trace) => trace.steps.length);
+  const actionSelectors = new Set(graph.traces.flatMap((trace) => trace.steps.map((step) => step.action.selector)));
   return {
     subjectId: subject.id,
     title: subject.title,
@@ -70,6 +80,9 @@ export function summarizeSubject(
     states: graph.stats.states,
     edges: graph.stats.edges,
     traces: graph.stats.traces,
+    uniqueActions: actionSelectors.size,
+    averageTraceLength: average(traceLengths),
+    maxTraceLength: Math.max(...traceLengths, 0),
     durationMs: graph.durationMs
   };
 }
@@ -96,8 +109,73 @@ export function buildAssignmentMetrics(
     relationalViolations: violations.length,
     structuralDetections: baselines.filter((baseline) => baseline.structural.detected).length,
     visualDetections: baselines.filter((baseline) => baseline.visual.detected).length,
+    uniqueActions: sum(summaries, "uniqueActions"),
     runtimeMs: sum(summaries, "durationMs")
   };
+}
+
+export function buildAppCoverage(
+  subjects: SubjectConfig[],
+  graphs: Map<string, StateGraph>,
+  summaries: SubjectSummary[],
+  faultCoverage: FaultCoverage[]
+): AppCoverageSummary[] {
+  const summariesByApp = groupBy(summaries, (summary) => summary.app);
+  return Array.from(summariesByApp.entries()).map(([app, appSummaries]) => {
+    const appSubjects = subjects.filter((subject) => subject.app === app);
+    const appGraphs = appSubjects.map((subject) => graphs.get(subject.id)).filter((graph): graph is StateGraph => Boolean(graph));
+    const selectors = new Set(appGraphs.flatMap((graph) => graph.traces.flatMap((trace) => trace.steps.map((step) => step.action.selector))));
+    const traceLengths = appGraphs.flatMap((graph) => graph.traces.map((trace) => trace.steps.length));
+    const faults = faultCoverage.filter((fault) => fault.app === app);
+    return {
+      app,
+      variants: appSummaries.length,
+      injectedFaults: faults.length,
+      detectedFaults: faults.filter((fault) => fault.detected).length,
+      states: sum(appSummaries, "states"),
+      transitions: sum(appSummaries, "edges"),
+      traces: sum(appSummaries, "traces"),
+      uniqueActions: selectors.size,
+      averageTraceLength: average(traceLengths),
+      maxTraceLength: Math.max(...traceLengths, 0),
+      structuralDetections: appSummaries.filter((summary) => summary.structuralDetected).length,
+      visualDetections: appSummaries.filter((summary) => summary.visualDetected).length,
+      runtimeMs: sum(appSummaries, "durationMs")
+    };
+  });
+}
+
+export function buildInvariantFamilyCoverage(
+  subjects: SubjectConfig[],
+  faultCoverage: FaultCoverage[],
+  violations: Violation[]
+): InvariantFamilyCoverage[] {
+  const invariantTypesById = new Map<string, Violation["invariantType"]>();
+  const configuredByType = new Map<Violation["invariantType"], Set<string>>();
+  for (const subject of subjects) {
+    for (const invariant of subject.invariants) {
+      invariantTypesById.set(invariant.id, invariant.type);
+      const configured = configuredByType.get(invariant.type) ?? new Set<string>();
+      configured.add(invariant.id);
+      configuredByType.set(invariant.type, configured);
+    }
+  }
+
+  const types = new Set<Violation["invariantType"]>([...configuredByType.keys(), ...violations.map((violation) => violation.invariantType)]);
+  return Array.from(types)
+    .sort()
+    .map((invariantType) => {
+      const faultsForType = faultCoverage.filter((fault) =>
+        fault.expectedInvariantIds.some((invariantId) => invariantTypesById.get(invariantId) === invariantType)
+      );
+      return {
+        invariantType,
+        configuredInvariants: configuredByType.get(invariantType)?.size ?? 0,
+        expectedFaults: faultsForType.length,
+        detectedFaults: faultsForType.filter((fault) => fault.detected).length,
+        violationInstances: violations.filter((violation) => violation.invariantType === invariantType).length
+      };
+    });
 }
 
 export function buildFaultCoverage(
@@ -164,8 +242,9 @@ export function buildCounterexamples(
       const firstTrace = tracesById.get(violation.traceIds[0] ?? "");
       const startState = firstTrace ? statesById.get(firstTrace.stateIds[0] ?? "") : undefined;
       const endState = resolveEndState(violation, statesById, firstTrace?.finalStateId);
+      const evidenceStates = violation.stateIds.map((stateId) => statesById.get(stateId));
       const screenshotPaths = Array.from(
-        new Set([startState?.screenshotPath, endState?.screenshotPath].filter((value): value is string => Boolean(value)))
+        new Set([startState?.screenshotPath, ...evidenceStates.map((state) => state?.screenshotPath), endState?.screenshotPath].filter((value): value is string => Boolean(value)))
       );
       return {
         id: violation.id,
@@ -223,6 +302,24 @@ function trimText(text: string): string {
   return text.replace(/\s+/g, " ").trim().slice(0, 420);
 }
 
-function sum(summaries: SubjectSummary[], key: "states" | "edges" | "traces" | "durationMs"): number {
+function sum(summaries: SubjectSummary[], key: "states" | "edges" | "traces" | "uniqueActions" | "durationMs"): number {
   return summaries.reduce((total, summary) => total + summary[key], 0);
+}
+
+function average(values: number[]): number {
+  if (values.length === 0) {
+    return 0;
+  }
+  return Number((values.reduce((total, value) => total + value, 0) / values.length).toFixed(2));
+}
+
+function groupBy<T>(values: T[], keyFor: (value: T) => string): Map<string, T[]> {
+  const grouped = new Map<string, T[]>();
+  for (const value of values) {
+    const key = keyFor(value);
+    const group = grouped.get(key) ?? [];
+    group.push(value);
+    grouped.set(key, group);
+  }
+  return grouped;
 }

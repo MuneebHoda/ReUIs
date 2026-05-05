@@ -1,0 +1,39 @@
+[
+  {
+    "id": "v_20003d5f6a60",
+    "subjectId": "transfer-back-loses-transfer",
+    "invariantId": "transfer-confirmation-paths-equivalent",
+    "invariantType": "path-equivalence",
+    "severity": "medium",
+    "title": "Normal and back/edit transfer paths must converge to the same receipt state.",
+    "description": "Equivalent workflow endpoints diverged across 2 representative paths.",
+    "traceIds": [
+      "t_2d376002ea56",
+      "t_bb6454bbbf09"
+    ],
+    "stateIds": [
+      "s_8cdb85b8f356",
+      "s_29cb5e1f4e4a"
+    ],
+    "evidence": {
+      "distinctEndpointStates": [
+        "s_8cdb85b8f356",
+        "s_29cb5e1f4e4a"
+      ],
+      "endpointFingerprints": [
+        "fb218f64a303997bc3e98fdc882b9a76887f7767e4a8443d2933cad4768a2020",
+        "503161f5761e626eb05b31da7b3ae55acc2035022a417ebdf2075829ec54a828"
+      ]
+    },
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. valid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Confirm Transfer ([data-testid=\"confirm-transfer\"])",
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. valid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Back to Recipient ([data-testid=\"transfer-review-back\"])",
+      "4. valid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "5. default -> Confirm Transfer ([data-testid=\"confirm-transfer\"])"
+    ]
+  }
+]

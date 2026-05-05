@@ -1,0 +1,30 @@
+[
+  {
+    "invariantType": "action-forbidden-state",
+    "configuredInvariants": 4,
+    "expectedFaults": 4,
+    "detectedFaults": 4,
+    "violationInstances": 5
+  },
+  {
+    "invariantType": "auth-precondition",
+    "configuredInvariants": 3,
+    "expectedFaults": 3,
+    "detectedFaults": 3,
+    "violationInstances": 7
+  },
+  {
+    "invariantType": "path-equivalence",
+    "configuredInvariants": 4,
+    "expectedFaults": 4,
+    "detectedFaults": 4,
+    "violationInstances": 5
+  },
+  {
+    "invariantType": "validation-blocking",
+    "configuredInvariants": 6,
+    "expectedFaults": 5,
+    "detectedFaults": 5,
+    "violationInstances": 42
+  }
+]

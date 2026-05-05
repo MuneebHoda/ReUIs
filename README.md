@@ -2,7 +2,7 @@
 
 RelUI is a TypeScript + Playwright research prototype that tests Web UI behavior across interaction paths. Instead of checking one page or one click in isolation, RelUI explores workflows, infers a canonical state-transition graph, and checks relational invariants such as authentication preconditions, validation blocking, forbidden transitions, and path equivalence.
 
-This repository is organized as a final-project artifact: it includes the tool, three controlled benchmark apps, twelve injected faults, lightweight baselines, replayable counterexamples, an HTML report, CSV exports, and LaTeX table snippets for the final paper.
+This repository is organized as a final-project artifact: it includes the tool, four controlled benchmark apps, sixteen injected faults, lightweight baselines, replayable counterexamples, an HTML report, CSV exports, coverage analytics, and LaTeX table snippets for the final paper.
 
 ## Why RelUI Exists
 
@@ -95,13 +95,14 @@ artifacts/                  Generated graphs, screenshots, reports, tables, CSVs
 
 ## Benchmark Suite
 
-RelUI evaluates three controlled Web applications. Each app has one clean variant and four faulty variants, for twelve injected faults total.
+RelUI evaluates four controlled Web applications. Each app has one clean variant and four faulty variants, for sixteen injected faults total.
 
 | App | Clean Variant | Faulty Variants | Main Behaviors |
 | --- | ---: | ---: | --- |
 | Auth Portal | 1 | 4 | Login, logout, protected dashboard, role-gated admin page |
 | Checkout Wizard | 1 | 4 | Cart validation, contact validation, payment, review, confirmation |
 | Settings Workflow | 1 | 4 | Save, quick save, cancel, reset, notification settings |
+| Transfer Workflow | 1 | 4 | Amount validation, recipient validation, review, confirmation, back/edit paths |
 
 ## Faults Injected
 
@@ -119,6 +120,10 @@ RelUI evaluates three controlled Web applications. Each app has one clean varian
 | F-SETTINGS-2 | Settings | `cancel-persists-change` | Cancel does not persist edits |
 | F-SETTINGS-3 | Settings | `reset-does-not-clear` | Reset clears saved edits |
 | F-SETTINGS-4 | Settings | `stale-notification` | Notification save paths converge |
+| F-TRANSFER-1 | Transfer | `invalid-amount-progression` | Invalid amounts block recipient collection |
+| F-TRANSFER-2 | Transfer | `invalid-recipient-progression` | Invalid recipients block review |
+| F-TRANSFER-3 | Transfer | `skip-confirmation` | Receipt requires explicit confirm action |
+| F-TRANSFER-4 | Transfer | `back-loses-transfer` | Normal and back/edit receipts converge |
 
 ## Relational Invariant Types
 
@@ -138,16 +143,16 @@ The generated report directly covers the assigned evaluation tasks. The latest f
 
 | Required Item | RelUI Output |
 | --- | --- |
-| Apps tested | 3 apps: Auth, Checkout, Settings |
-| Faults injected | 12 injected faults |
-| States discovered | 163 canonical states |
-| Transitions discovered | 340 graph transitions |
-| Bugs detected | 12 / 12 injected fault variants detected |
+| Apps tested | 4 apps: Auth, Checkout, Settings, Transfer |
+| Faults injected | 16 injected faults |
+| States discovered | 230 canonical states |
+| Transitions discovered | 467 graph transitions |
+| Bugs detected | 16 / 16 injected fault variants detected |
 | False positives | 0 relational violations on clean variants |
-| Runtime | About 171 seconds end-to-end on the current machine |
+| Runtime | About 250 seconds end-to-end on the current machine |
 | Example counterexamples | `artifacts/counterexamples.csv` and the HTML report counterexample cards |
 
-The current run also explored 332 replayable traces and produced 36 relational violation instances in 170.66 seconds. Multiple violation instances can correspond to the same injected fault because several traces may expose the same bug.
+The current run also explored 454 replayable traces and produced 59 relational violation instances in 250.08 seconds. Multiple violation instances can correspond to the same injected fault because several traces may expose the same bug.
 
 ## Generated Artifacts
 
@@ -157,6 +162,8 @@ After `npm run run`, RelUI writes:
 artifacts/report/index.html              Main browsable report
 artifacts/assignment_metrics.csv         One-row-per-required-metric summary
 artifacts/fault_coverage.csv             Fault-by-fault detection status
+artifacts/coverage_by_app.csv            App-level coverage and cost metrics
+artifacts/invariant_family_coverage.csv  Oracle-family detection contribution
 artifacts/baseline_comparison.csv        RelUI vs structural/visual baselines
 artifacts/runtime_by_subject.csv         Runtime and graph size per subject
 artifacts/counterexamples.csv            Representative replayable counterexamples
@@ -175,6 +182,8 @@ RelUI generates LaTeX snippets under `artifacts/tables/`:
 - `benchmark_subjects.tex`
 - `injected_faults.tex`
 - `detection_summary.tex`
+- `coverage_by_app.tex`
+- `invariant_family_coverage.tex`
 - `baseline_comparison.tex`
 - `runtime_scalability.tex`
 - `counterexamples.tex`
@@ -204,6 +213,7 @@ Examples of the kind of evidence produced:
 - `F-CHECKOUT-2`: express review reaches order review without completing payment.
 - `F-CHECKOUT-4`: normal checkout and back-navigation checkout reach different confirmation states.
 - `F-SETTINGS-2`: cancel persists an edited profile name.
+- `F-TRANSFER-4`: normal transfer and back/edit transfer reach receipts with different amount fields.
 
 Each counterexample includes replay steps, trace IDs, start/end URLs, state text differences, and screenshots when available.
 

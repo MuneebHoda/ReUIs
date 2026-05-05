@@ -123,6 +123,9 @@
     "endText": "RelUI auth benchmark Home Dashboard Admin Login Member Dashboard Protected dashboard loaded. Account: guest",
     "screenshotPaths": [
       "artifacts/subjects/auth-auth-bypass/screenshots/s_00a49100779d.png",
+      "artifacts/subjects/auth-auth-bypass/screenshots/s_d28f51fa1b00.png",
+      "artifacts/subjects/auth-auth-bypass/screenshots/s_40aff46e1937.png",
+      "artifacts/subjects/auth-auth-bypass/screenshots/s_361ec819d050.png",
       "artifacts/subjects/auth-auth-bypass/screenshots/s_693c2edca823.png"
     ],
     "textDiff": [
@@ -158,7 +161,9 @@
     "endText": "RelUI auth benchmark Home Dashboard Admin Logout Member Dashboard Protected dashboard loaded. Account: user",
     "screenshotPaths": [
       "artifacts/subjects/auth-logout-retains-access/screenshots/s_d8505850d93d.png",
-      "artifacts/subjects/auth-logout-retains-access/screenshots/s_69d58cc9a709.png"
+      "artifacts/subjects/auth-logout-retains-access/screenshots/s_66f3774cf417.png",
+      "artifacts/subjects/auth-logout-retains-access/screenshots/s_69d58cc9a709.png",
+      "artifacts/subjects/auth-logout-retains-access/screenshots/s_33b92a4abe70.png"
     ],
     "textDiff": [
       "- RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin",
@@ -192,6 +197,8 @@
     "endText": "RelUI auth benchmark Home Dashboard Admin Logout Admin Console Role restricted administration tools.",
     "screenshotPaths": [
       "artifacts/subjects/auth-role-escalation/screenshots/s_d7c20baf0817.png",
+      "artifacts/subjects/auth-role-escalation/screenshots/s_8747cabeacc6.png",
+      "artifacts/subjects/auth-role-escalation/screenshots/s_382d3f095369.png",
       "artifacts/subjects/auth-role-escalation/screenshots/s_8c7e60168213.png"
     ],
     "textDiff": [
@@ -225,6 +232,7 @@
     "endText": "RelUI auth benchmark Home Dashboard Admin Logout Member Dashboard Protected dashboard loaded. Account: user",
     "screenshotPaths": [
       "artifacts/subjects/auth-invalid-login-dashboard/screenshots/s_f0fb11eb43ea.png",
+      "artifacts/subjects/auth-invalid-login-dashboard/screenshots/s_98b838d77deb.png",
       "artifacts/subjects/auth-invalid-login-dashboard/screenshots/s_d813b40e0e84.png"
     ],
     "textDiff": [
@@ -258,6 +266,7 @@
     "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
     "screenshotPaths": [
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_9aec5b5247d7.png",
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
     ],
     "textDiff": [
@@ -292,6 +301,7 @@
     "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
     "screenshotPaths": [
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_9aec5b5247d7.png",
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
     ],
     "textDiff": [
@@ -326,6 +336,7 @@
     "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
     "screenshotPaths": [
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_9aec5b5247d7.png",
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
     ],
     "textDiff": [
@@ -360,6 +371,7 @@
     "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
     "screenshotPaths": [
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_9aec5b5247d7.png",
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
     ],
     "textDiff": [
@@ -394,6 +406,7 @@
     "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
     "screenshotPaths": [
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_9aec5b5247d7.png",
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
     ],
     "textDiff": [
@@ -428,6 +441,7 @@
     "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
     "screenshotPaths": [
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_9aec5b5247d7.png",
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
     ],
     "textDiff": [
@@ -462,6 +476,7 @@
     "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
     "screenshotPaths": [
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_9aec5b5247d7.png",
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
     ],
     "textDiff": [
@@ -496,6 +511,7 @@
     "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
     "screenshotPaths": [
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_9aec5b5247d7.png",
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
     ],
     "textDiff": [
@@ -530,6 +546,7 @@
     "endText": "RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact",
     "screenshotPaths": [
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png",
+      "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_9aec5b5247d7.png",
       "artifacts/subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png"
     ],
     "textDiff": [
@@ -565,6 +582,9 @@
     "endText": "RelUI checkout benchmark Cart Contact Payment Review Order Review Email: buyer@example.com Address: 100 Main Street Total: $40 Paid: no Place Order",
     "screenshotPaths": [
       "artifacts/subjects/checkout-skip-payment/screenshots/s_36eb583c5e25.png",
+      "artifacts/subjects/checkout-skip-payment/screenshots/s_9bfd85710f34.png",
+      "artifacts/subjects/checkout-skip-payment/screenshots/s_a221645be934.png",
+      "artifacts/subjects/checkout-skip-payment/screenshots/s_1d3829056120.png",
       "artifacts/subjects/checkout-skip-payment/screenshots/s_2c812142cc5b.png"
     ],
     "textDiff": [
@@ -1068,6 +1088,7 @@
     "endText": "RelUI checkout benchmark Cart Contact Payment Review Order Complete Confirmation generated. Email: missing Address: missing Total: $40 Paid: yes",
     "screenshotPaths": [
       "artifacts/subjects/checkout-back-loses-contact/screenshots/s_3c4902154c39.png",
+      "artifacts/subjects/checkout-back-loses-contact/screenshots/s_3f095d1abdf8.png",
       "artifacts/subjects/checkout-back-loses-contact/screenshots/s_ef9b9c0a8be0.png"
     ],
     "textDiff": [
@@ -1102,6 +1123,7 @@
     "endText": "RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Default User Email notifications: off Saved: yes",
     "screenshotPaths": [
       "artifacts/subjects/settings-alt-save-stale/screenshots/s_5b44f2eaeaac.png",
+      "artifacts/subjects/settings-alt-save-stale/screenshots/s_b35ad6246d3c.png",
       "artifacts/subjects/settings-alt-save-stale/screenshots/s_16c83dbbe8c0.png"
     ],
     "textDiff": [
@@ -1168,7 +1190,8 @@
     "endText": "RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Taylor Email notifications: off Saved: yes",
     "screenshotPaths": [
       "artifacts/subjects/settings-reset-does-not-clear/screenshots/s_f073a0b2946a.png",
-      "artifacts/subjects/settings-reset-does-not-clear/screenshots/s_5270d1d84916.png"
+      "artifacts/subjects/settings-reset-does-not-clear/screenshots/s_5270d1d84916.png",
+      "artifacts/subjects/settings-reset-does-not-clear/screenshots/s_a82662635441.png"
     ],
     "textDiff": [
       "- RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset",
@@ -1204,11 +1227,799 @@
     "endText": "RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Default User Email notifications: off Saved: yes",
     "screenshotPaths": [
       "artifacts/subjects/settings-stale-notification/screenshots/s_13999a0ab7c3.png",
+      "artifacts/subjects/settings-stale-notification/screenshots/s_2a172c5b1c79.png",
       "artifacts/subjects/settings-stale-notification/screenshots/s_81be9a85fe41.png"
     ],
     "textDiff": [
       "- RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset",
       "+ RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Default User Email notifications: off Saved: yes"
+    ]
+  },
+  {
+    "id": "v_70d3394c8db8",
+    "subjectId": "transfer-invalid-amount-progression",
+    "app": "transfer",
+    "variant": "invalid-amount-progression",
+    "faultId": "F-TRANSFER-1",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_f41c2e94f005"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])"
+    ],
+    "startStateId": "s_8dfb89917575",
+    "endStateId": "s_f226652fd958",
+    "startUrl": "/transfer/invalid-amount-progression",
+    "endUrl": "/transfer/invalid-amount-progression/recipient",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_8dfb89917575.png",
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_f226652fd958.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back"
+    ]
+  },
+  {
+    "id": "v_0aa542cdef4e",
+    "subjectId": "transfer-invalid-amount-progression",
+    "app": "transfer",
+    "variant": "invalid-amount-progression",
+    "faultId": "F-TRANSFER-1",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_0f4f39150d96"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. default -> Amount ([data-testid=\"nav-transfer-start\"])"
+    ],
+    "startStateId": "s_8dfb89917575",
+    "endStateId": "s_f226652fd958",
+    "startUrl": "/transfer/invalid-amount-progression",
+    "endUrl": "/transfer/invalid-amount-progression/recipient",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_8dfb89917575.png",
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_f226652fd958.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back"
+    ]
+  },
+  {
+    "id": "v_fc93168116eb",
+    "subjectId": "transfer-invalid-amount-progression",
+    "app": "transfer",
+    "variant": "invalid-amount-progression",
+    "faultId": "F-TRANSFER-1",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_88cbb203baed"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. default -> Recipient ([data-testid=\"nav-transfer-recipient\"])"
+    ],
+    "startStateId": "s_8dfb89917575",
+    "endStateId": "s_f226652fd958",
+    "startUrl": "/transfer/invalid-amount-progression",
+    "endUrl": "/transfer/invalid-amount-progression/recipient",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_8dfb89917575.png",
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_f226652fd958.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back"
+    ]
+  },
+  {
+    "id": "v_44091feaeacb",
+    "subjectId": "transfer-invalid-amount-progression",
+    "app": "transfer",
+    "variant": "invalid-amount-progression",
+    "faultId": "F-TRANSFER-1",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_ef710de71e68"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. default -> Review ([data-testid=\"nav-transfer-review\"])"
+    ],
+    "startStateId": "s_8dfb89917575",
+    "endStateId": "s_f226652fd958",
+    "startUrl": "/transfer/invalid-amount-progression",
+    "endUrl": "/transfer/invalid-amount-progression/recipient",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_8dfb89917575.png",
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_f226652fd958.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back"
+    ]
+  },
+  {
+    "id": "v_160d5b77fae5",
+    "subjectId": "transfer-invalid-amount-progression",
+    "app": "transfer",
+    "variant": "invalid-amount-progression",
+    "faultId": "F-TRANSFER-1",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_6cf89dae7040"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. default -> Confirmation ([data-testid=\"nav-transfer-confirmation\"])"
+    ],
+    "startStateId": "s_8dfb89917575",
+    "endStateId": "s_f226652fd958",
+    "startUrl": "/transfer/invalid-amount-progression",
+    "endUrl": "/transfer/invalid-amount-progression/recipient",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_8dfb89917575.png",
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_f226652fd958.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back"
+    ]
+  },
+  {
+    "id": "v_ee4dbce0488e",
+    "subjectId": "transfer-invalid-amount-progression",
+    "app": "transfer",
+    "variant": "invalid-amount-progression",
+    "faultId": "F-TRANSFER-1",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_cc035fb81bb9"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. valid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])"
+    ],
+    "startStateId": "s_8dfb89917575",
+    "endStateId": "s_f226652fd958",
+    "startUrl": "/transfer/invalid-amount-progression",
+    "endUrl": "/transfer/invalid-amount-progression/recipient",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_8dfb89917575.png",
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_f226652fd958.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back"
+    ]
+  },
+  {
+    "id": "v_69ae996387b6",
+    "subjectId": "transfer-invalid-amount-progression",
+    "app": "transfer",
+    "variant": "invalid-amount-progression",
+    "faultId": "F-TRANSFER-1",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_ba1219dd8411"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. admin -> Review Transfer ([data-testid=\"transfer-recipient-next\"])"
+    ],
+    "startStateId": "s_8dfb89917575",
+    "endStateId": "s_f226652fd958",
+    "startUrl": "/transfer/invalid-amount-progression",
+    "endUrl": "/transfer/invalid-amount-progression/recipient",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_8dfb89917575.png",
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_f226652fd958.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back"
+    ]
+  },
+  {
+    "id": "v_924ce1e6a502",
+    "subjectId": "transfer-invalid-amount-progression",
+    "app": "transfer",
+    "variant": "invalid-amount-progression",
+    "faultId": "F-TRANSFER-1",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_6a87e17c6f1d"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])"
+    ],
+    "startStateId": "s_8dfb89917575",
+    "endStateId": "s_f226652fd958",
+    "startUrl": "/transfer/invalid-amount-progression",
+    "endUrl": "/transfer/invalid-amount-progression/recipient",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_8dfb89917575.png",
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_f226652fd958.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back"
+    ]
+  },
+  {
+    "id": "v_b64ac33aa009",
+    "subjectId": "transfer-invalid-amount-progression",
+    "app": "transfer",
+    "variant": "invalid-amount-progression",
+    "faultId": "F-TRANSFER-1",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_46b6c9bb8ad6"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. valid -> Back ([data-testid=\"transfer-recipient-back\"])"
+    ],
+    "startStateId": "s_8dfb89917575",
+    "endStateId": "s_f226652fd958",
+    "startUrl": "/transfer/invalid-amount-progression",
+    "endUrl": "/transfer/invalid-amount-progression/recipient",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_8dfb89917575.png",
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_f226652fd958.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back"
+    ]
+  },
+  {
+    "id": "v_df772e515ea9",
+    "subjectId": "transfer-invalid-amount-progression",
+    "app": "transfer",
+    "variant": "invalid-amount-progression",
+    "faultId": "F-TRANSFER-1",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_c17eec419560"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. admin -> Back ([data-testid=\"transfer-recipient-back\"])"
+    ],
+    "startStateId": "s_8dfb89917575",
+    "endStateId": "s_f226652fd958",
+    "startUrl": "/transfer/invalid-amount-progression",
+    "endUrl": "/transfer/invalid-amount-progression/recipient",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_8dfb89917575.png",
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_f226652fd958.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back"
+    ]
+  },
+  {
+    "id": "v_4e36e802cb4e",
+    "subjectId": "transfer-invalid-amount-progression",
+    "app": "transfer",
+    "variant": "invalid-amount-progression",
+    "faultId": "F-TRANSFER-1",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_f54d978756e1"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Back ([data-testid=\"transfer-recipient-back\"])"
+    ],
+    "startStateId": "s_8dfb89917575",
+    "endStateId": "s_f226652fd958",
+    "startUrl": "/transfer/invalid-amount-progression",
+    "endUrl": "/transfer/invalid-amount-progression/recipient",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_8dfb89917575.png",
+      "artifacts/subjects/transfer-invalid-amount-progression/screenshots/s_f226652fd958.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back"
+    ]
+  },
+  {
+    "id": "v_43887dce489b",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "app": "transfer",
+    "variant": "invalid-recipient-progression",
+    "faultId": "F-TRANSFER-2",
+    "invariantId": "transfer-invalid-recipient-blocks-review",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer recipients must not advance to review.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_f92a74d46164"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])"
+    ],
+    "startStateId": "s_43f7bef43828",
+    "endStateId": "s_b5c184cdadec",
+    "startUrl": "/transfer/invalid-recipient-progression",
+    "endUrl": "/transfer/invalid-recipient-progression/review",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_43f7bef43828.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_e84815c7765b.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_b5c184cdadec.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient"
+    ]
+  },
+  {
+    "id": "v_994ae10b806b",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "app": "transfer",
+    "variant": "invalid-recipient-progression",
+    "faultId": "F-TRANSFER-2",
+    "invariantId": "transfer-invalid-recipient-blocks-review",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer recipients must not advance to review.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_b7bd2d57c819"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Amount ([data-testid=\"nav-transfer-start\"])"
+    ],
+    "startStateId": "s_43f7bef43828",
+    "endStateId": "s_b5c184cdadec",
+    "startUrl": "/transfer/invalid-recipient-progression",
+    "endUrl": "/transfer/invalid-recipient-progression/review",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_43f7bef43828.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_e84815c7765b.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_b5c184cdadec.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient"
+    ]
+  },
+  {
+    "id": "v_dc768872add8",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "app": "transfer",
+    "variant": "invalid-recipient-progression",
+    "faultId": "F-TRANSFER-2",
+    "invariantId": "transfer-invalid-recipient-blocks-review",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer recipients must not advance to review.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_8c958a08292e"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Recipient ([data-testid=\"nav-transfer-recipient\"])"
+    ],
+    "startStateId": "s_43f7bef43828",
+    "endStateId": "s_b5c184cdadec",
+    "startUrl": "/transfer/invalid-recipient-progression",
+    "endUrl": "/transfer/invalid-recipient-progression/review",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_43f7bef43828.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_e84815c7765b.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_b5c184cdadec.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient"
+    ]
+  },
+  {
+    "id": "v_888c9e185d93",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "app": "transfer",
+    "variant": "invalid-recipient-progression",
+    "faultId": "F-TRANSFER-2",
+    "invariantId": "transfer-invalid-recipient-blocks-review",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer recipients must not advance to review.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_2f6b0a11d962"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Review ([data-testid=\"nav-transfer-review\"])"
+    ],
+    "startStateId": "s_43f7bef43828",
+    "endStateId": "s_b5c184cdadec",
+    "startUrl": "/transfer/invalid-recipient-progression",
+    "endUrl": "/transfer/invalid-recipient-progression/review",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_43f7bef43828.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_e84815c7765b.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_b5c184cdadec.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient"
+    ]
+  },
+  {
+    "id": "v_c13271fb8126",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "app": "transfer",
+    "variant": "invalid-recipient-progression",
+    "faultId": "F-TRANSFER-2",
+    "invariantId": "transfer-invalid-recipient-blocks-review",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer recipients must not advance to review.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_61b09326d04e"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Confirmation ([data-testid=\"nav-transfer-confirmation\"])"
+    ],
+    "startStateId": "s_43f7bef43828",
+    "endStateId": "s_b5c184cdadec",
+    "startUrl": "/transfer/invalid-recipient-progression",
+    "endUrl": "/transfer/invalid-recipient-progression/review",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_43f7bef43828.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_e84815c7765b.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_b5c184cdadec.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient"
+    ]
+  },
+  {
+    "id": "v_1dc58a56ab3d",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "app": "transfer",
+    "variant": "invalid-recipient-progression",
+    "faultId": "F-TRANSFER-2",
+    "invariantId": "transfer-invalid-recipient-blocks-review",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer recipients must not advance to review.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_7be23801a55d"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Confirm Transfer ([data-testid=\"confirm-transfer\"])"
+    ],
+    "startStateId": "s_43f7bef43828",
+    "endStateId": "s_b5c184cdadec",
+    "startUrl": "/transfer/invalid-recipient-progression",
+    "endUrl": "/transfer/invalid-recipient-progression/review",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_43f7bef43828.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_e84815c7765b.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_b5c184cdadec.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient"
+    ]
+  },
+  {
+    "id": "v_9e9c5d473cf3",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "app": "transfer",
+    "variant": "invalid-recipient-progression",
+    "faultId": "F-TRANSFER-2",
+    "invariantId": "transfer-invalid-recipient-blocks-review",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer recipients must not advance to review.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_bc4cfb0f9e56"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Back to Recipient ([data-testid=\"transfer-review-back\"])"
+    ],
+    "startStateId": "s_43f7bef43828",
+    "endStateId": "s_b5c184cdadec",
+    "startUrl": "/transfer/invalid-recipient-progression",
+    "endUrl": "/transfer/invalid-recipient-progression/review",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_43f7bef43828.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_e84815c7765b.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_b5c184cdadec.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient"
+    ]
+  },
+  {
+    "id": "v_0ca412ca52a9",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "app": "transfer",
+    "variant": "invalid-recipient-progression",
+    "invariantId": "transfer-confirmation-paths-equivalent",
+    "invariantType": "path-equivalence",
+    "severity": "medium",
+    "title": "Normal and back/edit transfer paths must converge to the same receipt state.",
+    "description": "Equivalent workflow endpoints diverged across 2 representative paths.",
+    "traceIds": [
+      "t_2d376002ea56",
+      "t_7be23801a55d"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. valid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Confirm Transfer ([data-testid=\"confirm-transfer\"])",
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Confirm Transfer ([data-testid=\"confirm-transfer\"])"
+    ],
+    "startStateId": "s_43f7bef43828",
+    "endStateId": "s_48e4fbdbf36f",
+    "startUrl": "/transfer/invalid-recipient-progression",
+    "endUrl": "/transfer/invalid-recipient-progression/confirmation",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Complete Transfer receipt generated. Amount: $125 Recipient: not-a-recipient Memo: Spring rent Confirmed: yes",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_43f7bef43828.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_656ec12419b4.png",
+      "artifacts/subjects/transfer-invalid-recipient-progression/screenshots/s_48e4fbdbf36f.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Complete Transfer receipt generated. Amount: $125 Recipient: not-a-recipient Memo: Spring rent Confirmed: yes"
+    ]
+  },
+  {
+    "id": "v_10b4888ead8f",
+    "subjectId": "transfer-skip-confirmation",
+    "app": "transfer",
+    "variant": "skip-confirmation",
+    "faultId": "F-TRANSFER-3",
+    "invariantId": "transfer-confirmation-requires-confirm-action",
+    "invariantType": "auth-precondition",
+    "severity": "critical",
+    "title": "Transfer confirmation must be preceded by the explicit confirm action.",
+    "description": "A restricted state was reachable without the required authentication or authorization action.",
+    "traceIds": [
+      "t_52c3244e797e"
+    ],
+    "replaySteps": [
+      "1. default -> Confirmation ([data-testid=\"nav-transfer-confirmation\"])"
+    ],
+    "startStateId": "s_182e13706992",
+    "endStateId": "s_ccbfa697af25",
+    "startUrl": "/transfer/skip-confirmation",
+    "endUrl": "/transfer/skip-confirmation/confirmation",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Complete Transfer receipt generated. Amount: $100 Recipient: missing Memo: none Confirmed: no",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-skip-confirmation/screenshots/s_182e13706992.png",
+      "artifacts/subjects/transfer-skip-confirmation/screenshots/s_ccbfa697af25.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Complete Transfer receipt generated. Amount: $100 Recipient: missing Memo: none Confirmed: no"
+    ]
+  },
+  {
+    "id": "v_55c317f94780",
+    "subjectId": "transfer-skip-confirmation",
+    "app": "transfer",
+    "variant": "skip-confirmation",
+    "faultId": "F-TRANSFER-3",
+    "invariantId": "transfer-confirmation-requires-confirm-action",
+    "invariantType": "auth-precondition",
+    "severity": "critical",
+    "title": "Transfer confirmation must be preceded by the explicit confirm action.",
+    "description": "A restricted state was reachable without the required authentication or authorization action.",
+    "traceIds": [
+      "t_6cf89dae7040"
+    ],
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. default -> Confirmation ([data-testid=\"nav-transfer-confirmation\"])"
+    ],
+    "startStateId": "s_182e13706992",
+    "endStateId": "s_ccbfa697af25",
+    "startUrl": "/transfer/skip-confirmation",
+    "endUrl": "/transfer/skip-confirmation/confirmation",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Complete Transfer receipt generated. Amount: $100 Recipient: missing Memo: none Confirmed: no",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-skip-confirmation/screenshots/s_182e13706992.png",
+      "artifacts/subjects/transfer-skip-confirmation/screenshots/s_d8c9d724b613.png",
+      "artifacts/subjects/transfer-skip-confirmation/screenshots/s_ccbfa697af25.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Complete Transfer receipt generated. Amount: $100 Recipient: missing Memo: none Confirmed: no"
+    ]
+  },
+  {
+    "id": "v_3a5f14411412",
+    "subjectId": "transfer-skip-confirmation",
+    "app": "transfer",
+    "variant": "skip-confirmation",
+    "faultId": "F-TRANSFER-3",
+    "invariantId": "transfer-confirmation-requires-confirm-action",
+    "invariantType": "auth-precondition",
+    "severity": "critical",
+    "title": "Transfer confirmation must be preceded by the explicit confirm action.",
+    "description": "A restricted state was reachable without the required authentication or authorization action.",
+    "traceIds": [
+      "t_61b09326d04e"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Confirmation ([data-testid=\"nav-transfer-confirmation\"])"
+    ],
+    "startStateId": "s_182e13706992",
+    "endStateId": "s_dba96c869e61",
+    "startUrl": "/transfer/skip-confirmation",
+    "endUrl": "/transfer/skip-confirmation/confirmation",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Complete Transfer receipt generated. Amount: $125 Recipient: missing Memo: Spring rent Confirmed: no",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-skip-confirmation/screenshots/s_182e13706992.png",
+      "artifacts/subjects/transfer-skip-confirmation/screenshots/s_c00b4b99f4d1.png",
+      "artifacts/subjects/transfer-skip-confirmation/screenshots/s_c4c6bd2d2e9a.png",
+      "artifacts/subjects/transfer-skip-confirmation/screenshots/s_dba96c869e61.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Complete Transfer receipt generated. Amount: $125 Recipient: missing Memo: Spring rent Confirmed: no"
+    ]
+  },
+  {
+    "id": "v_20003d5f6a60",
+    "subjectId": "transfer-back-loses-transfer",
+    "app": "transfer",
+    "variant": "back-loses-transfer",
+    "faultId": "F-TRANSFER-4",
+    "invariantId": "transfer-confirmation-paths-equivalent",
+    "invariantType": "path-equivalence",
+    "severity": "medium",
+    "title": "Normal and back/edit transfer paths must converge to the same receipt state.",
+    "description": "Equivalent workflow endpoints diverged across 2 representative paths.",
+    "traceIds": [
+      "t_2d376002ea56",
+      "t_bb6454bbbf09"
+    ],
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. valid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Confirm Transfer ([data-testid=\"confirm-transfer\"])",
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. valid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Back to Recipient ([data-testid=\"transfer-review-back\"])",
+      "4. valid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "5. default -> Confirm Transfer ([data-testid=\"confirm-transfer\"])"
+    ],
+    "startStateId": "s_a9beefc32024",
+    "endStateId": "s_29cb5e1f4e4a",
+    "startUrl": "/transfer/back-loses-transfer",
+    "endUrl": "/transfer/back-loses-transfer/confirmation",
+    "startText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+    "endText": "RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Complete Transfer receipt generated. Amount: missing Recipient: alex@example.com Memo: Spring rent Confirmed: yes",
+    "screenshotPaths": [
+      "artifacts/subjects/transfer-back-loses-transfer/screenshots/s_a9beefc32024.png",
+      "artifacts/subjects/transfer-back-loses-transfer/screenshots/s_8cdb85b8f356.png",
+      "artifacts/subjects/transfer-back-loses-transfer/screenshots/s_29cb5e1f4e4a.png"
+    ],
+    "textDiff": [
+      "- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient",
+      "+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Complete Transfer receipt generated. Amount: missing Recipient: alex@example.com Memo: Spring rent Confirmed: yes"
     ]
   }
 ]

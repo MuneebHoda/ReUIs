@@ -1,0 +1,5 @@
+"invariant_type","configured_invariants","expected_faults","detected_faults","violation_instances"
+"action-forbidden-state","4","4","4","5"
+"auth-precondition","3","3","3","7"
+"path-equivalence","4","4","4","5"
+"validation-blocking","6","5","5","42"

@@ -1,0 +1,83 @@
+[
+  {
+    "id": "v_10b4888ead8f",
+    "subjectId": "transfer-skip-confirmation",
+    "invariantId": "transfer-confirmation-requires-confirm-action",
+    "invariantType": "auth-precondition",
+    "severity": "critical",
+    "title": "Transfer confirmation must be preceded by the explicit confirm action.",
+    "description": "A restricted state was reachable without the required authentication or authorization action.",
+    "traceIds": [
+      "t_52c3244e797e"
+    ],
+    "stateIds": [
+      "s_182e13706992",
+      "s_ccbfa697af25"
+    ],
+    "evidence": {
+      "missingRequiredActions": [
+        "[data-testid=\"confirm-transfer\"]"
+      ],
+      "finalState": "s_ccbfa697af25"
+    },
+    "replaySteps": [
+      "1. default -> Confirmation ([data-testid=\"nav-transfer-confirmation\"])"
+    ]
+  },
+  {
+    "id": "v_55c317f94780",
+    "subjectId": "transfer-skip-confirmation",
+    "invariantId": "transfer-confirmation-requires-confirm-action",
+    "invariantType": "auth-precondition",
+    "severity": "critical",
+    "title": "Transfer confirmation must be preceded by the explicit confirm action.",
+    "description": "A restricted state was reachable without the required authentication or authorization action.",
+    "traceIds": [
+      "t_6cf89dae7040"
+    ],
+    "stateIds": [
+      "s_182e13706992",
+      "s_d8c9d724b613",
+      "s_ccbfa697af25"
+    ],
+    "evidence": {
+      "missingRequiredActions": [
+        "[data-testid=\"confirm-transfer\"]"
+      ],
+      "finalState": "s_ccbfa697af25"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. default -> Confirmation ([data-testid=\"nav-transfer-confirmation\"])"
+    ]
+  },
+  {
+    "id": "v_3a5f14411412",
+    "subjectId": "transfer-skip-confirmation",
+    "invariantId": "transfer-confirmation-requires-confirm-action",
+    "invariantType": "auth-precondition",
+    "severity": "critical",
+    "title": "Transfer confirmation must be preceded by the explicit confirm action.",
+    "description": "A restricted state was reachable without the required authentication or authorization action.",
+    "traceIds": [
+      "t_61b09326d04e"
+    ],
+    "stateIds": [
+      "s_182e13706992",
+      "s_c00b4b99f4d1",
+      "s_c4c6bd2d2e9a",
+      "s_dba96c869e61"
+    ],
+    "evidence": {
+      "missingRequiredActions": [
+        "[data-testid=\"confirm-transfer\"]"
+      ],
+      "finalState": "s_dba96c869e61"
+    },
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Confirmation ([data-testid=\"nav-transfer-confirmation\"])"
+    ]
+  }
+]

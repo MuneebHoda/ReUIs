@@ -1,7 +1,7 @@
 {
   "subjectId": "auth-logout-retains-access",
-  "generatedAt": "2026-05-01T22:58:05.132Z",
-  "durationMs": 8869,
+  "generatedAt": "2026-05-05T22:16:09.157Z",
+  "durationMs": 9071,
   "nodes": [
     {
       "id": "s_d8505850d93d",

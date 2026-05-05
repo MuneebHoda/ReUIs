@@ -11,7 +11,7 @@ const server = http.createServer((request, response) => {
   }
 
   const [, app = "auth", variant = "clean"] = url.pathname.split("/");
-  if (!["auth", "checkout", "settings"].includes(app)) {
+  if (!["auth", "checkout", "settings", "transfer"].includes(app)) {
     response.writeHead(404, { "content-type": "text/plain" });
     response.end("Unknown benchmark app");
     return;
@@ -203,6 +203,7 @@ function page(app: string, variant: string): string {
       if (APP === "auth") renderAuth();
       if (APP === "checkout") renderCheckout();
       if (APP === "settings") renderSettings();
+      if (APP === "transfer") renderTransfer();
     }
     window.addEventListener("popstate", render);
 
@@ -419,6 +420,82 @@ function page(app: string, variant: string): string {
     function settingsSummary() {
       const state = settingsState();
       setHtml('<section><h1>Settings Saved</h1><div class="summary"><div>Display name: ' + state.displayName + '</div><div>Email notifications: ' + state.notifications + '</div><div>Saved: ' + (state.saved ? "yes" : "no") + '</div></div></section>');
+    }
+
+    function transferState() {
+      return store.get("transfer", { amount: 100, recipient: "", memo: "", reviewed: false, confirmed: false, lostTransfer: false });
+    }
+    function saveTransfer(patch) {
+      store.set("transfer", { ...transferState(), ...patch });
+    }
+    function renderTransfer() {
+      document.getElementById("nav").innerHTML = [
+        button("nav-transfer-start", "Amount", "/start", true),
+        button("nav-transfer-recipient", "Recipient", "/recipient", true),
+        button("nav-transfer-review", "Review", "/review", true),
+        button("nav-transfer-confirmation", "Confirmation", "/confirmation", true)
+      ].join("");
+      const current = route();
+      if (current === "/recipient") return transferRecipientPage();
+      if (current === "/review") return transferReviewPage();
+      if (current === "/confirmation") return transferConfirmationPage();
+      transferAmountPage();
+    }
+    function transferAmountPage(error) {
+      const state = transferState();
+      setHtml('<section><h1>Transfer Amount</h1>' + (error ? '<div class="error">' + error + '</div>' : '') + '<form><label>Amount<input data-testid="amount" type="number" name="amount" value="' + state.amount + '"></label><label>Memo<input data-testid="memo" name="memo" value="' + state.memo + '"></label><div class="actions"><button data-testid="transfer-amount-next" type="button" onclick="transferAmountNext()">Continue to Recipient</button></div></form></section>');
+    }
+    window.transferAmountNext = function() {
+      const amount = Number(document.querySelector('[data-testid="amount"]').value);
+      const memo = document.querySelector('[data-testid="memo"]').value;
+      if ((amount <= 0 || amount > 5000) && VARIANT !== "invalid-amount-progression") {
+        return transferAmountPage("Amount must be between $1 and $5,000.");
+      }
+      saveTransfer({ amount, memo, reviewed: false, confirmed: false });
+      go("/recipient");
+    };
+    function transferRecipientPage(error) {
+      const state = transferState();
+      setHtml('<section><h1>Transfer Recipient</h1>' + (error ? '<div class="error">' + error + '</div>' : '') + '<form><label>Recipient<input data-testid="recipient" name="recipient" value="' + state.recipient + '"></label><div class="actions"><button data-testid="transfer-recipient-next" type="button" onclick="transferRecipientNext()">Review Transfer</button><button data-testid="transfer-recipient-back" type="button" class="secondary" onclick="go(\\'/start\\')">Back</button></div></form></section>');
+    }
+    window.transferRecipientNext = function() {
+      const recipient = document.querySelector('[data-testid="recipient"]').value;
+      const ok = recipient.includes("@") && recipient.trim().length > 5;
+      if (!ok && VARIANT !== "invalid-recipient-progression") {
+        return transferRecipientPage("A valid recipient email is required.");
+      }
+      const patch = VARIANT === "back-loses-transfer" && transferState().lostTransfer ? { recipient, reviewed: true, confirmed: false } : { recipient, reviewed: true, confirmed: false };
+      saveTransfer(patch);
+      go("/review");
+    };
+    function transferReviewPage(error) {
+      const state = transferState();
+      if ((!state.amount || !state.recipient) && VARIANT !== "back-loses-transfer") {
+        return transferRecipientPage(error ?? "Amount and recipient are required before review.");
+      }
+      setHtml('<section><h1>Transfer Review</h1>' + (error ? '<div class="error">' + error + '</div>' : '') + '<div class="summary"><div>Amount: ' + (state.amount ? "$" + state.amount : "missing") + '</div><div>Recipient: ' + (state.recipient || "missing") + '</div><div>Memo: ' + (state.memo || "none") + '</div><div>Reviewed: ' + (state.reviewed ? "yes" : "no") + '</div></div><div class="actions"><button data-testid="confirm-transfer" type="button" onclick="confirmTransfer()">Confirm Transfer</button><button data-testid="transfer-review-back" type="button" class="secondary" onclick="transferReviewBack()">Back to Recipient</button></div></section>');
+    }
+    window.transferReviewBack = function() {
+      if (VARIANT === "back-loses-transfer") {
+        saveTransfer({ amount: 0, recipient: "", lostTransfer: true, reviewed: false, confirmed: false });
+      }
+      go("/recipient");
+    };
+    window.confirmTransfer = function() {
+      const state = transferState();
+      if ((!state.reviewed || !state.amount || !state.recipient) && VARIANT !== "skip-confirmation" && VARIANT !== "back-loses-transfer") {
+        return transferReviewPage("Review a complete transfer before confirmation.");
+      }
+      saveTransfer({ confirmed: true });
+      go("/confirmation");
+    };
+    function transferConfirmationPage() {
+      const state = transferState();
+      if (!state.confirmed && VARIANT !== "skip-confirmation") {
+        history.replaceState({}, "", BASE + "/review");
+        return transferReviewPage("Confirm transfer before receipt.");
+      }
+      setHtml('<section><h1>Transfer Complete</h1><div class="status">Transfer receipt generated.</div><div class="summary"><div>Amount: ' + (state.amount ? "$" + state.amount : "missing") + '</div><div>Recipient: ' + (state.recipient || "missing") + '</div><div>Memo: ' + (state.memo || "none") + '</div><div>Confirmed: ' + (state.confirmed ? "yes" : "no") + '</div></div></section>');
     }
 
     function bindForms() {}

@@ -39,6 +39,26 @@ describe("report model", () => {
     expect(counterexample?.textDiff.join("\n")).toContain("Protected dashboard loaded");
   });
 
+  it("builds app and invariant-family coverage analytics", () => {
+    const model = sampleModel();
+    const authCoverage = model.appCoverage.find((coverage) => coverage.app === "auth");
+    const authPrecondition = model.invariantFamilyCoverage.find((coverage) => coverage.invariantType === "auth-precondition");
+
+    expect(authCoverage).toMatchObject({
+      variants: 2,
+      injectedFaults: 1,
+      detectedFaults: 1,
+      uniqueActions: 1,
+      maxTraceLength: 1
+    });
+    expect(authPrecondition).toMatchObject({
+      configuredInvariants: 1,
+      expectedFaults: 1,
+      detectedFaults: 1,
+      violationInstances: 1
+    });
+  });
+
   it("escapes LaTeX table content", () => {
     expect(escapeLatex("auth_bypass & 100%")).toBe("auth\\_bypass \\& 100\\%");
 
@@ -68,7 +88,15 @@ function sampleModel() {
       url: "http://example.test/auth/auth-bypass",
       maxDepth: 1,
       inputProfiles: [{ name: "valid", values: {} }],
-      invariants: [],
+      invariants: [
+        {
+          id: "auth-dashboard-requires-login",
+          type: "auth-precondition",
+          description: "Dashboard requires login",
+          target: { textIncludes: "Protected dashboard loaded" },
+          requiredActionSelectors: ['[data-testid="user-login-submit"]']
+        }
+      ],
       expectedFaults: [
         {
           id: "F-AUTH-1",

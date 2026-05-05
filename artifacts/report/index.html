@@ -154,14 +154,15 @@
   </header>
   <main>
     <section class="metric-grid" aria-label="Assignment metrics">
-      <div class="metric"><strong>3</strong><span>Apps Tested</span><span>Auth, Checkout, Settings</span></div>
-      <div class="metric"><strong>12</strong><span>Faults Injected</span><span>12 faulty variants</span></div>
-      <div class="metric"><strong>163</strong><span>States Discovered</span><span>340 transitions</span></div>
-      <div class="metric"><strong>12/12</strong><span>Bugs Detected</span><span>0 clean false positives</span></div>
-      <div class="metric"><strong>332</strong><span>Traces Explored</span><span>Replayable browser traces</span></div>
-      <div class="metric"><strong>36</strong><span>Relational Violations</span><span>Counterexample instances</span></div>
-      <div class="metric"><strong>170.66s</strong><span>Runtime</span><span>End-to-end exploration time</span></div>
-      <div class="metric"><strong>3</strong><span>Baseline Hits</span><span>3 structural, 0 visual</span></div>
+      <div class="metric"><strong>4</strong><span>Apps Tested</span><span>Auth, Checkout, Settings, Transfer</span></div>
+      <div class="metric"><strong>16</strong><span>Faults Injected</span><span>16 faulty variants</span></div>
+      <div class="metric"><strong>230</strong><span>States Discovered</span><span>467 transitions</span></div>
+      <div class="metric"><strong>16/16</strong><span>Bugs Detected</span><span>0 clean false positives</span></div>
+      <div class="metric"><strong>454</strong><span>Traces Explored</span><span>Replayable browser traces</span></div>
+      <div class="metric"><strong>191</strong><span>Unique Actions</span><span>Per-subject action coverage</span></div>
+      <div class="metric"><strong>59</strong><span>Relational Violations</span><span>Counterexample instances</span></div>
+      <div class="metric"><strong>250.08s</strong><span>Runtime</span><span>End-to-end exploration time</span></div>
+      <div class="metric"><strong>5</strong><span>Baseline Hits</span><span>5 structural, 0 visual</span></div>
     </section>
 
     <section class="section">
@@ -187,7 +188,9 @@
       <div>Detected</div><div>4/4</div>
       <div>States</div><div>49</div>
       <div>Transitions</div><div>95</div>
-      <div>Runtime</div><div>44.25s</div>
+      <div>Unique actions</div><div>10</div>
+      <div>Avg trace length</div><div>1.73</div>
+      <div>Runtime</div><div>45.92s</div>
     </div>
     <p><span class="badge ok">F-AUTH-1</span> <span class="badge ok">F-AUTH-2</span> <span class="badge ok">F-AUTH-3</span> <span class="badge ok">F-AUTH-4</span></p>
   </article><article class="app-card">
@@ -198,7 +201,9 @@
       <div>Detected</div><div>4/4</div>
       <div>States</div><div>69</div>
       <div>Transitions</div><div>150</div>
-      <div>Runtime</div><div>87.82s</div>
+      <div>Unique actions</div><div>11</div>
+      <div>Avg trace length</div><div>2.25</div>
+      <div>Runtime</div><div>91.77s</div>
     </div>
     <p><span class="badge ok">F-CHECKOUT-1</span> <span class="badge ok">F-CHECKOUT-2</span> <span class="badge ok">F-CHECKOUT-3</span> <span class="badge ok">F-CHECKOUT-4</span></p>
   </article><article class="app-card">
@@ -209,9 +214,24 @@
       <div>Detected</div><div>4/4</div>
       <div>States</div><div>45</div>
       <div>Transitions</div><div>95</div>
-      <div>Runtime</div><div>38.59s</div>
+      <div>Unique actions</div><div>9</div>
+      <div>Avg trace length</div><div>1.2</div>
+      <div>Runtime</div><div>40.29s</div>
     </div>
     <p><span class="badge ok">F-SETTINGS-1</span> <span class="badge ok">F-SETTINGS-2</span> <span class="badge ok">F-SETTINGS-3</span> <span class="badge ok">F-SETTINGS-4</span></p>
+  </article><article class="app-card">
+    <h3>Transfer</h3>
+    <div class="mini-table">
+      <div>Variants</div><div>5</div>
+      <div>Faults</div><div>4</div>
+      <div>Detected</div><div>4/4</div>
+      <div>States</div><div>67</div>
+      <div>Transitions</div><div>127</div>
+      <div>Unique actions</div><div>9</div>
+      <div>Avg trace length</div><div>2.03</div>
+      <div>Runtime</div><div>72.09s</div>
+    </div>
+    <p><span class="badge ok">F-TRANSFER-1</span> <span class="badge ok">F-TRANSFER-2</span> <span class="badge ok">F-TRANSFER-3</span> <span class="badge ok">F-TRANSFER-4</span></p>
   </article>
       </div>
     </section>
@@ -222,18 +242,24 @@
         <article class="figure">
     <h3>Detected Faults</h3>
     <div class="bars">
-      <div class="bar-row"><span>RelUI</span><div class="bar-shell"><div class="bar-fill " style="width:100%"></div></div><strong>12</strong></div>
-      <div class="bar-row"><span>Structural</span><div class="bar-shell"><div class="bar-fill alt" style="width:25%"></div></div><strong>3</strong></div>
+      <div class="bar-row"><span>RelUI</span><div class="bar-shell"><div class="bar-fill " style="width:100%"></div></div><strong>16</strong></div>
+      <div class="bar-row"><span>Structural</span><div class="bar-shell"><div class="bar-fill alt" style="width:31%"></div></div><strong>5</strong></div>
       <div class="bar-row"><span>Visual</span><div class="bar-shell"><div class="bar-fill warn" style="width:3%"></div></div><strong>0</strong></div>
     </div>
   </article>
         <article class="figure">
+    <h3>Oracle Family Coverage</h3>
+    <div class="bars">
+      <div class="bar-row"><span>action-forbidden-state</span><div class="bar-shell"><div class="bar-fill " style="width:80%"></div></div><strong>4</strong></div><div class="bar-row"><span>auth-precondition</span><div class="bar-shell"><div class="bar-fill " style="width:60%"></div></div><strong>3</strong></div><div class="bar-row"><span>path-equivalence</span><div class="bar-shell"><div class="bar-fill " style="width:80%"></div></div><strong>4</strong></div><div class="bar-row"><span>validation-blocking</span><div class="bar-shell"><div class="bar-fill " style="width:100%"></div></div><strong>5</strong></div>
+    </div>
+  </article>
+        <article class="figure">
     <h3>States + Transitions</h3>
-    <div class="bars"><div class="bar-row"><span>Auth</span><div class="bar-shell"><div class="bar-fill alt" style="width:66%"></div></div><strong>144</strong></div><div class="bar-row"><span>Checkout</span><div class="bar-shell"><div class="bar-fill alt" style="width:100%"></div></div><strong>219</strong></div><div class="bar-row"><span>Settings</span><div class="bar-shell"><div class="bar-fill alt" style="width:64%"></div></div><strong>140</strong></div></div>
+    <div class="bars"><div class="bar-row"><span>Auth</span><div class="bar-shell"><div class="bar-fill alt" style="width:66%"></div></div><strong>144</strong></div><div class="bar-row"><span>Checkout</span><div class="bar-shell"><div class="bar-fill alt" style="width:100%"></div></div><strong>219</strong></div><div class="bar-row"><span>Settings</span><div class="bar-shell"><div class="bar-fill alt" style="width:64%"></div></div><strong>140</strong></div><div class="bar-row"><span>Transfer</span><div class="bar-shell"><div class="bar-fill alt" style="width:89%"></div></div><strong>194</strong></div></div>
   </article>
         <article class="figure">
     <h3>Runtime by App</h3>
-    <div class="bars"><div class="bar-row"><span>Auth</span><div class="bar-shell"><div class="bar-fill " style="width:50%"></div></div><strong>44.25</strong></div><div class="bar-row"><span>Checkout</span><div class="bar-shell"><div class="bar-fill " style="width:100%"></div></div><strong>87.82</strong></div><div class="bar-row"><span>Settings</span><div class="bar-shell"><div class="bar-fill " style="width:44%"></div></div><strong>38.59</strong></div></div>
+    <div class="bars"><div class="bar-row"><span>Auth</span><div class="bar-shell"><div class="bar-fill " style="width:50%"></div></div><strong>45.92</strong></div><div class="bar-row"><span>Checkout</span><div class="bar-shell"><div class="bar-fill " style="width:100%"></div></div><strong>91.77</strong></div><div class="bar-row"><span>Settings</span><div class="bar-shell"><div class="bar-fill " style="width:44%"></div></div><strong>40.29</strong></div><div class="bar-row"><span>Transfer</span><div class="bar-shell"><div class="bar-fill " style="width:79%"></div></div><strong>72.09</strong></div></div>
   </article>
       </div>
     </section>
@@ -254,7 +280,7 @@
             <td>10</td>
             <td>19</td>
             <td>18</td>
-            <td>9.15s</td>
+            <td>9.69s</td>
           </tr><tr>
             <td>auth-auth-bypass</td>
             <td>Auth</td>
@@ -266,7 +292,7 @@
             <td>11</td>
             <td>19</td>
             <td>18</td>
-            <td>8.74s</td>
+            <td>9.07s</td>
           </tr><tr>
             <td>auth-logout-retains-access</td>
             <td>Auth</td>
@@ -278,7 +304,7 @@
             <td>10</td>
             <td>19</td>
             <td>18</td>
-            <td>8.87s</td>
+            <td>9.07s</td>
           </tr><tr>
             <td>auth-role-escalation</td>
             <td>Auth</td>
@@ -290,7 +316,7 @@
             <td>9</td>
             <td>19</td>
             <td>18</td>
-            <td>8.75s</td>
+            <td>9.04s</td>
           </tr><tr>
             <td>auth-invalid-login-dashboard</td>
             <td>Auth</td>
@@ -302,7 +328,7 @@
             <td>9</td>
             <td>19</td>
             <td>18</td>
-            <td>8.75s</td>
+            <td>9.05s</td>
           </tr><tr>
             <td>checkout-clean</td>
             <td>Checkout</td>
@@ -314,7 +340,7 @@
             <td>13</td>
             <td>30</td>
             <td>28</td>
-            <td>17.59s</td>
+            <td>18.49s</td>
           </tr><tr>
             <td>checkout-invalid-step-progression</td>
             <td>Checkout</td>
@@ -326,7 +352,7 @@
             <td>14</td>
             <td>29</td>
             <td>28</td>
-            <td>17.55s</td>
+            <td>18.21s</td>
           </tr><tr>
             <td>checkout-skip-payment</td>
             <td>Checkout</td>
@@ -338,7 +364,7 @@
             <td>14</td>
             <td>30</td>
             <td>28</td>
-            <td>17.54s</td>
+            <td>18.42s</td>
           </tr><tr>
             <td>checkout-negative-total</td>
             <td>Checkout</td>
@@ -350,7 +376,7 @@
             <td>13</td>
             <td>28</td>
             <td>28</td>
-            <td>15.99s</td>
+            <td>16.68s</td>
           </tr><tr>
             <td>checkout-back-loses-contact</td>
             <td>Checkout</td>
@@ -362,7 +388,7 @@
             <td>15</td>
             <td>33</td>
             <td>30</td>
-            <td>19.15s</td>
+            <td>19.97s</td>
           </tr><tr>
             <td>settings-clean</td>
             <td>Settings</td>
@@ -374,7 +400,7 @@
             <td>9</td>
             <td>19</td>
             <td>20</td>
-            <td>7.61s</td>
+            <td>8.11s</td>
           </tr><tr>
             <td>settings-alt-save-stale</td>
             <td>Settings</td>
@@ -386,7 +412,7 @@
             <td>9</td>
             <td>19</td>
             <td>20</td>
-            <td>7.78s</td>
+            <td>8.05s</td>
           </tr><tr>
             <td>settings-cancel-persists-change</td>
             <td>Settings</td>
@@ -398,7 +424,7 @@
             <td>9</td>
             <td>19</td>
             <td>20</td>
-            <td>7.73s</td>
+            <td>7.98s</td>
           </tr><tr>
             <td>settings-reset-does-not-clear</td>
             <td>Settings</td>
@@ -410,7 +436,7 @@
             <td>9</td>
             <td>19</td>
             <td>20</td>
-            <td>7.74s</td>
+            <td>8.07s</td>
           </tr><tr>
             <td>settings-stale-notification</td>
             <td>Settings</td>
@@ -422,7 +448,67 @@
             <td>9</td>
             <td>19</td>
             <td>20</td>
-            <td>7.73s</td>
+            <td>8.09s</td>
+          </tr><tr>
+            <td>transfer-clean</td>
+            <td>Transfer</td>
+            <td>clean</td>
+            <td>0</td>
+            <td>0</td>
+            <td><span class="badge neutral">no</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>12</td>
+            <td>25</td>
+            <td>24</td>
+            <td>14.21s</td>
+          </tr><tr>
+            <td>transfer-invalid-amount-progression</td>
+            <td>Transfer</td>
+            <td>invalid-amount-progression</td>
+            <td>1</td>
+            <td>11</td>
+            <td><span class="badge ok">yes</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>13</td>
+            <td>24</td>
+            <td>24</td>
+            <td>13.57s</td>
+          </tr><tr>
+            <td>transfer-invalid-recipient-progression</td>
+            <td>Transfer</td>
+            <td>invalid-recipient-progression</td>
+            <td>1</td>
+            <td>8</td>
+            <td><span class="badge ok">yes</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>14</td>
+            <td>25</td>
+            <td>24</td>
+            <td>14.00s</td>
+          </tr><tr>
+            <td>transfer-skip-confirmation</td>
+            <td>Transfer</td>
+            <td>skip-confirmation</td>
+            <td>1</td>
+            <td>3</td>
+            <td><span class="badge neutral">no</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>13</td>
+            <td>25</td>
+            <td>24</td>
+            <td>14.27s</td>
+          </tr><tr>
+            <td>transfer-back-loses-transfer</td>
+            <td>Transfer</td>
+            <td>back-loses-transfer</td>
+            <td>1</td>
+            <td>1</td>
+            <td><span class="badge neutral">no</span></td>
+            <td><span class="badge neutral">no</span></td>
+            <td>15</td>
+            <td>28</td>
+            <td>26</td>
+            <td>16.05s</td>
           </tr>
     </tbody>
   </table>
@@ -551,6 +637,46 @@
       <div>Baseline</div><div>missed</div>
       <div>Counterexample</div><div><a href="#v_0b849bc211c0">v_0b849bc211c0</a></div>
     </div>
+  </article><article class="fault-card" id="F-TRANSFER-1">
+    <h3>F-TRANSFER-1 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Transfer / invalid-amount-progression</p>
+    <p>Invalid amount advances to recipient</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>transfer-invalid-amount-blocks-recipient</div>
+      <div>Detected By</div><div>transfer-invalid-amount-blocks-recipient</div>
+      <div>Baseline</div><div>structural</div>
+      <div>Counterexample</div><div><a href="#v_70d3394c8db8">v_70d3394c8db8</a></div>
+    </div>
+  </article><article class="fault-card" id="F-TRANSFER-2">
+    <h3>F-TRANSFER-2 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Transfer / invalid-recipient-progression</p>
+    <p>Invalid recipient advances to review</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>transfer-invalid-recipient-blocks-review</div>
+      <div>Detected By</div><div>transfer-invalid-recipient-blocks-review</div>
+      <div>Baseline</div><div>structural</div>
+      <div>Counterexample</div><div><a href="#v_43887dce489b">v_43887dce489b</a></div>
+    </div>
+  </article><article class="fault-card" id="F-TRANSFER-3">
+    <h3>F-TRANSFER-3 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Transfer / skip-confirmation</p>
+    <p>Confirmation reachable without explicit confirm action</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>transfer-confirmation-requires-confirm-action</div>
+      <div>Detected By</div><div>transfer-confirmation-requires-confirm-action</div>
+      <div>Baseline</div><div>missed</div>
+      <div>Counterexample</div><div><a href="#v_10b4888ead8f">v_10b4888ead8f</a></div>
+    </div>
+  </article><article class="fault-card" id="F-TRANSFER-4">
+    <h3>F-TRANSFER-4 <span class="badge ok">detected</span></h3>
+    <p class="fault-meta">Transfer / back-loses-transfer</p>
+    <p>Back/edit transfer path loses amount before receipt</p>
+    <div class="mini-table">
+      <div>Expected Oracle</div><div>transfer-confirmation-paths-equivalent</div>
+      <div>Detected By</div><div>transfer-confirmation-paths-equivalent</div>
+      <div>Baseline</div><div>missed</div>
+      <div>Counterexample</div><div><a href="#v_20003d5f6a60">v_20003d5f6a60</a></div>
+    </div>
   </article>
       </div>
     </section>
@@ -584,7 +710,7 @@
 3. default -&gt; Logout ([data-testid=&quot;logout&quot;])
 4. default -&gt; Dashboard ([data-testid=&quot;nav-dashboard&quot;])</pre>
     <div class="diff"><div class="minus">- RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin</div><div class="plus">+ RelUI auth benchmark Home Dashboard Admin Logout Member Dashboard Protected dashboard loaded. Account: user</div></div>
-    <div class="shots"><div class="shot"><img src="../subjects/auth-logout-retains-access/screenshots/s_d8505850d93d.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/auth-logout-retains-access/screenshots/s_69d58cc9a709.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/auth-logout-retains-access/screenshots/s_d8505850d93d.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/auth-logout-retains-access/screenshots/s_66f3774cf417.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div><div class="shot"><img src="../subjects/auth-logout-retains-access/screenshots/s_69d58cc9a709.png" alt="Counterexample screenshot 3" /><span>Observed state</span></div><div class="shot"><img src="../subjects/auth-logout-retains-access/screenshots/s_33b92a4abe70.png" alt="Counterexample screenshot 4" /><span>Observed state</span></div></div>
   </article><article class="counterexample" id="v_55cc6dd4d85c">
     <h3>F-AUTH-3 <span class="badge critical">critical</span></h3>
     <p class="fault-meta">auth-role-escalation · auth-admin-requires-admin-login</p>
@@ -598,7 +724,7 @@
 2. valid -&gt; User Login ([data-testid=&quot;user-login-submit&quot;])
 3. default -&gt; Admin ([data-testid=&quot;nav-admin&quot;])</pre>
     <div class="diff"><div class="minus">- RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin</div><div class="plus">+ RelUI auth benchmark Home Dashboard Admin Logout Admin Console Role restricted administration tools.</div></div>
-    <div class="shots"><div class="shot"><img src="../subjects/auth-role-escalation/screenshots/s_d7c20baf0817.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/auth-role-escalation/screenshots/s_8c7e60168213.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/auth-role-escalation/screenshots/s_d7c20baf0817.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/auth-role-escalation/screenshots/s_8747cabeacc6.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div><div class="shot"><img src="../subjects/auth-role-escalation/screenshots/s_382d3f095369.png" alt="Counterexample screenshot 3" /><span>Observed state</span></div><div class="shot"><img src="../subjects/auth-role-escalation/screenshots/s_8c7e60168213.png" alt="Counterexample screenshot 4" /><span>Observed state</span></div></div>
   </article><article class="counterexample" id="v_74667be014c3">
     <h3>F-AUTH-4 <span class="badge high">high</span></h3>
     <p class="fault-meta">auth-invalid-login-dashboard · auth-invalid-login-blocks-dashboard</p>
@@ -611,7 +737,7 @@
     <pre>1. default -&gt; Login ([data-testid=&quot;home-login&quot;])
 2. invalid -&gt; User Login ([data-testid=&quot;user-login-submit&quot;])</pre>
     <div class="diff"><div class="minus">- RelUI auth benchmark Home Dashboard Admin Login Auth Portal Exercise authentication and authorization flows. Login Open Dashboard Open Admin</div><div class="plus">+ RelUI auth benchmark Home Dashboard Admin Logout Member Dashboard Protected dashboard loaded. Account: user</div></div>
-    <div class="shots"><div class="shot"><img src="../subjects/auth-invalid-login-dashboard/screenshots/s_f0fb11eb43ea.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/auth-invalid-login-dashboard/screenshots/s_d813b40e0e84.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/auth-invalid-login-dashboard/screenshots/s_f0fb11eb43ea.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/auth-invalid-login-dashboard/screenshots/s_98b838d77deb.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div><div class="shot"><img src="../subjects/auth-invalid-login-dashboard/screenshots/s_d813b40e0e84.png" alt="Counterexample screenshot 3" /><span>Observed state</span></div></div>
   </article><article class="counterexample" id="v_18a1939e81f6">
     <h3>F-CHECKOUT-1 <span class="badge high">high</span></h3>
     <p class="fault-meta">checkout-invalid-step-progression · checkout-invalid-contact-blocks-payment</p>
@@ -624,7 +750,7 @@
     <pre>1. valid -&gt; Continue to Contact ([data-testid=&quot;cart-next&quot;])
 2. invalid -&gt; Continue to Payment ([data-testid=&quot;contact-next&quot;])</pre>
     <div class="diff"><div class="minus">- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact</div><div class="plus">+ RelUI checkout benchmark Cart Contact Payment Review Payment Card Review Order Back to Contact</div></div>
-    <div class="shots"><div class="shot"><img src="../subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/checkout-invalid-step-progression/screenshots/s_fe1fe81a3ea6.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/checkout-invalid-step-progression/screenshots/s_9aec5b5247d7.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div><div class="shot"><img src="../subjects/checkout-invalid-step-progression/screenshots/s_ddf89d7c67f5.png" alt="Counterexample screenshot 3" /><span>Observed state</span></div></div>
   </article><article class="counterexample" id="v_3f65e0ddcfb0">
     <h3>F-CHECKOUT-2 <span class="badge critical">critical</span></h3>
     <p class="fault-meta">checkout-skip-payment · checkout-express-review-requires-payment</p>
@@ -639,7 +765,7 @@
 3. default -&gt; Back to Contact ([data-testid=&quot;payment-back&quot;])
 4. default -&gt; Express Review ([data-testid=&quot;express-review&quot;])</pre>
     <div class="diff"><div class="minus">- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact</div><div class="plus">+ RelUI checkout benchmark Cart Contact Payment Review Order Review Email: buyer@example.com Address: 100 Main Street Total: $40 Paid: no Place Order</div></div>
-    <div class="shots"><div class="shot"><img src="../subjects/checkout-skip-payment/screenshots/s_36eb583c5e25.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/checkout-skip-payment/screenshots/s_2c812142cc5b.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/checkout-skip-payment/screenshots/s_36eb583c5e25.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/checkout-skip-payment/screenshots/s_9bfd85710f34.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div><div class="shot"><img src="../subjects/checkout-skip-payment/screenshots/s_a221645be934.png" alt="Counterexample screenshot 3" /><span>Observed state</span></div><div class="shot"><img src="../subjects/checkout-skip-payment/screenshots/s_1d3829056120.png" alt="Counterexample screenshot 4" /><span>Observed state</span></div><div class="shot"><img src="../subjects/checkout-skip-payment/screenshots/s_2c812142cc5b.png" alt="Counterexample screenshot 5" /><span>Observed state</span></div></div>
   </article><article class="counterexample" id="v_c633136d65f9">
     <h3>F-CHECKOUT-3 <span class="badge high">high</span></h3>
     <p class="fault-meta">checkout-negative-total · checkout-invalid-cart-blocks-contact</p>
@@ -672,7 +798,7 @@
 5. valid -&gt; Review Order ([data-testid=&quot;payment-next&quot;])
 6. default -&gt; Place Order ([data-testid=&quot;place-order&quot;])</pre>
     <div class="diff"><div class="minus">- RelUI checkout benchmark Cart Contact Payment Review Cart Quantity Continue to Contact</div><div class="plus">+ RelUI checkout benchmark Cart Contact Payment Review Order Complete Confirmation generated. Email: missing Address: missing Total: $40 Paid: yes</div></div>
-    <div class="shots"><div class="shot"><img src="../subjects/checkout-back-loses-contact/screenshots/s_3c4902154c39.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/checkout-back-loses-contact/screenshots/s_ef9b9c0a8be0.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/checkout-back-loses-contact/screenshots/s_3c4902154c39.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/checkout-back-loses-contact/screenshots/s_3f095d1abdf8.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div><div class="shot"><img src="../subjects/checkout-back-loses-contact/screenshots/s_ef9b9c0a8be0.png" alt="Counterexample screenshot 3" /><span>Observed state</span></div></div>
   </article><article class="counterexample" id="v_a71700cbaffd">
     <h3>F-SETTINGS-1 <span class="badge medium">medium</span></h3>
     <p class="fault-meta">settings-alt-save-stale · settings-profile-save-paths-equivalent</p>
@@ -685,7 +811,7 @@
     <pre>1. valid -&gt; Save Profile ([data-testid=&quot;save-profile&quot;])
 1. valid -&gt; Quick Save ([data-testid=&quot;quick-save-profile&quot;])</pre>
     <div class="diff"><div class="minus">- RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset</div><div class="plus">+ RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Default User Email notifications: off Saved: yes</div></div>
-    <div class="shots"><div class="shot"><img src="../subjects/settings-alt-save-stale/screenshots/s_5b44f2eaeaac.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/settings-alt-save-stale/screenshots/s_16c83dbbe8c0.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/settings-alt-save-stale/screenshots/s_5b44f2eaeaac.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/settings-alt-save-stale/screenshots/s_b35ad6246d3c.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div><div class="shot"><img src="../subjects/settings-alt-save-stale/screenshots/s_16c83dbbe8c0.png" alt="Counterexample screenshot 3" /><span>Observed state</span></div></div>
   </article><article class="counterexample" id="v_c523bde1591e">
     <h3>F-SETTINGS-2 <span class="badge high">high</span></h3>
     <p class="fault-meta">settings-cancel-persists-change · settings-cancel-does-not-save</p>
@@ -711,7 +837,7 @@
 2. default -&gt; Profile ([data-testid=&quot;nav-settings&quot;])
 3. default -&gt; Reset ([data-testid=&quot;reset-profile&quot;])</pre>
     <div class="diff"><div class="minus">- RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset</div><div class="plus">+ RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Taylor Email notifications: off Saved: yes</div></div>
-    <div class="shots"><div class="shot"><img src="../subjects/settings-reset-does-not-clear/screenshots/s_f073a0b2946a.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/settings-reset-does-not-clear/screenshots/s_5270d1d84916.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/settings-reset-does-not-clear/screenshots/s_f073a0b2946a.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/settings-reset-does-not-clear/screenshots/s_5270d1d84916.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div><div class="shot"><img src="../subjects/settings-reset-does-not-clear/screenshots/s_a82662635441.png" alt="Counterexample screenshot 3" /><span>Observed state</span></div></div>
   </article><article class="counterexample" id="v_0b849bc211c0">
     <h3>F-SETTINGS-4 <span class="badge medium">medium</span></h3>
     <p class="fault-meta">settings-stale-notification · settings-notification-save-paths-equivalent</p>
@@ -726,7 +852,63 @@
 1. default -&gt; Notifications ([data-testid=&quot;nav-notifications&quot;])
 2. valid -&gt; Quick Save ([data-testid=&quot;quick-save-notifications&quot;])</pre>
     <div class="diff"><div class="minus">- RelUI settings benchmark Profile Notifications Summary Profile Settings Display name Save Profile Quick Save Cancel Reset</div><div class="plus">+ RelUI settings benchmark Profile Notifications Summary Settings Saved Display name: Default User Email notifications: off Saved: yes</div></div>
-    <div class="shots"><div class="shot"><img src="../subjects/settings-stale-notification/screenshots/s_13999a0ab7c3.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/settings-stale-notification/screenshots/s_81be9a85fe41.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/settings-stale-notification/screenshots/s_13999a0ab7c3.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/settings-stale-notification/screenshots/s_2a172c5b1c79.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div><div class="shot"><img src="../subjects/settings-stale-notification/screenshots/s_81be9a85fe41.png" alt="Counterexample screenshot 3" /><span>Observed state</span></div></div>
+  </article><article class="counterexample" id="v_70d3394c8db8">
+    <h3>F-TRANSFER-1 <span class="badge high">high</span></h3>
+    <p class="fault-meta">transfer-invalid-amount-progression · transfer-invalid-amount-blocks-recipient</p>
+    <p>An invalid input profile reached a state that should require valid input first.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/transfer/invalid-amount-progression</div>
+      <div>End URL</div><div>/transfer/invalid-amount-progression/recipient</div>
+      <div>Trace IDs</div><div>t_f41c2e94f005</div>
+    </div>
+    <pre>1. invalid -&gt; Continue to Recipient ([data-testid=&quot;transfer-amount-next&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient</div><div class="plus">+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Recipient Recipient Review Transfer Back</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/transfer-invalid-amount-progression/screenshots/s_8dfb89917575.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/transfer-invalid-amount-progression/screenshots/s_f226652fd958.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+  </article><article class="counterexample" id="v_43887dce489b">
+    <h3>F-TRANSFER-2 <span class="badge high">high</span></h3>
+    <p class="fault-meta">transfer-invalid-recipient-progression · transfer-invalid-recipient-blocks-review</p>
+    <p>An invalid input profile reached a state that should require valid input first.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/transfer/invalid-recipient-progression</div>
+      <div>End URL</div><div>/transfer/invalid-recipient-progression/review</div>
+      <div>Trace IDs</div><div>t_f92a74d46164</div>
+    </div>
+    <pre>1. valid -&gt; Continue to Recipient ([data-testid=&quot;transfer-amount-next&quot;])
+2. invalid -&gt; Review Transfer ([data-testid=&quot;transfer-recipient-next&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient</div><div class="plus">+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Review Amount: $125 Recipient: not-a-recipient Memo: Spring rent Reviewed: yes Confirm Transfer Back to Recipient</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/transfer-invalid-recipient-progression/screenshots/s_43f7bef43828.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/transfer-invalid-recipient-progression/screenshots/s_e84815c7765b.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div><div class="shot"><img src="../subjects/transfer-invalid-recipient-progression/screenshots/s_b5c184cdadec.png" alt="Counterexample screenshot 3" /><span>Observed state</span></div></div>
+  </article><article class="counterexample" id="v_10b4888ead8f">
+    <h3>F-TRANSFER-3 <span class="badge critical">critical</span></h3>
+    <p class="fault-meta">transfer-skip-confirmation · transfer-confirmation-requires-confirm-action</p>
+    <p>A restricted state was reachable without the required authentication or authorization action.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/transfer/skip-confirmation</div>
+      <div>End URL</div><div>/transfer/skip-confirmation/confirmation</div>
+      <div>Trace IDs</div><div>t_52c3244e797e</div>
+    </div>
+    <pre>1. default -&gt; Confirmation ([data-testid=&quot;nav-transfer-confirmation&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient</div><div class="plus">+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Complete Transfer receipt generated. Amount: $100 Recipient: missing Memo: none Confirmed: no</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/transfer-skip-confirmation/screenshots/s_182e13706992.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/transfer-skip-confirmation/screenshots/s_ccbfa697af25.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div></div>
+  </article><article class="counterexample" id="v_20003d5f6a60">
+    <h3>F-TRANSFER-4 <span class="badge medium">medium</span></h3>
+    <p class="fault-meta">transfer-back-loses-transfer · transfer-confirmation-paths-equivalent</p>
+    <p>Equivalent workflow endpoints diverged across 2 representative paths.</p>
+    <div class="mini-table">
+      <div>Start URL</div><div>/transfer/back-loses-transfer</div>
+      <div>End URL</div><div>/transfer/back-loses-transfer/confirmation</div>
+      <div>Trace IDs</div><div>t_2d376002ea56, t_bb6454bbbf09</div>
+    </div>
+    <pre>1. valid -&gt; Continue to Recipient ([data-testid=&quot;transfer-amount-next&quot;])
+2. valid -&gt; Review Transfer ([data-testid=&quot;transfer-recipient-next&quot;])
+3. default -&gt; Confirm Transfer ([data-testid=&quot;confirm-transfer&quot;])
+1. valid -&gt; Continue to Recipient ([data-testid=&quot;transfer-amount-next&quot;])
+2. valid -&gt; Review Transfer ([data-testid=&quot;transfer-recipient-next&quot;])
+3. default -&gt; Back to Recipient ([data-testid=&quot;transfer-review-back&quot;])
+4. valid -&gt; Review Transfer ([data-testid=&quot;transfer-recipient-next&quot;])
+5. default -&gt; Confirm Transfer ([data-testid=&quot;confirm-transfer&quot;])</pre>
+    <div class="diff"><div class="minus">- RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Amount Amount Memo Continue to Recipient</div><div class="plus">+ RelUI transfer benchmark Amount Recipient Review Confirmation Transfer Complete Transfer receipt generated. Amount: missing Recipient: alex@example.com Memo: Spring rent Confirmed: yes</div></div>
+    <div class="shots"><div class="shot"><img src="../subjects/transfer-back-loses-transfer/screenshots/s_a9beefc32024.png" alt="Counterexample screenshot 1" /><span>Start state</span></div><div class="shot"><img src="../subjects/transfer-back-loses-transfer/screenshots/s_8cdb85b8f356.png" alt="Counterexample screenshot 2" /><span>Observed state</span></div><div class="shot"><img src="../subjects/transfer-back-loses-transfer/screenshots/s_29cb5e1f4e4a.png" alt="Counterexample screenshot 3" /><span>Observed state</span></div></div>
   </article>
       </div>
     </section>
@@ -794,6 +976,26 @@
     <h3>settings-stale-notification</h3>
     <p>9 states, 19 transitions, 20 traces</p>
     <div class="edge">s_13999a0ab7c3 -> s_6d0bc275bf36 via Save Profile [valid]</div><div class="edge">s_13999a0ab7c3 -> s_6d0bc275bf36 via Quick Save [valid]</div><div class="edge">s_13999a0ab7c3 -> s_abc2fdbefee9 via Cancel [valid]</div><div class="edge">s_6d0bc275bf36 -> s_ea43b423787f via Profile [default]</div><div class="edge">s_ea43b423787f -> s_81be9a85fe41 via Reset [default]</div><div class="edge">s_13999a0ab7c3 -> s_ae5b73d5ee96 via Notifications [default]</div><div class="edge">s_ae5b73d5ee96 -> s_2a172c5b1c79 via Save Notifications [valid]</div><div class="edge">s_ae5b73d5ee96 -> s_81be9a85fe41 via Quick Save [valid]</div>
+  </article><article class="figure">
+    <h3>transfer-clean</h3>
+    <p>12 states, 25 transitions, 24 traces</p>
+    <div class="edge">s_c6bee7ea7734 -> s_be99f44d1805 via Continue to Recipient [invalid]</div><div class="edge">s_c6bee7ea7734 -> s_7b878131a7aa via Continue to Recipient [valid]</div><div class="edge">s_7b878131a7aa -> s_aa5b216753c4 via Review Transfer [invalid]</div><div class="edge">s_c6bee7ea7734 -> s_92ee3b49cd92 via Confirmation [default]</div><div class="edge">s_7b878131a7aa -> s_2fef20a978e6 via Review Transfer [valid]</div><div class="edge">s_2fef20a978e6 -> s_7b299b24f67c via Confirm Transfer [default]</div><div class="edge">s_2fef20a978e6 -> s_ed7343e61c9c via Back to Recipient [default]</div><div class="edge">s_ed7343e61c9c -> s_2fef20a978e6 via Review Transfer [valid]</div>
+  </article><article class="figure">
+    <h3>transfer-invalid-amount-progression</h3>
+    <p>13 states, 24 transitions, 24 traces</p>
+    <div class="edge">s_8dfb89917575 -> s_f226652fd958 via Continue to Recipient [invalid]</div><div class="edge">s_8dfb89917575 -> s_f226652fd958 via Continue to Recipient [valid]</div><div class="edge">s_f226652fd958 -> s_c771f638b105 via Review Transfer [invalid]</div><div class="edge">s_8dfb89917575 -> s_ac7250e238ec via Confirmation [default]</div><div class="edge">s_f226652fd958 -> s_1937fcc9e337 via Review Transfer [valid]</div><div class="edge">s_1937fcc9e337 -> s_f612d5c60a36 via Confirm Transfer [default]</div><div class="edge">s_1937fcc9e337 -> s_d40f90ae9b1e via Back to Recipient [default]</div><div class="edge">s_d40f90ae9b1e -> s_1937fcc9e337 via Review Transfer [valid]</div>
+  </article><article class="figure">
+    <h3>transfer-invalid-recipient-progression</h3>
+    <p>14 states, 25 transitions, 24 traces</p>
+    <div class="edge">s_43f7bef43828 -> s_ea855cc7a87d via Continue to Recipient [invalid]</div><div class="edge">s_43f7bef43828 -> s_e84815c7765b via Continue to Recipient [valid]</div><div class="edge">s_e84815c7765b -> s_b5c184cdadec via Review Transfer [invalid]</div><div class="edge">s_43f7bef43828 -> s_268abf1bc388 via Confirmation [default]</div><div class="edge">s_e84815c7765b -> s_887d99898fe4 via Review Transfer [valid]</div><div class="edge">s_887d99898fe4 -> s_656ec12419b4 via Confirm Transfer [default]</div><div class="edge">s_887d99898fe4 -> s_6757175224a4 via Back to Recipient [default]</div><div class="edge">s_6757175224a4 -> s_887d99898fe4 via Review Transfer [valid]</div>
+  </article><article class="figure">
+    <h3>transfer-skip-confirmation</h3>
+    <p>13 states, 25 transitions, 24 traces</p>
+    <div class="edge">s_182e13706992 -> s_d8c9d724b613 via Continue to Recipient [invalid]</div><div class="edge">s_182e13706992 -> s_c00b4b99f4d1 via Continue to Recipient [valid]</div><div class="edge">s_c00b4b99f4d1 -> s_c4c6bd2d2e9a via Review Transfer [invalid]</div><div class="edge">s_182e13706992 -> s_ccbfa697af25 via Confirmation [default]</div><div class="edge">s_c00b4b99f4d1 -> s_01c5d3532228 via Review Transfer [valid]</div><div class="edge">s_01c5d3532228 -> s_9f4baecf1302 via Confirm Transfer [default]</div><div class="edge">s_01c5d3532228 -> s_d2a938ba6349 via Back to Recipient [default]</div><div class="edge">s_d2a938ba6349 -> s_01c5d3532228 via Review Transfer [valid]</div>
+  </article><article class="figure">
+    <h3>transfer-back-loses-transfer</h3>
+    <p>15 states, 28 transitions, 26 traces</p>
+    <div class="edge">s_a9beefc32024 -> s_94487060f922 via Continue to Recipient [invalid]</div><div class="edge">s_a9beefc32024 -> s_fff63a7fbbb0 via Continue to Recipient [valid]</div><div class="edge">s_fff63a7fbbb0 -> s_16a4fcbec50c via Review Transfer [invalid]</div><div class="edge">s_a9beefc32024 -> s_1acc4a79fd89 via Confirmation [default]</div><div class="edge">s_fff63a7fbbb0 -> s_c3916123aa50 via Review Transfer [valid]</div><div class="edge">s_c3916123aa50 -> s_8cdb85b8f356 via Confirm Transfer [default]</div><div class="edge">s_c3916123aa50 -> s_fff63a7fbbb0 via Back to Recipient [default]</div><div class="edge">s_fff63a7fbbb0 -> s_924fec3365f0 via Review Transfer [valid]</div>
   </article>
       </div>
     </section>

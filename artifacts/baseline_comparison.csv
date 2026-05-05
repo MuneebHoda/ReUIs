@@ -14,3 +14,8 @@
 "settings-cancel-persists-change","settings","cancel-persists-change","1","true","1","false","0","false","0"
 "settings-reset-does-not-clear","settings","reset-does-not-clear","1","true","1","false","0","false","0"
 "settings-stale-notification","settings","stale-notification","1","true","1","false","0","false","0"
+"transfer-clean","transfer","clean","0","false","0","false","0","false","0"
+"transfer-invalid-amount-progression","transfer","invalid-amount-progression","1","true","11","true","1","false","0"
+"transfer-invalid-recipient-progression","transfer","invalid-recipient-progression","1","true","8","true","1","false","0"
+"transfer-skip-confirmation","transfer","skip-confirmation","1","true","3","false","0","false","0"
+"transfer-back-loses-transfer","transfer","back-loses-transfer","1","true","1","false","0","false","0"

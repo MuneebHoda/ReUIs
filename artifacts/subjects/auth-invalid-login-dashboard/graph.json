@@ -1,7 +1,7 @@
 {
   "subjectId": "auth-invalid-login-dashboard",
-  "generatedAt": "2026-05-01T22:58:22.628Z",
-  "durationMs": 8748,
+  "generatedAt": "2026-05-05T22:16:27.249Z",
+  "durationMs": 9055,
   "nodes": [
     {
       "id": "s_f0fb11eb43ea",

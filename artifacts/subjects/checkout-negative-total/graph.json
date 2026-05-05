@@ -1,7 +1,7 @@
 {
   "subjectId": "checkout-negative-total",
-  "generatedAt": "2026-05-01T22:59:31.299Z",
-  "durationMs": 15986,
+  "generatedAt": "2026-05-05T22:17:39.056Z",
+  "durationMs": 16676,
   "nodes": [
     {
       "id": "s_30f20df1d627",

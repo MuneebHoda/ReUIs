@@ -1,0 +1,298 @@
+[
+  {
+    "id": "v_70d3394c8db8",
+    "subjectId": "transfer-invalid-amount-progression",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_f41c2e94f005"
+    ],
+    "stateIds": [
+      "s_8dfb89917575",
+      "s_f226652fd958"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-amount-next\"]",
+      "forbiddenState": "s_f226652fd958"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])"
+    ]
+  },
+  {
+    "id": "v_0aa542cdef4e",
+    "subjectId": "transfer-invalid-amount-progression",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_0f4f39150d96"
+    ],
+    "stateIds": [
+      "s_8dfb89917575",
+      "s_f226652fd958"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-amount-next\"]",
+      "forbiddenState": "s_f226652fd958"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. default -> Amount ([data-testid=\"nav-transfer-start\"])"
+    ]
+  },
+  {
+    "id": "v_fc93168116eb",
+    "subjectId": "transfer-invalid-amount-progression",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_88cbb203baed"
+    ],
+    "stateIds": [
+      "s_8dfb89917575",
+      "s_f226652fd958"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-amount-next\"]",
+      "forbiddenState": "s_f226652fd958"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. default -> Recipient ([data-testid=\"nav-transfer-recipient\"])"
+    ]
+  },
+  {
+    "id": "v_44091feaeacb",
+    "subjectId": "transfer-invalid-amount-progression",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_ef710de71e68"
+    ],
+    "stateIds": [
+      "s_8dfb89917575",
+      "s_f226652fd958"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-amount-next\"]",
+      "forbiddenState": "s_f226652fd958"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. default -> Review ([data-testid=\"nav-transfer-review\"])"
+    ]
+  },
+  {
+    "id": "v_160d5b77fae5",
+    "subjectId": "transfer-invalid-amount-progression",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_6cf89dae7040"
+    ],
+    "stateIds": [
+      "s_8dfb89917575",
+      "s_f226652fd958"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-amount-next\"]",
+      "forbiddenState": "s_f226652fd958"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. default -> Confirmation ([data-testid=\"nav-transfer-confirmation\"])"
+    ]
+  },
+  {
+    "id": "v_ee4dbce0488e",
+    "subjectId": "transfer-invalid-amount-progression",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_cc035fb81bb9"
+    ],
+    "stateIds": [
+      "s_8dfb89917575",
+      "s_f226652fd958"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-amount-next\"]",
+      "forbiddenState": "s_f226652fd958"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. valid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])"
+    ]
+  },
+  {
+    "id": "v_69ae996387b6",
+    "subjectId": "transfer-invalid-amount-progression",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_ba1219dd8411"
+    ],
+    "stateIds": [
+      "s_8dfb89917575",
+      "s_f226652fd958"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-amount-next\"]",
+      "forbiddenState": "s_f226652fd958"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. admin -> Review Transfer ([data-testid=\"transfer-recipient-next\"])"
+    ]
+  },
+  {
+    "id": "v_924ce1e6a502",
+    "subjectId": "transfer-invalid-amount-progression",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_6a87e17c6f1d"
+    ],
+    "stateIds": [
+      "s_8dfb89917575",
+      "s_f226652fd958"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-amount-next\"]",
+      "forbiddenState": "s_f226652fd958"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])"
+    ]
+  },
+  {
+    "id": "v_b64ac33aa009",
+    "subjectId": "transfer-invalid-amount-progression",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_46b6c9bb8ad6"
+    ],
+    "stateIds": [
+      "s_8dfb89917575",
+      "s_f226652fd958"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-amount-next\"]",
+      "forbiddenState": "s_f226652fd958"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. valid -> Back ([data-testid=\"transfer-recipient-back\"])"
+    ]
+  },
+  {
+    "id": "v_df772e515ea9",
+    "subjectId": "transfer-invalid-amount-progression",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_c17eec419560"
+    ],
+    "stateIds": [
+      "s_8dfb89917575",
+      "s_f226652fd958"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-amount-next\"]",
+      "forbiddenState": "s_f226652fd958"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. admin -> Back ([data-testid=\"transfer-recipient-back\"])"
+    ]
+  },
+  {
+    "id": "v_4e36e802cb4e",
+    "subjectId": "transfer-invalid-amount-progression",
+    "invariantId": "transfer-invalid-amount-blocks-recipient",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer amounts must not advance to recipient collection.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_f54d978756e1"
+    ],
+    "stateIds": [
+      "s_8dfb89917575",
+      "s_f226652fd958"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-amount-next\"]",
+      "forbiddenState": "s_f226652fd958"
+    },
+    "replaySteps": [
+      "1. invalid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Back ([data-testid=\"transfer-recipient-back\"])"
+    ]
+  }
+]

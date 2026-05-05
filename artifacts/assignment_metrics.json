@@ -1,21 +1,23 @@
 {
-  "appsTested": 3,
+  "appsTested": 4,
   "appNames": [
     "auth",
     "checkout",
-    "settings"
+    "settings",
+    "transfer"
   ],
-  "subjectVariants": 15,
-  "cleanVariants": 3,
-  "faultyVariants": 12,
-  "faultsInjected": 12,
-  "statesDiscovered": 163,
-  "transitionsDiscovered": 340,
-  "tracesExplored": 332,
-  "bugsDetected": 12,
+  "subjectVariants": 20,
+  "cleanVariants": 4,
+  "faultyVariants": 16,
+  "faultsInjected": 16,
+  "statesDiscovered": 230,
+  "transitionsDiscovered": 467,
+  "tracesExplored": 454,
+  "bugsDetected": 16,
   "falsePositives": 0,
-  "relationalViolations": 36,
-  "structuralDetections": 3,
+  "relationalViolations": 59,
+  "structuralDetections": 5,
   "visualDetections": 0,
-  "runtimeMs": 170664
+  "uniqueActions": 191,
+  "runtimeMs": 250081
 }

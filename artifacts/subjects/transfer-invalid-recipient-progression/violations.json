@@ -1,0 +1,239 @@
+[
+  {
+    "id": "v_43887dce489b",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "invariantId": "transfer-invalid-recipient-blocks-review",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer recipients must not advance to review.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_f92a74d46164"
+    ],
+    "stateIds": [
+      "s_43f7bef43828",
+      "s_e84815c7765b",
+      "s_b5c184cdadec"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-recipient-next\"]",
+      "forbiddenState": "s_b5c184cdadec"
+    },
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])"
+    ]
+  },
+  {
+    "id": "v_994ae10b806b",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "invariantId": "transfer-invalid-recipient-blocks-review",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer recipients must not advance to review.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_b7bd2d57c819"
+    ],
+    "stateIds": [
+      "s_43f7bef43828",
+      "s_e84815c7765b",
+      "s_b5c184cdadec"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-recipient-next\"]",
+      "forbiddenState": "s_b5c184cdadec"
+    },
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Amount ([data-testid=\"nav-transfer-start\"])"
+    ]
+  },
+  {
+    "id": "v_dc768872add8",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "invariantId": "transfer-invalid-recipient-blocks-review",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer recipients must not advance to review.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_8c958a08292e"
+    ],
+    "stateIds": [
+      "s_43f7bef43828",
+      "s_e84815c7765b",
+      "s_b5c184cdadec"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-recipient-next\"]",
+      "forbiddenState": "s_b5c184cdadec"
+    },
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Recipient ([data-testid=\"nav-transfer-recipient\"])"
+    ]
+  },
+  {
+    "id": "v_888c9e185d93",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "invariantId": "transfer-invalid-recipient-blocks-review",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer recipients must not advance to review.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_2f6b0a11d962"
+    ],
+    "stateIds": [
+      "s_43f7bef43828",
+      "s_e84815c7765b",
+      "s_b5c184cdadec"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-recipient-next\"]",
+      "forbiddenState": "s_b5c184cdadec"
+    },
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Review ([data-testid=\"nav-transfer-review\"])"
+    ]
+  },
+  {
+    "id": "v_c13271fb8126",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "invariantId": "transfer-invalid-recipient-blocks-review",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer recipients must not advance to review.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_61b09326d04e"
+    ],
+    "stateIds": [
+      "s_43f7bef43828",
+      "s_e84815c7765b",
+      "s_b5c184cdadec"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-recipient-next\"]",
+      "forbiddenState": "s_b5c184cdadec"
+    },
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Confirmation ([data-testid=\"nav-transfer-confirmation\"])"
+    ]
+  },
+  {
+    "id": "v_1dc58a56ab3d",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "invariantId": "transfer-invalid-recipient-blocks-review",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer recipients must not advance to review.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_7be23801a55d"
+    ],
+    "stateIds": [
+      "s_43f7bef43828",
+      "s_e84815c7765b",
+      "s_b5c184cdadec"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-recipient-next\"]",
+      "forbiddenState": "s_b5c184cdadec"
+    },
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Confirm Transfer ([data-testid=\"confirm-transfer\"])"
+    ]
+  },
+  {
+    "id": "v_9e9c5d473cf3",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "invariantId": "transfer-invalid-recipient-blocks-review",
+    "invariantType": "validation-blocking",
+    "severity": "high",
+    "title": "Invalid transfer recipients must not advance to review.",
+    "description": "An invalid input profile reached a state that should require valid input first.",
+    "traceIds": [
+      "t_bc4cfb0f9e56"
+    ],
+    "stateIds": [
+      "s_43f7bef43828",
+      "s_e84815c7765b",
+      "s_b5c184cdadec"
+    ],
+    "evidence": {
+      "invalidProfiles": [
+        "invalid"
+      ],
+      "actionSelector": "[data-testid=\"transfer-recipient-next\"]",
+      "forbiddenState": "s_b5c184cdadec"
+    },
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Back to Recipient ([data-testid=\"transfer-review-back\"])"
+    ]
+  },
+  {
+    "id": "v_0ca412ca52a9",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "invariantId": "transfer-confirmation-paths-equivalent",
+    "invariantType": "path-equivalence",
+    "severity": "medium",
+    "title": "Normal and back/edit transfer paths must converge to the same receipt state.",
+    "description": "Equivalent workflow endpoints diverged across 2 representative paths.",
+    "traceIds": [
+      "t_2d376002ea56",
+      "t_7be23801a55d"
+    ],
+    "stateIds": [
+      "s_656ec12419b4",
+      "s_48e4fbdbf36f"
+    ],
+    "evidence": {
+      "distinctEndpointStates": [
+        "s_656ec12419b4",
+        "s_48e4fbdbf36f"
+      ],
+      "endpointFingerprints": [
+        "eaa38338ab305356d947f87c95c94efc7af461b1f3557b9446689deeb376ef50",
+        "8b42e3231b2b7df7ee70ea0351db2bbd30a0bd4cd755ac39f768d7206adead3c"
+      ]
+    },
+    "replaySteps": [
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. valid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Confirm Transfer ([data-testid=\"confirm-transfer\"])",
+      "1. valid -> Continue to Recipient ([data-testid=\"transfer-amount-next\"])",
+      "2. invalid -> Review Transfer ([data-testid=\"transfer-recipient-next\"])",
+      "3. default -> Confirm Transfer ([data-testid=\"confirm-transfer\"])"
+    ]
+  }
+]

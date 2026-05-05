@@ -11,7 +11,10 @@
     "states": 10,
     "edges": 19,
     "traces": 18,
-    "durationMs": 9146
+    "uniqueActions": 10,
+    "averageTraceLength": 1.72,
+    "maxTraceLength": 4,
+    "durationMs": 9692
   },
   {
     "subjectId": "auth-auth-bypass",
@@ -25,7 +28,10 @@
     "states": 11,
     "edges": 19,
     "traces": 18,
-    "durationMs": 8742
+    "uniqueActions": 10,
+    "averageTraceLength": 1.78,
+    "maxTraceLength": 4,
+    "durationMs": 9067
   },
   {
     "subjectId": "auth-logout-retains-access",
@@ -39,7 +45,10 @@
     "states": 10,
     "edges": 19,
     "traces": 18,
-    "durationMs": 8869
+    "uniqueActions": 10,
+    "averageTraceLength": 1.72,
+    "maxTraceLength": 4,
+    "durationMs": 9071
   },
   {
     "subjectId": "auth-role-escalation",
@@ -53,7 +62,10 @@
     "states": 9,
     "edges": 19,
     "traces": 18,
-    "durationMs": 8748
+    "uniqueActions": 10,
+    "averageTraceLength": 1.72,
+    "maxTraceLength": 4,
+    "durationMs": 9035
   },
   {
     "subjectId": "auth-invalid-login-dashboard",
@@ -67,7 +79,10 @@
     "states": 9,
     "edges": 19,
     "traces": 18,
-    "durationMs": 8748
+    "uniqueActions": 10,
+    "averageTraceLength": 1.72,
+    "maxTraceLength": 4,
+    "durationMs": 9055
   },
   {
     "subjectId": "checkout-clean",
@@ -81,7 +96,10 @@
     "states": 13,
     "edges": 30,
     "traces": 28,
-    "durationMs": 17592
+    "uniqueActions": 11,
+    "averageTraceLength": 2.29,
+    "maxTraceLength": 6,
+    "durationMs": 18490
   },
   {
     "subjectId": "checkout-invalid-step-progression",
@@ -95,7 +113,10 @@
     "states": 14,
     "edges": 29,
     "traces": 28,
-    "durationMs": 17550
+    "uniqueActions": 10,
+    "averageTraceLength": 2.29,
+    "maxTraceLength": 6,
+    "durationMs": 18214
   },
   {
     "subjectId": "checkout-skip-payment",
@@ -109,7 +130,10 @@
     "states": 14,
     "edges": 30,
     "traces": 28,
-    "durationMs": 17542
+    "uniqueActions": 11,
+    "averageTraceLength": 2.29,
+    "maxTraceLength": 6,
+    "durationMs": 18424
   },
   {
     "subjectId": "checkout-negative-total",
@@ -123,7 +147,10 @@
     "states": 13,
     "edges": 28,
     "traces": 28,
-    "durationMs": 15986
+    "uniqueActions": 11,
+    "averageTraceLength": 2.07,
+    "maxTraceLength": 6,
+    "durationMs": 16676
   },
   {
     "subjectId": "checkout-back-loses-contact",
@@ -137,7 +164,10 @@
     "states": 15,
     "edges": 33,
     "traces": 30,
-    "durationMs": 19149
+    "uniqueActions": 11,
+    "averageTraceLength": 2.33,
+    "maxTraceLength": 6,
+    "durationMs": 19970
   },
   {
     "subjectId": "settings-clean",
@@ -151,7 +181,10 @@
     "states": 9,
     "edges": 19,
     "traces": 20,
-    "durationMs": 7610
+    "uniqueActions": 9,
+    "averageTraceLength": 1.2,
+    "maxTraceLength": 3,
+    "durationMs": 8105
   },
   {
     "subjectId": "settings-alt-save-stale",
@@ -165,7 +198,10 @@
     "states": 9,
     "edges": 19,
     "traces": 20,
-    "durationMs": 7783
+    "uniqueActions": 9,
+    "averageTraceLength": 1.2,
+    "maxTraceLength": 3,
+    "durationMs": 8050
   },
   {
     "subjectId": "settings-cancel-persists-change",
@@ -179,7 +215,10 @@
     "states": 9,
     "edges": 19,
     "traces": 20,
-    "durationMs": 7731
+    "uniqueActions": 9,
+    "averageTraceLength": 1.2,
+    "maxTraceLength": 3,
+    "durationMs": 7984
   },
   {
     "subjectId": "settings-reset-does-not-clear",
@@ -193,7 +232,10 @@
     "states": 9,
     "edges": 19,
     "traces": 20,
-    "durationMs": 7735
+    "uniqueActions": 9,
+    "averageTraceLength": 1.2,
+    "maxTraceLength": 3,
+    "durationMs": 8068
   },
   {
     "subjectId": "settings-stale-notification",
@@ -207,6 +249,94 @@
     "states": 9,
     "edges": 19,
     "traces": 20,
-    "durationMs": 7733
+    "uniqueActions": 9,
+    "averageTraceLength": 1.2,
+    "maxTraceLength": 3,
+    "durationMs": 8085
+  },
+  {
+    "subjectId": "transfer-clean",
+    "title": "Transfer / clean",
+    "app": "transfer",
+    "variant": "clean",
+    "expectedFaults": 0,
+    "relationalViolations": 0,
+    "structuralDetected": false,
+    "visualDetected": false,
+    "states": 12,
+    "edges": 25,
+    "traces": 24,
+    "uniqueActions": 8,
+    "averageTraceLength": 2.04,
+    "maxTraceLength": 5,
+    "durationMs": 14215
+  },
+  {
+    "subjectId": "transfer-invalid-amount-progression",
+    "title": "Transfer / invalid-amount-progression",
+    "app": "transfer",
+    "variant": "invalid-amount-progression",
+    "expectedFaults": 1,
+    "relationalViolations": 11,
+    "structuralDetected": true,
+    "visualDetected": false,
+    "states": 13,
+    "edges": 24,
+    "traces": 24,
+    "uniqueActions": 9,
+    "averageTraceLength": 1.92,
+    "maxTraceLength": 5,
+    "durationMs": 13567
+  },
+  {
+    "subjectId": "transfer-invalid-recipient-progression",
+    "title": "Transfer / invalid-recipient-progression",
+    "app": "transfer",
+    "variant": "invalid-recipient-progression",
+    "expectedFaults": 1,
+    "relationalViolations": 8,
+    "structuralDetected": true,
+    "visualDetected": false,
+    "states": 14,
+    "edges": 25,
+    "traces": 24,
+    "uniqueActions": 8,
+    "averageTraceLength": 2.04,
+    "maxTraceLength": 5,
+    "durationMs": 13996
+  },
+  {
+    "subjectId": "transfer-skip-confirmation",
+    "title": "Transfer / skip-confirmation",
+    "app": "transfer",
+    "variant": "skip-confirmation",
+    "expectedFaults": 1,
+    "relationalViolations": 3,
+    "structuralDetected": false,
+    "visualDetected": false,
+    "states": 13,
+    "edges": 25,
+    "traces": 24,
+    "uniqueActions": 8,
+    "averageTraceLength": 2.04,
+    "maxTraceLength": 5,
+    "durationMs": 14266
+  },
+  {
+    "subjectId": "transfer-back-loses-transfer",
+    "title": "Transfer / back-loses-transfer",
+    "app": "transfer",
+    "variant": "back-loses-transfer",
+    "expectedFaults": 1,
+    "relationalViolations": 1,
+    "structuralDetected": false,
+    "visualDetected": false,
+    "states": 15,
+    "edges": 28,
+    "traces": 26,
+    "uniqueActions": 9,
+    "averageTraceLength": 2.12,
+    "maxTraceLength": 5,
+    "durationMs": 16051
   }
 ]

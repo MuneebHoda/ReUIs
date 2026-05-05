@@ -238,6 +238,9 @@ export interface SubjectSummary {
   states: number;
   edges: number;
   traces: number;
+  uniqueActions: number;
+  averageTraceLength: number;
+  maxTraceLength: number;
   durationMs: number;
 }
 
@@ -256,7 +259,32 @@ export interface AssignmentMetrics {
   relationalViolations: number;
   structuralDetections: number;
   visualDetections: number;
+  uniqueActions: number;
   runtimeMs: number;
+}
+
+export interface AppCoverageSummary {
+  app: string;
+  variants: number;
+  injectedFaults: number;
+  detectedFaults: number;
+  states: number;
+  transitions: number;
+  traces: number;
+  uniqueActions: number;
+  averageTraceLength: number;
+  maxTraceLength: number;
+  structuralDetections: number;
+  visualDetections: number;
+  runtimeMs: number;
+}
+
+export interface InvariantFamilyCoverage {
+  invariantType: RelationalInvariant["type"];
+  configuredInvariants: number;
+  expectedFaults: number;
+  detectedFaults: number;
+  violationInstances: number;
 }
 
 export interface FaultCoverage {

@@ -267,5 +267,107 @@
     "baselineDetected": false,
     "baselineKinds": [],
     "counterexampleId": "v_0b849bc211c0"
+  },
+  {
+    "faultId": "F-TRANSFER-1",
+    "title": "Invalid amount advances to recipient",
+    "subjectId": "transfer-invalid-amount-progression",
+    "app": "transfer",
+    "variant": "invalid-amount-progression",
+    "expectedInvariantIds": [
+      "transfer-invalid-amount-blocks-recipient"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "transfer-invalid-amount-blocks-recipient"
+    ],
+    "relationalViolationIds": [
+      "v_70d3394c8db8",
+      "v_0aa542cdef4e",
+      "v_fc93168116eb",
+      "v_44091feaeacb",
+      "v_160d5b77fae5",
+      "v_ee4dbce0488e",
+      "v_69ae996387b6",
+      "v_924ce1e6a502",
+      "v_b64ac33aa009",
+      "v_df772e515ea9",
+      "v_4e36e802cb4e"
+    ],
+    "baselineDetected": true,
+    "baselineKinds": [
+      "structural"
+    ],
+    "counterexampleId": "v_70d3394c8db8"
+  },
+  {
+    "faultId": "F-TRANSFER-2",
+    "title": "Invalid recipient advances to review",
+    "subjectId": "transfer-invalid-recipient-progression",
+    "app": "transfer",
+    "variant": "invalid-recipient-progression",
+    "expectedInvariantIds": [
+      "transfer-invalid-recipient-blocks-review"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "transfer-invalid-recipient-blocks-review"
+    ],
+    "relationalViolationIds": [
+      "v_43887dce489b",
+      "v_994ae10b806b",
+      "v_dc768872add8",
+      "v_888c9e185d93",
+      "v_c13271fb8126",
+      "v_1dc58a56ab3d",
+      "v_9e9c5d473cf3"
+    ],
+    "baselineDetected": true,
+    "baselineKinds": [
+      "structural"
+    ],
+    "counterexampleId": "v_43887dce489b"
+  },
+  {
+    "faultId": "F-TRANSFER-3",
+    "title": "Confirmation reachable without explicit confirm action",
+    "subjectId": "transfer-skip-confirmation",
+    "app": "transfer",
+    "variant": "skip-confirmation",
+    "expectedInvariantIds": [
+      "transfer-confirmation-requires-confirm-action"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "transfer-confirmation-requires-confirm-action"
+    ],
+    "relationalViolationIds": [
+      "v_10b4888ead8f",
+      "v_55c317f94780",
+      "v_3a5f14411412"
+    ],
+    "baselineDetected": false,
+    "baselineKinds": [],
+    "counterexampleId": "v_10b4888ead8f"
+  },
+  {
+    "faultId": "F-TRANSFER-4",
+    "title": "Back/edit transfer path loses amount before receipt",
+    "subjectId": "transfer-back-loses-transfer",
+    "app": "transfer",
+    "variant": "back-loses-transfer",
+    "expectedInvariantIds": [
+      "transfer-confirmation-paths-equivalent"
+    ],
+    "detected": true,
+    "detectingInvariantIds": [
+      "transfer-confirmation-paths-equivalent"
+    ],
+    "relationalViolationIds": [
+      "v_20003d5f6a60"
+    ],
+    "baselineDetected": false,
+    "baselineKinds": [],
+    "counterexampleId": "v_20003d5f6a60"
   }
 ]

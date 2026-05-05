@@ -1,0 +1,62 @@
+[
+  {
+    "app": "auth",
+    "variants": 5,
+    "injectedFaults": 4,
+    "detectedFaults": 4,
+    "states": 49,
+    "transitions": 95,
+    "traces": 90,
+    "uniqueActions": 10,
+    "averageTraceLength": 1.73,
+    "maxTraceLength": 4,
+    "structuralDetections": 1,
+    "visualDetections": 0,
+    "runtimeMs": 45920
+  },
+  {
+    "app": "checkout",
+    "variants": 5,
+    "injectedFaults": 4,
+    "detectedFaults": 4,
+    "states": 69,
+    "transitions": 150,
+    "traces": 142,
+    "uniqueActions": 11,
+    "averageTraceLength": 2.25,
+    "maxTraceLength": 6,
+    "structuralDetections": 2,
+    "visualDetections": 0,
+    "runtimeMs": 91774
+  },
+  {
+    "app": "settings",
+    "variants": 5,
+    "injectedFaults": 4,
+    "detectedFaults": 4,
+    "states": 45,
+    "transitions": 95,
+    "traces": 100,
+    "uniqueActions": 9,
+    "averageTraceLength": 1.2,
+    "maxTraceLength": 3,
+    "structuralDetections": 0,
+    "visualDetections": 0,
+    "runtimeMs": 40292
+  },
+  {
+    "app": "transfer",
+    "variants": 5,
+    "injectedFaults": 4,
+    "detectedFaults": 4,
+    "states": 67,
+    "transitions": 127,
+    "traces": 122,
+    "uniqueActions": 9,
+    "averageTraceLength": 2.03,
+    "maxTraceLength": 5,
+    "structuralDetections": 2,
+    "visualDetections": 0,
+    "runtimeMs": 72095
+  }
+]

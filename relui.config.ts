@@ -13,7 +13,10 @@ const inputProfiles = [
       address: "100 Main Street",
       card: "4242424242424242",
       displayName: "Taylor",
-      notifications: "on"
+      notifications: "on",
+      amount: 125,
+      recipient: "alex@example.com",
+      memo: "Spring rent"
     }
   },
   {
@@ -26,7 +29,10 @@ const inputProfiles = [
       address: "200 Admin Ave",
       card: "5555444433331111",
       displayName: "Admin Taylor",
-      notifications: "on"
+      notifications: "on",
+      amount: 250,
+      recipient: "finance@example.com",
+      memo: "Admin transfer"
     }
   },
   {
@@ -39,7 +45,10 @@ const inputProfiles = [
       address: "",
       card: "123",
       displayName: "",
-      notifications: ""
+      notifications: "",
+      amount: -25,
+      recipient: "not-a-recipient",
+      memo: ""
     }
   }
 ];
@@ -170,6 +179,45 @@ const settingsInvariants: RelationalInvariant[] = [
   }
 ];
 
+const transferInvariants: RelationalInvariant[] = [
+  {
+    id: "transfer-invalid-amount-blocks-recipient",
+    type: "validation-blocking",
+    severity: "high",
+    description: "Invalid transfer amounts must not advance to recipient collection.",
+    invalidProfiles: ["invalid"],
+    actionSelectors: ['[data-testid="transfer-amount-next"]'],
+    forbidden: { urlIncludes: "/recipient" }
+  },
+  {
+    id: "transfer-invalid-recipient-blocks-review",
+    type: "validation-blocking",
+    severity: "high",
+    description: "Invalid transfer recipients must not advance to review.",
+    invalidProfiles: ["invalid"],
+    actionSelectors: ['[data-testid="transfer-recipient-next"]'],
+    forbidden: { urlIncludes: "/review" }
+  },
+  {
+    id: "transfer-confirmation-requires-confirm-action",
+    type: "auth-precondition",
+    severity: "critical",
+    description: "Transfer confirmation must be preceded by the explicit confirm action.",
+    target: { urlIncludes: "/confirmation", textIncludes: "Transfer Complete" },
+    requiredActionSelectors: ['[data-testid="confirm-transfer"]']
+  },
+  {
+    id: "transfer-confirmation-paths-equivalent",
+    type: "path-equivalence",
+    severity: "medium",
+    description: "Normal and back/edit transfer paths must converge to the same receipt state.",
+    endpoint: { textIncludes: "Transfer Complete" },
+    candidateActionSelectors: ['[data-testid="confirm-transfer"]'],
+    profiles: ["valid"],
+    minDistinctPaths: 2
+  }
+];
+
 function makeSubjects(): SubjectConfig[] {
   return [
   subject("auth", "clean", authInvariants, [], { maxTraces: 18, seedTraces: authSeeds }),
@@ -212,12 +260,26 @@ function makeSubjects(): SubjectConfig[] {
   ], { maxDepth: 4, maxTraces: 20, seedTraces: settingsSeeds }),
   subject("settings", "stale-notification", settingsInvariants, [
     { id: "F-SETTINGS-4", title: "Quick notification save discards notification state", invariantIds: ["settings-notification-save-paths-equivalent"] }
-  ], { maxDepth: 4, maxTraces: 20, seedTraces: settingsSeeds })
+  ], { maxDepth: 4, maxTraces: 20, seedTraces: settingsSeeds }),
+
+  subject("transfer", "clean", transferInvariants, [], { maxDepth: 5, maxTraces: 24, seedTraces: transferSeeds }),
+  subject("transfer", "invalid-amount-progression", transferInvariants, [
+    { id: "F-TRANSFER-1", title: "Invalid amount advances to recipient", invariantIds: ["transfer-invalid-amount-blocks-recipient"] }
+  ], { maxDepth: 5, maxTraces: 24, seedTraces: transferSeeds }),
+  subject("transfer", "invalid-recipient-progression", transferInvariants, [
+    { id: "F-TRANSFER-2", title: "Invalid recipient advances to review", invariantIds: ["transfer-invalid-recipient-blocks-review"] }
+  ], { maxDepth: 5, maxTraces: 24, seedTraces: transferSeeds }),
+  subject("transfer", "skip-confirmation", transferInvariants, [
+    { id: "F-TRANSFER-3", title: "Confirmation reachable without explicit confirm action", invariantIds: ["transfer-confirmation-requires-confirm-action"] }
+  ], { maxDepth: 5, maxTraces: 24, seedTraces: transferSeeds }),
+  subject("transfer", "back-loses-transfer", transferInvariants, [
+    { id: "F-TRANSFER-4", title: "Back/edit transfer path loses amount before receipt", invariantIds: ["transfer-confirmation-paths-equivalent"] }
+  ], { maxDepth: 5, maxTraces: 26, seedTraces: transferSeeds })
   ];
 }
 
 function subject(
-  app: "auth" | "checkout" | "settings",
+  app: "auth" | "checkout" | "settings" | "transfer",
   variant: string,
   invariants: RelationalInvariant[],
   expectedFaults: SubjectConfig["expectedFaults"],
@@ -377,6 +439,42 @@ const settingsSeeds: SubjectConfig["seedTraces"] = [
     steps: [
       { selector: '[data-testid="nav-notifications"]', label: "Notifications", profileName: "default", isFormAction: false },
       { selector: '[data-testid="quick-save-notifications"]', label: "Quick Save", profileName: "valid" }
+    ]
+  }
+];
+
+const transferSeeds: SubjectConfig["seedTraces"] = [
+  {
+    name: "invalid-amount",
+    steps: [{ selector: '[data-testid="transfer-amount-next"]', label: "Continue to Recipient", profileName: "invalid" }]
+  },
+  {
+    name: "invalid-recipient",
+    steps: [
+      { selector: '[data-testid="transfer-amount-next"]', label: "Continue to Recipient", profileName: "valid" },
+      { selector: '[data-testid="transfer-recipient-next"]', label: "Review Transfer", profileName: "invalid" }
+    ]
+  },
+  {
+    name: "direct-confirmation",
+    steps: [{ selector: '[data-testid="nav-transfer-confirmation"]', label: "Confirmation", profileName: "default", isFormAction: false }]
+  },
+  {
+    name: "normal-transfer",
+    steps: [
+      { selector: '[data-testid="transfer-amount-next"]', label: "Continue to Recipient", profileName: "valid" },
+      { selector: '[data-testid="transfer-recipient-next"]', label: "Review Transfer", profileName: "valid" },
+      { selector: '[data-testid="confirm-transfer"]', label: "Confirm Transfer", profileName: "default", isFormAction: false }
+    ]
+  },
+  {
+    name: "back-edit-transfer",
+    steps: [
+      { selector: '[data-testid="transfer-amount-next"]', label: "Continue to Recipient", profileName: "valid" },
+      { selector: '[data-testid="transfer-recipient-next"]', label: "Review Transfer", profileName: "valid" },
+      { selector: '[data-testid="transfer-review-back"]', label: "Back to Recipient", profileName: "default", isFormAction: false },
+      { selector: '[data-testid="transfer-recipient-next"]', label: "Review Transfer", profileName: "valid" },
+      { selector: '[data-testid="confirm-transfer"]', label: "Confirm Transfer", profileName: "default", isFormAction: false }
     ]
   }
 ];

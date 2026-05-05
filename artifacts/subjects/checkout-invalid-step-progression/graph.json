@@ -1,7 +1,7 @@
 {
   "subjectId": "checkout-invalid-step-progression",
-  "generatedAt": "2026-05-01T22:58:57.771Z",
-  "durationMs": 17550,
+  "generatedAt": "2026-05-05T22:17:03.952Z",
+  "durationMs": 18214,
   "nodes": [
     {
       "id": "s_fe1fe81a3ea6",

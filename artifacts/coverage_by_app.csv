@@ -1,0 +1,5 @@
+"app","variants","injected_faults","detected_faults","states","transitions","traces","unique_actions","avg_trace_length","max_trace_length","structural_detections","visual_detections","runtime_ms","runtime_seconds"
+"auth","5","4","4","49","95","90","10","1.73","4","1","0","45920","45.92"
+"checkout","5","4","4","69","150","142","11","2.25","6","2","0","91774","91.77"
+"settings","5","4","4","45","95","100","9","1.2","3","0","0","40292","40.29"
+"transfer","5","4","4","67","127","122","9","2.03","5","2","0","72095","72.09"
